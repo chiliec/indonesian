@@ -21,8 +21,8 @@ export function createBot(deps: BotDeps): Bot<BotCtx> {
     ctx.deps = deps;
     const tgUser = ctx.from;
     if (tgUser) {
-      const initialLocale = tgUser.language_code === 'ru' ? 'ru' : 'en';
-      const user = await deps.usersRepo.upsertByTelegramId(tgUser.id, { locale: initialLocale });
+      const defaultLocale = tgUser.language_code === 'ru' ? 'ru' : 'en';
+      const user = await deps.usersRepo.touchUser(tgUser.id, { defaultLocale });
       ctx.userIsEn = isEn(user.locale);
     } else {
       ctx.userIsEn = true;

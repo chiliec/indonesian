@@ -24,6 +24,15 @@ test('upsertByTelegramId is idempotent', async () => {
   assert.equal(u?.locale, 'ru');
 });
 
+test('touchUser preserves locale on subsequent calls', async () => {
+  const repo = new UsersRepo();
+  await repo.touchUser(42, { defaultLocale: 'en' });
+  await repo.setLocale(42, 'ru');
+  await repo.touchUser(42, { defaultLocale: 'en' });
+  const u = await repo.getByTelegramId(42);
+  assert.equal(u?.locale, 'ru');
+});
+
 test('setPlanPaid sets subscription window', async () => {
   const repo = new UsersRepo();
   await repo.upsertByTelegramId(7, { locale: 'en' });

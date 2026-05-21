@@ -55,6 +55,23 @@ export class UsersRepo {
     return updated;
   }
 
+  async touchUser(
+    telegramId: number,
+    init: { defaultLocale: Locale },
+  ): Promise<UserDoc> {
+    const now = new Date();
+    const updated = await UserModel.findOneAndUpdate(
+      { telegramId },
+      {
+        $set: { lastSeenAt: now },
+        $setOnInsert: { locale: init.defaultLocale, plan: 'free', level: 'A0' },
+      },
+      { upsert: true, new: true, setDefaultsOnInsert: true },
+    ).lean<UserDoc>();
+    if (!updated) throw new Error('touchUser returned null');
+    return updated;
+  }
+
   async getByTelegramId(telegramId: number): Promise<UserDoc | null> {
     return UserModel.findOne({ telegramId }).lean<UserDoc>();
   }
