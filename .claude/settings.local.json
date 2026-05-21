@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(command -v textutil)",
+      "Bash(textutil -convert txt -stdout /Users/babin/Develop/Pet/indonesian/docs/Telegram_Language_Bots_Research_and_Plan.docx)",
+      "Bash(cat)",
+      "Read(//tmp/**)",
+      "Bash(npm install *)",
+      "Bash(npm test *)",
+      "Bash(npm run *)",
+      "Bash(git *)"
+    ]
+  }
+}
