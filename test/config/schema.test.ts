@@ -11,6 +11,7 @@ test('EnvSchema accepts a complete env', () => {
   const env = {
     TELEGRAM_BOT_TOKEN: 't',
     ANTHROPIC_API_KEY: 'a',
+    DEEPGRAM_API_KEY: 'd',
     MONGODB_URI: 'mongodb://localhost/x',
   };
   const result = EnvSchema.safeParse(env);

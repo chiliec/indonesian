@@ -4,12 +4,14 @@ import { Types } from 'mongoose';
 import type { UsersRepo } from './db/users.js';
 import type { ConversationService } from './services/ConversationService.js';
 import type { CorrectionService } from './services/CorrectionService.js';
+import type { DeepgramService } from './services/DeepgramService.js';
 import type { ScenarioEngine } from './services/scenarios/ScenarioEngine.js';
 import { t, isEn } from './util/i18n.js';
 import { menuCommand } from './handlers/menu.js';
 import { langCommand, langCallback } from './handlers/lang.js';
 import { scenariosCommand, startCallback } from './handlers/scenarios.js';
 import { textHandler } from './handlers/text.js';
+import { voiceHandler } from './handlers/voice.js';
 import { endCommand } from './handlers/end.js';
 
 export interface BotDeps {
@@ -17,6 +19,7 @@ export interface BotDeps {
   usersRepo: UsersRepo;
   conversation: ConversationService;
   correction: CorrectionService;
+  deepgram: DeepgramService;
   scenarioEngine: ScenarioEngine;
   logger: Logger;
 }
@@ -94,6 +97,7 @@ export function createBot(deps: BotDeps): Bot<BotCtx> {
   });
 
   bot.on('message:text', textHandler);
+  bot.on('message:voice', voiceHandler);
 
   bot.catch((err) => {
     deps.logger.error({ err: err.error, update: err.ctx.update }, 'bot error');
