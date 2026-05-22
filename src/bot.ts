@@ -1,13 +1,18 @@
 import { Bot, Context } from 'grammy';
 import type { Logger } from 'pino';
 import type { UsersRepo } from './db/users.js';
+import type { ConversationService } from './services/ConversationService.js';
+import type { ScenarioEngine } from './services/scenarios/ScenarioEngine.js';
 import { t, isEn } from './util/i18n.js';
 import { menuCommand } from './handlers/menu.js';
 import { langCommand, langCallback } from './handlers/lang.js';
+import { scenariosCommand, startCallback } from './handlers/scenarios.js';
 
 export interface BotDeps {
   token: string;
   usersRepo: UsersRepo;
+  conversation: ConversationService;
+  scenarioEngine: ScenarioEngine;
   logger: Logger;
 }
 
@@ -40,6 +45,10 @@ export function createBot(deps: BotDeps): Bot<BotCtx> {
   bot.command('lang', langCommand);
   bot.callbackQuery(/^lang:(en|ru)$/, langCallback);
   bot.callbackQuery('menu:lang', langCommand);
+
+  bot.command('scenarios', scenariosCommand);
+  bot.callbackQuery('menu:scenarios', scenariosCommand);
+  bot.callbackQuery(/^start:.+$/, startCallback);
 
   bot.catch((err) => {
     deps.logger.error({ err: err.error, update: err.ctx.update }, 'bot error');
