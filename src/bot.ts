@@ -8,6 +8,7 @@ import { menuCommand } from './handlers/menu.js';
 import { langCommand, langCallback } from './handlers/lang.js';
 import { scenariosCommand, startCallback } from './handlers/scenarios.js';
 import { textHandler } from './handlers/text.js';
+import { endCommand } from './handlers/end.js';
 
 export interface BotDeps {
   token: string;
@@ -50,6 +51,8 @@ export function createBot(deps: BotDeps): Bot<BotCtx> {
   bot.command('scenarios', scenariosCommand);
   bot.callbackQuery('menu:scenarios', scenariosCommand);
   bot.callbackQuery(/^start:.+$/, startCallback);
+
+  bot.command('end', endCommand);
 
   bot.on('message:text', textHandler);
 
