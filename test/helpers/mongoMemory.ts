@@ -18,4 +18,7 @@ export async function clearMemoryMongo(): Promise<void> {
   const collections = await mongoose.connection.db?.collections();
   if (!collections) return;
   for (const c of collections) await c.deleteMany({});
+  for (const name of mongoose.modelNames()) {
+    await mongoose.model(name).syncIndexes();
+  }
 }
