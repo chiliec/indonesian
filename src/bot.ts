@@ -2,6 +2,8 @@ import { Bot, Context } from 'grammy';
 import type { Logger } from 'pino';
 import type { UsersRepo } from './db/users.js';
 import { t, isEn } from './util/i18n.js';
+import { menuCommand } from './handlers/menu.js';
+import { langCommand, langCallback } from './handlers/lang.js';
 
 export interface BotDeps {
   token: string;
@@ -33,6 +35,11 @@ export function createBot(deps: BotDeps): Bot<BotCtx> {
   bot.command('start', async (ctx) => {
     await ctx.reply(t('start.welcome', ctx.userIsEn));
   });
+
+  bot.command('menu', menuCommand);
+  bot.command('lang', langCommand);
+  bot.callbackQuery(/^lang:(en|ru)$/, langCallback);
+  bot.callbackQuery('menu:lang', langCommand);
 
   bot.catch((err) => {
     deps.logger.error({ err: err.error, update: err.ctx.update }, 'bot error');
