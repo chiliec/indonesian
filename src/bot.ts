@@ -15,6 +15,7 @@ import { scenariosCommand, startCallback } from './handlers/scenarios.js';
 import { textHandler } from './handlers/text.js';
 import { voiceHandler } from './handlers/voice.js';
 import { endCommand } from './handlers/end.js';
+import { subscribeCommand, recordSuccessfulPayment } from './handlers/subscribe.js';
 
 export interface BotDeps {
   token: string;
@@ -63,6 +64,30 @@ export function createBot(deps: BotDeps): Bot<BotCtx> {
   bot.callbackQuery(/^start:.+$/, startCallback);
 
   bot.command('end', endCommand);
+
+  bot.command('subscribe', subscribeCommand);
+  bot.callbackQuery('menu:subscribe', subscribeCommand);
+
+  bot.on('pre_checkout_query', async (ctx) => {
+    await ctx.answerPreCheckoutQuery(true);
+  });
+
+  bot.on('message:successful_payment', async (ctx) => {
+    const sp = ctx.message?.successful_payment;
+    if (!sp || !ctx.from) return;
+    const promoted = await recordSuccessfulPayment({
+      telegramId: ctx.from.id,
+      telegramChargeId: sp.telegram_payment_charge_id,
+      starsAmount: sp.total_amount,
+      payload: sp.invoice_payload,
+      usersRepo: deps.usersRepo,
+    });
+    if (promoted) {
+      await ctx.reply(ctx.userIsEn
+        ? '✅ Subscription active for 30 days. Enjoy unlimited practice!'
+        : '✅ Подписка активна на 30 дней. Безлимит — твой.');
+    }
+  });
 
   bot.callbackQuery(/^correct:(.+)$/, async (ctx) => {
     if (!ctx.from || !ctx.callbackQuery.data) return;
