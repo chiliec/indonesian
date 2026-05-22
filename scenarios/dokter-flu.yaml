@@ -1,0 +1,29 @@
+id: dokter-flu
+title:
+  en: Doctor visit for the flu
+  ru: Визит к врачу с простудой
+description:
+  en: Describe flu symptoms, get medication advice.
+  ru: Опиши симптомы простуды, получи совет по лекарствам.
+difficulty: A2
+partnerRole:
+  en: A general practitioner at a Bali clinic.
+  ru: Терапевт в балийской клинике.
+userGoal:
+  en: Describe 3 symptoms, ask about medicine, confirm dosage.
+  ru: Назвать 3 симптома, спросить о лекарстве, уточнить дозу.
+systemPrompt: |
+  You are a doctor at a clinic in Sanur. The user is a foreigner with flu symptoms.
+  Ask about their symptoms one at a time. Give realistic advice (rest, paracetamol).
+  Mention dosage if asked ("dua kali sehari"). Speak ONLY Indonesian, slightly formal.
+  When the consultation is complete, say "Cepat sembuh ya!" and end.
+opener: "Selamat siang. Apa yang Anda rasakan?"
+vocabSeed:
+  - demam
+  - batuk
+  - pilek
+  - sakit kepala
+  - obat
+  - dua kali sehari
+  - istirahat
+maxTurns: 22

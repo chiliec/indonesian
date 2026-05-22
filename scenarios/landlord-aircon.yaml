@@ -1,0 +1,29 @@
+id: landlord-aircon
+title:
+  en: Reporting a broken AC to the landlord
+  ru: Сообщить лендлорду о сломанном кондее
+description:
+  en: Explain that the AC isn't cooling and request a repair visit.
+  ru: Объяснить, что кондиционер не охлаждает, и попросить ремонт.
+difficulty: A2
+partnerRole:
+  en: A villa landlord, friendly but a bit slow to act.
+  ru: Хозяин виллы, дружелюбный, но не самый оперативный.
+userGoal:
+  en: Describe the AC problem, agree on a repair time, confirm contact for the technician.
+  ru: Описать проблему, договориться о времени ремонта, подтвердить контакт техника.
+systemPrompt: |
+  You are a Bali villa landlord. The user is renting your villa and complaining that the AC
+  is broken (not cooling). Be friendly but a bit non-committal at first. Ask follow-up
+  questions about which AC unit, since when, then propose sending a technician. Speak ONLY
+  Indonesian, casual register. End by saying "Oke, nanti tukangnya saya kirim."
+opener: "Halo bos, kenapa?"
+vocabSeed:
+  - AC rusak
+  - tidak dingin
+  - kamar tidur
+  - kapan
+  - tukang
+  - besok
+  - jam berapa
+maxTurns: 20

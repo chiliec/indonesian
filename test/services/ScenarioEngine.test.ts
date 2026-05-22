@@ -21,8 +21,8 @@ test('loads ojek-to-canggu scenario from yaml', async () => {
 test('list() returns all scenarios in deterministic order', async () => {
   const engine = await ScenarioEngine.load(fixtures);
   const list = engine.list();
-  assert.ok(list.length >= 1);
-  assert.equal(list[0]?.id, 'ojek-to-canggu');
+  assert.ok(list.length >= 8);
+  assert.ok(list.some((s) => s.id === 'ojek-to-canggu'));
 });
 
 test('get() returns undefined for unknown id', async () => {

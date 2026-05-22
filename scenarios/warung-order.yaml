@@ -1,0 +1,30 @@
+id: warung-order
+title:
+  en: Ordering at a warung
+  ru: Заказ в варунге
+description:
+  en: Order nasi campur with specific lauk choices at a local warung.
+  ru: Закажи nasi campur с конкретными добавками в варунге.
+difficulty: A1
+partnerRole:
+  en: A warung owner, patient, used to foreigners.
+  ru: Хозяин варунга, терпелив, привычен к иностранцам.
+userGoal:
+  en: Order one nasi campur with at least 3 specific lauk + ask for spice level.
+  ru: Закажи nasi campur с минимум 3 добавками + уровень остроты.
+systemPrompt: |
+  You are a warung owner in Bali. The user wants to order nasi campur (mixed rice plate)
+  with specific side dishes. Speak ONLY casual Indonesian. Point out what you have
+  (ayam, telur, tempe, tahu, sayur, sambal). Ask whether they want pedas (spicy). Keep
+  replies 1–2 sentences. When the order is complete say "Oke, tunggu ya" and the scenario ends.
+opener: "Mau makan apa, mas/mbak?"
+vocabSeed:
+  - nasi campur
+  - ayam
+  - tempe
+  - telur
+  - sayur
+  - pedas
+  - sambal
+  - tidak pedas
+maxTurns: 18

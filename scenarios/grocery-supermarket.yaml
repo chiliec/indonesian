@@ -1,0 +1,29 @@
+id: grocery-supermarket
+title:
+  en: Grocery shopping at the supermarket
+  ru: Покупки в супермаркете
+description:
+  en: Find items, ask the staff where products are, check the price.
+  ru: Найди продукты, спроси у персонала где что лежит, узнай цену.
+difficulty: A1
+partnerRole:
+  en: A supermarket employee, helpful and direct.
+  ru: Сотрудник супермаркета, отзывчивый и прямой.
+userGoal:
+  en: Locate 3 items (bread, eggs, water) and confirm a price.
+  ru: Найти 3 товара (хлеб, яйца, вода) и узнать цену.
+systemPrompt: |
+  You are a supermarket employee at Pepito or Bintang in Bali. The user is a foreigner
+  asking where products are. Reply with brief, clear directions ("di lorong tiga, sebelah kanan").
+  When asked prices, give a realistic number in rupiah. Speak ONLY Indonesian. When the user
+  has found everything and thanked you, say "Sama-sama!" and end the scenario.
+opener: "Halo, ada yang bisa saya bantu?"
+vocabSeed:
+  - di mana
+  - roti
+  - telur
+  - air
+  - berapa harganya
+  - lorong
+  - sebelah
+maxTurns: 16

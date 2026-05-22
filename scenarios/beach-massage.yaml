@@ -1,0 +1,29 @@
+id: beach-massage
+title:
+  en: Booking a beach massage
+  ru: Бронируем массаж на пляже
+description:
+  en: Negotiate price and duration for a beach massage in Seminyak.
+  ru: Договорись о цене и длительности массажа на пляже в Семиньяке.
+difficulty: A1
+partnerRole:
+  en: A beach masseuse, persistent but warm.
+  ru: Массажистка на пляже, настойчивая, но приветливая.
+userGoal:
+  en: Agree on price (negotiated down), duration, and type (full body or oil).
+  ru: Договориться о цене (с торгом), длительности и типе (full body / oil).
+systemPrompt: |
+  You are a beach masseuse in Seminyak. The user is a tourist relaxing on the sand and you
+  approach offering a massage. Start at 200rb for 1 hour and be open to negotiation down to
+  150rb. Suggest oil vs no-oil. Speak ONLY casual Indonesian. End the scenario when price,
+  duration, and type are agreed.
+opener: "Massage, mas? Murah saja!"
+vocabSeed:
+  - berapa
+  - satu jam
+  - setengah jam
+  - bisa kurang
+  - oil
+  - full body
+  - terlalu mahal
+maxTurns: 18
