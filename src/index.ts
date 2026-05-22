@@ -14,6 +14,7 @@ import { TtsService } from './services/TtsService.js';
 import { QuotaService } from './services/QuotaService.js';
 import { Entitlement } from './services/Entitlement.js';
 import { sweepStaleSessions } from './services/SessionSweeper.js';
+import { expireDueSubscriptions } from './services/SubscriptionWatcher.js';
 import { createBot } from './bot.js';
 
 async function main() {
@@ -50,9 +51,19 @@ async function main() {
     }
   }, 60 * 60 * 1000);
 
+  const expireInterval = setInterval(async () => {
+    try {
+      const n = await expireDueSubscriptions();
+      if (n > 0) logger.info({ count: n }, 'expired subscriptions');
+    } catch (err) {
+      logger.error({ err }, 'expiry sweep failed');
+    }
+  }, 15 * 60 * 1000);
+
   const shutdown = async () => {
     logger.info('shutting down');
     clearInterval(sweepInterval);
+    clearInterval(expireInterval);
     await bot.stop();
     await disconnectMongo();
     process.exit(0);
