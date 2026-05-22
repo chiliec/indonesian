@@ -17,7 +17,16 @@ export async function startCallback(ctx: BotCtx): Promise<void> {
   const m = ctx.callbackQuery.data.match(/^start:(.+)$/);
   if (!m || !m[1]) return;
   await ctx.answerCallbackQuery();
-  // quota check happens in Task 18 paywall — for now allow
+
+  const ent = await ctx.deps.entitlement.canStartScenario(ctx.from.id);
+  if (!ent.allowed) {
+    await ctx.reply(
+      ctx.userIsEn
+        ? '⏳ Free limit reached for today. /subscribe for unlimited practice, or come back tomorrow.'
+        : '⏳ Дневной лимит исчерпан. /subscribe — безлимит, или возвращайся завтра.',
+    );
+    return;
+  }
   const { opener } = await ctx.deps.conversation.start(ctx.from.id, m[1]);
   await ctx.reply(opener);
 }

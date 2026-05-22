@@ -35,7 +35,7 @@ export class UserDoc {
   public lastSeenAt!: Date;
 }
 
-const UserModel = getModelForClass(UserDoc);
+export const UserModel = getModelForClass(UserDoc);
 
 export class UsersRepo {
   async upsertByTelegramId(

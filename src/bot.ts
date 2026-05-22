@@ -7,6 +7,7 @@ import type { CorrectionService } from './services/CorrectionService.js';
 import type { DeepgramService } from './services/DeepgramService.js';
 import type { TtsService } from './services/TtsService.js';
 import type { ScenarioEngine } from './services/scenarios/ScenarioEngine.js';
+import type { Entitlement } from './services/Entitlement.js';
 import { t, isEn } from './util/i18n.js';
 import { menuCommand } from './handlers/menu.js';
 import { langCommand, langCallback } from './handlers/lang.js';
@@ -23,6 +24,7 @@ export interface BotDeps {
   deepgram: DeepgramService;
   tts: TtsService;
   scenarioEngine: ScenarioEngine;
+  entitlement: Entitlement;
   logger: Logger;
 }
 

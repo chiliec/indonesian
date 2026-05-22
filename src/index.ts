@@ -11,6 +11,8 @@ import { ConversationService } from './services/ConversationService.js';
 import { CorrectionService } from './services/CorrectionService.js';
 import { DeepgramService } from './services/DeepgramService.js';
 import { TtsService } from './services/TtsService.js';
+import { QuotaService } from './services/QuotaService.js';
+import { Entitlement } from './services/Entitlement.js';
 import { sweepStaleSessions } from './services/SessionSweeper.js';
 import { createBot } from './bot.js';
 
@@ -25,6 +27,8 @@ async function main() {
   const correction = new CorrectionService({ anthropic });
   const deepgram = new DeepgramService({ apiKey: env.DEEPGRAM_API_KEY, logger });
   const tts = new TtsService();
+  const quota = new QuotaService();
+  const entitlement = new Entitlement({ users: usersRepo, quota });
   const bot = createBot({
     token: env.TELEGRAM_BOT_TOKEN,
     usersRepo,
@@ -33,6 +37,7 @@ async function main() {
     deepgram,
     tts,
     scenarioEngine: engine,
+    entitlement,
     logger,
   });
 
