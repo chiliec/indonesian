@@ -1,0 +1,21 @@
+version: '3.9'
+services:
+  bot:
+    build: .
+    restart: unless-stopped
+    env_file: .env
+    depends_on:
+      - mongo
+    volumes:
+      - ./secrets/gcp-tts.json:/app/gcp-tts.json:ro
+    environment:
+      GOOGLE_APPLICATION_CREDENTIALS: /app/gcp-tts.json
+      MONGODB_URI: mongodb://mongo:27017/indonesian-bot
+  mongo:
+    image: mongo:7
+    restart: unless-stopped
+    volumes:
+      - mongo_data:/data/db
+
+volumes:
+  mongo_data:
