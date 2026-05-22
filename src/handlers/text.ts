@@ -1,3 +1,4 @@
+import { InlineKeyboard } from 'grammy';
 import type { BotCtx } from '../bot.js';
 import { t } from '../util/i18n.js';
 
@@ -16,7 +17,11 @@ export async function textHandler(ctx: BotCtx): Promise<void> {
   }
   try {
     const result = await ctx.deps.conversation.handleUserTurn(session._id, ctx.message.text);
-    await ctx.reply(result.characterReply);
+    const kb = new InlineKeyboard().text(
+      ctx.userIsEn ? '💡 Correct me' : '💡 Исправь',
+      `correct:${session._id.toString()}`,
+    );
+    await ctx.reply(result.characterReply, { reply_markup: kb });
   } catch (err) {
     ctx.deps.logger.error({ err }, 'handleUserTurn failed');
     await ctx.reply(t('error.generic', ctx.userIsEn));

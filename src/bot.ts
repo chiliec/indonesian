@@ -1,7 +1,9 @@
 import { Bot, Context } from 'grammy';
 import type { Logger } from 'pino';
+import { Types } from 'mongoose';
 import type { UsersRepo } from './db/users.js';
 import type { ConversationService } from './services/ConversationService.js';
+import type { CorrectionService } from './services/CorrectionService.js';
 import type { ScenarioEngine } from './services/scenarios/ScenarioEngine.js';
 import { t, isEn } from './util/i18n.js';
 import { menuCommand } from './handlers/menu.js';
@@ -14,6 +16,7 @@ export interface BotDeps {
   token: string;
   usersRepo: UsersRepo;
   conversation: ConversationService;
+  correction: CorrectionService;
   scenarioEngine: ScenarioEngine;
   logger: Logger;
 }
@@ -53,6 +56,42 @@ export function createBot(deps: BotDeps): Bot<BotCtx> {
   bot.callbackQuery(/^start:.+$/, startCallback);
 
   bot.command('end', endCommand);
+
+  bot.callbackQuery(/^correct:(.+)$/, async (ctx) => {
+    if (!ctx.from || !ctx.callbackQuery.data) return;
+    await ctx.answerCallbackQuery();
+    const parts = ctx.callbackQuery.data.split(':');
+    const sid = parts[1];
+    if (!sid) return;
+    let sessionObjectId: Types.ObjectId;
+    try {
+      sessionObjectId = new Types.ObjectId(sid);
+    } catch {
+      return;
+    }
+    const session = await deps.conversation.deps.sessions.findById(sessionObjectId);
+    if (!session) return;
+    const turns = session.turns;
+    const reversedUserIdx = [...turns].reverse().findIndex((t) => t.role === 'user');
+    if (reversedUserIdx < 0) return;
+    const userTurnIdx = turns.length - 1 - reversedUserIdx;
+    const userTurn = turns[userTurnIdx];
+    const assistantTurn = turns[userTurnIdx + 1];
+    if (!userTurn || !assistantTurn) return;
+    try {
+      const recap = await deps.correction.correctLastTurn({
+        telegramId: ctx.from.id,
+        sessionId: session._id,
+        userText: userTurn.text,
+        characterReply: assistantTurn.text,
+        userIsEn: ctx.userIsEn,
+      });
+      await ctx.reply(recap);
+    } catch (err) {
+      deps.logger.error({ err }, 'correctLastTurn failed');
+      await ctx.reply(t('error.generic', ctx.userIsEn));
+    }
+  });
 
   bot.on('message:text', textHandler);
 

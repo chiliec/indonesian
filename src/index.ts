@@ -8,6 +8,7 @@ import { SessionsRepo } from './db/sessions.js';
 import { ScenarioEngine } from './services/scenarios/ScenarioEngine.js';
 import { AnthropicService } from './services/anthropic.js';
 import { ConversationService } from './services/ConversationService.js';
+import { CorrectionService } from './services/CorrectionService.js';
 import { sweepStaleSessions } from './services/SessionSweeper.js';
 import { createBot } from './bot.js';
 
@@ -19,10 +20,12 @@ async function main() {
   const engine = await ScenarioEngine.load(path.resolve('scenarios'));
   const anthropic = new AnthropicService({ apiKey: env.ANTHROPIC_API_KEY, logger });
   const conversation = new ConversationService({ sessions, engine, anthropic, logger });
+  const correction = new CorrectionService({ anthropic });
   const bot = createBot({
     token: env.TELEGRAM_BOT_TOKEN,
     usersRepo,
     conversation,
+    correction,
     scenarioEngine: engine,
     logger,
   });
