@@ -16,6 +16,7 @@ import { textHandler } from './handlers/text.js';
 import { voiceHandler } from './handlers/voice.js';
 import { endCommand } from './handlers/end.js';
 import { subscribeCommand, recordSuccessfulPayment } from './handlers/subscribe.js';
+import { statsCommand } from './handlers/stats.js';
 
 export interface BotDeps {
   token: string;
@@ -26,6 +27,7 @@ export interface BotDeps {
   tts: TtsService;
   scenarioEngine: ScenarioEngine;
   entitlement: Entitlement;
+  adminIds: string;
   logger: Logger;
 }
 
@@ -67,6 +69,8 @@ export function createBot(deps: BotDeps): Bot<BotCtx> {
 
   bot.command('subscribe', subscribeCommand);
   bot.callbackQuery('menu:subscribe', subscribeCommand);
+
+  bot.command('stats', statsCommand);
 
   bot.on('pre_checkout_query', async (ctx) => {
     await ctx.answerPreCheckoutQuery(true);

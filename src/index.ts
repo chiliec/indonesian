@@ -39,6 +39,7 @@ async function main() {
     tts,
     scenarioEngine: engine,
     entitlement,
+    adminIds: env.ADMIN_TELEGRAM_IDS,
     logger,
   });
 

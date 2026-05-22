@@ -6,6 +6,7 @@ export const EnvSchema = z.object({
   DEEPGRAM_API_KEY: z.string().min(1),
   MONGODB_URI: z.string().min(1),
   LOG_LEVEL: z.string().default('info'),
+  ADMIN_TELEGRAM_IDS: z.string().default(''),
 });
 
 export type Env = z.infer<typeof EnvSchema>;
