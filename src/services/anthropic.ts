@@ -62,4 +62,30 @@ Keep total response under 6 lines. Never quote the character's reply.`;
     if (!block || block.type !== 'text') throw new Error('no text block in correction');
     return block.text.trim();
   }
+
+  async correctVoiceTurn(
+    userText: string,
+    characterReply: string,
+    userIsEn: boolean,
+  ): Promise<string> {
+    const sys = `You are an Indonesian-language tutor. The user spoke (we have their Deepgram transcript).
+Identify 1–3 fixes for grammar/word choice AND one pronunciation tip likely to help the learner
+(based on common Indonesian-as-second-language pitfalls — final-syllable stress, "ng" sound, the
+schwa "e", soft "c" as "ch"). Format: "❌ wrong → ✅ right" then "🔊 Pronunciation tip: …" in
+${userIsEn ? 'English' : 'Russian'}. Total under 6 lines.`;
+    const res = await this.client.messages.create({
+      model: MODEL_HAIKU,
+      max_tokens: 400,
+      system: sys,
+      messages: [
+        {
+          role: 'user',
+          content: `User said (transcript): "${userText}"\nCharacter replied: "${characterReply}"`,
+        },
+      ],
+    });
+    const block = res.content.find((c) => c.type === 'text');
+    if (!block || block.type !== 'text') throw new Error('no text block in voice correction');
+    return block.text.trim();
+  }
 }

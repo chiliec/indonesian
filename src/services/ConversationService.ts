@@ -32,6 +32,7 @@ export class ConversationService {
   async handleUserTurn(
     sessionId: Types.ObjectId,
     userText: string,
+    audioFileId?: string,
   ): Promise<{ characterReply: string; turnCount: number }> {
     const session = await this.deps.sessions.findById(sessionId);
     if (!session) throw new Error('session not found');
@@ -39,7 +40,11 @@ export class ConversationService {
     const scenario = this.deps.engine.get(session.scenarioId);
     if (!scenario) throw new Error(`scenario gone: ${session.scenarioId}`);
 
-    await this.deps.sessions.appendTurn(sessionId, { role: 'user', text: userText });
+    await this.deps.sessions.appendTurn(sessionId, {
+      role: 'user',
+      text: userText,
+      ...(audioFileId ? { audioFileId } : {}),
+    });
 
     const history = buildMessageHistory(
       [...session.turns, { role: 'user', text: userText }],

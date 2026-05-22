@@ -8,6 +8,7 @@ export interface CorrectionInput {
   userText: string;
   characterReply: string;
   userIsEn: boolean;
+  audioFileId?: string;
 }
 
 export interface CorrectionDeps {
@@ -18,11 +19,17 @@ export class CorrectionService {
   constructor(public readonly deps: CorrectionDeps) {}
 
   async correctLastTurn(input: CorrectionInput): Promise<string> {
-    const recap = await this.deps.anthropic.correctTurn(
-      input.userText,
-      input.characterReply,
-      input.userIsEn,
-    );
+    const recap = input.audioFileId
+      ? await this.deps.anthropic.correctVoiceTurn(
+          input.userText,
+          input.characterReply,
+          input.userIsEn,
+        )
+      : await this.deps.anthropic.correctTurn(
+          input.userText,
+          input.characterReply,
+          input.userIsEn,
+        );
     await CorrectionModel.create({
       telegramId: input.telegramId,
       sessionId: input.sessionId,

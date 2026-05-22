@@ -90,6 +90,7 @@ export function createBot(deps: BotDeps): Bot<BotCtx> {
         userText: userTurn.text,
         characterReply: assistantTurn.text,
         userIsEn: ctx.userIsEn,
+        ...(userTurn.audioFileId ? { audioFileId: userTurn.audioFileId } : {}),
       });
       await ctx.reply(recap);
     } catch (err) {

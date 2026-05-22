@@ -23,7 +23,11 @@ export async function voiceHandler(ctx: BotCtx): Promise<void> {
       return;
     }
     await ctx.reply(`🗣 _${transcript}_`, { parse_mode: 'Markdown' });
-    const result = await ctx.deps.conversation.handleUserTurn(session._id, transcript);
+    const result = await ctx.deps.conversation.handleUserTurn(
+      session._id,
+      transcript,
+      ctx.message.voice.file_id,
+    );
     const kb = new InlineKeyboard().text(
       ctx.userIsEn ? '💡 Correct me' : '💡 Исправь',
       `correct:${session._id.toString()}`,
