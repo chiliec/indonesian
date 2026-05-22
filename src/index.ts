@@ -10,6 +10,7 @@ import { AnthropicService } from './services/anthropic.js';
 import { ConversationService } from './services/ConversationService.js';
 import { CorrectionService } from './services/CorrectionService.js';
 import { DeepgramService } from './services/DeepgramService.js';
+import { TtsService } from './services/TtsService.js';
 import { sweepStaleSessions } from './services/SessionSweeper.js';
 import { createBot } from './bot.js';
 
@@ -23,12 +24,14 @@ async function main() {
   const conversation = new ConversationService({ sessions, engine, anthropic, logger });
   const correction = new CorrectionService({ anthropic });
   const deepgram = new DeepgramService({ apiKey: env.DEEPGRAM_API_KEY, logger });
+  const tts = new TtsService();
   const bot = createBot({
     token: env.TELEGRAM_BOT_TOKEN,
     usersRepo,
     conversation,
     correction,
     deepgram,
+    tts,
     scenarioEngine: engine,
     logger,
   });

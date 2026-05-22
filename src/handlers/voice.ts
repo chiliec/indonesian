@@ -1,4 +1,4 @@
-import { InlineKeyboard } from 'grammy';
+import { InlineKeyboard, InputFile } from 'grammy';
 import type { BotCtx } from '../bot.js';
 import { t } from '../util/i18n.js';
 
@@ -28,7 +28,11 @@ export async function voiceHandler(ctx: BotCtx): Promise<void> {
       ctx.userIsEn ? '💡 Correct me' : '💡 Исправь',
       `correct:${session._id.toString()}`,
     );
-    await ctx.reply(result.characterReply, { reply_markup: kb });
+    const audio = await ctx.deps.tts.synthesize(result.characterReply);
+    await ctx.replyWithVoice(new InputFile(audio, 'reply.ogg'), {
+      caption: result.characterReply,
+      reply_markup: kb,
+    });
   } catch (err) {
     ctx.deps.logger.error({ err }, 'voice failed');
     await ctx.reply(t('error.generic', ctx.userIsEn));

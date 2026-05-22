@@ -5,6 +5,7 @@ import type { UsersRepo } from './db/users.js';
 import type { ConversationService } from './services/ConversationService.js';
 import type { CorrectionService } from './services/CorrectionService.js';
 import type { DeepgramService } from './services/DeepgramService.js';
+import type { TtsService } from './services/TtsService.js';
 import type { ScenarioEngine } from './services/scenarios/ScenarioEngine.js';
 import { t, isEn } from './util/i18n.js';
 import { menuCommand } from './handlers/menu.js';
@@ -20,6 +21,7 @@ export interface BotDeps {
   conversation: ConversationService;
   correction: CorrectionService;
   deepgram: DeepgramService;
+  tts: TtsService;
   scenarioEngine: ScenarioEngine;
   logger: Logger;
 }
