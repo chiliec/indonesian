@@ -1,8 +1,6 @@
-import type { Types } from 'mongoose';
 import type { QuizEngine } from './quiz/QuizEngine.js';
 import { build } from './quiz/QuestionFactory.js';
-import type { Question } from './quiz/types.js';
-import type { QuizCard } from './quiz/types.js';
+import type { Question, QuizCard } from './quiz/types.js';
 import { QuizSessionsRepo, type QuizSession } from '../db/quizSessions.js';
 import { QuizProgressRepo, type QuizProgress } from '../db/quizProgress.js';
 
@@ -124,6 +122,4 @@ export class QuizService {
     };
   }
 
-  /** map a session's stored question to the runtime Question shape */
-  static toQuestion = toQuestion;
 }

@@ -91,3 +91,40 @@ test('unseen cards are ordered before mastered ones', async () => {
   // module-1 has 5 cards; mastered m1-0001 should be at the end.
   assert.equal(ids[ids.length - 1], 'm1-0001');
 });
+
+test('mixed answers yield partial score and partial missed list', async () => {
+  const res = await svc.start(1, 'module-1');
+  const total = res!.session.questions.length;
+  let outcome;
+  for (let i = 0; i < total; i++) {
+    const fresh = await sessions.findActive(1);
+    const q = fresh!.questions[fresh!.current]!;
+    // first question correct, the rest wrong
+    const chosen = i === 0 ? q.correctIndex : (q.correctIndex + 1) % q.options.length;
+    await sessions.setCurrentPoll(fresh!._id, `mix-${i}`);
+    outcome = await svc.recordAnswer(`mix-${i}`, chosen);
+  }
+  assert.equal(outcome!.done, true);
+  assert.equal(outcome!.finalScore, 1);
+  assert.equal(outcome!.total, total);
+  assert.equal(outcome!.missed.length, total - 1);
+});
+
+test('ordering groups unseen, then previously-wrong, then mastered', async () => {
+  const progress = new QuizProgressRepo();
+  await progress.record(1, 'm1-0001', true);  // mastered -> last
+  await progress.record(1, 'm1-0002', false); // wrong -> middle
+  const res = await svc.start(1, 'module-1');
+  const ids = res!.session.questions.map((q) => q.cardId);
+  const posWrong = ids.indexOf('m1-0002');
+  const posMastered = ids.indexOf('m1-0001');
+  const unseen = ['m1-0003', 'm1-0004', 'm1-0005'];
+  // every unseen card comes before the previously-wrong card
+  for (const u of unseen) {
+    assert.ok(ids.indexOf(u) < posWrong, `${u} should precede previously-wrong m1-0002`);
+  }
+  // the previously-wrong card comes before the mastered card
+  assert.ok(posWrong < posMastered, 'previously-wrong should precede mastered');
+  // mastered card is last
+  assert.equal(ids[ids.length - 1], 'm1-0001');
+});
