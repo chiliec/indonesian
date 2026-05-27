@@ -42,12 +42,15 @@ export function parseApkg(apkgPath: string): ParsedApkg {
   let notes: RawNote[];
   try {
     const db = new Database(dbPath, { readonly: true });
-    const rows = db.prepare('SELECT id, flds FROM notes').all() as {
-      id: number;
-      flds: string;
-    }[];
-    notes = rows.map((r) => ({ id: r.id, fields: r.flds.split(FIELD_SEP) }));
-    db.close();
+    try {
+      const rows = db.prepare('SELECT id, flds FROM notes').all() as {
+        id: number;
+        flds: string;
+      }[];
+      notes = rows.map((r) => ({ id: r.id, fields: r.flds.split(FIELD_SEP) }));
+    } finally {
+      db.close();
+    }
   } finally {
     fs.rmSync(tmpDir, { recursive: true, force: true });
   }

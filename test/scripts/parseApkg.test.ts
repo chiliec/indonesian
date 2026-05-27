@@ -42,11 +42,25 @@ test('parseApkg reads notes flds and media map', () => {
   const parsed = parseApkg(apkgPath);
   assert.equal(parsed.notes.length, 2);
   assert.deepEqual(parsed.notes[0]!.fields, ['pasar', 'market', '[sound:greeting1.mp3]']);
+  assert.deepEqual(parsed.notes[1]!.fields, ['rumah', 'house', '']);
   assert.equal(parsed.mediaByName.get('greeting1.mp3'), '0');
 });
 
 test('parseApkg exposes raw media bytes by number', () => {
   const parsed = parseApkg(apkgPath);
   const num = parsed.mediaByName.get('greeting1.mp3')!;
-  assert.ok(parsed.mediaBytes(num).length > 0);
+  assert.deepEqual(parsed.mediaBytes(num), Buffer.from('FAKEMP3BYTES'));
+});
+
+test('parseApkg throws a clear error for the newer anki21b format', () => {
+  const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'apkg21b-'));
+  const zip = new AdmZip();
+  zip.addFile('collection.anki21b', Buffer.from('ZSTDBYTES'));
+  const out = path.join(dir, 'new.apkg');
+  zip.writeZip(out);
+  try {
+    assert.throws(() => parseApkg(out), /newer|anki21b/i);
+  } finally {
+    fs.rmSync(dir, { recursive: true, force: true });
+  }
 });
