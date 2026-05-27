@@ -6,6 +6,7 @@ export async function menuCommand(ctx: BotCtx) {
   const en = ctx.userIsEn;
   const kb = new InlineKeyboard()
     .text(t('menu.scenarios', en), 'menu:scenarios')
+    .text(t('menu.quiz', en), 'menu:quiz')
     .row()
     .text(t('menu.lang', en), 'menu:lang')
     .text(t('menu.subscribe', en), 'menu:subscribe')

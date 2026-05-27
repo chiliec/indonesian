@@ -26,3 +26,10 @@ Run after `docker compose up -d`.
 ## Flow D — admin
 - [ ] `/stats` from non-admin → no response
 - [ ] `/stats` from admin → table with counts
+
+## Quiz
+- [ ] `/quiz` lists 8 modules with mastery %.
+- [ ] Picking a module sends a voice bubble + a quiz poll.
+- [ ] Answering reveals ✓/✗ + explanation and the next question appears.
+- [ ] After 10 questions a summary shows score + missed words + retry buttons.
+- [ ] Re-answering the same audio clip reuses the cached file_id (no re-upload).

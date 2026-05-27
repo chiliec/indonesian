@@ -17,6 +17,9 @@ import { voiceHandler } from './handlers/voice.js';
 import { endCommand } from './handlers/end.js';
 import { subscribeCommand, recordSuccessfulPayment } from './handlers/subscribe.js';
 import { statsCommand } from './handlers/stats.js';
+import { quizCommand, quizStartCallback, quizPollAnswer } from './handlers/quiz.js';
+import type { QuizService } from './services/QuizService.js';
+import type { AudioCacheRepo } from './db/audioCache.js';
 
 export interface BotDeps {
   token: string;
@@ -27,6 +30,8 @@ export interface BotDeps {
   tts: TtsService;
   scenarioEngine: ScenarioEngine;
   entitlement: Entitlement;
+  quiz: QuizService;
+  audioCache: AudioCacheRepo;
   adminIds: string;
   logger: Logger;
 }
@@ -64,6 +69,22 @@ export function createBot(deps: BotDeps): Bot<BotCtx> {
   bot.command('scenarios', scenariosCommand);
   bot.callbackQuery('menu:scenarios', scenariosCommand);
   bot.callbackQuery(/^start:.+$/, startCallback);
+
+  bot.command('quiz', quizCommand);
+  bot.callbackQuery('menu:quiz', quizCommand);
+  bot.callbackQuery(/^quiz:start:.+$/, quizStartCallback);
+
+  bot.on('poll_answer', async (ctx) => {
+    const pa = ctx.pollAnswer;
+    const chosen = pa.option_ids[0];
+    const userId = pa.user?.id;
+    if (chosen === undefined || userId === undefined) return; // retracted vote or anonymous
+    try {
+      await quizPollAnswer(ctx.api, deps, pa.poll_id, userId, chosen);
+    } catch (err) {
+      deps.logger.error({ err }, 'quiz poll_answer failed');
+    }
+  });
 
   bot.command('end', endCommand);
 

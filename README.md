@@ -37,7 +37,19 @@ npm run typecheck
 - `/start` — welcome
 - `/menu` — main menu (inline)
 - `/scenarios` — pick a scenario
+- `/quiz` — vocabulary quiz (audio + native quiz polls), free & unlimited
 - `/end` — end current scenario
 - `/subscribe` — Stars subscription
 - `/lang` — switch interface language (en/ru)
 - `/stats` — admin only
+
+## Quiz content (Anki)
+
+Quiz content is generated offline from *The Indonesian Way* Anki decks.
+
+1. Install ffmpeg (`brew install ffmpeg`).
+2. Put the 8 `.apkg` files in `.cache/anki/module-1.apkg` … `module-8.apkg`
+   (or set `deckId`s in `scripts/anki-decks.config.ts` to attempt auto-download).
+3. `npm run prep:anki` → writes `content/quiz/*.yaml` + `content/quiz/audio/*.ogg`.
+4. Commit `content/quiz/`. The bot loads it at startup; audio `file_id`s are
+   cached in Mongo on first send.
