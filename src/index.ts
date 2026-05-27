@@ -13,6 +13,11 @@ import { DeepgramService } from './services/DeepgramService.js';
 import { TtsService } from './services/TtsService.js';
 import { QuotaService } from './services/QuotaService.js';
 import { Entitlement } from './services/Entitlement.js';
+import { QuizEngine } from './services/quiz/QuizEngine.js';
+import { QuizService } from './services/QuizService.js';
+import { QuizSessionsRepo } from './db/quizSessions.js';
+import { QuizProgressRepo } from './db/quizProgress.js';
+import { AudioCacheRepo } from './db/audioCache.js';
 import { sweepStaleSessions } from './services/SessionSweeper.js';
 import { expireDueSubscriptions } from './services/SubscriptionWatcher.js';
 import { createBot } from './bot.js';
@@ -23,6 +28,11 @@ async function main() {
   const usersRepo = new UsersRepo();
   const sessions = new SessionsRepo();
   const engine = await ScenarioEngine.load(path.resolve('scenarios'));
+  const quizEngine = await QuizEngine.load(path.resolve('content/quiz'));
+  const quizSessions = new QuizSessionsRepo();
+  const quizProgress = new QuizProgressRepo();
+  const audioCache = new AudioCacheRepo();
+  const quiz = new QuizService({ engine: quizEngine, sessions: quizSessions, progress: quizProgress });
   const anthropic = new AnthropicService({ apiKey: env.ANTHROPIC_API_KEY, logger });
   const conversation = new ConversationService({ sessions, engine, anthropic, logger });
   const correction = new CorrectionService({ anthropic });
@@ -39,6 +49,8 @@ async function main() {
     tts,
     scenarioEngine: engine,
     entitlement,
+    quiz,
+    audioCache,
     adminIds: env.ADMIN_TELEGRAM_IDS,
     logger,
   });
