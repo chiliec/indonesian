@@ -56,7 +56,7 @@ export async function askQuestion(
     question.options.map((text) => ({ text })),
     {
       type: 'quiz',
-      correct_option_id: question.correctIndex,
+      correct_option_ids: [question.correctIndex],
       is_anonymous: false,
       explanation: question.explanation,
     },
@@ -81,16 +81,10 @@ export async function quizPollAnswer(api: Api, deps: BotDeps, pollId: string, us
   const outcome = await deps.quiz.recordAnswer(pollId, chosenIndex);
   if (!outcome) return;
   if (outcome.next) {
-    await askQuestion(api, userId, deps, await activeSessionId(deps, userId), outcome.next.question);
+    await askQuestion(api, userId, deps, outcome.sessionId, outcome.next.question);
     return;
   }
   await sendSummary(api, deps, outcome);
-}
-
-async function activeSessionId(deps: BotDeps, userId: number): Promise<import('mongoose').Types.ObjectId> {
-  const s = await deps.quiz.deps.sessions.findActive(userId);
-  if (!s) throw new Error('no active quiz session');
-  return s._id;
 }
 
 async function sendSummary(api: Api, deps: BotDeps, outcome: AnswerOutcome): Promise<void> {

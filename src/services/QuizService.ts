@@ -1,3 +1,4 @@
+import type { Types } from 'mongoose';
 import type { QuizEngine } from './quiz/QuizEngine.js';
 import { build } from './quiz/QuestionFactory.js';
 import type { Question, QuizCard } from './quiz/types.js';
@@ -22,6 +23,7 @@ export interface ModuleMastery {
 export interface AnswerOutcome {
   telegramId: number;
   moduleId: string;
+  sessionId: Types.ObjectId;
   correct: boolean;
   done: boolean;
   next: { question: Question; index: number } | null;
@@ -113,6 +115,7 @@ export class QuizService {
     return {
       telegramId: session.telegramId,
       moduleId: session.moduleId,
+      sessionId: session._id,
       correct,
       done,
       next: nextStored ? { question: toQuestion(nextStored), index: nextIndex } : null,
