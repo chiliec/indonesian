@@ -1,0 +1,93 @@
+import { test, before, after, beforeEach } from 'node:test';
+import assert from 'node:assert/strict';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+import { startMemoryMongo, stopMemoryMongo, clearMemoryMongo } from '../helpers/mongoMemory.js';
+import { QuizEngine } from '../../src/services/quiz/QuizEngine.js';
+import { QuizService } from '../../src/services/QuizService.js';
+import { QuizSessionsRepo } from '../../src/db/quizSessions.js';
+import { QuizProgressRepo } from '../../src/db/quizProgress.js';
+
+const here = path.dirname(fileURLToPath(import.meta.url));
+const fixtures = path.join(here, '..', 'fixtures', 'quiz');
+
+let svc: QuizService;
+let sessions: QuizSessionsRepo;
+
+before(startMemoryMongo);
+after(stopMemoryMongo);
+beforeEach(async () => {
+  await clearMemoryMongo();
+  const engine = await QuizEngine.load(fixtures);
+  sessions = new QuizSessionsRepo();
+  svc = new QuizService({ engine, sessions, progress: new QuizProgressRepo() });
+});
+
+test('moduleList reports mastery percentages', async () => {
+  const list = await svc.moduleList(1);
+  assert.equal(list.length, 2);
+  const m1 = list.find((m) => m.id === 'module-1')!;
+  assert.equal(m1.pct, 0);
+});
+
+test('start builds a session capped at module size and returns first question', async () => {
+  const res = await svc.start(1, 'module-1');
+  assert.ok(res);
+  assert.equal(res.session.questions.length, 5); // module-1 has 5 cards (< 10)
+  assert.equal(res.first.cardId, res.session.questions[0]!.cardId);
+});
+
+test('start returns null for unknown module', async () => {
+  assert.equal(await svc.start(1, 'nope'), null);
+});
+
+test('start abandons any prior active session', async () => {
+  await svc.start(1, 'module-1');
+  await svc.start(1, 'module-2');
+  const active = await sessions.findActive(1);
+  assert.equal(active!.moduleId, 'module-2');
+});
+
+test('recordAnswer scores correct answer and advances', async () => {
+  const res = await svc.start(1, 'module-1');
+  const sess = res!.session;
+  const q0 = sess.questions[0]!;
+  await sessions.setCurrentPoll(sess._id, 'poll-1');
+  const outcome = await svc.recordAnswer('poll-1', q0.correctIndex);
+  assert.ok(outcome);
+  assert.equal(outcome.correct, true);
+  assert.ok(outcome.next); // more questions remain
+  assert.equal(outcome.next.index, 1);
+});
+
+test('recordAnswer on last question completes session and lists missed', async () => {
+  const res = await svc.start(1, 'module-1');
+  let sess = res!.session;
+  // Answer every question wrong by picking a deliberately wrong index.
+  for (let i = 0; i < sess.questions.length; i++) {
+    const fresh = await sessions.findActive(1);
+    const q = fresh!.questions[fresh!.current]!;
+    const wrong = (q.correctIndex + 1) % q.options.length;
+    await sessions.setCurrentPoll(fresh!._id, `p-${i}`);
+    var outcome = await svc.recordAnswer(`p-${i}`, wrong);
+  }
+  assert.equal(outcome!.done, true);
+  assert.equal(outcome!.finalScore, 0);
+  assert.equal(outcome!.total, 5);
+  assert.equal(outcome!.missed.length, 5);
+  assert.equal(await sessions.findActive(1), null); // completed
+});
+
+test('recordAnswer returns null for unknown poll id', async () => {
+  assert.equal(await svc.recordAnswer('ghost', 0), null);
+});
+
+test('unseen cards are ordered before mastered ones', async () => {
+  const progress = new QuizProgressRepo();
+  // Master one card; it should sort last.
+  await progress.record(1, 'm1-0001', true);
+  const res = await svc.start(1, 'module-1');
+  const ids = res!.session.questions.map((q) => q.cardId);
+  // module-1 has 5 cards; mastered m1-0001 should be at the end.
+  assert.equal(ids[ids.length - 1], 'm1-0001');
+});
