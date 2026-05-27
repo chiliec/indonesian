@@ -4,7 +4,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { startMemoryMongo, stopMemoryMongo, clearMemoryMongo } from '../helpers/mongoMemory.js';
 import { QuizEngine } from '../../src/services/quiz/QuizEngine.js';
-import { QuizService } from '../../src/services/QuizService.js';
+import { QuizService, MIXED_MODULE_ID } from '../../src/services/QuizService.js';
 import { QuizSessionsRepo } from '../../src/db/quizSessions.js';
 import { QuizProgressRepo } from '../../src/db/quizProgress.js';
 
@@ -23,11 +23,23 @@ beforeEach(async () => {
   svc = new QuizService({ engine, sessions, progress: new QuizProgressRepo() });
 });
 
-test('moduleList reports mastery percentages', async () => {
+test('moduleList reports mastery percentages with Mixed first', async () => {
   const list = await svc.moduleList(1);
-  assert.equal(list.length, 2);
+  // 2 fixture modules + the synthetic Mixed entry, which sorts first.
+  assert.equal(list.length, 3);
+  assert.equal(list[0]!.id, MIXED_MODULE_ID);
   const m1 = list.find((m) => m.id === 'module-1')!;
   assert.equal(m1.pct, 0);
+});
+
+test('start with Mixed draws across all modules', async () => {
+  const res = await svc.start(1, MIXED_MODULE_ID);
+  assert.ok(res);
+  assert.equal(res.session.moduleId, MIXED_MODULE_ID);
+  const ids = res.session.questions.map((q) => q.cardId);
+  // fixtures have fewer than 10 cards total, so every module's cards appear
+  assert.ok(ids.some((id) => id.startsWith('m1-')), 'expected module-1 cards');
+  assert.ok(ids.some((id) => id.startsWith('m2-')), 'expected module-2 cards');
 });
 
 test('start builds a session capped at module size and returns first question', async () => {

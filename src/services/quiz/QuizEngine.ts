@@ -1,7 +1,7 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import YAML from 'yaml';
-import type { QuizModule } from './types.js';
+import type { QuizModule, QuizCard } from './types.js';
 
 export class QuizEngine {
   private constructor(private readonly map: Map<string, QuizModule>) {}
@@ -29,5 +29,23 @@ export class QuizEngine {
 
   list(): QuizModule[] {
     return Array.from(this.map.values()).sort((a, b) => a.id.localeCompare(b.id));
+  }
+
+  /** every card across all modules, de-duplicated by id (the Mixed pool). */
+  allCards(): QuizCard[] {
+    const byId = new Map<string, QuizCard>();
+    for (const m of this.list()) {
+      for (const c of m.cards) if (!byId.has(c.id)) byId.set(c.id, c);
+    }
+    return Array.from(byId.values());
+  }
+
+  /** find a card by id across all modules (used for cross-module summaries). */
+  card(id: string): QuizCard | undefined {
+    for (const m of this.map.values()) {
+      const c = m.cards.find((x) => x.id === id);
+      if (c) return c;
+    }
+    return undefined;
   }
 }

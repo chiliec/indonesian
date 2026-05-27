@@ -89,11 +89,11 @@ export async function quizPollAnswer(api: Api, deps: BotDeps, pollId: string, us
 
 async function sendSummary(api: Api, deps: BotDeps, outcome: AnswerOutcome): Promise<void> {
   const en = true; // poll_answer carries no locale; default to English chrome
-  const module = deps.quiz.deps.engine.get(outcome.moduleId);
   let text = `${t('quiz.summary', en)}${outcome.finalScore}/${outcome.total}`;
-  if (outcome.missed.length && module) {
+  if (outcome.missed.length) {
+    // Look up cards across all modules so this works for Mixed sessions too.
     const lines = outcome.missed
-      .map((id) => module.cards.find((c) => c.id === id))
+      .map((id) => deps.quiz.deps.engine.card(id))
       .filter((c): c is NonNullable<typeof c> => !!c)
       .map((c) => `• ${c.indonesian} — ${c.english}`);
     if (lines.length) text += `\n\n${t('quiz.missed', en)}\n${lines.join('\n')}`;

@@ -7,6 +7,9 @@ import { QuizProgressRepo, type QuizProgress } from '../db/quizProgress.js';
 
 const SESSION_LENGTH = 10;
 
+/** synthetic module id: draws questions from every module's cards. */
+export const MIXED_MODULE_ID = 'mixed';
+
 export interface QuizDeps {
   engine: QuizEngine;
   sessions: QuizSessionsRepo;
@@ -64,14 +67,27 @@ export class QuizService {
   constructor(public readonly deps: QuizDeps) {}
 
   async moduleList(telegramId: number): Promise<ModuleMastery[]> {
+    const masteredPct = (cards: QuizCard[], prog: Map<string, QuizProgress>): number => {
+      let mastered = 0;
+      for (const c of cards) if ((prog.get(c.id)?.correct ?? 0) > 0) mastered++;
+      return cards.length ? Math.round((mastered / cards.length) * 100) : 0;
+    };
+
     const out: ModuleMastery[] = [];
     for (const m of this.deps.engine.list()) {
       const prog = await this.deps.progress.forCards(telegramId, m.cards.map((c) => c.id));
-      let mastered = 0;
-      for (const c of m.cards) if ((prog.get(c.id)?.correct ?? 0) > 0) mastered++;
-      const pct = m.cards.length ? Math.round((mastered / m.cards.length) * 100) : 0;
-      out.push({ id: m.id, titleEn: m.title.en, titleRu: m.title.ru, pct });
+      out.push({ id: m.id, titleEn: m.title.en, titleRu: m.title.ru, pct: masteredPct(m.cards, prog) });
     }
+
+    // Prepend the Mixed entry: mastery across the de-duplicated union of all cards.
+    const all = this.deps.engine.allCards();
+    const allProg = await this.deps.progress.forCards(telegramId, all.map((c) => c.id));
+    out.unshift({
+      id: MIXED_MODULE_ID,
+      titleEn: '🎲 Mixed (all words)',
+      titleRu: '🎲 Микс (все слова)',
+      pct: masteredPct(all, allProg),
+    });
     return out;
   }
 
@@ -79,14 +95,15 @@ export class QuizService {
     telegramId: number,
     moduleId: string,
   ): Promise<{ session: QuizSession; first: Question } | null> {
-    const module = this.deps.engine.get(moduleId);
-    if (!module) return null;
+    const cards =
+      moduleId === MIXED_MODULE_ID ? this.deps.engine.allCards() : this.deps.engine.get(moduleId)?.cards;
+    if (!cards || cards.length === 0) return null;
     await this.deps.sessions.abandonActive(telegramId);
 
-    const prog = await this.deps.progress.forCards(telegramId, module.cards.map((c) => c.id));
-    const ordered = orderByMastery(module.cards, prog);
+    const prog = await this.deps.progress.forCards(telegramId, cards.map((c) => c.id));
+    const ordered = orderByMastery(cards, prog);
     const chosen = ordered.slice(0, Math.min(SESSION_LENGTH, ordered.length));
-    const questions = chosen.map((card) => build(card, module.cards));
+    const questions = chosen.map((card) => build(card, cards));
 
     const session = await this.deps.sessions.create(telegramId, moduleId, questions);
     const first = questions[0];
