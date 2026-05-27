@@ -1,0 +1,8 @@
+id: module-1
+title: { en: "Module 1 — Greetings", ru: "Модуль 1 — Приветствия" }
+cards:
+  - { id: m1-0001, indonesian: "pasar", english: "market", audio: "aaa111.ogg" }
+  - { id: m1-0002, indonesian: "rumah", english: "house", audio: "bbb222.ogg" }
+  - { id: m1-0003, indonesian: "air", english: "water", audio: "ccc333.ogg" }
+  - { id: m1-0004, indonesian: "teman", english: "friend" }
+  - { id: m1-0005, indonesian: "makan", english: "to eat", audio: "ddd444.ogg" }

@@ -1,0 +1,5 @@
+id: module-2
+title: { en: "Module 2 — Family", ru: "Модуль 2 — Семья" }
+cards:
+  - { id: m2-0001, indonesian: "ibu", english: "mother", audio: "eee555.ogg" }
+  - { id: m2-0002, indonesian: "ayah", english: "father", audio: "fff666.ogg" }
