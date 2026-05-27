@@ -2,6 +2,16 @@ import type { QuizCard, Question, QuestionType } from './types.js';
 
 const ALL_TYPES: QuestionType[] = ['audio-en', 'audio-id', 'id-en', 'en-id'];
 
+// Telegram quiz-poll field limits. Long phrase/sentence cards would otherwise
+// make sendPoll reject the whole question with a 400, so clamp defensively.
+const POLL_QUESTION_MAX = 300;
+const POLL_OPTION_MAX = 100;
+const POLL_EXPLANATION_MAX = 200;
+
+function clamp(s: string, max: number): string {
+  return s.length <= max ? s : s.slice(0, max);
+}
+
 export interface BuildOpts {
   type?: QuestionType;
   rng?: () => number;
@@ -48,13 +58,14 @@ export function build(card: QuizCard, pool: readonly QuizCard[], opts: BuildOpts
       ? opts.type
       : eligible[Math.floor(rng() * eligible.length)]!;
 
-  const correct = answerOf(type, card);
+  // Clamp option values before deduping so truncation can't yield duplicates.
+  const correct = clamp(answerOf(type, card), POLL_OPTION_MAX);
 
   const distractors: string[] = [];
   const seen = new Set<string>([correct]);
   for (const c of shuffle(pool, rng)) {
     if (c.id === card.id) continue;
-    const v = answerOf(type, c);
+    const v = clamp(answerOf(type, c), POLL_OPTION_MAX);
     if (seen.has(v)) continue;
     seen.add(v);
     distractors.push(v);
@@ -74,10 +85,10 @@ export function build(card: QuizCard, pool: readonly QuizCard[], opts: BuildOpts
   const q: Question = {
     cardId: card.id,
     type,
-    promptText: buildPrompt(type, card),
+    promptText: clamp(buildPrompt(type, card), POLL_QUESTION_MAX),
     options,
     correctIndex,
-    explanation: `${card.indonesian} = ${card.english}`,
+    explanation: clamp(`${card.indonesian} = ${card.english}`, POLL_EXPLANATION_MAX),
   };
   if ((type === 'audio-en' || type === 'audio-id') && card.audio) q.audioFile = card.audio;
   return q;

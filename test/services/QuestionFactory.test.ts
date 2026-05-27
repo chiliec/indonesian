@@ -56,3 +56,22 @@ test('distractors come from the pool and never duplicate the answer', () => {
     assert.ok(pool.some((c) => c.english === o));
   }
 });
+
+test('clamps poll fields to Telegram limits (option 100, question 300, explanation 200)', () => {
+  const longEn = 'e'.repeat(250);
+  const longId = 'i'.repeat(400);
+  const longCard: QuizCard = { id: 'long', indonesian: longId, english: longEn };
+  const longPool: QuizCard[] = [
+    longCard,
+    { id: 'd1', indonesian: 'x'.repeat(150), english: 'y'.repeat(150) },
+    { id: 'd2', indonesian: 'p'.repeat(150), english: 'q'.repeat(150) },
+    { id: 'd3', indonesian: 'm'.repeat(150), english: 'n'.repeat(150) },
+  ];
+  // id-en: prompt embeds the long Indonesian term, options are English values.
+  const q = build(longCard, longPool, { type: 'id-en', rng: () => 0 });
+  assert.ok(q.promptText.length <= 300, `promptText ${q.promptText.length} > 300`);
+  for (const o of q.options) assert.ok(o.length <= 100, `option ${o.length} > 100`);
+  assert.ok(q.explanation.length <= 200, `explanation ${q.explanation.length} > 200`);
+  // Options stay unique after clamping.
+  assert.equal(new Set(q.options).size, q.options.length);
+});
