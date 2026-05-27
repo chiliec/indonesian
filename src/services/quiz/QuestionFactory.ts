@@ -64,6 +64,13 @@ export function build(card: QuizCard, pool: readonly QuizCard[], opts: BuildOpts
   const options = shuffle([correct, ...distractors], rng);
   const correctIndex = options.indexOf(correct);
 
+  if (options.length < 2) {
+    throw new Error(`cannot build question for ${card.id}: pool too small (${options.length} option(s))`);
+  }
+  if (correctIndex < 0) {
+    throw new Error(`correct answer missing from options for ${card.id}`);
+  }
+
   const q: Question = {
     cardId: card.id,
     type,

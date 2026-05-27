@@ -20,7 +20,7 @@ export interface Question {
   promptText: string;
   /** OGG filename, present only for audio-* types */
   audioFile?: string;
-  /** exactly 4 answer options */
+  /** answer options (up to 4; fewer only for very small modules) */
   options: string[];
   /** index into options of the correct answer */
   correctIndex: number;

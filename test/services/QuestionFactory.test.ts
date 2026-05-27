@@ -40,6 +40,14 @@ test('en-id builds indonesian options', () => {
   assert.match(q.promptText, /market/);
 });
 
+test('audio-id builds indonesian options with audio', () => {
+  const q = build(pool[0]!, pool, { type: 'audio-id', rng: () => 0 });
+  assert.equal(q.type, 'audio-id');
+  assert.equal(q.audioFile, 'a.ogg');
+  assert.equal(q.options[q.correctIndex], 'pasar');
+  assert.equal(q.options.length, 4);
+});
+
 test('distractors come from the pool and never duplicate the answer', () => {
   const q = build(pool[0]!, pool, { type: 'id-en', rng: () => 0.3 });
   const others = q.options.filter((_, i) => i !== q.correctIndex);
