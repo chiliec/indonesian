@@ -1,0 +1,950 @@
+id: module-5
+title:
+  en: Module 5
+  ru: Модуль 5
+cards:
+  - id: module-5-0001
+    indonesian: berganti
+    english: to have one thing replaced with another, to change
+    audio: 44aa1bd77f64.ogg
+  - id: module-5-0002
+    indonesian: berubah
+    english: to change, to evolve, to be different from before
+    audio: a61dde0a1087.ogg
+  - id: module-5-0003
+    indonesian: kata kerja
+    english: a verb
+    audio: f904beba4310.ogg
+  - id: module-5-0004
+    indonesian: memukul (pukul)
+    english: to hit someone/something, to strike
+    audio: 0790f1271bd4.ogg
+  - id: module-5-0005
+    indonesian: menerima (terima)
+    english: to receive something, to accept something
+    audio: 2164451e94e9.ogg
+  - id: module-5-0006
+    indonesian: mengantar (antar)
+    english: to take/accompany someone somewhere, to deliver something or someone to
+      a certain place
+    audio: 77629bfc1133.ogg
+  - id: module-5-0007
+    indonesian: mengatur (atur)
+    english: to arrange something, to regulate something
+    audio: 291bf8f3eab5.ogg
+  - id: module-5-0008
+    indonesian: menggoreng (goreng)
+    english: to fry something
+    audio: c7c59554d1b3.ogg
+  - id: module-5-0009
+    indonesian: menghitung (hitung)
+    english: to count something
+    audio: b22343381b68.ogg
+  - id: module-5-0010
+    indonesian: mengirim (kirim)
+    english: to send something
+    audio: 57f051d6908e.ogg
+  - id: module-5-0011
+    indonesian: mengisi (isi)
+    english: to fill something,
+    audio: 2b14d6e1e6d0.ogg
+  - id: module-5-0012
+    indonesian: menikah (nikah)
+    english: to get married
+    audio: ac8f5202cdcb.ogg
+  - id: module-5-0013
+    indonesian: menutup (tutup)
+    english: to shut something, to close something
+    audio: 402582cf6255.ogg
+  - id: module-5-0014
+    indonesian: menyimpan (simpan)
+    english: to store something away, to save/deposit money
+    audio: 86bd980cb508.ogg
+  - id: module-5-0015
+    indonesian: merasa (rasa)
+    english: to feel (an emotion), to feel that...
+    audio: 37adb782c5cb.ogg
+  - id: module-5-0016
+    indonesian: mohon
+    english: to ask someone for something (respectfully)
+    audio: dd62158a8c3e.ogg
+  - id: module-5-0017
+    indonesian: pena
+    english: a pen
+    audio: 1668496c724e.ogg
+  - id: module-5-0018
+    indonesian: pensil
+    english: a pencil
+    audio: dfae739a2c02.ogg
+  - id: module-5-0019
+    indonesian: rasa
+    english: a feeling, a sense, a sensation of something
+    audio: a91f521f252d.ogg
+  - id: module-5-0020
+    indonesian: sedih
+    english: sad, to feel sadness
+    audio: 42572cfe4a31.ogg
+  - id: module-5-0021
+    indonesian: kamus
+    english: a dictionary
+    audio: 70418598fd6f.ogg
+  - id: module-5-0022
+    indonesian: memotong (potong)
+    english: to cut something, to cut something off
+    audio: ba43b6e9a06d.ogg
+  - id: module-5-0023
+    indonesian: menanam (tanam)
+    english: to plant something, to grow something e.g. a crop
+    audio: 16fdde923a1a.ogg
+  - id: module-5-0024
+    indonesian: mengubah (ubah)
+    english: to change, to alter
+    audio: a5336257cd02.ogg
+  - id: module-5-0025
+    indonesian: padi
+    english: rice (as it grows in a paddy field or dry field), a rice plant
+    audio: 6613af1ef2bc.ogg
+  - id: module-5-0026
+    indonesian: akuntan
+    english: an accountant
+    audio: 69b7e383ba24.ogg
+  - id: module-5-0027
+    indonesian: dokter gigi
+    english: a dentist
+    audio: 51fc0951b62b.ogg
+  - id: module-5-0028
+    indonesian: efisien
+    english: efficient
+    audio: d20b82a2dc86.ogg
+  - id: module-5-0029
+    indonesian: gagal
+    english: to not succeed, to fail
+    audio: 8a94ce0374b0.ogg
+  - id: module-5-0030
+    indonesian: ibu rumah tangga
+    english: a housewife
+    audio: 1571ad402a6d.ogg
+  - id: module-5-0031
+    indonesian: insinyur
+    english: an engineer
+    audio: e27b1b6992ad.ogg
+  - id: module-5-0032
+    indonesian: jenis
+    english: a type, a category, a class of something, a species of something
+    audio: dc75897ea787.ogg
+  - id: module-5-0033
+    indonesian: marah
+    english: angry
+    audio: 4469f8dafbd2.ogg
+  - id: module-5-0034
+    indonesian: mengetik (ketik)
+    english: to type
+    audio: ad2848df3858.ogg
+  - id: module-5-0035
+    indonesian: montir
+    english: a mechanic
+    audio: 2a7ff3223f75.ogg
+  - id: module-5-0036
+    indonesian: pegawai negeri
+    english: a civil servant
+    audio: e63b2e666da3.ogg
+  - id: module-5-0037
+    indonesian: pelayan (layan)
+    english: a waiter / waitress
+    audio: 5bdd2fd251bb.ogg
+  - id: module-5-0038
+    indonesian: pemain (main)
+    english: a player
+    audio: 9de96557fadf.ogg
+  - id: module-5-0039
+    indonesian: pengusaha (usaha)
+    english: a businessman, a businesswoman, an entrepreneur
+    audio: e07db2cd362c.ogg
+  - id: module-5-0040
+    indonesian: rajin
+    english: conscientious, industrious, hard-working, disciplined, diligent
+    audio: a25408bc1755.ogg
+  - id: module-5-0041
+    indonesian: sebetulnya
+    english: actually, to be honest, as a matter of fact
+    audio: a1a436e7b756.ogg
+  - id: module-5-0042
+    indonesian: sepatu
+    english: shoes
+    audio: 1b16e31792e9.ogg
+  - id: module-5-0043
+    indonesian: sekretaris
+    english: a secretary
+    audio: 22c62ada5ef0.ogg
+  - id: module-5-0044
+    indonesian: sopir
+    english: a driver
+    audio: f468a211380f.ogg
+  - id: module-5-0045
+    indonesian: tentara
+    english: a soldier, the army, the armed forces
+    audio: c2e8ad0e8f7a.ogg
+  - id: module-5-0046
+    indonesian: terima telepon
+    english: to answer the phone, to take a phone call
+    audio: 036e871756f4.ogg
+  - id: module-5-0047
+    indonesian: tugas
+    english: the things you have to do (as part of a job), a task, duties, obligations
+    audio: 90a86cb6053f.ogg
+  - id: module-5-0048
+    indonesian: tukang kayu
+    english: a carpenter
+    audio: db89aaea9ebe.ogg
+  - id: module-5-0049
+    indonesian: tukang listrik
+    english: an electrician
+    audio: d2be3c8a10fe.ogg
+  - id: module-5-0050
+    indonesian: wartawan
+    english: a journalist, a reporter
+    audio: 9432c8c8c69e.ogg
+  - id: module-5-0051
+    indonesian: bengkel
+    english: workshop, repairshop
+    audio: 03d8bdd67a8d.ogg
+  - id: module-5-0052
+    indonesian: ekor
+    english: animal's tail, counter-word for animals
+    audio: dbd31f2036b3.ogg
+  - id: module-5-0053
+    indonesian: hadiah
+    english: a gift, a present
+    audio: f3f8696420c5.ogg
+  - id: module-5-0054
+    indonesian: ibu
+    english: mother, a lady, you (in addressing an elder female)
+    audio: b4009314fc6b.ogg
+  - id: module-5-0055
+    indonesian: kepala sekolah
+    english: school principal
+    audio: e8e51d616382.ogg
+  - id: module-5-0056
+    indonesian: melukis (lukis)
+    english: to paint
+    audio: 0df9e43aaefd.ogg
+  - id: module-5-0057
+    indonesian: sapi
+    english: cattle, cow, farm ox
+    audio: 39e00101cbd1.ogg
+  - id: module-5-0058
+    indonesian: seniman
+    english: an artist
+    audio: 0e9286be3ed2.ogg
+  - id: module-5-0059
+    indonesian: tukang masak
+    english: cook
+    audio: d0c1699dbc04.ogg
+  - id: module-5-0060
+    indonesian: baru (2)
+    english: it is only then that...
+    audio: f0426c8e15be.ogg
+  - id: module-5-0061
+    indonesian: habis
+    english: used up, all gone
+    audio: 0fab9801eea0.ogg
+  - id: module-5-0062
+    indonesian: jarang
+    english: rarely, seldom
+    audio: d8a01d3ce3f8.ogg
+  - id: module-5-0063
+    indonesian: kue kering
+    english: biscuits, cookies
+    audio: a540ff8b8399.ogg
+  - id: module-5-0064
+    indonesian: makanan kecil
+    english: snackfood
+    audio: 44fbaf695808.ogg
+  - id: module-5-0065
+    indonesian: mengurus (urus)
+    english: to take care of something
+    audio: 2a3c84036202.ogg
+  - id: module-5-0066
+    indonesian: organisasi
+    english: organisation
+    audio: f46b79985994.ogg
+  - id: module-5-0067
+    indonesian: pembangunan (bangun)
+    english: development
+    audio: af45866de079.ogg
+  - id: module-5-0068
+    indonesian: program
+    english: plan/program of action
+    audio: 1bd04e14b5ec.ogg
+  - id: module-5-0069
+    indonesian: rapat
+    english: meeting
+    audio: c3d28075c148.ogg
+  - id: module-5-0070
+    indonesian: sambal
+    english: chili-based side dish, chili paste
+    audio: 7a51a24c6cd8.ogg
+  - id: module-5-0071
+    indonesian: sedikit
+    english: a little, a few
+    audio: 32a48487feb7.ogg
+  - id: module-5-0072
+    indonesian: urusan
+    english: matters requiring attention, affairs
+    audio: d09e9e9a32af.ogg
+  - id: module-5-0073
+    indonesian: berwawancara
+    english: to conduct an interview
+    audio: a018e960849d.ogg
+  - id: module-5-0074
+    indonesian: masalah
+    english: problem
+    audio: ced491845ce1.ogg
+  - id: module-5-0075
+    indonesian: membangun (bangun)
+    english: to build/construct something
+    audio: 40d72dba6017.ogg
+  - id: module-5-0076
+    indonesian: mencari jalan
+    english: to try to find a way
+    audio: 5743b59cc8bb.ogg
+  - id: module-5-0077
+    indonesian: orang desa
+    english: a villager
+    audio: 254860371852.ogg
+  - id: module-5-0078
+    indonesian: setelah
+    english: after (a more formal variant of sesudah)
+    audio: 6d284894f2ab.ogg
+  - id: module-5-0079
+    indonesian: abjad
+    english: alphabet
+    audio: f0bcc15c6587.ogg
+  - id: module-5-0080
+    indonesian: ejaan
+    english: spelling
+    audio: ee111e8d61b1.ogg
+  - id: module-5-0081
+    indonesian: huruf
+    english: letter
+    audio: e713d024f541.ogg
+  - id: module-5-0082
+    indonesian: khusus
+    english: special, specific (adjective)
+    audio: d70169c562fe.ogg
+  - id: module-5-0083
+    indonesian: peneliti (teliti)
+    english: researcher
+    audio: 6281975905ac.ogg
+  - id: module-5-0084
+    indonesian: sekali lagi
+    english: once more, once again
+    audio: 14811ce46d08.ogg
+  - id: module-5-0085
+    indonesian: terima kasih kembali
+    english: you're welcome
+    audio: 3d3a55381607.ogg
+  - id: module-5-0086
+    indonesian: tulisan
+    english: writing, piece of writing
+    audio: ed742d5797e7.ogg
+  - id: module-5-0087
+    indonesian: ucapan
+    english: pronunciation
+    audio: feabb86a9906.ogg
+  - id: module-5-0088
+    indonesian: atas (1)
+    english: above
+    audio: 9a358d7faa64.ogg
+  - id: module-5-0089
+    indonesian: bawah
+    english: below
+    audio: 5a21e8cb6c20.ogg
+  - id: module-5-0090
+    indonesian: berbeda
+    english: different
+    audio: 1c54294ed988.ogg
+  - id: module-5-0091
+    indonesian: dasar
+    english: basic, foundation
+    audio: 7c2e0537bdb9.ogg
+  - id: module-5-0092
+    indonesian: dunia
+    english: world
+    audio: f4be7c75dec7.ogg
+  - id: module-5-0093
+    indonesian: hal
+    english: matter
+    audio: 25b2198c895c.ogg
+  - id: module-5-0094
+    indonesian: ilmu pengetahuan
+    english: science
+    audio: 6ca2aa92eb15.ogg
+  - id: module-5-0095
+    indonesian: kejuruan
+    english: vocational
+    audio: 90c1073c13ce.ogg
+  - id: module-5-0096
+    indonesian: kurang banyak
+    english: too few, not enough
+    audio: 829cd66f0159.ogg
+  - id: module-5-0097
+    indonesian: kurikulum
+    english: curriculum
+    audio: 83123a041717.ogg
+  - id: module-5-0098
+    indonesian: lebih dulu
+    english: first, earlier
+    audio: 7bc503720396.ogg
+  - id: module-5-0099
+    indonesian: mata pelajaran
+    english: subject
+    audio: 1351ef551167.ogg
+  - id: module-5-0100
+    indonesian: milik
+    english: belonging of, owned by
+    audio: f54599b2b9d4.ogg
+  - id: module-5-0101
+    indonesian: muatan lokal
+    english: local content
+    audio: 2de0709751eb.ogg
+  - id: module-5-0102
+    indonesian: negeri
+    english: (adjective) state, government (owned)
+    audio: 92d2670b43ff.ogg
+  - id: module-5-0103
+    indonesian: pendidikan (didik)
+    english: education
+    audio: 99e2ec790505.ogg
+  - id: module-5-0104
+    indonesian: sebagian besar
+    english: most
+    audio: 3b75e6df1e47.ogg
+  - id: module-5-0105
+    indonesian: sistem
+    english: system
+    audio: 71467391e694.ogg
+  - id: module-5-0106
+    indonesian: tanaman
+    english: plant
+    audio: 3a902f2ee3e1.ogg
+  - id: module-5-0107
+    indonesian: termasuk
+    english: included in, including
+    audio: f551b840a087.ogg
+  - id: module-5-0108
+    indonesian: tingkat
+    english: level
+    audio: d5d02dc9793d.ogg
+  - id: module-5-0109
+    indonesian: umum
+    english: public, general
+    audio: 56b3ad8d0bdc.ogg
+  - id: module-5-0110
+    indonesian: berguna
+    english: useful
+    audio: 0c3a11201ba6.ogg
+  - id: module-5-0111
+    indonesian: berkebun
+    english: to garden
+    audio: 81c99db55705.ogg
+  - id: module-5-0112
+    indonesian: bersifat
+    english: in nature, in character
+    audio: 0f95d6d599ce.ogg
+  - id: module-5-0113
+    indonesian: cara
+    english: way
+    audio: 47e85cce97ea.ogg
+  - id: module-5-0114
+    indonesian: fisika
+    english: physics
+    audio: db0c839a2be9.ogg
+  - id: module-5-0115
+    indonesian: hasil
+    english: result, yield
+    audio: 6ffc907a2ef3.ogg
+  - id: module-5-0116
+    indonesian: kambing
+    english: goat
+    audio: 4b86787d1dbc.ogg
+  - id: module-5-0117
+    indonesian: kerbau
+    english: water buffalo
+    audio: 4cb15840686c.ogg
+  - id: module-5-0118
+    indonesian: keterampilan
+    english: skill
+    audio: 102031657f3a.ogg
+  - id: module-5-0119
+    indonesian: menengah (tengah)
+    english: middle-level
+    audio: 4afe1d745099.ogg
+  - id: module-5-0120
+    indonesian: mesin cuci
+    english: washing machine
+    audio: d31af41e6f4d.ogg
+  - id: module-5-0121
+    indonesian: mesin
+    english: engine, machine
+    audio: 3657b715b73a.ogg
+  - id: module-5-0122
+    indonesian: para
+    english: plural marker for human beings
+    audio: b7a69156c696.ogg
+  - id: module-5-0123
+    indonesian: pertanian
+    english: agriculture
+    audio: cc3419b4cb6d.ogg
+  - id: module-5-0124
+    indonesian: siswa
+    english: school student
+    audio: 4825be16b93f.ogg
+  - id: module-5-0125
+    indonesian: usaha tani
+    english: agricultural enterprise
+    audio: 842955e4f4d4.ogg
+  - id: module-5-0126
+    indonesian: berbagai
+    english: various
+    audio: a788a3cf56e6.ogg
+  - id: module-5-0127
+    indonesian: bersama-sama
+    english: together
+    audio: 10a5290e41aa.ogg
+  - id: module-5-0128
+    indonesian: ilmu pengetahuan alam
+    english: natural science
+    audio: f09ed4714d9e.ogg
+  - id: module-5-0129
+    indonesian: ilmu pengetahuan sosial
+    english: social science
+    audio: ac28ef1e4753.ogg
+  - id: module-5-0130
+    indonesian: pada waktu itu
+    english: at that time
+    audio: 8e47a76887f1.ogg
+  - id: module-5-0131
+    indonesian: Sekolah Menengah Atas (SMA)
+    english: high school
+    audio: d68b1496bc1b.ogg
+  - id: module-5-0132
+    indonesian: ahli
+    english: expert
+    audio: 03d153bafac4.ogg
+  - id: module-5-0133
+    indonesian: bibi
+    english: aunt
+    audio: 218090ab6414.ogg
+  - id: module-5-0134
+    indonesian: ekonomi pertanian
+    english: agricultural economic
+    audio: 88071b9334b4.ogg
+  - id: module-5-0135
+    indonesian: gelar
+    english: degree, professional title, title of respect
+    audio: 04401f01711f.ogg
+  - id: module-5-0136
+    indonesian: Katolik
+    english: Catholic
+    audio: 48e2727d06ac.ogg
+  - id: module-5-0137
+    indonesian: yang ke-
+    english: the ____th (of number)
+    audio: 800492451f35.ogg
+  - id: module-5-0138
+    indonesian: laboratorium
+    english: laboratory
+    audio: 7c537f7aa245.ogg
+  - id: module-5-0139
+    indonesian: mengatakan (katakan)
+    english: to say something
+    audio: cd1ae8f4c477.ogg
+  - id: module-5-0140
+    indonesian: paman
+    english: uncle
+    audio: bbb8f05ca6cd.ogg
+  - id: module-5-0141
+    indonesian: sarjana
+    english: university graduate
+    audio: 610df6b34875.ogg
+  - id: module-5-0142
+    indonesian: sosiologi
+    english: sociology
+    audio: 3e2d029f1f01.ogg
+  - id: module-5-0143
+    indonesian: teknik mesin
+    english: mechanical engineering
+    audio: 4f0f9e0ffa36.ogg
+  - id: module-5-0144
+    indonesian: teknik pertanian
+    english: agricultural engineering
+    audio: 6d8f309d925a.ogg
+  - id: module-5-0145
+    indonesian: buat
+    english: (informal) for
+    audio: 86655b52a454.ogg
+  - id: module-5-0146
+    indonesian: bermasalah
+    english: to have a problem
+    audio: 5593d86c43da.ogg
+  - id: module-5-0147
+    indonesian: gampang
+    english: easy
+    audio: 5a4974494fd4.ogg
+  - id: module-5-0148
+    indonesian: kasus
+    english: case
+    audio: d70bef44f9f3.ogg
+  - id: module-5-0149
+    indonesian: mikir (pikir)
+    english: (informal) to think
+    audio: a48624b782b8.ogg
+  - id: module-5-0150
+    indonesian: milih (pilih)
+    english: (informal) to choose
+    audio: 4ea59f464c0f.ogg
+  - id: module-5-0151
+    indonesian: ngobrol
+    english: to chat, to talk about something (informal)
+    audio: df92de783aae.ogg
+  - id: module-5-0152
+    indonesian: nolong (tolong)
+    english: (informal) to help
+    audio: 7b9a597579d9.ogg
+  - id: module-5-0153
+    indonesian: pengacara (acara)
+    english: lawyer
+    audio: 9ed0ea3ecc94.ogg
+  - id: module-5-0154
+    indonesian: soal
+    english: about (informal)
+    audio: 3828197b40be.ogg
+  - id: module-5-0155
+    indonesian: soalnya
+    english: (informal) the thing is, because
+    audio: 60a19934437e.ogg
+  - id: module-5-0156
+    indonesian: studi pembangunan
+    english: development studies
+    audio: ecbe2907e405.ogg
+  - id: module-5-0157
+    indonesian: teknik elektro
+    english: electrical engineering
+    audio: a82947d820d6.ogg
+  - id: module-5-0158
+    indonesian: terus (2)
+    english: and then (informal)
+    audio: e7b1eef4d0f4.ogg
+  - id: module-5-0159
+    indonesian: bangsawan
+    english: a noble
+    audio: 80febe97485e.ogg
+  - id: module-5-0160
+    indonesian: belum pernah
+    english: has/have never
+    audio: ed2636cb4fe6.ogg
+  - id: module-5-0161
+    indonesian: bintang
+    english: star
+    audio: fdfcb27a3849.ogg
+  - id: module-5-0162
+    indonesian: penari (tari)
+    english: dancer
+    audio: 65b14fac4411.ogg
+  - id: module-5-0163
+    indonesian: perdana menteri
+    english: prime minister
+    audio: 99ecfe4c8a23.ogg
+  - id: module-5-0164
+    indonesian: sampai sekarang
+    english: so far
+    audio: 5ac93159497f.ogg
+  - id: module-5-0165
+    indonesian: sudah pernah
+    english: has/have ever
+    audio: 0d67e92c7b5e.ogg
+  - id: module-5-0166
+    indonesian: belum biasa
+    english: not yet used to
+    audio: ada6c62ef7a5.ogg
+  - id: module-5-0167
+    indonesian: berani
+    english: dare to do something
+    audio: 4c755e30ab60.ogg
+  - id: module-5-0168
+    indonesian: berhasil
+    english: to be successful, to have success, to succeed
+    audio: 037f5d820fec.ogg
+  - id: module-5-0169
+    indonesian: berbahasa
+    english: to be a speaker of a language
+    audio: 7012e6b452ba.ogg
+  - id: module-5-0170
+    indonesian: kayu jati
+    english: teak
+    audio: 4caeb2cf280e.ogg
+  - id: module-5-0171
+    indonesian: minuman keras
+    english: alcoholic drinks
+    audio: 2122abee0be3.ogg
+  - id: module-5-0172
+    indonesian: pedagang
+    english: a dealer/merchant
+    audio: 12a9696b5c69.ogg
+  - id: module-5-0173
+    indonesian: pekerja
+    english: a worker
+    audio: 330107af8435.ogg
+  - id: module-5-0174
+    indonesian: pelatih
+    english: a coach
+    audio: 5b1f398b967a.ogg
+  - id: module-5-0175
+    indonesian: pemimpin (pimpin)
+    english: a leader
+    audio: 458f5dd4047b.ogg
+  - id: module-5-0176
+    indonesian: pengajar (ajar)
+    english: a teacher
+    audio: 4d94c8ae73ff.ogg
+  - id: module-5-0177
+    indonesian: pengalaman
+    english: experience
+    audio: b6a53bc6206d.ogg
+  - id: module-5-0178
+    indonesian: pengelola (kelola)
+    english: a manager
+    audio: bbacb1fa6f5d.ogg
+  - id: module-5-0179
+    indonesian: penjual (jual)
+    english: a seller
+    audio: cd4c054d9b57.ogg
+  - id: module-5-0180
+    indonesian: penulis (tulis)
+    english: a writer, an author
+    audio: 954a3f4df355.ogg
+  - id: module-5-0181
+    indonesian: penyanyi
+    english: a singer
+    audio: 7b626de9323c.ogg
+  - id: module-5-0182
+    indonesian: petugas
+    english: a staffer
+    audio: 92fe5f67a892.ogg
+  - id: module-5-0183
+    indonesian: rokok
+    english: a cigarette
+    audio: 4f1dd27efa70.ogg
+  - id: module-5-0184
+    indonesian: sudah biasa
+    english: to be used to
+    audio: 87993497949e.ogg
+  - id: module-5-0185
+    indonesian: traktor
+    english: tractor
+    audio: 4f0224367962.ogg
+  - id: module-5-0186
+    indonesian: angka
+    english: a figure, digits
+    audio: bf0bd151d44c.ogg
+  - id: module-5-0187
+    indonesian: bercerita
+    english: to tell
+    audio: 630b5400cd7a.ogg
+  - id: module-5-0188
+    indonesian: berpengalaman
+    english: experienced
+    audio: d7e79753af6b.ogg
+  - id: module-5-0189
+    indonesian: bersedia
+    english: to be willing
+    audio: 900bed9577f9.ogg
+  - id: module-5-0190
+    indonesian: cewek
+    english: a chick, a young woman
+    audio: f646770caacb.ogg
+  - id: module-5-0191
+    indonesian: dua kali
+    english: twice
+    audio: b70fd8799e87.ogg
+  - id: module-5-0192
+    indonesian: ganti
+    english: to replace, to change
+    audio: 3b9ad14dcce4.ogg
+  - id: module-5-0193
+    indonesian: kartu
+    english: a card
+    audio: 2d5f1017321a.ogg
+  - id: module-5-0194
+    indonesian: komponen
+    english: a component
+    audio: d899e4215dad.ogg
+  - id: module-5-0195
+    indonesian: surat lamaran
+    english: an application
+    audio: 466701bb273a.ogg
+  - id: module-5-0196
+    indonesian: memasang (pasang)
+    english: to fit, instal, set/put something in a place
+    audio: af3499c4429f.ogg
+  - id: module-5-0197
+    indonesian: ngomong
+    english: to say talk, chat
+    audio: 8f43bd9e6179.ogg
+  - id: module-5-0198
+    indonesian: nyanyi
+    english: to sing
+    audio: 7c498dc4374a.ogg
+  - id: module-5-0199
+    indonesian: paling tidak
+    english: at least
+    audio: 2b9f70ee5aad.ogg
+  - id: module-5-0200
+    indonesian: resepsionis
+    english: a receptionist
+    audio: abeb8c4ff208.ogg
+  - id: module-5-0201
+    indonesian: riwayat hidup
+    english: a biography
+    audio: 790772190c17.ogg
+  - id: module-5-0202
+    indonesian: asal
+    english: on condition that
+    audio: 084ba936106d.ogg
+  - id: module-5-0203
+    indonesian: hormat
+    english: respect
+    audio: cb7103ecaa88.ogg
+  - id: module-5-0204
+    indonesian: iklan
+    english: an advertisement
+    audio: 0ef305dcc077.ogg
+  - id: module-5-0205
+    indonesian: kepala kantor
+    english: office head
+    audio: 5100baf78ffd.ogg
+  - id: module-5-0206
+    indonesian: lupa
+    english: to forget
+    audio: 6eccd0b26207.ogg
+  - id: module-5-0207
+    indonesian: melalui
+    english: by, through
+    audio: 6996503a08b3.ogg
+  - id: module-5-0208
+    indonesian: melamar
+    english: to apply for (a job), to formally ask for a woman's hand in marriage
+    audio: 1611c4305bc6.ogg
+  - id: module-5-0209
+    indonesian: mengendarai (kendarai)
+    english: to drive
+    audio: 381595cd808d.ogg
+  - id: module-5-0210
+    indonesian: perhatian
+    english: attention
+    audio: b280de7bb393.ogg
+  - id: module-5-0211
+    indonesian: terserah
+    english: it's up to you
+    audio: dd62bed40da6.ogg
+  - id: module-5-0212
+    indonesian: wawancara
+    english: interview
+    audio: d3f309625bc4.ogg
+  - id: module-5-0213
+    indonesian: bidan
+    english: a midwife
+    audio: 9548abda05bb.ogg
+  - id: module-5-0214
+    indonesian: cucu
+    english: a grandson/a granddaughter
+    audio: b2de5a049deb.ogg
+  - id: module-5-0215
+    indonesian: dibandingkan
+    english: to be compared
+    audio: aa3fc3846599.ogg
+  - id: module-5-0216
+    indonesian: dokter hewan
+    english: a vetinary doctor, a vet
+    audio: da81e24ed091.ogg
+  - id: module-5-0217
+    indonesian: film horor
+    english: a horror movie/film
+    audio: 3eb69496a3ca.ogg
+  - id: module-5-0218
+    indonesian: hobi
+    english: hobby
+    audio: b6460dcedc32.ogg
+  - id: module-5-0219
+    indonesian: ijazah
+    english: a diploma
+    audio: 04b970170bf5.ogg
+  - id: module-5-0220
+    indonesian: kaca mata
+    english: glasses
+    audio: b9a31acf4363.ogg
+  - id: module-5-0221
+    indonesian: kekurangan
+    english: to be short of
+    audio: 9aaff2e827ed.ogg
+  - id: module-5-0222
+    indonesian: kuda
+    english: a horse
+    audio: a895311c03ff.ogg
+  - id: module-5-0223
+    indonesian: mata
+    english: an eye
+    audio: 05da3689f40d.ogg
+  - id: module-5-0224
+    indonesian: melayani
+    english: to serve someone, to attend to (customers)
+    audio: 188f58238945.ogg
+  - id: module-5-0225
+    indonesian: panitia
+    english: a committee
+    audio: d15c34570896.ogg
+  - id: module-5-0226
+    indonesian: penyakit
+    english: a disease
+    audio: 696c11a1e67a.ogg
+  - id: module-5-0227
+    indonesian: praktis
+    english: practical
+    audio: 6335b6217a29.ogg
+  - id: module-5-0228
+    indonesian: Puskesmas
+    english: a community health centre
+    audio: 6a86f98c54cf.ogg
+  - id: module-5-0229
+    indonesian: sakit jantung
+    english: to have a heart disease
+    audio: da9d57435a97.ogg
+  - id: module-5-0230
+    indonesian: salon kecantikan
+    english: a beauty salon
+    audio: 46807f96b467.ogg
+  - id: module-5-0231
+    indonesian: sarjana muda
+    english: Bachelor of Arts
+    audio: 92c96d4a9a60.ogg
+  - id: module-5-0232
+    indonesian: seksi
+    english: a section
+    audio: 948b7c237ab8.ogg
+  - id: module-5-0233
+    indonesian: skripsi
+    english: a thesis
+    audio: edbd3147f454.ogg
+  - id: module-5-0234
+    indonesian: tebal
+    english: thick
+    audio: 881ba0a8cc78.ogg
+  - id: module-5-0235
+    indonesian: tergantung pada
+    english: to depend on
+    audio: 15b9365c9ebe.ogg
+  - id: module-5-0236
+    indonesian: tergantung
+    english: to hang, be suspended
+    audio: 18b9e76c77f9.ogg

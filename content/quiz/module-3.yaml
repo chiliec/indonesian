@@ -1,0 +1,1095 @@
+id: module-3
+title:
+  en: Module 3
+  ru: Модуль 3
+cards:
+  - id: module-3-0001
+    indonesian: berangkat
+    english: to depart, to set off (to go somewhere) to leave (on a trip)
+    audio: ddb5c9d7778d.ogg
+  - id: module-3-0002
+    indonesian: berkunjung (ke)
+    english: to visit (a place)
+    audio: e59e337924e3.ogg
+  - id: module-3-0003
+    indonesian: kurang (time)
+    english: to, before (when telling the time)
+    audio: c37610a10dee.ogg
+  - id: module-3-0004
+    indonesian: lewat
+    english: past (when telling the time),to go past
+    audio: 876e900f70ea.ogg
+  - id: module-3-0005
+    indonesian: makan pagi
+    english: to have breakfast
+    audio: 3fa3bb64815f.ogg
+  - id: module-3-0006
+    indonesian: makan siang
+    english: to have lunch
+    audio: a13c1c94358d.ogg
+  - id: module-3-0007
+    indonesian: makan malam
+    english: to have dinner
+    audio: 4a158966c39e.ogg
+  - id: module-3-0008
+    indonesian: perusahaan
+    english: company, business enterprise
+    audio: bd7cab2ec0ac.ogg
+  - id: module-3-0009
+    indonesian: pukul
+    english: o'clock[a marker word used to express the time of day in hours and minutes]
+    audio: 36130c0176d1.ogg
+  - id: module-3-0010
+    indonesian: sampai
+    english: until (a certain time) as far as (a certain place)
+    audio: 99aab4b4bef6.ogg
+  - id: module-3-0011
+    indonesian: sarapan
+    english: breakfast, to have breakfast
+    audio: 3e6812ad7ef9.ogg
+  - id: module-3-0012
+    indonesian: seperempat
+    english: a quarter
+    audio: 84fbc9fc1d61.ogg
+  - id: module-3-0013
+    indonesian: setengah
+    english: a half
+    audio: 83b751d2ce7c.ogg
+  - id: module-3-0014
+    indonesian: tengah malam
+    english: at midnight, in the middle of the night
+    audio: 961a608ecf75.ogg
+  - id: module-3-0015
+    indonesian: tertawa
+    english: to laugh
+    audio: 8a680019382c.ogg
+  - id: module-3-0016
+    indonesian: apaan
+    english: (slangy) what kind of...
+    audio: 93ad450c50b4.ogg
+  - id: module-3-0017
+    indonesian: banget
+    english: (slangy)very, really
+    audio: a8b680db4ebd.ogg
+  - id: module-3-0018
+    indonesian: beres
+    english: fixed up, put right, all okay, resolved
+    audio: 7fd15c2d261b.ogg
+  - id: module-3-0019
+    indonesian: berlari
+    english: to run
+    audio: 7302be98dcc5.ogg
+  - id: module-3-0020
+    indonesian: doyan
+    english: (slangy) to like (especially food)
+    audio: cce41b437412.ogg
+  - id: module-3-0021
+    indonesian: ikut kuliah
+    english: to attend a lecture, to go to a lecture
+    audio: 1c613538fca1.ogg
+  - id: module-3-0022
+    indonesian: jam berapa?
+    english: what time?
+    audio: d183013634e8.ogg
+  - id: module-3-0023
+    indonesian: kalo
+    english: (slangy) if as for (me/him/that etc.) as far as ... is concerned (informal)
+    audio: 3989efa76f17.ogg
+  - id: module-3-0024
+    indonesian: ketemu
+    english: (informal) to meet, to find
+    audio: 6751e2fcf8ee.ogg
+  - id: module-3-0025
+    indonesian: lapangan
+    english: a field, a (sports) ground, an open space (especially for recreation)
+    audio: 65826bfea4cc.ogg
+  - id: module-3-0026
+    indonesian: lebih suka
+    english: to prefer,to like something better
+    audio: 5d733531954e.ogg
+  - id: module-3-0027
+    indonesian: lumayan
+    english: not bad, quite good
+    audio: 6630138cd794.ogg
+  - id: module-3-0028
+    indonesian: nanti siang
+    english: this afternoon (spoken in the morning)
+    audio: 9364c0224807.ogg
+  - id: module-3-0029
+    indonesian: nanti sore
+    english: late this afternoon (spoken earlier in the day)
+    audio: e212d5d15d1e.ogg
+  - id: module-3-0030
+    indonesian: nanti malam
+    english: tonight (spoken earlier in the day)
+    audio: 4783f7cd382c.ogg
+  - id: module-3-0031
+    indonesian: pake
+    english: (informal)by (a certain mode of transport), with
+    audio: 755bc8b0d3f3.ogg
+  - id: module-3-0032
+    indonesian: pulang
+    english: to come home, to go home
+    audio: 21e9f32671f9.ogg
+  - id: module-3-0033
+    indonesian: sih
+    english: "[a slangy particle that adds emphasis and colour to a question]"
+    audio: 4156fa2fb066.ogg
+  - id: module-3-0034
+    indonesian: tentu saja
+    english: of course
+    audio: c70d67482e90.ogg
+  - id: module-3-0035
+    indonesian: yuk
+    english: c'mon, let's...
+    audio: ad2e57ada030.ogg
+  - id: module-3-0036
+    indonesian: hari
+    english: a day
+    audio: 449332b3d336.ogg
+  - id: module-3-0037
+    indonesian: kadang-kadang
+    english: sometimes, occasionally, from time to time
+    audio: fada876e7940.ogg
+  - id: module-3-0038
+    indonesian: musik
+    english: music
+    audio: adf353b0386c.ogg
+  - id: module-3-0039
+    indonesian: pada pagi hari
+    english: in the morning(s)
+    audio: 25bfd33fd9d9.ogg
+  - id: module-3-0040
+    indonesian: pada siang hari
+    english: in the afternoon(s)
+    audio: 36e149e7e972.ogg
+  - id: module-3-0041
+    indonesian: pada sore hari
+    english: in the late afternoon(s)
+    audio: 0589c53fce9c.ogg
+  - id: module-3-0042
+    indonesian: pada malam hari
+    english: at night
+    audio: b356b213c722.ogg
+  - id: module-3-0043
+    indonesian: salah
+    english: wrong, to be wrong
+    audio: 355f770f60d4.ogg
+  - id: module-3-0044
+    indonesian: tenis
+    english: tennis
+    audio: 825b11d1ee12.ogg
+  - id: module-3-0045
+    indonesian: acara
+    english: a television/radio program, something you plan to do
+    audio: d46f57431f84.ogg
+  - id: module-3-0046
+    indonesian: apalagi
+    english: particularly, the more so, especially
+    audio: 7389849c20c0.ogg
+  - id: module-3-0047
+    indonesian: apartemen
+    english: an apartment, a flat, a unit
+    audio: 4514d6df3431.ogg
+  - id: module-3-0048
+    indonesian: berenang
+    english: to swim, to go swimming
+    audio: d0364aecb19f.ogg
+  - id: module-3-0049
+    indonesian: beristirahat
+    english: to rest, to take a rest, to take a break
+    audio: 1bb747b1f372.ogg
+  - id: module-3-0050
+    indonesian: bersembahyang
+    english: to say/do your prayers,to worship
+    audio: 0687b4d42d2f.ogg
+  - id: module-3-0051
+    indonesian: bersenam
+    english: to do gymnastics, to do aerobics, to work out
+    audio: 25dd58c1edec.ogg
+  - id: module-3-0052
+    indonesian: cuma
+    english: just, only
+    audio: b2f0dc4f5c5b.ogg
+  - id: module-3-0053
+    indonesian: kegiatan
+    english: activity
+    audio: 4ea0515b70e7.ogg
+  - id: module-3-0054
+    indonesian: kolam renang
+    english: swimming pool
+    audio: 078b605cad75.ogg
+  - id: module-3-0055
+    indonesian: melakukan (lakukan)
+    english: to do something, to undertake something, to make (a trip, effort)
+    audio: 163849cb43fe.ogg
+  - id: module-3-0056
+    indonesian: lari pagi
+    english: early morning jogging
+    audio: 7318f4d3d02c.ogg
+  - id: module-3-0057
+    indonesian: lu
+    english: you (Jakarta slang)
+    audio: 551c8342ba41.ogg
+  - id: module-3-0058
+    indonesian: makasih
+    english: (informal) thanks
+    audio: f87f75fddf01.ogg
+  - id: module-3-0059
+    indonesian: musala
+    english: prayer room (for Muslims), a small mosque
+    audio: 84c221aae2a1.ogg
+  - id: module-3-0060
+    indonesian: ngapain
+    english: why? why on earth...?, what (is someone) doing?, what for? what's the
+      point?, what's going on?
+    audio: 76fd20a08027.ogg
+  - id: module-3-0061
+    indonesian: nih
+    english: this, at the moment, now
+    audio: 78a30059e413.ogg
+  - id: module-3-0062
+    indonesian: olahraga
+    english: sport
+    audio: f1d7e2b362d4.ogg
+  - id: module-3-0063
+    indonesian: pacaran
+    english: to be going steady, to be dating, to be going out with
+    audio: 188fb3e9ae16.ogg
+  - id: module-3-0064
+    indonesian: sesudah
+    english: after (doing something), after (a certain time)
+    audio: 745209214552.ogg
+  - id: module-3-0065
+    indonesian: sulit
+    english: difficult, hard to do
+    audio: da9bd2f61c17.ogg
+  - id: module-3-0066
+    indonesian: taman
+    english: park
+    audio: 8843eaf290c4.ogg
+  - id: module-3-0067
+    indonesian: hari libur
+    english: a day off, a (day off for a) holiday, a one-day holiday
+    audio: b31a1b379664.ogg
+  - id: module-3-0068
+    indonesian: kalau (Anda) bagaimana?
+    english: what about (you)?, what about (her/John etc.)
+    audio: 005e284ef829.ogg
+  - id: module-3-0069
+    indonesian: pasti
+    english: definitely, sure to be, bound to (be...), must be (i.e. bound to be)
+    audio: caecc10c5f86.ogg
+  - id: module-3-0070
+    indonesian: sekeluarga
+    english: the whole family
+    audio: 7c7f3d2d8e74.ogg
+  - id: module-3-0071
+    indonesian: sepi
+    english: quiet, lonely, deserted
+    audio: c3b830cd95af.ogg
+  - id: module-3-0072
+    indonesian: suka sekali
+    english: to really like, to enjoy, to love (doing something)
+    audio: 890723dfd34f.ogg
+  - id: module-3-0073
+    indonesian: tidak boleh
+    english: not allowed to, shouldn't, can't (i.e. not permitted to)
+    audio: ca7be1b70c83.ogg
+  - id: module-3-0074
+    indonesian: waktu senggang
+    english: free time, spare time, leisure time
+    audio: 40b4416f7ffa.ogg
+  - id: module-3-0075
+    indonesian: anggur
+    english: wine
+    audio: 3464e00a74a6.ogg
+  - id: module-3-0076
+    indonesian: bulu tangkis
+    english: badminton
+    audio: 40216908bb73.ogg
+  - id: module-3-0077
+    indonesian: capai
+    english: tired
+    audio: df13a3ea90e2.ogg
+  - id: module-3-0078
+    indonesian: gelas
+    english: glass (i.e. a tumbler you drink from), a drinking glass
+    audio: f6841e771287.ogg
+  - id: module-3-0079
+    indonesian: kelab malam
+    english: night club
+    audio: 0c450ca4f195.ogg
+  - id: module-3-0080
+    indonesian: nanti dulu
+    english: just a moment, wait a moment, hang on a sec
+    audio: 6fd2c6e77f07.ogg
+  - id: module-3-0081
+    indonesian: percaya
+    english: to believe
+    audio: 68fcead510df.ogg
+  - id: module-3-0082
+    indonesian: semua
+    english: all, all of them, everyone, everybody
+    audio: 64aa50c397b8.ogg
+  - id: module-3-0083
+    indonesian: tadi malam
+    english: last night
+    audio: a319c0155002.ogg
+  - id: module-3-0084
+    indonesian: ternyata
+    english: so ... after all, it turns out that ... after all
+    audio: 96b380aba497.ogg
+  - id: module-3-0085
+    indonesian: wiski
+    english: whisky
+    audio: 2f6c9d006557.ogg
+  - id: module-3-0086
+    indonesian: besok
+    english: tomorrow
+    audio: 86d8608ee605.ogg
+  - id: module-3-0087
+    indonesian: hari ini
+    english: today
+    audio: 2edc744e517c.ogg
+  - id: module-3-0088
+    indonesian: kemarin
+    english: yesterday
+    audio: 776432774a66.ogg
+  - id: module-3-0089
+    indonesian: hari Minggu
+    english: Sunday
+    audio: c427a297ba4d.ogg
+  - id: module-3-0090
+    indonesian: hari Senin
+    english: Monday
+    audio: 6b8f420af900.ogg
+  - id: module-3-0091
+    indonesian: hari Selasa
+    english: Tuesday
+    audio: 7f619d58b846.ogg
+  - id: module-3-0092
+    indonesian: hari Rabu
+    english: Wednesday
+    audio: 58e0f532fd3b.ogg
+  - id: module-3-0093
+    indonesian: hari Kamis
+    english: Thursday
+    audio: 3c271c7f1827.ogg
+  - id: module-3-0094
+    indonesian: hari Jumat
+    english: Friday
+    audio: c06efa4c4c63.ogg
+  - id: module-3-0095
+    indonesian: hari Sabtu
+    english: Saturday
+    audio: b199f215a7eb.ogg
+  - id: module-3-0096
+    indonesian: kapan
+    english: when?
+    audio: 4aa50b4c91cb.ogg
+  - id: module-3-0097
+    indonesian: agen perjalanan
+    english: travel agent
+    audio: 1761519839f9.ogg
+  - id: module-3-0098
+    indonesian: jadwal
+    english: a schedule
+    audio: a6c010c6b9f6.ogg
+  - id: module-3-0099
+    indonesian: menurut
+    english: according to
+    audio: 7a8f25341871.ogg
+  - id: module-3-0100
+    indonesian: penerbangan
+    english: a flight
+    audio: 64d5e9d06360.ogg
+  - id: module-3-0101
+    indonesian: tiket
+    english: a ticket
+    audio: ea962803d983.ogg
+  - id: module-3-0102
+    indonesian: kepada
+    english: to (when you are talking about something that is directed towards an
+      individual or a group of people, not a place)
+    audio: 16616087a268.ogg
+  - id: module-3-0103
+    indonesian: majalah
+    english: magazine
+    audio: 29a0eb3a2a0c.ogg
+  - id: module-3-0104
+    indonesian: membaca (baca)
+    english: to read
+    audio: a82706b59501.ogg
+  - id: module-3-0105
+    indonesian: membersihkan (bersihkan)
+    english: to clean something
+    audio: 06c01ffeda4a.ogg
+  - id: module-3-0106
+    indonesian: mencuci (cuci)
+    english: to wash
+    audio: ba56a6ac470f.ogg
+  - id: module-3-0107
+    indonesian: mendengarkan (dengarkan)
+    english: to listen to something
+    audio: 5b082fa25d24.ogg
+  - id: module-3-0108
+    indonesian: menonton (tonton)
+    english: to watch something (especially TV, a sports match, a performance, a
+      movie, a spectacle)
+    audio: 42650302e20a.ogg
+  - id: module-3-0109
+    indonesian: menulis (tulis)
+    english: to write
+    audio: da579656cf58.ogg
+  - id: module-3-0110
+    indonesian: menyapu (sapu)
+    english: to sweep
+    audio: d6bf6006e08d.ogg
+  - id: module-3-0111
+    indonesian: novel
+    english: novel
+    audio: 7fdc31d8e4b1.ogg
+  - id: module-3-0112
+    indonesian: piring
+    english: plate, the dishes
+    audio: a5daf10bea1b.ogg
+  - id: module-3-0113
+    indonesian: sapu
+    english: a broom (to sweep floor)
+    audio: c3f10ee31f2a.ogg
+  - id: module-3-0114
+    indonesian: sedang apa?
+    english: what are (you) doing?, what is (he/she) doing?
+    audio: e538f9b40b86.ogg
+  - id: module-3-0115
+    indonesian: surat kabar
+    english: newspaper
+    audio: 7ae1e1e3960e.ogg
+  - id: module-3-0116
+    indonesian: surat
+    english: a letter (i.e. an item of correspondence)
+    audio: 6387aba652be.ogg
+  - id: module-3-0117
+    indonesian: bangun
+    english: to get up (out of bed)
+    audio: 4fcd0710748d.ogg
+  - id: module-3-0118
+    indonesian: berita
+    english: news
+    audio: 2b6481870dc1.ogg
+  - id: module-3-0119
+    indonesian: berpakaian
+    english: to get dressed, to be dressed
+    audio: f20ec5c3b307.ogg
+  - id: module-3-0120
+    indonesian: bersiap-siap
+    english: to get ready, to make preparations, to prepare (for something)
+    audio: b566f5f792e2.ogg
+  - id: module-3-0121
+    indonesian: bersisir
+    english: to comb your hair
+    audio: 4f641f02ebee.ogg
+  - id: module-3-0122
+    indonesian: menggosok gigi
+    english: to brush your teeth
+    audio: 15b1d173d9eb.ogg
+  - id: module-3-0123
+    indonesian: kemudian
+    english: then (after that)
+    audio: 02ed1da91614.ogg
+  - id: module-3-0124
+    indonesian: membeli (beli)
+    english: to buy something
+    audio: 07de8839e512.ogg
+  - id: module-3-0125
+    indonesian: mengambil (ambil)
+    english: to go and get something, to fetch something, to reach out and remove,
+      to pick up something
+    audio: e852696c0cb3.ogg
+  - id: module-3-0126
+    indonesian: pemandangan (pandang)
+    english: view, scene, panorama, (natural) scenery
+    audio: 9e0072d8cea5.ogg
+  - id: module-3-0127
+    indonesian: sebelum
+    english: before (a certain time/event)
+    audio: 44ed30a4bda4.ogg
+  - id: module-3-0128
+    indonesian: sendiri
+    english: self, by oneself (without help from anyone), alone
+    audio: 46df2e942779.ogg
+  - id: module-3-0129
+    indonesian: alat
+    english: device, tool, implement
+    audio: 05aeb2769121.ogg
+  - id: module-3-0130
+    indonesian: baju
+    english: "a shirt, a dress, an upper-body garment, (also loosely: clothes)"
+    audio: 8b02c1f8535c.ogg
+  - id: module-3-0131
+    indonesian: elektronik
+    english: electronic
+    audio: ce2fa2fb8311.ogg
+  - id: module-3-0132
+    indonesian: habis (informal for 'sesudah')
+    english: after (informal)
+    audio: 0fab9801eea0.ogg
+  - id: module-3-0133
+    indonesian: ingin
+    english: to wish (to...), to want (to...)
+    audio: e7ab32b09817.ogg
+  - id: module-3-0134
+    indonesian: jadi (verb)
+    english: to happen, occur, transpire, take place
+    audio: 1e5f4f794809.ogg
+  - id: module-3-0135
+    indonesian: kita
+    english: we (including the person or persons you are talking to)
+    audio: 35ff4952b485.ogg
+  - id: module-3-0136
+    indonesian: kami
+    english: we (excluding the person or persons you are talking to)
+    audio: 0025054c85e8.ogg
+  - id: module-3-0137
+    indonesian: keren
+    english: stylish, trendy
+    audio: ee816ad29660.ogg
+  - id: module-3-0138
+    indonesian: mencoba (coba)
+    english: to try to do something, to try something out, to try on (clothes)
+    audio: 889d1c7d5e99.ogg
+  - id: module-3-0139
+    indonesian: minggu
+    english: week
+    audio: 48a77b2f107b.ogg
+  - id: module-3-0140
+    indonesian: nonton (tonton)
+    english: (informal) to go to the movies, to watch something (especially TV, a
+      sports match, a parade etc.)
+    audio: 69026f7350d4.ogg
+  - id: module-3-0141
+    indonesian: sampai di + name of places
+    english: to arrive in/at (a place), to reach (a destination)
+    audio: 141b28c7ce23.ogg
+  - id: module-3-0142
+    indonesian: yang lalu
+    english: ...ago, last...
+    audio: 19fe5bade89e.ogg
+  - id: module-3-0143
+    indonesian: bahasa Belanda
+    english: Dutch
+    audio: 9825acea3387.ogg
+  - id: module-3-0144
+    indonesian: berkuasa
+    english: to be in power, to be the dominant force
+    audio: c6e92b53c329.ogg
+  - id: module-3-0145
+    indonesian: bikin
+    english: (informal) to make (something)
+    audio: 4f86db9c2d12.ogg
+  - id: module-3-0146
+    indonesian: membuat (buat)
+    english: to make (something)
+    audio: 86ca6dbe9b68.ogg
+  - id: module-3-0147
+    indonesian: duduk-duduk
+    english: to sit around (in a casual or leisurely way)
+    audio: 6421652f9a4d.ogg
+  - id: module-3-0148
+    indonesian: dulu (2)
+    english: in former times, a long time ago, used to (i.e. regularly happened in
+      former times)
+    audio: ff6d5ac164b6.ogg
+  - id: module-3-0149
+    indonesian: hukum
+    english: law, the law (as a body of regulations or an area of study)
+    audio: 46dbf67f062a.ogg
+  - id: module-3-0150
+    indonesian: ibu kos
+    english: land lady
+    audio: b5310e0db988.ogg
+  - id: module-3-0151
+    indonesian: kalo pagi
+    english: (informal) in the morning
+    audio: 691679d6debe.ogg
+  - id: module-3-0152
+    indonesian: karena
+    english: because
+    audio: 7be1004db55f.ogg
+  - id: module-3-0153
+    indonesian: kenapa?
+    english: why?
+    audio: 5e54e1dd1b92.ogg
+  - id: module-3-0154
+    indonesian: macam-macam
+    english: all sorts (of), all kinds (of), various kinds of
+    audio: 30e3cca8ecce.ogg
+  - id: module-3-0155
+    indonesian: mata kuliah
+    english: a subject (of study at a university), a course, a unit of study
+    audio: 0b5890213dde.ogg
+  - id: module-3-0156
+    indonesian: memberikan (berikan)
+    english: to give something
+    audio: 4a6e9f3c847a.ogg
+  - id: module-3-0157
+    indonesian: mengapa?
+    english: why?
+    audio: bcda0f19c13b.ogg
+  - id: module-3-0158
+    indonesian: ngorok
+    english: (informal) to snore
+    audio: bd4ce5934254.ogg
+  - id: module-3-0159
+    indonesian: pagi-pagi
+    english: very early in the morning
+    audio: e6ce0688e4a0.ogg
+  - id: module-3-0160
+    indonesian: rumah kos
+    english: a boarding house
+    audio: d0143a602ad1.ogg
+  - id: module-3-0161
+    indonesian: tadi pagi
+    english: this morning (spoken later in the day)
+    audio: bc4d8be16791.ogg
+  - id: module-3-0162
+    indonesian: tadi siang
+    english: this afternoon (spoken later in the day)
+    audio: 61bec9fa8208.ogg
+  - id: module-3-0163
+    indonesian: undang-undang
+    english: an act of parliament, law(s) of the land
+    audio: 8bf6c7cdcc2d.ogg
+  - id: module-3-0164
+    indonesian: ya?
+    english: ..., right? ...have you? ...do you? ...does he/she? ...okay? (seeking
+      confirmation or approval)
+    audio: 0dd36c30b76b.ogg
+  - id: module-3-0165
+    indonesian: ada yang, ada ____ yang
+    english: some (noun)
+    audio: 4d45c1d43408.ogg
+  - id: module-3-0166
+    indonesian: ahli filsafat
+    english: philosopher
+  - id: module-3-0167
+    indonesian: filsuf
+    english: philosopher
+    audio: 70f1d080f949.ogg
+  - id: module-3-0168
+    indonesian: berdagang
+    english: to trade, to earn a living buying &amp; selling, to deal in
+      such-&amp;-such a commodity
+    audio: 454f5bed6a2b.ogg
+  - id: module-3-0169
+    indonesian: berpikir
+    english: to think, to ponder, to ruminate
+    audio: aa89290d4607.ogg
+  - id: module-3-0170
+    indonesian: biji
+    english: a seed, seed, a berry, a pip beans (e.g. coffee beans), the stone (in
+      stone fruit)
+    audio: 6b0ac22f9913.ogg
+  - id: module-3-0171
+    indonesian: bola voli
+    english: volley ball
+    audio: 1542deb3ce9b.ogg
+  - id: module-3-0172
+    indonesian: gitar
+    english: guitar
+    audio: 2268f1246a8a.ogg
+  - id: module-3-0173
+    indonesian: istimewa
+    english: special, exceptional, out of the ordinary
+    audio: feee6bdd7b8a.ogg
+  - id: module-3-0174
+    indonesian: juta
+    english: million
+    audio: 2ce35b9f0e05.ogg
+  - id: module-3-0175
+    indonesian: kalah
+    english: to lose (a contest/fight etc.), to be defeated
+    audio: 5b549a53377a.ogg
+  - id: module-3-0176
+    indonesian: kurang [+adjective]
+    english: less..., not quite..., don't/doesn't really..., isn't/aren't really...
+    audio: c37610a10dee.ogg
+  - id: module-3-0177
+    indonesian: lagu
+    english: a song, a tune, a piece of music
+    audio: cf7f0f7abbd6.ogg
+  - id: module-3-0178
+    indonesian: memperbaiki (perbaiki)
+    english: to repair something, to fix something broken
+    audio: 69470fd9ac8a.ogg
+  - id: module-3-0179
+    indonesian: menang
+    english: to win
+    audio: c31b743cb045.ogg
+  - id: module-3-0180
+    indonesian: menjadi (jadi)
+    english: to become, to be
+    audio: 90d9126c93b5.ogg
+  - id: module-3-0181
+    indonesian: menjual (jual)
+    english: to sell
+    audio: 538926797b28.ogg
+  - id: module-3-0182
+    indonesian: menyanyi (nyanyi)
+    english: to sing
+    audio: 73cd0d105a60.ogg
+  - id: module-3-0183
+    indonesian: menyanyikan (nyanyikan)
+    english: to sing (a certain song)
+    audio: 379bc2e02311.ogg
+  - id: module-3-0184
+    indonesian: pandai
+    english: to be good at (doing something), clever, intelligent, smart
+    audio: 9da442c1ff26.ogg
+  - id: module-3-0185
+    indonesian: pernah
+    english: once, ever, at some time in the past
+    audio: b145febf7279.ogg
+  - id: module-3-0186
+    indonesian: pintar
+    english: clever, intelligent, smart
+    audio: 69e680e7c1cd.ogg
+  - id: module-3-0187
+    indonesian: sama sekali
+    english: absolutely, at all, completely, totally (in negative expressions)
+    audio: 47d842448cb9.ogg
+  - id: module-3-0188
+    indonesian: tidak begitu
+    english: not very..., not especially, not particularly...
+    audio: 84e72367ecae.ogg
+  - id: module-3-0189
+    indonesian: yang + (adjective)
+    english: the (adjective) one
+    audio: 6a467a1fd5e8.ogg
+  - id: module-3-0190
+    indonesian: yang lain
+    english: the other one
+    audio: bb592df9fe1c.ogg
+  - id: module-3-0191
+    indonesian: memakai (pakai)
+    english: to use something, to wear something
+    audio: f69509cf48e5.ogg
+  - id: module-3-0192
+    indonesian: memelihara (pelihara)
+    english: to keep (as a pet, domestic animal or farm animal)
+    audio: 934689e17ba8.ogg
+  - id: module-3-0193
+    indonesian: mengajar (ajar)
+    english: to teach (someone / students / pupils / a subject), to do teaching
+    audio: 0661ccb3db96.ogg
+  - id: module-3-0194
+    indonesian: menolong (tolong)
+    english: to help someone (especially someone in difficulty)
+    audio: d6e47721f250.ogg
+  - id: module-3-0195
+    indonesian: menunggu (tunggu)
+    english: to wait, to wait for (someone / something), to await
+    audio: 74eb5f9ed27b.ogg
+  - id: module-3-0196
+    indonesian: minta tolong
+    english: to ask for assistance/help
+    audio: 16a635a0441b.ogg
+  - id: module-3-0197
+    indonesian: sejarah
+    english: history
+    audio: 805900668c96.ogg
+  - id: module-3-0198
+    indonesian: selalu
+    english: always
+    audio: 0d92c9963626.ogg
+  - id: module-3-0199
+    indonesian: selama
+    english: for (a certain period of time)
+    audio: 1b70f5b7dc42.ogg
+  - id: module-3-0200
+    indonesian: sendirian
+    english: alone, on your own (i.e. without a companion)
+    audio: c10a0283638e.ogg
+  - id: module-3-0201
+    indonesian: sudah cukup
+    english: that's enough, that will do
+    audio: 8705e40c4d99.ogg
+  - id: module-3-0202
+    indonesian: tidak pernah
+    english: never (the opposite of 'always')
+    audio: c7f72ee4bbc1.ogg
+  - id: module-3-0203
+    indonesian: waktu
+    english: time
+    audio: 317adebaa181.ogg
+  - id: module-3-0204
+    indonesian: akhirnya
+    english: finally, in the end, eventually, lastly
+    audio: 872a2b6f766f.ogg
+  - id: module-3-0205
+    indonesian: berapa lama
+    english: how long
+    audio: 09486eda8804.ogg
+  - id: module-3-0206
+    indonesian: detektif
+    english: detective
+    audio: d98740daa9cc.ogg
+  - id: module-3-0207
+    indonesian: di antaranya
+    english: including, among them
+    audio: 37772713a0d7.ogg
+  - id: module-3-0208
+    indonesian: kaviar
+    english: caviar
+    audio: ee246621c91e.ogg
+  - id: module-3-0209
+    indonesian: lobi
+    english: lobby
+    audio: 03398dfd822a.ogg
+  - id: module-3-0210
+    indonesian: masakan
+    english: cooking, cuisine, cooked food
+    audio: 6ea31bd59815.ogg
+  - id: module-3-0211
+    indonesian: mawar
+    english: rose
+    audio: a314a345d6db.ogg
+  - id: module-3-0212
+    indonesian: membayar (bayar)
+    english: to pay
+    audio: 7307eb779930.ogg
+  - id: module-3-0213
+    indonesian: memilih (pilih)
+    english: to choose
+    audio: 9231b437a38d.ogg
+  - id: module-3-0214
+    indonesian: mencium (cium)
+    english: to kiss someone, to smell, to sniff something
+    audio: fb7d7e224a45.ogg
+  - id: module-3-0215
+    indonesian: mewah
+    english: luxurious
+    audio: 7ac5060a1c41.ogg
+  - id: module-3-0216
+    indonesian: oleh
+    english: by (i.e. done/made/written by)
+    audio: bbd96f396f5a.ogg
+  - id: module-3-0217
+    indonesian: pada waktu
+    english: at the time when
+    audio: 26382b6e0553.ogg
+  - id: module-3-0218
+    indonesian: pipi
+    english: cheeks
+    audio: 46df9616792e.ogg
+  - id: module-3-0219
+    indonesian: sambil
+    english: while (one person performing two actions at the same time)
+    audio: ebebbc4cf357.ogg
+  - id: module-3-0220
+    indonesian: sampanye
+    english: chamapgne
+    audio: ccdcd8761780.ogg
+  - id: module-3-0221
+    indonesian: senang
+    english: happy, enjoying yourself, to like something, to like doing something
+    audio: 95dbf29cc39e.ogg
+  - id: module-3-0222
+    indonesian: swasta
+    english: private (i.e. not state-owned)
+    audio: d470d4e324f5.ogg
+  - id: module-3-0223
+    indonesian: wanita
+    english: a woman, a lady
+    audio: d16d388419d5.ogg
+  - id: module-3-0224
+    indonesian: Allah
+    english: God
+    audio: 83789cc570da.ogg
+  - id: module-3-0225
+    indonesian: Allahu Akbar
+    english: God is great
+    audio: c0b1bbd14acd.ogg
+  - id: module-3-0226
+    indonesian: Al-Qur'an
+    english: The Koran (the holy book of Islam)
+    audio: 314b6e4bfd60.ogg
+  - id: module-3-0227
+    indonesian: ayat
+    english: a verse, a stanza (from a poem or from holy scripture)
+    audio: 8c5c66383517.ogg
+  - id: module-3-0228
+    indonesian: barang
+    english: thing, goods, piece of merchandise
+    audio: e6acf726b888.ogg
+  - id: module-3-0229
+    indonesian: batik
+    english: batik
+    audio: 8e25163b4cd8.ogg
+  - id: module-3-0230
+    indonesian: beragama
+    english: to be a follower of such-and-such a religion
+    audio: b940615f551d.ogg
+  - id: module-3-0231
+    indonesian: berbuka puasa
+    english: to break your fast, to have a meal in the evening after a day of fasting
+    audio: 925c7194d2d2.ogg
+  - id: module-3-0232
+    indonesian: berkumpul
+    english: to assemble, to gather, to come together
+    audio: cc8309e12ebb.ogg
+  - id: module-3-0233
+    indonesian: berpuasa
+    english: to fast, to abstain from food and drink
+    audio: ac8f58f9872a.ogg
+  - id: module-3-0234
+    indonesian: bersalaman
+    english: to greet each other (usually by shaking hands)
+    audio: 59c6376e6b24.ogg
+  - id: module-3-0235
+    indonesian: bersyukur
+    english: to thank God
+    audio: 97b75ef3ce8c.ogg
+  - id: module-3-0236
+    indonesian: besoknya
+    english: the next day, the following day
+    audio: a46d4d3a95d0.ogg
+  - id: module-3-0237
+    indonesian: bulan puasa
+    english: the fasting month
+    audio: eb45324a980b.ogg
+  - id: module-3-0238
+    indonesian: di mana-mana
+    english: everywhere
+    audio: dcf524e89c80.ogg
+  - id: module-3-0239
+    indonesian: doa
+    english: a prayer (especially a personal, meditative prayer)
+    audio: a6a8299743c7.ogg
+  - id: module-3-0240
+    indonesian: gelap
+    english: dark, not well lit
+    audio: 44e8cf52193a.ogg
+  - id: module-3-0241
+    indonesian: hari raya
+    english: a feast day, a big religious holiday
+    audio: fb4719b11edd.ogg
+  - id: module-3-0242
+    indonesian: haus
+    english: thirsty
+    audio: 0e2fb6b33ed7.ogg
+  - id: module-3-0243
+    indonesian: Idul Fitri
+    english: the festival of Ied, the (usually two) days of celebrations at the end
+      of the Muslim fasting month
+    audio: 9e95f9578b59.ogg
+  - id: module-3-0244
+    indonesian: kali
+    english: times, a time
+    audio: ebc020dbb683.ogg
+  - id: module-3-0245
+    indonesian: ketupat
+    english: lumps of rice boiled in packets made from woven leaves (a special food
+      eaten at Idul Fitri)
+    audio: 23f19f484a47.ogg
+  - id: module-3-0246
+    indonesian: lahir dan batin
+    english: outwardly and inwardly
+    audio: ad115a2e51bb.ogg
+  - id: module-3-0247
+    indonesian: lantai
+    english: floor
+    audio: 4a33697dc8c9.ogg
+  - id: module-3-0248
+    indonesian: lapar
+    english: hungry
+    audio: 6c076e152b10.ogg
+  - id: module-3-0249
+    indonesian: Lebaran
+    english: (the Javanese term for) the period of celebrations at the end of the
+      Muslim fasting month
+    audio: 933758105035.ogg
+  - id: module-3-0250
+    indonesian: libur
+    english: to be shut/closed (for a holiday etc.), to have time off (from
+      work/school etc.)
+    audio: e560e9a4567b.ogg
+  - id: module-3-0251
+    indonesian: membawa (bawa)
+    english: to take, to bring, to carry (something somewhere)
+    audio: e8988b3f567e.ogg
+  - id: module-3-0252
+    indonesian: memimpin (pimpin)
+    english: to lead
+    audio: 7e504b6e9836.ogg
+  - id: module-3-0253
+    indonesian: mengucapkan (ucapkan)
+    english: to say something, to utter something, to pronounce (a sound)
+    audio: a3ed29e92889.ogg
+  - id: module-3-0254
+    indonesian: minta maaf
+    english: to apologise, to ask for forgiveness
+    audio: 453535c439c3.ogg
+  - id: module-3-0255
+    indonesian: mohon maaf
+    english: to apologise, to ask for forgiveness
+    audio: f2b1201663de.ogg
+  - id: module-3-0256
+    indonesian: mudik
+    english: to make a visit back to your home village in the countryside, to go
+      upstream
+    audio: 33e8ac1e083d.ogg
+  - id: module-3-0257
+    indonesian: nabi
+    english: religious prophet
+    audio: babafa0cab8a.ogg
+  - id: module-3-0258
+    indonesian: naik haji
+    english: to make the pilgrimage to Mecca
+    audio: a93c51834d90.ogg
+  - id: module-3-0259
+    indonesian: oleh-oleh
+    english: a gift/present brought back for family or a friend after a trip somewhere
+    audio: 94710499aed2.ogg
+  - id: module-3-0260
+    indonesian: perabot
+    english: furniture
+    audio: 6084b4358056.ogg
+  - id: module-3-0261
+    indonesian: puasa
+    english: fasting, the Islamic Fast
+    audio: 9120c09c41a3.ogg
+  - id: module-3-0262
+    indonesian: rendang
+    english: a stew of beef chunks cooked until dry in spices and shredded coconut
+    audio: 6e1820013b4a.ogg
+  - id: module-3-0263
+    indonesian: saat
+    english: a moment, a point in time, a short time, while, during
+    audio: aa10045e8def.ogg
+  - id: module-3-0264
+    indonesian: sahur
+    english: to eat a pre-dawn meal during the fasting month, to eat an early
+      breakfast during the fasting month
+    audio: 66d313ac17bb.ogg
+  - id: module-3-0265
+    indonesian: sekolah menengah
+    english: high school, secondary school
+    audio: 0a0fcbacbc94.ogg
+  - id: module-3-0266
+    indonesian: setiap
+    english: each, every
+    audio: fee60aeb9415.ogg
+  - id: module-3-0267
+    indonesian: takbiran
+    english: to chant Allahu Akbar (God is Great) in chorus over and over
+    audio: 282df314b707.ogg
+  - id: module-3-0268
+    indonesian: tempat kerja
+    english: place of work
+    audio: 8bfa3829d4d0.ogg
+  - id: module-3-0269
+    indonesian: ulama
+    english: very learned and pious Muslim
+    audio: 4b82d5e6e511.ogg

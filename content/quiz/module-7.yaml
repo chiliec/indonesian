@@ -1,0 +1,559 @@
+id: module-7
+title:
+  en: Module 7
+  ru: Модуль 7
+cards:
+  - id: module-7-0001
+    indonesian: baju hangat
+    english: sweater
+    audio: 2a1924990c79.ogg
+  - id: module-7-0002
+    indonesian: baju tidur
+    english: a pajama
+    audio: 3c32fbf3ffc0.ogg
+  - id: module-7-0003
+    indonesian: blus
+    english: blouse
+    audio: a9b5fdfd146e.ogg
+  - id: module-7-0004
+    indonesian: buatan
+    english: made in
+    audio: ee7c5dd198c2.ogg
+  - id: module-7-0005
+    indonesian: celana
+    english: pants
+    audio: f3049953a4ba.ogg
+  - id: module-7-0006
+    indonesian: celana dalam
+    english: underpants
+    audio: 83fd213a3dd4.ogg
+  - id: module-7-0007
+    indonesian: celana pendek
+    english: shorts
+    audio: e22a26312087.ogg
+  - id: module-7-0008
+    indonesian: cucian
+    english: laundry
+    audio: e960dde16831.ogg
+  - id: module-7-0009
+    indonesian: dasi
+    english: neck tie
+    audio: b0493ba6c8be.ogg
+  - id: module-7-0010
+    indonesian: jaket
+    english: a coat
+    audio: c37c6670f025.ogg
+  - id: module-7-0011
+    indonesian: kaus
+    english: a t-shirt
+    audio: c8ea3ed0c3c3.ogg
+  - id: module-7-0012
+    indonesian: kemeja
+    english: a shirt
+    audio: 12f43fafff6b.ogg
+  - id: module-7-0013
+    indonesian: lengan
+    english: arm, sleeve
+    audio: 85cf3fa1d710.ogg
+  - id: module-7-0014
+    indonesian: rok
+    english: a skirt
+    audio: c0ce173d12b9.ogg
+  - id: module-7-0015
+    indonesian: sapu tangan
+    english: handkerchiefs
+    audio: 42a3eefc915f.ogg
+  - id: module-7-0016
+    indonesian: sedang (size)
+    english: medium (of size)
+    audio: 824de3edccaf.ogg
+  - id: module-7-0017
+    indonesian: topi
+    english: a hat
+    audio: c0b43e05b352.ogg
+  - id: module-7-0018
+    indonesian: ukuran
+    english: size, measurement
+    audio: dd4b4e18897b.ogg
+  - id: module-7-0019
+    indonesian: agar
+    english: in order to
+    audio: dd315a1fb922.ogg
+  - id: module-7-0020
+    indonesian: helm
+    english: a helmet
+    audio: 5b5114832c8c.ogg
+  - id: module-7-0021
+    indonesian: ingat
+    english: to remember
+    audio: a7b1608d5d11.ogg
+  - id: module-7-0022
+    indonesian: diingat-ingat
+    english: to give it a good long thought
+  - id: module-7-0023
+    indonesian: jas
+    english: suit jacket
+    audio: b2504ae4f247.ogg
+  - id: module-7-0024
+    indonesian: kan
+    english: derived from bukan to show a knowledge or understanding shared by
+      speaker and listener
+    audio: f766c5bf5a10.ogg
+  - id: module-7-0025
+    indonesian: kau
+    english: you
+    audio: 949f0b4096d4.ogg
+  - id: module-7-0026
+    indonesian: kelupaan
+    english: have forgotten
+    audio: 594de359e9b4.ogg
+  - id: module-7-0027
+    indonesian: kurang
+    english: lacking
+    audio: c37610a10dee.ogg
+  - id: module-7-0028
+    indonesian: rasanya
+    english: it seems to me
+    audio: c13b8f66d6da.ogg
+  - id: module-7-0029
+    indonesian: resmi
+    english: formal
+    audio: b1bdcd85576c.ogg
+  - id: module-7-0030
+    indonesian: SIM
+    english: driver's license (acronym)
+    audio: 035c0f67c20c.ogg
+  - id: module-7-0031
+    indonesian: Surat Izin Mengemudi
+    english: driver's license
+  - id: module-7-0032
+    indonesian: siap-siap
+    english: to get ready
+  - id: module-7-0033
+    indonesian: segala
+    english: each and everything, the whole kit and kaboodle
+    audio: 7e7e2fdd6f42.ogg
+  - id: module-7-0034
+    indonesian: sementara
+    english: while (at the same time)
+    audio: 399db0b03948.ogg
+  - id: module-7-0035
+    indonesian: Surat Tanda Nomor Kendaraan
+    english: motor vehicle registration certificate
+    audio: 6e2313459810.ogg
+  - id: module-7-0036
+    indonesian: STNK
+    english: motor vehicle registration certificate (acronym)
+    audio: 906dc890489f.ogg
+  - id: module-7-0037
+    indonesian: telat
+    english: too late, overdue
+    audio: 434ff3dfe4ea.ogg
+  - id: module-7-0038
+    indonesian: ikat kepala
+    english: a head cloth
+    audio: e2947a407bb4.ogg
+  - id: module-7-0039
+    indonesian: jilbab
+    english: hijab, headscarf
+    audio: 8c7ed272828a.ogg
+  - id: module-7-0040
+    indonesian: kain
+    english: a piece of cloth, textile, garment
+    audio: 8c39b345f252.ogg
+  - id: module-7-0041
+    indonesian: kebaya
+    english: a mostly transparent traditional women blouse
+    audio: 9c41ecb54201.ogg
+  - id: module-7-0042
+    indonesian: peragaan busana
+    english: fashion show
+    audio: 50676e322ed7.ogg
+  - id: module-7-0043
+    indonesian: sarung
+    english: a sarong
+    audio: a2d8e5f90825.ogg
+  - id: module-7-0044
+    indonesian: abu-abu
+    english: grey
+    audio: 914962fb6e14.ogg
+  - id: module-7-0045
+    indonesian: berpendapat
+    english: to think
+    audio: 22857f2bcba7.ogg
+  - id: module-7-0046
+    indonesian: dibungkus
+    english: to be wrapped
+    audio: 6b400190a45f.ogg
+  - id: module-7-0047
+    indonesian: kelihatannya
+    english: it seems as if
+    audio: 799798dd615c.ogg
+  - id: module-7-0048
+    indonesian: lebar
+    english: wide, broad, width
+    audio: a4800e9ab023.ogg
+  - id: module-7-0049
+    indonesian: menjahit (jahit)
+    english: to sew
+    audio: 91a690dcc4f1.ogg
+  - id: module-7-0050
+    indonesian: pas
+    english: to fit
+    audio: ab97689080d9.ogg
+  - id: module-7-0051
+    indonesian: berlatih
+    english: to practice
+    audio: 2c0b6fccb14d.ogg
+  - id: module-7-0052
+    indonesian: BH
+    english: undergarment worn by women to support their breasts
+    audio: a623ecea4148.ogg
+  - id: module-7-0053
+    indonesian: catatan kuliah
+    english: lecture notes
+    audio: fd2bc3704c3f.ogg
+  - id: module-7-0054
+    indonesian: cek
+    english: a cheque
+    audio: be2c47009715.ogg
+  - id: module-7-0055
+    indonesian: deterjen
+    english: detergent
+    audio: 7beb55a5cf46.ogg
+  - id: module-7-0056
+    indonesian: dibuang
+    english: to be thrown away
+    audio: 756b7f32c78e.ogg
+  - id: module-7-0057
+    indonesian: dijahit
+    english: to be sewn
+    audio: af6034bd2965.ogg
+  - id: module-7-0058
+    indonesian: dipegang
+    english: to be held
+    audio: 2c103c0d7ea3.ogg
+  - id: module-7-0059
+    indonesian: dipinjam
+    english: to be borrowed
+    audio: 1fb5c09c728b.ogg
+  - id: module-7-0060
+    indonesian: dipotong
+    english: to be cut off
+    audio: 5614f50b841d.ogg
+  - id: module-7-0061
+    indonesian: diseterika
+    english: to be ironed
+    audio: ab79b8d8fdae.ogg
+  - id: module-7-0062
+    indonesian: kartu kredit
+    english: a credit card
+    audio: 7c6677500f7c.ogg
+  - id: module-7-0063
+    indonesian: membuang (buang)
+    english: to throw away
+    audio: e5733426eb12.ogg
+  - id: module-7-0064
+    indonesian: memegang (pegang)
+    english: to hold on to something
+    audio: c609e021606c.ogg
+  - id: module-7-0065
+    indonesian: mengherankan (heran)
+    english: surprising
+    audio: 745e33b4fc88.ogg
+  - id: module-7-0066
+    indonesian: menyeterika (seterika)
+    english: to iron
+    audio: 5a70da29cb6d.ogg
+  - id: module-7-0067
+    indonesian: pakaian setelan
+    english: a suit
+    audio: a43146331ae9.ogg
+  - id: module-7-0068
+    indonesian: segera
+    english: immediately, promptly
+    audio: 62226074e23f.ogg
+  - id: module-7-0069
+    indonesian: sialan
+    english: an expression like the English 'Damn!'
+    audio: e8654fa43fcf.ogg
+  - id: module-7-0070
+    indonesian: membungkus (bungkus)
+    english: to wrap something
+    audio: 3a235481afdc.ogg
+  - id: module-7-0071
+    indonesian: ember
+    english: a bucket
+    audio: 2686d9a8789f.ogg
+  - id: module-7-0072
+    indonesian: menghidupkan (hidupkan)
+    english: turn on/switch on (a light or engine)
+    audio: 3b9d343844c5.ogg
+  - id: module-7-0073
+    indonesian: menjemur (jemur)
+    english: to dry something in the sun
+    audio: 85e8e25aa96f.ogg
+  - id: module-7-0074
+    indonesian: kertas
+    english: paper
+    audio: af8dcf05bd89.ogg
+  - id: module-7-0075
+    indonesian: kotak
+    english: a box
+    audio: c42ff2884be0.ogg
+  - id: module-7-0076
+    indonesian: berkata
+    english: to say (that)
+    audio: 979bd47714d4.ogg
+  - id: module-7-0077
+    indonesian: cinta
+    english: love (romantic love)
+    audio: b80f190da182.ogg
+  - id: module-7-0078
+    indonesian: diganggu
+    english: to be upset by
+    audio: f5121f58a163.ogg
+  - id: module-7-0079
+    indonesian: kaca
+    english: glass, mirror
+    audio: 500217c0974f.ogg
+  - id: module-7-0080
+    indonesian: majikan
+    english: a boss
+    audio: 6698cb83b2d7.ogg
+  - id: module-7-0081
+    indonesian: memasukkan (masukkan)
+    english: to put something into
+    audio: 58856813a39c.ogg
+  - id: module-7-0082
+    indonesian: rendah
+    english: low
+    audio: ab489da4d9af.ogg
+  - id: module-7-0083
+    indonesian: sadar
+    english: to be aware, to be conscious
+    audio: 913555316674.ogg
+  - id: module-7-0084
+    indonesian: saku
+    english: a pocket
+    audio: 32eec50c413c.ogg
+  - id: module-7-0085
+    indonesian: sesuatu
+    english: something
+    audio: 0f93bcbed01c.ogg
+  - id: module-7-0086
+    indonesian: sisir
+    english: a comb
+    audio: f149f87e7165.ogg
+  - id: module-7-0087
+    indonesian: menambah (tambah)
+    english: to add to something
+    audio: 0f447b77e443.ogg
+  - id: module-7-0088
+    indonesian: demikian
+    english: thus
+    audio: ebe9ec8fb180.ogg
+  - id: module-7-0089
+    indonesian: perbedaan
+    english: difference
+    audio: 88663fd6d9c6.ogg
+  - id: module-7-0090
+    indonesian: sebenarnya
+    english: actually, as a matter of fact
+    audio: 359d33f860f7.ogg
+  - id: module-7-0091
+    indonesian: sehingga
+    english: so that
+    audio: 540f6b1f5be8.ogg
+  - id: module-7-0092
+    indonesian: tanpa
+    english: without
+    audio: 8889154b9888.ogg
+  - id: module-7-0093
+    indonesian: terkejut
+    english: surprised
+    audio: b7ff21656d51.ogg
+  - id: module-7-0094
+    indonesian: tersenyum
+    english: to smile
+    audio: 7d01bcaf8bfc.ogg
+  - id: module-7-0095
+    indonesian: menunjukkan (tunjukkan)
+    english: to show something
+    audio: 398cbb885f63.ogg
+  - id: module-7-0096
+    indonesian: memisahkan (pisahkan)
+    english: to separate
+    audio: c60cb61da0e7.ogg
+  - id: module-7-0097
+    indonesian: untung
+    english: luckily
+    audio: 40d5ab1fa5ca.ogg
+  - id: module-7-0098
+    indonesian: begini
+    english: so, like this, this way
+    audio: ac6992857152.ogg
+  - id: module-7-0099
+    indonesian: dikurangi
+    english: to be reduced
+    audio: 9e5b4c5a7f8d.ogg
+  - id: module-7-0100
+    indonesian: harga mati
+    english: the lowest possible price
+    audio: 69ab690a8430.ogg
+  - id: module-7-0101
+    indonesian: harga pas
+    english: a fixed price
+    audio: bd1a48107324.ogg
+  - id: module-7-0102
+    indonesian: lain kali
+    english: some other time
+    audio: dd2c13493f05.ogg
+  - id: module-7-0103
+    indonesian: ndak
+    english: no, not (informal)
+    audio: a31905e138aa.ogg
+  - id: module-7-0104
+    indonesian: pikir-pikir
+    english: to consider about something
+    audio: 38a5b2d7009f.ogg
+  - id: module-7-0105
+    indonesian: tawar
+    english: bargaining
+    audio: 630f7996a8c4.ogg
+  - id: module-7-0106
+    indonesian: tawar-menawar
+    english: to negotiate something, to bargain
+    audio: 2629a1700f8f.ogg
+  - id: module-7-0107
+    indonesian: menawarkan (tawarkan)
+    english: to offer something to someone
+    audio: c37bc27e556c.ogg
+  - id: module-7-0108
+    indonesian: bentuk
+    english: form, shape
+    audio: ad4a7999e442.ogg
+  - id: module-7-0109
+    indonesian: beranda
+    english: a verandah
+    audio: 016db2aca39f.ogg
+  - id: module-7-0110
+    indonesian: genteng
+    english: a roof tile, tiles (for a roof)
+    audio: 35f51ca51852.ogg
+  - id: module-7-0111
+    indonesian: seng
+    english: corrugated iron
+    audio: 9a3e740b1fa7.ogg
+  - id: module-7-0112
+    indonesian: suara
+    english: a voice, a sound
+    audio: 1bc12e4e9702.ogg
+  - id: module-7-0113
+    indonesian: apa lagi?
+    english: what else?
+    audio: 7389849c20c0.ogg
+  - id: module-7-0114
+    indonesian: bak
+    english: a tub (in a bathroom), the tray (on the back of a truck)
+    audio: 3635bf1a789b.ogg
+  - id: module-7-0115
+    indonesian: bergengsi
+    english: prestigious
+    audio: 870a1914e634.ogg
+  - id: module-7-0116
+    indonesian: menggabungkan (gabungkan)
+    english: to combine, to merge
+    audio: 1cced6c111c6.ogg
+  - id: module-7-0117
+    indonesian: gang
+    english: an alley, a passageway, a corridor
+    audio: af38e5b219e5.ogg
+  - id: module-7-0118
+    indonesian: menghubungi (hubungi)
+    english: to make a contact with someone
+    audio: 96a225c7c18f.ogg
+  - id: module-7-0119
+    indonesian: joglo
+    english: one traditional style of Javanese roof
+    audio: 6048cbb0907b.ogg
+  - id: module-7-0120
+    indonesian: kagum
+    english: amazed, full of admiration
+    audio: b29099501e11.ogg
+  - id: module-7-0121
+    indonesian: Kebun Raya
+    english: The Botanical Garden (in Bogor)
+    audio: ee216c9c2539.ogg
+  - id: module-7-0122
+    indonesian: kredit
+    english: credit (from a bank)
+    audio: a10492a32426.ogg
+  - id: module-7-0123
+    indonesian: kulkas
+    english: a refrigerator
+    audio: fc3d5971383b.ogg
+  - id: module-7-0124
+    indonesian: lanjut
+    english: advanced (talking about something that occurs at a further stage)
+    audio: 53b0121e9d1b.ogg
+  - id: module-7-0125
+    indonesian: lokasi
+    english: a location, a site
+    audio: 1551c091b02c.ogg
+  - id: module-7-0126
+    indonesian: masa kini
+    english: the present nowadays
+    audio: 2d1ef0b1de09.ogg
+  - id: module-7-0127
+    indonesian: masa lampau
+    english: the past
+    audio: ada3ed6c6aa4.ogg
+  - id: module-7-0128
+    indonesian: memiliki (miliki)
+    english: to have
+    audio: e327d4e6ca60.ogg
+  - id: module-7-0129
+    indonesian: mesin cuci piring
+    english: dishwasher
+    audio: e130c3420fed.ogg
+  - id: module-7-0130
+    indonesian: mutiara
+    english: a pearl
+    audio: a0e26b0fc708.ogg
+  - id: module-7-0131
+    indonesian: nyaman
+    english: pleasant (talking about your surroundings)
+    audio: a1541385b19f.ogg
+  - id: module-7-0132
+    indonesian: pendopo
+    english: a reception area in a traditional Javanese house
+    audio: 40588c87d790.ogg
+  - id: module-7-0133
+    indonesian: peralatan
+    english: equipment
+    audio: 65247c1cf4a8.ogg
+  - id: module-7-0134
+    indonesian: perumahan
+    english: a housing complex
+    audio: dbbb65c1f4cf.ogg
+  - id: module-7-0135
+    indonesian: sejuk
+    english: cool
+    audio: e32047aa5142.ogg
+  - id: module-7-0136
+    indonesian: tempat tinggal
+    english: a place of residence
+    audio: 714a2513cbf1.ogg
+  - id: module-7-0137
+    indonesian: wastafel
+    english: a washbasin (in a bathroom)
+    audio: c5847aabf3cf.ogg
+  - id: module-7-0138
+    indonesian: membutuhkan (butuhkan)
+    english: to need something
+    audio: cc1c550738f1.ogg
+  - id: module-7-0139
+    indonesian: pinjaman
+    english: a loan of money, a lend of something
+    audio: f4a15ba1fe8d.ogg

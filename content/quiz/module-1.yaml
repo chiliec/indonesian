@@ -1,0 +1,1030 @@
+id: module-1
+title:
+  en: Module 1
+  ru: Модуль 1
+cards:
+  - id: module-1-0001
+    indonesian: Anda
+    english: you
+    audio: dc1bda04a833.ogg
+  - id: module-1-0002
+    indonesian: apa kabar?
+    english: How are you?
+  - id: module-1-0003
+    indonesian: apa?
+    english: what
+    audio: 08d444fe7b57.ogg
+  - id: module-1-0004
+    indonesian: baik-baik saja
+    english: fine, good (in reply to 'How are you?')
+    audio: 83e3f3a8a3dc.ogg
+  - id: module-1-0005
+    indonesian: biasa
+    english: usual, ordinary, normal
+    audio: a6c4a9f256ad.ogg
+  - id: module-1-0006
+    indonesian: dan
+    english: and
+    audio: 4ced0824f2cc.ogg
+  - id: module-1-0007
+    indonesian: duduk
+    english: to sit, to sit down
+    audio: 287e5fcdc12d.ogg
+  - id: module-1-0008
+    indonesian: kenalkan
+    english: This is ... (when you are introducing someone)
+    audio: cc5440cedfec.ogg
+  - id: module-1-0009
+    indonesian: makan
+    english: to eat
+    audio: 827ab6accccd.ogg
+  - id: module-1-0010
+    indonesian: malam
+    english: night
+    audio: 75407b681ff9.ogg
+  - id: module-1-0011
+    indonesian: masuk
+    english: to go in, to come in, to enter
+    audio: c1859d5aa1c3.ogg
+  - id: module-1-0012
+    indonesian: minum
+    english: to drink
+    audio: 8222f3a2ea62.ogg
+  - id: module-1-0013
+    indonesian: nama
+    english: (someone's) name, the name (of something)
+    audio: 32566ae61708.ogg
+  - id: module-1-0014
+    indonesian: pagi
+    english: morning
+    audio: 207953499045.ogg
+  - id: module-1-0015
+    indonesian: saja
+    english: just, only
+    audio: 6f49c8f68eb4.ogg
+  - id: module-1-0016
+    indonesian: saya
+    english: I, me
+    audio: 71960c6d1cc4.ogg
+  - id: module-1-0017
+    indonesian: selamat
+    english: "safe (from trouble), Also: Congratulations!"
+    audio: dc9459172fd4.ogg
+  - id: module-1-0018
+    indonesian: siang
+    english: late morning to mid afternoon
+    audio: b673cc409feb.ogg
+  - id: module-1-0019
+    indonesian: siapa
+    english: who
+    audio: 4f2974169d23.ogg
+  - id: module-1-0020
+    indonesian: silakan
+    english: please (go ahead and...)
+    audio: 361471be94a3.ogg
+  - id: module-1-0021
+    indonesian: sore
+    english: mid afternoon to early evening
+    audio: 9898825581dc.ogg
+  - id: module-1-0022
+    indonesian: terima kasih
+    english: thank you
+    audio: 57b688b15143.ogg
+  - id: module-1-0023
+    indonesian: Amerika Serikat
+    english: The United States of America
+    audio: e39540866899.ogg
+  - id: module-1-0024
+    indonesian: Arab Saudi
+    english: Saudi Arabia
+    audio: d294a8cde7f1.ogg
+  - id: module-1-0025
+    indonesian: Belanda
+    english: The Netherlands, Holland
+    audio: d2a2689b0679.ogg
+  - id: module-1-0026
+    indonesian: berasal
+    english: to originally come (from), to originate (from)
+    audio: c577e4ec2463.ogg
+  - id: module-1-0027
+    indonesian: Cina
+    english: China
+    audio: f51804c2e0dd.ogg
+  - id: module-1-0028
+    indonesian: dari
+    english: from
+    audio: c4faa75b3c25.ogg
+  - id: module-1-0029
+    indonesian: dari mana
+    english: from where
+    audio: 22f2a95699f3.ogg
+  - id: module-1-0030
+    indonesian: dari sini
+    english: from here
+    audio: 2b28d6178f08.ogg
+  - id: module-1-0031
+    indonesian: Filipina
+    english: The Philippines
+    audio: 87429cbe2bd3.ogg
+  - id: module-1-0032
+    indonesian: Inggris
+    english: English, Britain
+    audio: cbcbc035ac85.ogg
+  - id: module-1-0033
+    indonesian: ini
+    english: this
+    audio: e95fd8e871d0.ogg
+  - id: module-1-0034
+    indonesian: Italia
+    english: Italy
+    audio: 12d6c3c60aa3.ogg
+  - id: module-1-0035
+    indonesian: jauh
+    english: a long way away, distant
+    audio: edf1f239df89.ogg
+  - id: module-1-0036
+    indonesian: Jepang
+    english: Japan
+    audio: 7101e4b0e443.ogg
+  - id: module-1-0037
+    indonesian: Jerman
+    english: Germany
+    audio: 6afb5ad00467.ogg
+  - id: module-1-0038
+    indonesian: maaf
+    english: Sorry, I apologise
+    audio: a438a4d86866.ogg
+  - id: module-1-0039
+    indonesian: Mesir
+    english: Egypt
+    audio: 28336a5f8be2.ogg
+  - id: module-1-0040
+    indonesian: O begitu!
+    english: Really! Really?, Is that so!
+    audio: b2aeaab74228.ogg
+  - id: module-1-0041
+    indonesian: Perancis
+    english: France
+    audio: d1a4d3ac4937.ogg
+  - id: module-1-0042
+    indonesian: Rusia
+    english: Russia
+    audio: 4890595cc243.ogg
+  - id: module-1-0043
+    indonesian: Selandia Baru
+    english: New Zealand
+    audio: b5596c6de4cf.ogg
+  - id: module-1-0044
+    indonesian: saya kira
+    english: I thought (that... )
+    audio: 546311f81292.ogg
+  - id: module-1-0045
+    indonesian: Singapura
+    english: Singapore
+    audio: f70387180481.ogg
+  - id: module-1-0046
+    indonesian: tidak
+    english: no, not (negating a verb, adjective, or preposition)
+    audio: b4121eddd675.ogg
+  - id: module-1-0047
+    indonesian: Yunani
+    english: Greece
+    audio: 8be07345de3e.ogg
+  - id: module-1-0048
+    indonesian: Bu
+    english: Mrs, madam
+    audio: cf612fb3d9ce.ogg
+  - id: module-1-0049
+    indonesian: gedung
+    english: building
+    audio: e78456c78025.ogg
+  - id: module-1-0050
+    indonesian: gereja
+    english: church
+    audio: 04f46004cdf5.ogg
+  - id: module-1-0051
+    indonesian: kantor
+    english: office
+    audio: b3c2483eccd1.ogg
+  - id: module-1-0052
+    indonesian: ke
+    english: to (preposition), towards, in direction of
+    audio: 8bb2fb958322.ogg
+  - id: module-1-0053
+    indonesian: ke mana
+    english: (to) where
+    audio: dbea1670f572.ogg
+  - id: module-1-0054
+    indonesian: mari
+    english: please, c'mon, let's, good bye
+    audio: 5b77d28c81c1.ogg
+  - id: module-1-0055
+    indonesian: mau
+    english: to want (to do something), to want (something)
+    audio: f93df2299d94.ogg
+  - id: module-1-0056
+    indonesian: mesjid
+    english: mosque
+    audio: d501db0d46c6.ogg
+  - id: module-1-0057
+    indonesian: pabrik
+    english: factory
+    audio: 3b43838bea79.ogg
+  - id: module-1-0058
+    indonesian: Pak
+    english: Mr, sir (a title and term of address)
+    audio: 880096afc4b8.ogg
+  - id: module-1-0059
+    indonesian: pasar
+    english: market
+    audio: 82c1cb1a0cee.ogg
+  - id: module-1-0060
+    indonesian: restoran
+    english: restaurant
+    audio: fab0d6a3eea6.ogg
+  - id: module-1-0061
+    indonesian: rumah sakit
+    english: hospital
+    audio: 6e8d84a04132.ogg
+  - id: module-1-0062
+    indonesian: rumah
+    english: house
+    audio: 6cc8030505c9.ogg
+  - id: module-1-0063
+    indonesian: sekolah
+    english: school
+    audio: d48ad04e04aa.ogg
+  - id: module-1-0064
+    indonesian: toko
+    english: shop
+    audio: a6dfc40c05e6.ogg
+  - id: module-1-0065
+    indonesian: air
+    english: "water, Also: fluid, juice"
+    audio: 51eda2647996.ogg
+  - id: module-1-0066
+    indonesian: akan
+    english: will, going to (future marker)
+    audio: 89a21755496b.ogg
+  - id: module-1-0067
+    indonesian: aku
+    english: I, me (informal)
+    audio: 1a64e0a5059d.ogg
+  - id: module-1-0068
+    indonesian: apakah
+    english: question marker for 'yes/no' questions
+    audio: 2f3a6e58c263.ogg
+  - id: module-1-0069
+    indonesian: ayam
+    english: chicken
+    audio: 243a7bf145a8.ogg
+  - id: module-1-0070
+    indonesian: bisa
+    english: can, able to
+    audio: fa86dbb82bef.ogg
+  - id: module-1-0071
+    indonesian: daging
+    english: meat
+    audio: 9d89ca1fc763.ogg
+  - id: module-1-0072
+    indonesian: dapat
+    english: can
+    audio: 663e54a5800e.ogg
+  - id: module-1-0073
+    indonesian: di
+    english: at, in, on
+    audio: f22168e1c3b8.ogg
+  - id: module-1-0074
+    indonesian: ikan
+    english: fish, a fish
+    audio: c5adb8e40605.ogg
+  - id: module-1-0075
+    indonesian: kamu
+    english: you (informal)
+    audio: 7bf0192163e9.ogg
+  - id: module-1-0076
+    indonesian: kepingin
+    english: want (to), wish (to)
+    audio: 35cdf87d3d55.ogg
+  - id: module-1-0077
+    indonesian: kopi
+    english: coffee
+    audio: 67699476c0c9.ogg
+  - id: module-1-0078
+    indonesian: nasi
+    english: cooked rice
+    audio: 10c7910ad002.ogg
+  - id: module-1-0079
+    indonesian: nggak
+    english: no, not (informal)
+    audio: 4fc99a769214.ogg
+  - id: module-1-0080
+    indonesian: pisang
+    english: banana
+    audio: a017e287e4cf.ogg
+  - id: module-1-0081
+    indonesian: roti
+    english: bread, biscuit, cookie
+    audio: 99bc74176f82.ogg
+  - id: module-1-0082
+    indonesian: rumah makan
+    english: restaurant
+    audio: dfc506f1a9b6.ogg
+  - id: module-1-0083
+    indonesian: suka
+    english: to like
+    audio: 9017e24593f6.ogg
+  - id: module-1-0084
+    indonesian: susu
+    english: milk
+    audio: 87f19303504a.ogg
+  - id: module-1-0085
+    indonesian: tahu (noun)
+    english: tofu, soya bean curd
+    audio: ec91ad98b84e.ogg
+  - id: module-1-0086
+    indonesian: teh
+    english: tea
+    audio: d2125195062c.ogg
+  - id: module-1-0087
+    indonesian: telur
+    english: egg
+    audio: 3abe10ff6264.ogg
+  - id: module-1-0088
+    indonesian: tempe
+    english: soya bean biscuit, tempeh
+    audio: 5ea34fcc56c2.ogg
+  - id: module-1-0089
+    indonesian: tinggal
+    english: to live (in a certain place), to stay
+    audio: 11ba9d2706a8.ogg
+  - id: module-1-0090
+    indonesian: air jeruk
+    english: orange juice
+    audio: 5c67ee4d785d.ogg
+  - id: module-1-0091
+    indonesian: atau
+    english: or
+    audio: b3a4203322aa.ogg
+  - id: module-1-0092
+    indonesian: ayam goreng
+    english: fried chicken
+    audio: ab87781c6114.ogg
+  - id: module-1-0093
+    indonesian: bioskop
+    english: cinema, movie theatre
+    audio: 4f1e395bf92f.ogg
+  - id: module-1-0094
+    indonesian: bir
+    english: beer
+    audio: 85576a512471.ogg
+  - id: module-1-0095
+    indonesian: buah
+    english: fruit
+    audio: 9c19825e2ddf.ogg
+  - id: module-1-0096
+    indonesian: coklat
+    english: chocolate, brown
+    audio: ec50c083aac9.ogg
+  - id: module-1-0097
+    indonesian: di sana
+    english: there, over there
+    audio: 8abe66e3c39d.ogg
+  - id: module-1-0098
+    indonesian: durian
+    english: durian fruit
+    audio: 4a23dcfdeed2.ogg
+  - id: module-1-0099
+    indonesian: hotel
+    english: hotel
+    audio: ebb16cf876a8.ogg
+  - id: module-1-0100
+    indonesian: jeruk
+    english: citrus fruit
+    audio: 4038b3069697.ogg
+  - id: module-1-0101
+    indonesian: juga
+    english: also
+    audio: 4bb229cf8dd5.ogg
+  - id: module-1-0102
+    indonesian: kantor pos
+    english: post office
+    audio: 7b07c25cb97b.ogg
+  - id: module-1-0103
+    indonesian: kentang
+    english: potato
+    audio: 5afb336f393d.ogg
+  - id: module-1-0104
+    indonesian: mal
+    english: shopping mall
+    audio: 9a57902f7a3a.ogg
+  - id: module-1-0105
+    indonesian: nasi goreng
+    english: fried rice
+    audio: e7c9f7eb845a.ogg
+  - id: module-1-0106
+    indonesian: pasar swalayan
+    english: super market
+    audio: b731fd621063.ogg
+  - id: module-1-0107
+    indonesian: sekarang
+    english: now
+    audio: d326f0d43f8c.ogg
+  - id: module-1-0108
+    indonesian: terminal bus
+    english: bus terminal
+    audio: bbcfbf67a537.ogg
+  - id: module-1-0109
+    indonesian: tapi
+    english: but
+    audio: 1fa1fcb03935.ogg
+  - id: module-1-0110
+    indonesian: universitas
+    english: university
+    audio: cfdfc83d4404.ogg
+  - id: module-1-0111
+    indonesian: warung
+    english: small streetside eatery
+    audio: 576d96da9a83.ogg
+  - id: module-1-0112
+    indonesian: warung internet
+    english: internet cafe
+    audio: 98e6ab067387.ogg
+  - id: module-1-0113
+    indonesian: administrasi
+    english: administration
+    audio: aa56efec3433.ogg
+  - id: module-1-0114
+    indonesian: angkot
+    english: city transport
+    audio: 22b15e11e993.ogg
+  - id: module-1-0115
+    indonesian: bank
+    english: a bank, (i.e. a financial institution)
+    audio: 916191506568.ogg
+  - id: module-1-0116
+    indonesian: buku
+    english: book
+    audio: 603e62d384ab.ogg
+  - id: module-1-0117
+    indonesian: di antara
+    english: between, among
+    audio: ce03e0c50cc7.ogg
+  - id: module-1-0118
+    indonesian: di belakang
+    english: behind, at the rear of, in back of
+    audio: 706c334378a3.ogg
+  - id: module-1-0119
+    indonesian: di dekat
+    english: near
+    audio: fb627cfc3748.ogg
+  - id: module-1-0120
+    indonesian: di depan
+    english: in front of
+    audio: 872f9833ca38.ogg
+  - id: module-1-0121
+    indonesian: di mana
+    english: where at
+    audio: fcd402d01419.ogg
+  - id: module-1-0122
+    indonesian: di samping
+    english: beside, side-by-side (with), next to, in addition to
+    audio: 1b3de6b63617.ogg
+  - id: module-1-0123
+    indonesian: imigrasi
+    english: immigration
+    audio: 219333bea8d4.ogg
+  - id: module-1-0124
+    indonesian: jalan
+    english: street, road
+    audio: ee8883675d7d.ogg
+  - id: module-1-0125
+    indonesian: kampus
+    english: campus
+    audio: 750c73987a9b.ogg
+  - id: module-1-0126
+    indonesian: kantor polisi
+    english: police station
+    audio: 514c0317938c.ogg
+  - id: module-1-0127
+    indonesian: kota
+    english: city, town
+    audio: befddd38be00.ogg
+  - id: module-1-0128
+    indonesian: nasional
+    english: national
+    audio: 07699f9e1608.ogg
+  - id: module-1-0129
+    indonesian: pemerintah
+    english: the government
+    audio: 3cc5bfb6872a.ogg
+  - id: module-1-0130
+    indonesian: perpustakaan
+    english: library
+    audio: cbb1bbd5fd72.ogg
+  - id: module-1-0131
+    indonesian: polisi
+    english: police, police officer
+    audio: f803a02854d1.ogg
+  - id: module-1-0132
+    indonesian: pusat
+    english: the centre
+    audio: 71ce0bd0ce58.ogg
+  - id: module-1-0133
+    indonesian: ya
+    english: yes
+    audio: 0dd36c30b76b.ogg
+  - id: module-1-0134
+    indonesian: ada
+    english: there is, there are, to be present, to be in, to be at home
+    audio: 40feecb34c73.ogg
+  - id: module-1-0135
+    indonesian: dekat
+    english: nearby, close by
+    audio: 4b543148d420.ogg
+  - id: module-1-0136
+    indonesian: itu
+    english: that, those
+    audio: 03c5accaaf28.ogg
+  - id: module-1-0137
+    indonesian: -mu
+    english: your (informal)
+    audio: e466af238d58.ogg
+  - id: module-1-0138
+    indonesian: -ku
+    english: my (informal)
+    audio: 9ea870f32722.ogg
+  - id: module-1-0139
+    indonesian: tahu (verb)
+    english: to know
+    audio: 84b04f317e16.ogg
+  - id: module-1-0140
+    indonesian: tau
+    english: to know (coll)
+    audio: ac1382018f7c.ogg
+  - id: module-1-0141
+    indonesian: becak
+    english: a three-wheeled pedicab
+    audio: df41568163c7.ogg
+  - id: module-1-0142
+    indonesian: bemo
+    english: a three-wheeled taxicab
+    audio: eb08a4291460.ogg
+  - id: module-1-0143
+    indonesian: berjalan
+    english: to go, to move forward, to walk
+    audio: 0d6382061af9.ogg
+  - id: module-1-0144
+    indonesian: bus
+    english: bus
+    audio: b193fd861428.ogg
+  - id: module-1-0145
+    indonesian: dari sana
+    english: (from) there
+    audio: d1b27c912884.ogg
+  - id: module-1-0146
+    indonesian: datang
+    english: to come
+    audio: a663e6af91a3.ogg
+  - id: module-1-0147
+    indonesian: di sini
+    english: here
+    audio: a42a9d7b8588.ogg
+  - id: module-1-0148
+    indonesian: dokar
+    english: horse cart
+    audio: 121a2dcae7bd.ogg
+  - id: module-1-0149
+    indonesian: harus
+    english: must, have to
+    audio: 89838109fe00.ogg
+  - id: module-1-0150
+    indonesian: kaki
+    english: leg, foot
+    audio: 386c87823674.ogg
+  - id: module-1-0151
+    indonesian: kapal
+    english: ship
+    audio: 0c9000a5dee2.ogg
+  - id: module-1-0152
+    indonesian: katanya
+    english: I heard that..., they say..., people say that...
+    audio: 6578ca1d8a0b.ogg
+  - id: module-1-0153
+    indonesian: ke sana
+    english: (to) there
+    audio: 7d17da43e8c0.ogg
+  - id: module-1-0154
+    indonesian: ke sini
+    english: (to) here
+    audio: 438964d6a043.ogg
+  - id: module-1-0155
+    indonesian: kembali
+    english: to go back, to come back, you're welcome, (in reply to 'thank you')
+    audio: d42be696e5a2.ogg
+  - id: module-1-0156
+    indonesian: kereta api
+    english: train
+    audio: 13fd93bdc229.ogg
+  - id: module-1-0157
+    indonesian: mobil
+    english: car
+    audio: de904f84c968.ogg
+  - id: module-1-0158
+    indonesian: naik
+    english: by (when talking about a mode of transport),to get aboard, to go
+      upwards, to ascend
+    audio: 6ec4bfd4a144.ogg
+  - id: module-1-0159
+    indonesian: pergi
+    english: to go
+    audio: e899505d29f7.ogg
+  - id: module-1-0160
+    indonesian: pesawat terbang
+    english: aeroplane
+    audio: 26d4e4547583.ogg
+  - id: module-1-0161
+    indonesian: sana
+    english: off you go
+    audio: a1d8c052b2fa.ogg
+  - id: module-1-0162
+    indonesian: sepeda
+    english: bicycle
+    audio: 1d3106b89c50.ogg
+  - id: module-1-0163
+    indonesian: sepeda motor
+    english: motorbike
+    audio: cb1750c72051.ogg
+  - id: module-1-0164
+    indonesian: taksi
+    english: taxi
+    audio: 46967cfb409f.ogg
+  - id: module-1-0165
+    indonesian: bagus
+    english: excellent, impressive, great, terrific, really good
+    audio: 59dd6dcce8f5.ogg
+  - id: module-1-0166
+    indonesian: baru
+    english: new
+    audio: f0426c8e15be.ogg
+  - id: module-1-0167
+    indonesian: bersih
+    english: clean
+    audio: e8e43735c095.ogg
+  - id: module-1-0168
+    indonesian: besar
+    english: big
+    audio: f16f1bed5198.ogg
+  - id: module-1-0169
+    indonesian: buah-buahan
+    english: all kind of fruits
+    audio: 6981bdf2fe78.ogg
+  - id: module-1-0170
+    indonesian: cepat
+    english: fast, quick
+    audio: cf9aba000e2c.ogg
+  - id: module-1-0171
+    indonesian: enak
+    english: delicious
+    audio: dac7efecc6e0.ogg
+  - id: module-1-0172
+    indonesian: indah
+    english: beautiful (of art works, scenery, items)
+    audio: 3c3ba39d0049.ogg
+  - id: module-1-0173
+    indonesian: jagung
+    english: corn
+    audio: e34c97be88a8.ogg
+  - id: module-1-0174
+    indonesian: kecil
+    english: small
+    audio: 39c0c4ae58da.ogg
+  - id: module-1-0175
+    indonesian: kosong
+    english: empty, vacant, zero, naught
+    audio: 7db20c62791e.ogg
+  - id: module-1-0176
+    indonesian: kotor
+    english: dirty
+    audio: 578acd3f51ed.ogg
+  - id: module-1-0177
+    indonesian: mahal
+    english: expensive
+    audio: 8dec15e916e2.ogg
+  - id: module-1-0178
+    indonesian: makanan
+    english: food
+    audio: e4593f5bc6dc.ogg
+  - id: module-1-0179
+    indonesian: manis
+    english: sweet
+    audio: 0e8959932274.ogg
+  - id: module-1-0180
+    indonesian: menyenangkan (senang)
+    english: pleasant, nice, enjoyable
+    audio: b33da37ec5f4.ogg
+  - id: module-1-0181
+    indonesian: minuman
+    english: drink
+    audio: 94902c2ba172.ogg
+  - id: module-1-0182
+    indonesian: murah
+    english: cheap
+    audio: d34e893956e0.ogg
+  - id: module-1-0183
+    indonesian: penuh
+    english: full
+    audio: 07a51cf50c39.ogg
+  - id: module-1-0184
+    indonesian: ramai
+    english: crowded, full of people, bustling, noisy
+    audio: fd3bc6921d23.ogg
+  - id: module-1-0185
+    indonesian: bagaimana
+    english: how, what is .... like?
+    audio: d509d8f1b697.ogg
+  - id: module-1-0186
+    indonesian: belajar
+    english: to study
+    audio: 886fb6d7d904.ogg
+  - id: module-1-0187
+    indonesian: cukup
+    english: quite, pretty (adverb), enough
+    audio: 72d6876fca6a.ogg
+  - id: module-1-0188
+    indonesian: sekali
+    english: very
+    audio: 7a511eb3eb86.ogg
+  - id: module-1-0189
+    indonesian: biasanya
+    english: usually
+    audio: 2f3a63031f0d.ogg
+  - id: module-1-0190
+    indonesian: bukan
+    english: not, no (when negating a noun)
+    audio: 8e4c3f189d83.ogg
+  - id: module-1-0191
+    indonesian: dingin
+    english: cold
+    audio: 67ebb559f735.ogg
+  - id: module-1-0192
+    indonesian: jelek
+    english: ugly, bad,poor (quality)
+    audio: bdda90f94dae.ogg
+  - id: module-1-0193
+    indonesian: kurang (mathematics)
+    english: less, not so much, minus (in mathematical calculations)
+    audio: c37610a10dee.ogg
+  - id: module-1-0194
+    indonesian: lambat
+    english: slow
+    audio: 1de8d3ca388a.ogg
+  - id: module-1-0195
+    indonesian: negara
+    english: country
+    audio: 0138fa8dbd76.ogg
+  - id: module-1-0196
+    indonesian: orang
+    english: person, man/woman
+    audio: 5028e74ecd73.ogg
+  - id: module-1-0197
+    indonesian: pahit
+    english: bitter, without sugar(tea, coffee)
+    audio: 7615f25924c0.ogg
+  - id: module-1-0198
+    indonesian: panas
+    english: hot
+    audio: 805385d46d24.ogg
+  - id: module-1-0199
+    indonesian: pedas
+    english: spicy hot
+    audio: 4360305ca6e0.ogg
+  - id: module-1-0200
+    indonesian: yang
+    english: that, which, who (relative pronoun)
+    audio: 6a467a1fd5e8.ogg
+  - id: module-1-0201
+    indonesian: apakah Anda mau...?
+    english: Would you like (something)?, Would you like to (do something)?, Do you
+      want to...?
+    audio: d7770656f63c.ogg
+  - id: module-1-0202
+    indonesian: baik
+    english: good, fine, very well
+    audio: 1cf5fdf5eded.ogg
+  - id: module-1-0203
+    indonesian: dengan
+    english: with, together with
+    audio: 4708548642e1.ogg
+  - id: module-1-0204
+    indonesian: goreng
+    english: fried
+    audio: a550dd0fceb1.ogg
+  - id: module-1-0205
+    indonesian: jawaban
+    english: answer
+    audio: d66615374c3e.ogg
+  - id: module-1-0206
+    indonesian: minta
+    english: to ask for something, to request
+    audio: 0372a25842fa.ogg
+  - id: module-1-0207
+    indonesian: pertanyaan
+    english: question
+    audio: 071acd7db941.ogg
+  - id: module-1-0208
+    indonesian: rambutan
+    english: rambutan fruit)
+    audio: cc97935936b1.ogg
+  - id: module-1-0209
+    indonesian: sama
+    english: the same, with, together with (in informal usage), and
+    audio: 5611c9d548e2.ogg
+  - id: module-1-0210
+    indonesian: satai
+    english: kebabs, satay (meat roasted on skewers)
+    audio: 40a195205f91.ogg
+  - id: module-1-0211
+    indonesian: traktir
+    english: to 'treat' someone, to 'shout' someone, to pay for someone
+    audio: 8a1c5126e4fd.ogg
+  - id: module-1-0212
+    indonesian: wah
+    english: oh! (exclamation of surprise, admiration etc.)
+    audio: eaebcc45a7e9.ogg
+  - id: module-1-0213
+    indonesian: bagaimana kalau...
+    english: what about (doing something), what if
+    audio: 4cbf519dcb7f.ogg
+  - id: module-1-0214
+    indonesian: bahasa Indonesia
+    english: Indonesian (language)
+    audio: 8669cb6bf047.ogg
+  - id: module-1-0215
+    indonesian: bahasa
+    english: language
+    audio: d960e260bf80.ogg
+  - id: module-1-0216
+    indonesian: baiklah
+    english: okay, fine, very well
+    audio: 11c4cc1b1e46.ogg
+  - id: module-1-0217
+    indonesian: berjalan-jalan
+    english: to go for a stroll, to travel
+    audio: d803a2433a6d.ogg
+  - id: module-1-0218
+    indonesian: boleh
+    english: "may, can. In reply to a question: Sure! No problem! Great!"
+    audio: c917b91fc4ec.ogg
+  - id: module-1-0219
+    indonesian: kalau
+    english: if
+    audio: b5d7e006948b.ogg
+  - id: module-1-0220
+    indonesian: keluar
+    english: to go out, to come out, to emerge, to exit
+    audio: a31d8f6f6ed0.ogg
+  - id: module-1-0221
+    indonesian: nanti
+    english: in a short while, later
+    audio: 3edd0d5e1603.ogg
+  - id: module-1-0222
+    indonesian: tidak apa-apa
+    english: that's fine, no problem, no worries
+    audio: 33be785dfd95.ogg
+  - id: module-1-0223
+    indonesian: asrama
+    english: a dormitory
+    audio: b26e66938027.ogg
+  - id: module-1-0224
+    indonesian: bahasa Cina
+    english: Chinese (the language)
+    audio: 1948ec422d19.ogg
+  - id: module-1-0225
+    indonesian: bahasa Inggris
+    english: English (the language)
+    audio: a4531eccbbfe.ogg
+  - id: module-1-0226
+    indonesian: bapak
+    english: father
+    audio: d2cb0027f141.ogg
+  - id: module-1-0227
+    indonesian: Bapak
+    english: you, to address elder male
+    audio: d2cb0027f141.ogg
+  - id: module-1-0228
+    indonesian: belok
+    english: a turn, to make a turn
+    audio: e63c6dca06bc.ogg
+  - id: module-1-0229
+    indonesian: di seberang
+    english: on the other side
+    audio: 5cb7b23fe167.ogg
+  - id: module-1-0230
+    indonesian: dosen
+    english: university lecturer, professor
+    audio: ad49067edb3b.ogg
+  - id: module-1-0231
+    indonesian: fakultas
+    english: a faculty
+    audio: c948cc3f0e90.ogg
+  - id: module-1-0232
+    indonesian: ilmu
+    english: science, esoteric knowledge
+    audio: e4ac534e8d1c.ogg
+  - id: module-1-0233
+    indonesian: ilmu bumi
+    english: geography
+    audio: 1fe17199a092.ogg
+  - id: module-1-0234
+    indonesian: ilmu ekonomi
+    english: economics
+    audio: d529f17244db.ogg
+  - id: module-1-0235
+    indonesian: ilmu kimia
+    english: chemistry
+    audio: 4a6484e50883.ogg
+  - id: module-1-0236
+    indonesian: ilmu politik
+    english: political science
+    audio: 6fcd56a63103.ogg
+  - id: module-1-0237
+    indonesian: informasi
+    english: information
+    audio: e7da50170727.ogg
+  - id: module-1-0238
+    indonesian: kedua
+    english: the second
+    audio: a23b2d207b27.ogg
+  - id: module-1-0239
+    indonesian: kuliah
+    english: a lecture (in a university course
+    audio: 80fc6e856055.ogg
+  - id: module-1-0240
+    indonesian: mahasiswa
+    english: university student
+    audio: ad542ecdc337.ogg
+  - id: module-1-0241
+    indonesian: matematika
+    english: mathematics
+    audio: 1055d9fec6b8.ogg
+  - id: module-1-0242
+    indonesian: pertama
+    english: the first
+    audio: fe1268a6655c.ogg
+  - id: module-1-0243
+    indonesian: rektor
+    english: university president, vice-chancellor
+    audio: 546a0f0f16e3.ogg
+  - id: module-1-0244
+    indonesian: sastra
+    english: literature
+    audio: 666e597f773a.ogg
+  - id: module-1-0245
+    indonesian: studi
+    english: the study (of something), studies (in a certain field
+    audio: ee2291045042.ogg
+  - id: module-1-0246
+    indonesian: terus (1)
+    english: continue, go ahead, to keep on ___-ing, to continue to...
+    audio: e7b1eef4d0f4.ogg
+  - id: module-1-0247
+    indonesian: toko buku
+    english: book shop
+    audio: 052d83192b54.ogg
+  - id: module-1-0248
+    indonesian: toko roti
+    english: bakery
+    audio: fa2b99b8aca8.ogg
+  - id: module-1-0249
+    indonesian: banyak
+    english: a lot (of), many, much
+    audio: ea89ac0f4c88.ogg
+  - id: module-1-0250
+    indonesian: bermacam-macam
+    english: all sorts (of), various (kinds of)
+    audio: de487dfeb8b2.ogg
+  - id: module-1-0251
+    indonesian: Eropa
+    english: Europe
+    audio: 027f7822b542.ogg
+  - id: module-1-0252
+    indonesian: kamar
+    english: room
+    audio: 271f92da792f.ogg
+  - id: module-1-0253
+    indonesian: lain
+    english: other
+    audio: 2b2d954ee964.ogg
+  - id: module-1-0254
+    indonesian: lama
+    english: long (of duration), old, longstanding, from the past
+    audio: 12e8c1761969.ogg
+  - id: module-1-0255
+    indonesian: laut
+    english: the sea
+    audio: fd4d24c7dd6c.ogg
+  - id: module-1-0256
+    indonesian: tempat
+    english: a place, room (i.e. space to put something)
+    audio: 4330ce62c2db.ogg

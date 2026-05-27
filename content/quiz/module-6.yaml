@@ -1,0 +1,812 @@
+id: module-6
+title:
+  en: Module 6
+  ru: Модуль 6
+cards:
+  - id: module-6-0001
+    indonesian: agak
+    english: rather
+    audio: 0526de303974.ogg
+  - id: module-6-0002
+    indonesian: barat daya
+    english: south west
+    audio: 3d2e3e76e1cf.ogg
+  - id: module-6-0003
+    indonesian: barat laut
+    english: north west
+    audio: 7312e5903147.ogg
+  - id: module-6-0004
+    indonesian: baru-baru ini
+    english: recently
+    audio: 14fe38fce1bb.ogg
+  - id: module-6-0005
+    indonesian: camat
+    english: the head of a sub-district
+    audio: cef5e38c1775.ogg
+  - id: module-6-0006
+    indonesian: iklim
+    english: climate
+    audio: f1be4be44d36.ogg
+  - id: module-6-0007
+    indonesian: jalan layang
+    english: a fly over
+    audio: 45e646c559cd.ogg
+  - id: module-6-0008
+    indonesian: kawasan
+    english: a region, an area
+    audio: 7d7eb42ef321.ogg
+  - id: module-6-0009
+    indonesian: kecamatan
+    english: a sub-district
+    audio: f72e85b592ca.ogg
+  - id: module-6-0010
+    indonesian: makam
+    english: a grave, a tomb
+    audio: 2ba97f2186e0.ogg
+  - id: module-6-0011
+    indonesian: mata angin
+    english: the points of the compass
+    audio: 7f06203b1168.ogg
+  - id: module-6-0012
+    indonesian: monumen
+    english: monument
+    audio: ac329555bdc0.ogg
+  - id: module-6-0013
+    indonesian: pahlawan
+    english: a hero
+    audio: dda626cea81f.ogg
+  - id: module-6-0014
+    indonesian: tenggara
+    english: south east
+    audio: cfcc320f4d62.ogg
+  - id: module-6-0015
+    indonesian: tepi
+    english: the edge
+    audio: 72391163a120.ogg
+  - id: module-6-0016
+    indonesian: timur laut
+    english: north east
+    audio: 0dcd9fdcb6cc.ogg
+  - id: module-6-0017
+    indonesian: timur
+    english: east, eastern
+    audio: 42a82eebd7f9.ogg
+  - id: module-6-0018
+    indonesian: utara
+    english: north, northern
+    audio: 53fae8a15a03.ogg
+  - id: module-6-0019
+    indonesian: berangin
+    english: windy
+    audio: f5417631f39a.ogg
+  - id: module-6-0020
+    indonesian: berawan
+    english: cloudy
+    audio: 4a3cf6c87d9d.ogg
+  - id: module-6-0021
+    indonesian: celsius
+    english: celsius, centigrade
+    audio: 5d1d57924d5e.ogg
+  - id: module-6-0022
+    indonesian: derajat
+    english: a degree of temperature
+    audio: bbd1a7698508.ogg
+  - id: module-6-0023
+    indonesian: hujan
+    english: rain
+    audio: 2dca4767e031.ogg
+  - id: module-6-0024
+    indonesian: inilah
+    english: this is ...
+    audio: f07b4b4125a6.ogg
+  - id: module-6-0025
+    indonesian: kering
+    english: dry
+    audio: 1d15084e5cd9.ogg
+  - id: module-6-0026
+    indonesian: lembab
+    english: humid
+    audio: 9c46be73ba15.ogg
+  - id: module-6-0027
+    indonesian: musim
+    english: a season
+    audio: 25db9a092ea0.ogg
+  - id: module-6-0028
+    indonesian: musim kemarau
+    english: the dry season
+    audio: 4b4456dbcf90.ogg
+  - id: module-6-0029
+    indonesian: musim hujan
+    english: the rainy season
+    audio: 8795ffb3f0bb.ogg
+  - id: module-6-0030
+    indonesian: musim panas
+    english: summer
+    audio: 131db446b2a7.ogg
+  - id: module-6-0031
+    indonesian: musim dingin
+    english: winter
+    audio: ee0259160417.ogg
+  - id: module-6-0032
+    indonesian: pemirsa
+    english: viewers
+    audio: bdbf9acb4330.ogg
+  - id: module-6-0033
+    indonesian: prakiraan cuaca
+    english: weather forecast
+    audio: f2b443ee8d22.ogg
+  - id: module-6-0034
+    indonesian: ramalan
+    english: a prediction
+    audio: 67fe5948f7a1.ogg
+  - id: module-6-0035
+    indonesian: sekian
+    english: that's all
+    audio: 2801e78c2ccc.ogg
+  - id: module-6-0036
+    indonesian: suhu
+    english: temperature
+    audio: e12b29b9c8e7.ogg
+  - id: module-6-0037
+    indonesian: terang
+    english: clear, bright
+    audio: af9c04b15261.ogg
+  - id: module-6-0038
+    indonesian: cerita
+    english: a story, to tell
+    audio: 6043c6c5e83a.ogg
+  - id: module-6-0039
+    indonesian: minyak
+    english: oil
+    audio: a7dbb1a2fb87.ogg
+  - id: module-6-0040
+    indonesian: yang di sana
+    english: the one over there
+    audio: aaecddd399d7.ogg
+  - id: module-6-0041
+    indonesian: yang ini
+    english: this one
+    audio: 1faec5687135.ogg
+  - id: module-6-0042
+    indonesian: yang itu
+    english: that one
+    audio: a05c3344101d.ogg
+  - id: module-6-0043
+    indonesian: yang mana
+    english: which one?
+    audio: c2c8f0cb364c.ogg
+  - id: module-6-0044
+    indonesian: bertanding
+    english: to compete
+    audio: 9f5693604231.ogg
+  - id: module-6-0045
+    indonesian: bodoh
+    english: stupid
+    audio: b88303881806.ogg
+  - id: module-6-0046
+    indonesian: kuis
+    english: quiz
+    audio: d13bbc4b9e33.ogg
+  - id: module-6-0047
+    indonesian: lucu
+    english: funny
+    audio: 710d7f17b627.ogg
+  - id: module-6-0048
+    indonesian: maju
+    english: to go forward
+    audio: 780532dc346f.ogg
+  - id: module-6-0049
+    indonesian: menjawab (jawab)
+    english: to answer
+    audio: 8d65b803df3c.ogg
+  - id: module-6-0050
+    indonesian: moderator
+    english: the moderator
+    audio: d705347aab7c.ogg
+  - id: module-6-0051
+    indonesian: paling
+    english: the most
+    audio: 563548948d60.ogg
+  - id: module-6-0052
+    indonesian: panjang
+    english: long (of things or distance)
+    audio: 1d1fa7c3202b.ogg
+  - id: module-6-0053
+    indonesian: pendek
+    english: short
+    audio: d106e420f097.ogg
+  - id: module-6-0054
+    indonesian: persegi
+    english: a square
+    audio: ccb2980a9bea.ogg
+  - id: module-6-0055
+    indonesian: sabar
+    english: patient
+    audio: c33563a38210.ogg
+  - id: module-6-0056
+    indonesian: sederhana
+    english: simple
+    audio: 26925e774a94.ogg
+  - id: module-6-0057
+    indonesian: selamat datang
+    english: welcome
+    audio: 806224dd61e2.ogg
+  - id: module-6-0058
+    indonesian: tengah
+    english: middle
+    audio: 2c0060956266.ogg
+  - id: module-6-0059
+    indonesian: tim
+    english: a team
+    audio: 60cad79e8ee3.ogg
+  - id: module-6-0060
+    indonesian: diambil
+    english: to be fetched, to be removed
+    audio: a64dceb4d983.ogg
+  - id: module-6-0061
+    indonesian: diantar
+    english: to be accompanied
+    audio: 92b97061e767.ogg
+  - id: module-6-0062
+    indonesian: diatur
+    english: to be arranged
+    audio: e6539fbabd45.ogg
+  - id: module-6-0063
+    indonesian: dibaca
+    english: to be read
+    audio: 97d218fc001c.ogg
+  - id: module-6-0064
+    indonesian: dibangun
+    english: to be built
+    audio: d9a4f0ac7bf1.ogg
+  - id: module-6-0065
+    indonesian: dibawa
+    english: to be carried
+    audio: 997480b34e72.ogg
+  - id: module-6-0066
+    indonesian: dibeli
+    english: to be bought
+    audio: c10a779cf533.ogg
+  - id: module-6-0067
+    indonesian: diberi
+    english: to be given to someone, to have something attached on
+    audio: 4571f106ce60.ogg
+  - id: module-6-0068
+    indonesian: diberikan
+    english: to be given something
+    audio: 5b79336c927a.ogg
+  - id: module-6-0069
+    indonesian: dibuat
+    english: to be made
+    audio: 5b7619186e7f.ogg
+  - id: module-6-0070
+    indonesian: dibuka
+    english: to be opened
+    audio: dc72e5e38029.ogg
+  - id: module-6-0071
+    indonesian: dicuci
+    english: to be washed
+    audio: cf1a7cf9dd02.ogg
+  - id: module-6-0072
+    indonesian: dikirim
+    english: to be sent
+    audio: ef344731fe9c.ogg
+  - id: module-6-0073
+    indonesian: dijawab
+    english: to be answered
+    audio: 7af8a2561f8a.ogg
+  - id: module-6-0074
+    indonesian: dijual
+    english: to be sold
+    audio: c623fa577225.ogg
+  - id: module-6-0075
+    indonesian: dilakukan
+    english: to be done
+    audio: c06981181692.ogg
+  - id: module-6-0076
+    indonesian: dimakan
+    english: to be eaten
+    audio: a3aafcce91af.ogg
+  - id: module-6-0077
+    indonesian: dinyanyikan
+    english: to be sung
+    audio: 8dae51caf55b.ogg
+  - id: module-6-0078
+    indonesian: diperbaiki
+    english: to be fixed
+    audio: 026840228280.ogg
+  - id: module-6-0079
+    indonesian: ditanam
+    english: to be planted
+    audio: bfb73b169fa7.ogg
+  - id: module-6-0080
+    indonesian: ditulis
+    english: to be written
+    audio: 75d7ac51080e.ogg
+  - id: module-6-0081
+    indonesian: ditutup
+    english: to be closed
+    audio: 948a13f942d2.ogg
+  - id: module-6-0082
+    indonesian: cangkir
+    english: a cup
+    audio: d5cdb6d2a058.ogg
+  - id: module-6-0083
+    indonesian: ceret
+    english: a kettle
+    audio: fe23ccd05f56.ogg
+  - id: module-6-0084
+    indonesian: diaduk
+    english: to be stirred
+    audio: f3d5fd020773.ogg
+  - id: module-6-0085
+    indonesian: diajak
+    english: to be invited
+    audio: fea2f791a717.ogg
+  - id: module-6-0086
+    indonesian: digunakan
+    english: to be used
+    audio: 27270404828b.ogg
+  - id: module-6-0087
+    indonesian: diisi
+    english: to be filled in/out
+    audio: b1272bd1ceda.ogg
+  - id: module-6-0088
+    indonesian: dikembalikan
+    english: to be returned
+    audio: 2c5340ca5af3.ogg
+  - id: module-6-0089
+    indonesian: diminum
+    english: to be drunk
+    audio: fe4d7bba47ba.ogg
+  - id: module-6-0090
+    indonesian: direbus
+    english: to be boiled
+    audio: d2b1f582392b.ogg
+  - id: module-6-0091
+    indonesian: disimpan
+    english: to be kept
+    audio: 9c61ab0eaa40.ogg
+  - id: module-6-0092
+    indonesian: disuruh
+    english: to be told to do something
+    audio: b91a7c5c911a.ogg
+  - id: module-6-0093
+    indonesian: ditaruh
+    english: to be placed
+    audio: 511e736eb5db.ogg
+  - id: module-6-0094
+    indonesian: garam
+    english: salt
+    audio: c14aa4c66d42.ogg
+  - id: module-6-0095
+    indonesian: gula
+    english: sugar
+    audio: 3483d2a8e737.ogg
+  - id: module-6-0096
+    indonesian: jam tangan
+    english: a wristwatch
+    audio: 279501947699.ogg
+  - id: module-6-0097
+    indonesian: kopi tubruk
+    english: Indonesian-style coffee
+    audio: 19730dbbec35.ogg
+  - id: module-6-0098
+    indonesian: kupas
+    english: to peel
+    audio: 28e95aece631.ogg
+  - id: module-6-0099
+    indonesian: laporan
+    english: a report
+    audio: 001499c1b30f.ogg
+  - id: module-6-0100
+    indonesian: merebus (rebus)
+    english: to boil
+    audio: 4fca9ca5d68d.ogg
+  - id: module-6-0101
+    indonesian: merica
+    english: pepper
+    audio: 6c178baa6b7c.ogg
+  - id: module-6-0102
+    indonesian: panci
+    english: a pot, saucepan
+    audio: 3b735c30b356.ogg
+  - id: module-6-0103
+    indonesian: poci
+    english: a teapot
+    audio: 55fd7030bf5e.ogg
+  - id: module-6-0104
+    indonesian: tumbuh
+    english: to grow
+    audio: 6c83827f1b25.ogg
+  - id: module-6-0105
+    indonesian: bawang merah
+    english: shallot
+    audio: cf94cb0d8a1c.ogg
+  - id: module-6-0106
+    indonesian: bawang putih
+    english: garlic
+    audio: dbfee983ee75.ogg
+  - id: module-6-0107
+    indonesian: cabai
+    english: chili pepper
+    audio: e246f9f7010e.ogg
+  - id: module-6-0108
+    indonesian: mencampur (campur)
+    english: to mix
+    audio: be17b2bd8f9a.ogg
+  - id: module-6-0109
+    indonesian: dicampur
+    english: to be mixed
+    audio: bfc543eef419.ogg
+  - id: module-6-0110
+    indonesian: daging kambing
+    english: lamb, goat meat
+    audio: a0456ada8c76.ogg
+  - id: module-6-0111
+    indonesian: mengiris (iris)
+    english: to slice thinly
+  - id: module-6-0112
+    indonesian: kacang panjang
+    english: long beans
+    audio: 38ff5bccbe25.ogg
+  - id: module-6-0113
+    indonesian: kacang tanah
+    english: peanuts
+    audio: ef977cc28c1a.ogg
+  - id: module-6-0114
+    indonesian: kangkung
+    english: water spinach
+    audio: 3b2a636f6668.ogg
+  - id: module-6-0115
+    indonesian: kerupuk
+    english: shrimp crackers
+    audio: d8e81bf67d4e.ogg
+  - id: module-6-0116
+    indonesian: ketimun
+    english: cucumber
+    audio: c6b7368bde55.ogg
+  - id: module-6-0117
+    indonesian: ketumbar
+    english: coriander
+    audio: ad7de4dde3f0.ogg
+  - id: module-6-0118
+    indonesian: kol
+    english: cabbage
+    audio: c41fab3de9e9.ogg
+  - id: module-6-0119
+    indonesian: mentega
+    english: butter
+    audio: 60ceb688dc6b.ogg
+  - id: module-6-0120
+    indonesian: mengoleskan (oleskan)
+    english: to spread over
+    audio: 5684a65cb52f.ogg
+  - id: module-6-0121
+    indonesian: memanggang (panggang)
+    english: to grill
+    audio: ca5c275a7959.ogg
+  - id: module-6-0122
+    indonesian: menyajikan (sajikan)
+    english: to serve
+    audio: f36873ffbcd2.ogg
+  - id: module-6-0123
+    indonesian: sesuai
+    english: according to, suitable, appropriate
+    audio: 3d1388c16541.ogg
+  - id: module-6-0124
+    indonesian: selera
+    english: taste, appetite
+    audio: 0c8b2ebc6522.ogg
+  - id: module-6-0125
+    indonesian: menambahkan (tambahkan)
+    english: to add
+    audio: 06208e8dd1ca.ogg
+  - id: module-6-0126
+    indonesian: menaruh (taruh)
+    english: to put
+    audio: e10e2bb99d09.ogg
+  - id: module-6-0127
+    indonesian: terasi
+    english: shrimp paste
+    audio: 9bbcd9a75ed6.ogg
+  - id: module-6-0128
+    indonesian: tomat
+    english: tomato
+    audio: 24e1535142f0.ogg
+  - id: module-6-0129
+    indonesian: menumis (tumis)
+    english: to sautee
+    audio: a926c326c8b6.ogg
+  - id: module-6-0130
+    indonesian: akar
+    english: a root, roots
+    audio: 4f86948abc67.ogg
+  - id: module-6-0131
+    indonesian: berkeliling
+    english: to go from place to place
+    audio: f85e3503292b.ogg
+  - id: module-6-0132
+    indonesian: bungkus
+    english: packets of ...
+    audio: 218acd5674dc.ogg
+  - id: module-6-0133
+    indonesian: bungkusan
+    english: a package
+    audio: b0ad17c24b1d.ogg
+  - id: module-6-0134
+    indonesian: daun
+    english: a leaf, leaves
+    audio: 54aff51966a9.ogg
+  - id: module-6-0135
+    indonesian: demam
+    english: fever
+    audio: 0f6d29f91097.ogg
+  - id: module-6-0136
+    indonesian: gemuk
+    english: fat
+    audio: d4758912f778.ogg
+  - id: module-6-0137
+    indonesian: menggendong (gendong)
+    english: to carry something
+    audio: 9a4b00c1d515.ogg
+  - id: module-6-0138
+    indonesian: instruksi
+    english: an instruction
+    audio: aeb9b94f6105.ogg
+  - id: module-6-0139
+    indonesian: isi
+    english: the contents of something
+    audio: 400d44d87c87.ogg
+  - id: module-6-0140
+    indonesian: jamu
+    english: Indonesian tonic and herbal medicine
+    audio: 287233283b4b.ogg
+  - id: module-6-0141
+    indonesian: masuk angin
+    english: to catch a cold
+    audio: dcdd8b7011fc.ogg
+  - id: module-6-0142
+    indonesian: muka
+    english: someone's face, the front part of something
+    audio: 766926aab002.ogg
+  - id: module-6-0143
+    indonesian: obat
+    english: medicine
+    audio: 161a654bb127.ogg
+  - id: module-6-0144
+    indonesian: pemakaian (pakai)
+    english: the use of something
+    audio: 338413157ada.ogg
+  - id: module-6-0145
+    indonesian: perut
+    english: abdomen, belly
+    audio: 7d49c638ea4b.ogg
+  - id: module-6-0146
+    indonesian: sakit kepala
+    english: to have a headache
+    audio: 23c221222b35.ogg
+  - id: module-6-0147
+    indonesian: sakit perut
+    english: to have stomach problem
+    audio: 511b7383a4f3.ogg
+  - id: module-6-0148
+    indonesian: sariawan
+    english: a mouth ulcer
+    audio: acf366a35b25.ogg
+  - id: module-6-0149
+    indonesian: bahagia
+    english: happy
+    audio: cd143931d74d.ogg
+  - id: module-6-0150
+    indonesian: bahkan
+    english: in fact even
+    audio: 3f5a14444349.ogg
+  - id: module-6-0151
+    indonesian: cuma-cuma
+    english: free, cost nothing
+    audio: 33322e7d70cc.ogg
+  - id: module-6-0152
+    indonesian: dicoba
+    english: to be tried on
+    audio: 75a99f6b273f.ogg
+  - id: module-6-0153
+    indonesian: foto
+    english: a photograph
+    audio: 3119c30d53dd.ogg
+  - id: module-6-0154
+    indonesian: hari kerja
+    english: a work day
+    audio: 9ccd5ca34673.ogg
+  - id: module-6-0155
+    indonesian: jam buka
+    english: opening hours
+    audio: d0a631703f04.ogg
+  - id: module-6-0156
+    indonesian: jatuh sakit
+    english: to fall sick
+    audio: edad095ca681.ogg
+  - id: module-6-0157
+    indonesian: kosmetik
+    english: cosmetics
+    audio: 896594c0f7e9.ogg
+  - id: module-6-0158
+    indonesian: kurus
+    english: thin, skinny
+    audio: 6357bb674f86.ogg
+  - id: module-6-0159
+    indonesian: mengobati (obati)
+    english: to heal
+    audio: 09d7a348ae53.ogg
+  - id: module-6-0160
+    indonesian: mula-mula
+    english: at first
+    audio: d19321f46bfa.ogg
+  - id: module-6-0161
+    indonesian: Nyonya
+    english: Mrs.
+    audio: 8327ca896906.ogg
+  - id: module-6-0162
+    indonesian: orang sakit
+    english: a sick person
+    audio: 6ce373d646e0.ogg
+  - id: module-6-0163
+    indonesian: pikiran
+    english: an idea/a thought
+    audio: 5ef9223b5659.ogg
+  - id: module-6-0164
+    indonesian: pintu masuk
+    english: entrance
+    audio: dab1adb7a8d5.ogg
+  - id: module-6-0165
+    indonesian: produksi
+    english: production
+    audio: 561ce2fd0246.ogg
+  - id: module-6-0166
+    indonesian: sabun
+    english: soap
+    audio: d378ad8be3f1.ogg
+  - id: module-6-0167
+    indonesian: sembuh
+    english: cured, recovered
+    audio: 5d27bd7af26e.ogg
+  - id: module-6-0168
+    indonesian: suatu
+    english: a, one
+    audio: cf8a2290f91f.ogg
+  - id: module-6-0169
+    indonesian: tablet
+    english: a tablet (i.e. a kind of pill)
+    audio: ee7b379847f7.ogg
+  - id: module-6-0170
+    indonesian: tangan
+    english: hand, arm
+    audio: 435e32350c1e.ogg
+  - id: module-6-0171
+    indonesian: tetangga
+    english: a neighbour
+    audio: bd545ca0b355.ogg
+  - id: module-6-0172
+    indonesian: tradisional
+    english: traditional
+    audio: ca7f7fc73a3e.ogg
+  - id: module-6-0173
+    indonesian: abu
+    english: ash, ashes
+    audio: 920e2d787371.ogg
+  - id: module-6-0174
+    indonesian: bendera
+    english: a flag
+    audio: 0e37607c4333.ogg
+  - id: module-6-0175
+    indonesian: bernama
+    english: is called by the name ...
+    audio: 19755844efda.ogg
+  - id: module-6-0176
+    indonesian: bersejarah
+    english: historic
+    audio: dda6f33d245e.ogg
+  - id: module-6-0177
+    indonesian: berteriak
+    english: to shout, to yell
+    audio: 053865d7c8bd.ogg
+  - id: module-6-0178
+    indonesian: diganti
+    english: to be replaced
+    audio: 70cd10401745.ogg
+  - id: module-6-0179
+    indonesian: dikenal
+    english: to be recognised (as/by)
+    audio: 38b3948ee65f.ogg
+  - id: module-6-0180
+    indonesian: dilihat
+    english: to be seen, to be looked at
+    audio: fb7cc81217ec.ogg
+  - id: module-6-0181
+    indonesian: dinaikkan
+    english: to be taken upwards
+    audio: eb8c4418383f.ogg
+  - id: module-6-0182
+    indonesian: dikunjungi
+    english: to be visited
+    audio: 21454a24a26e.ogg
+  - id: module-6-0183
+    indonesian: diturunkan
+    english: to be lowered
+    audio: 164e05269e68.ogg
+  - id: module-6-0184
+    indonesian: filsafat
+    english: philosophy
+    audio: b15a3a9e302e.ogg
+  - id: module-6-0185
+    indonesian: Hindia Belanda
+    english: The Netherlands East Indies
+    audio: 910a8c91904e.ogg
+  - id: module-6-0186
+    indonesian: istana
+    english: a palace
+    audio: aee2b467268f.ogg
+  - id: module-6-0187
+    indonesian: jatuh
+    english: to fall
+    audio: ce78bbe1ad5b.ogg
+  - id: module-6-0188
+    indonesian: kelihatan
+    english: visible
+    audio: 094e129dbc17.ogg
+  - id: module-6-0189
+    indonesian: pemandu wisata
+    english: tour guide
+    audio: 0a652079a70f.ogg
+  - id: module-6-0190
+    indonesian: perang
+    english: war
+    audio: a36145970d25.ogg
+  - id: module-6-0191
+    indonesian: pohon beringin
+    english: a banyan tree
+    audio: 193eca917b55.ogg
+  - id: module-6-0192
+    indonesian: ribuan
+    english: thousands
+    audio: 3ab368eb2d64.ogg
+  - id: module-6-0193
+    indonesian: sebuah
+    english: a, one
+    audio: e9530019d013.ogg
+  - id: module-6-0194
+    indonesian: terdapat
+    english: is to be found at/in/among
+    audio: e270f13e6fea.ogg
+  - id: module-6-0195
+    indonesian: zaman
+    english: an age, an era
+    audio: 1d2c2f28bd39.ogg
+  - id: module-6-0196
+    indonesian: berjuta-juta
+    english: millions
+    audio: 8d41c8036177.ogg
+  - id: module-6-0197
+    indonesian: puncak
+    english: a peak
+    audio: 546b70842dfb.ogg
+  - id: module-6-0198
+    indonesian: pusat perbelanjaan
+    english: a shopping centre
+    audio: 71e9fdd54809.ogg
+  - id: module-6-0199
+    indonesian: seluruh
+    english: the entire, the whole
+    audio: 900ca72fec70.ogg
+  - id: module-6-0200
+    indonesian: suasana
+    english: the atmosphere (of a place)
+    audio: 10799ce7b87b.ogg
+  - id: module-6-0201
+    indonesian: tempat makan
+    english: a place to eat, food court
+    audio: 5056834ec511.ogg
+  - id: module-6-0202
+    indonesian: yakin
+    english: to feel/be sure (that)
+    audio: 7b04dac999d3.ogg
