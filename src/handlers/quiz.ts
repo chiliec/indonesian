@@ -41,7 +41,7 @@ export async function quizStartCallback(ctx: BotCtx): Promise<void> {
   await askQuestion(ctx.api, ctx.from.id, ctx.deps, res.session._id, res.first);
 }
 
-/** Send the audio (cached file_id or upload-then-cache), then the quiz poll. */
+/** Send the quiz poll with audio embedded in the question (Bot API 10.0 media). */
 export async function askQuestion(
   api: Api,
   chatId: number,
@@ -49,7 +49,10 @@ export async function askQuestion(
   sessionId: import('mongoose').Types.ObjectId,
   question: Question,
 ): Promise<void> {
-  if (question.audioFile) await sendQuizAudio(api, chatId, deps, question.audioFile);
+  const media = question.audioFile
+    ? { type: 'audio' as const, media: await resolveQuizAudio(deps, question.audioFile) }
+    : undefined;
+
   const poll = await api.sendPoll(
     chatId,
     question.promptText,
@@ -59,21 +62,26 @@ export async function askQuestion(
       correct_option_ids: [question.correctIndex],
       is_anonymous: false,
       explanation: question.explanation,
+      ...(media ? { media } : {}),
     },
   );
+
+  // Cache the audio file_id Telegram surfaces on the returned poll, so the next
+  // send reuses it instead of re-uploading the OGG. (audio != voice file_id.)
+  const fileId = poll.poll.media?.audio?.file_id;
+  if (question.audioFile && fileId) {
+    await deps.audioCache.set(question.audioFile, fileId, 'audio');
+  }
+
   await deps.quiz.deps.sessions.setCurrentPoll(sessionId, poll.poll.id);
 }
 
-async function sendQuizAudio(api: Api, chatId: number, deps: BotDeps, audioFile: string): Promise<void> {
-  const cached = await deps.audioCache.get(audioFile);
-  if (cached) {
-    await api.sendVoice(chatId, cached);
-    return;
-  }
+/** Cached audio file_id, or a fresh InputFile read from disk for first upload. */
+async function resolveQuizAudio(deps: BotDeps, audioFile: string): Promise<string | InputFile> {
+  const cached = await deps.audioCache.get(audioFile, 'audio');
+  if (cached) return cached;
   const buf = await fs.readFile(path.join(QUIZ_AUDIO_DIR, audioFile));
-  const msg = await api.sendVoice(chatId, new InputFile(buf, audioFile));
-  const fileId = msg.voice?.file_id;
-  if (fileId) await deps.audioCache.set(audioFile, fileId);
+  return new InputFile(buf, audioFile);
 }
 
 /** poll_answer handler — record the answer, then ask next or show summary. */
