@@ -140,3 +140,28 @@ test('ordering groups unseen, then previously-wrong, then mastered', async () =>
   // mastered card is last
   assert.equal(ids[ids.length - 1], 'm1-0001');
 });
+
+test('start: audioless cards always render as text', async () => {
+  // m1-0004 ("teman") has no audio in the fixtures.
+  const res = await svc.start(1, 'module-1', () => 0);
+  const teman = res!.session.questions.find((q) => q.cardId === 'm1-0004')!;
+  assert.equal(teman.type, 'text');
+  assert.equal(teman.audioFile, undefined);
+});
+
+test('start: unmastered audio cards render as listen with audio attached', async () => {
+  const res = await svc.start(1, 'module-1', () => 0);
+  const pasar = res!.session.questions.find((q) => q.cardId === 'm1-0001')!;
+  assert.equal(pasar.type, 'listen');
+  assert.equal(pasar.audioFile, 'aaa111.ogg');
+});
+
+test('start: a mastered audio card becomes produce when the roll passes', async () => {
+  const progress = new QuizProgressRepo();
+  await progress.record(1, 'm1-0001', true); // mastered
+  // rng=0 makes the produce roll (rng < 1/5) pass for the mastered audio card.
+  const res = await svc.start(1, 'module-1', () => 0);
+  const pasar = res!.session.questions.find((q) => q.cardId === 'm1-0001')!;
+  assert.equal(pasar.type, 'produce');
+  assert.equal(pasar.audioFile, undefined);
+});

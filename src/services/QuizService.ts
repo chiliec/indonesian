@@ -94,6 +94,7 @@ export class QuizService {
   async start(
     telegramId: number,
     moduleId: string,
+    rng: () => number = Math.random,
   ): Promise<{ session: QuizSession; first: Question } | null> {
     const cards =
       moduleId === MIXED_MODULE_ID ? this.deps.engine.allCards() : this.deps.engine.get(moduleId)?.cards;
@@ -103,7 +104,9 @@ export class QuizService {
     const prog = await this.deps.progress.forCards(telegramId, cards.map((c) => c.id));
     const ordered = orderByMastery(cards, prog);
     const chosen = ordered.slice(0, Math.min(SESSION_LENGTH, ordered.length));
-    const questions = chosen.map((card) => build(card, cards));
+    const questions = chosen.map((card) =>
+      build(card, cards, { isMastered: (prog.get(card.id)?.correct ?? 0) > 0, rng }),
+    );
 
     const session = await this.deps.sessions.create(telegramId, moduleId, questions);
     const first = questions[0];
