@@ -1,19 +1,23 @@
 import type { QuizCard, Question, QuestionType } from './types.js';
 
-const ALL_TYPES: QuestionType[] = ['audio-en', 'audio-id', 'id-en', 'en-id'];
-
 // Telegram quiz-poll field limits. Long phrase/sentence cards would otherwise
 // make sendPoll reject the whole question with a 400, so clamp defensively.
 const POLL_QUESTION_MAX = 300;
 const POLL_OPTION_MAX = 100;
 const POLL_EXPLANATION_MAX = 200;
 
+// Fraction of mastered audio cards surfaced as recall ("produce") questions.
+const PRODUCE_RATE = 1 / 5;
+
 function clamp(s: string, max: number): string {
   return s.length <= max ? s : s.slice(0, max);
 }
 
 export interface BuildOpts {
+  /** Caller-specified mode override; ignored if ineligible for the card. */
   type?: QuestionType;
+  /** Whether the learner has already gotten this card right at least once. */
+  isMastered?: boolean;
   rng?: () => number;
 }
 
@@ -28,24 +32,30 @@ function shuffle<T>(arr: readonly T[], rng: () => number): T[] {
   return a;
 }
 
+/** Modes a card can render: listen needs audio; text & produce work without it. */
 export function eligibleTypes(card: QuizCard): QuestionType[] {
-  return card.audio ? [...ALL_TYPES] : ALL_TYPES.filter((t) => !t.startsWith('audio'));
+  return card.audio ? ['listen', 'produce', 'text'] : ['text', 'produce'];
 }
 
-/** the field the learner must choose, given the question type */
+/** Default mode selection: audioless -> text; mastered audio -> produce ~1/5; else listen. */
+function selectType(card: QuizCard, isMastered: boolean, rng: () => number): QuestionType {
+  if (!card.audio) return 'text';
+  if (isMastered && rng() < PRODUCE_RATE) return 'produce';
+  return 'listen';
+}
+
+/** The field the learner must choose, given the mode. */
 function answerOf(type: QuestionType, c: QuizCard): string {
-  return type === 'audio-en' || type === 'id-en' ? c.english : c.indonesian;
+  return type === 'produce' ? c.indonesian : c.english;
 }
 
 function buildPrompt(type: QuestionType, card: QuizCard): string {
   switch (type) {
-    case 'audio-en':
+    case 'listen':
       return 'What does this mean?';
-    case 'audio-id':
-      return 'Which word did you hear?';
-    case 'id-en':
+    case 'text':
       return `What does "${card.indonesian}" mean?`;
-    case 'en-id':
+    case 'produce':
       return `How do you say "${card.english}"?`;
   }
 }
@@ -56,7 +66,7 @@ export function build(card: QuizCard, pool: readonly QuizCard[], opts: BuildOpts
   const type =
     opts.type && eligible.includes(opts.type)
       ? opts.type
-      : eligible[Math.floor(rng() * eligible.length)]!;
+      : selectType(card, opts.isMastered ?? false, rng);
 
   // Clamp option values before deduping so truncation can't yield duplicates.
   const correct = clamp(answerOf(type, card), POLL_OPTION_MAX);
@@ -90,6 +100,6 @@ export function build(card: QuizCard, pool: readonly QuizCard[], opts: BuildOpts
     correctIndex,
     explanation: clamp(`${card.indonesian} = ${card.english}`, POLL_EXPLANATION_MAX),
   };
-  if ((type === 'audio-en' || type === 'audio-id') && card.audio) q.audioFile = card.audio;
+  if (type === 'listen' && card.audio) q.audioFile = card.audio;
   return q;
 }

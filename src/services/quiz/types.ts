@@ -11,14 +11,14 @@ export interface QuizModule {
   cards: QuizCard[];
 }
 
-export type QuestionType = 'audio-en' | 'audio-id' | 'id-en' | 'en-id';
+export type QuestionType = 'listen' | 'produce' | 'text';
 
 export interface Question {
   cardId: string;
   type: QuestionType;
   /** poll question text */
   promptText: string;
-  /** OGG filename, present only for audio-* types */
+  /** OGG filename, present only for the 'listen' mode */
   audioFile?: string;
   /** answer options (up to 4; fewer only for very small modules) */
   options: string[];
