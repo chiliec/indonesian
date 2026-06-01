@@ -2,8 +2,8 @@ type Locale = 'en' | 'ru';
 
 const strings = {
   'start.welcome': {
-    en: 'Welcome! I help you learn Indonesian by chatting. /menu for options.',
-    ru: 'Привет! Я помогаю учить индонезийский через диалоги. /menu — варианты.',
+    en: 'Welcome! I help you learn Indonesian. Tap ▶️ Practice to begin, or 🎭 Scenarios to chat.',
+    ru: 'Привет! Помогаю учить индонезийский. Жми ▶️ Практика или 🎭 Сценарии.',
   },
   'menu.title': {
     en: '*Menu*\nChoose what you want to do:',
