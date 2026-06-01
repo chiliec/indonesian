@@ -76,12 +76,18 @@ export async function askQuestion(
   await deps.quiz.deps.sessions.setCurrentPoll(sessionId, poll.poll.id);
 }
 
-/** Cached audio file_id, or a fresh InputFile read from disk for first upload. */
+/**
+ * Cached audio file_id, or a fresh InputFile read from disk for first upload.
+ * Poll media (Bot API 10.0) only accepts a music-type audio track, so we send
+ * the MP3 sibling of the card's OGG/Opus clip (same content hash, emitted at
+ * prep time). The cache is keyed by the OGG reference under kind 'audio'.
+ */
 async function resolveQuizAudio(deps: BotDeps, audioFile: string): Promise<string | InputFile> {
   const cached = await deps.audioCache.get(audioFile, 'audio');
   if (cached) return cached;
-  const buf = await fs.readFile(path.join(QUIZ_AUDIO_DIR, audioFile));
-  return new InputFile(buf, audioFile);
+  const mp3File = audioFile.replace(/\.ogg$/, '.mp3');
+  const buf = await fs.readFile(path.join(QUIZ_AUDIO_DIR, mp3File));
+  return new InputFile(buf, mp3File);
 }
 
 /** poll_answer handler — record the answer, then ask next or show summary. */
