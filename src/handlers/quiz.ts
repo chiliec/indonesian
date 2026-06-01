@@ -68,7 +68,13 @@ export async function askQuestion(
   sessionId: import('mongoose').Types.ObjectId,
   question: Question,
 ): Promise<void> {
-  if (question.audioFile) await sendQuizAudio(api, chatId, deps, question.audioFile);
+  if (question.audioFile) {
+    const card = deps.quiz.deps.engine.card(question.cardId);
+    // Show the Indonesian word as a tappable spoiler above the poll — visible
+    // (not hidden) but blurred so the learner can try the audio first.
+    const caption = card ? `<tg-spoiler>${escapeHtml(card.indonesian)}</tg-spoiler>` : undefined;
+    await sendQuizAudio(api, chatId, deps, question.audioFile, caption);
+  }
 
   const poll = await api.sendPoll(
     chatId,
@@ -85,15 +91,30 @@ export async function askQuestion(
   await deps.quiz.deps.sessions.setCurrentPoll(sessionId, poll.poll.id);
 }
 
+/** Escape the five HTML-significant chars so card text is safe in an HTML caption. */
+function escapeHtml(s: string): string {
+  return s
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;');
+}
+
 /** Send the OGG/Opus clip as a voice message, reusing/caching its file_id. */
-async function sendQuizAudio(api: Api, chatId: number, deps: BotDeps, audioFile: string): Promise<void> {
+async function sendQuizAudio(
+  api: Api,
+  chatId: number,
+  deps: BotDeps,
+  audioFile: string,
+  caption?: string,
+): Promise<void> {
+  const opts = caption ? { caption, parse_mode: 'HTML' as const } : {};
   const cached = await deps.audioCache.get(audioFile);
   if (cached) {
-    await api.sendVoice(chatId, cached);
+    await api.sendVoice(chatId, cached, opts);
     return;
   }
   const buf = await fs.readFile(path.join(QUIZ_AUDIO_DIR, audioFile));
-  const msg = await api.sendVoice(chatId, new InputFile(buf, audioFile));
+  const msg = await api.sendVoice(chatId, new InputFile(buf, audioFile), opts);
   const fileId = msg.voice?.file_id;
   if (fileId) await deps.audioCache.set(audioFile, fileId);
 }
