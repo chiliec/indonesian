@@ -19,3 +19,18 @@ test('set then get returns file id; set is idempotent (upsert)', async () => {
   await repo.set('x.ogg', 'fileid-2');
   assert.equal(await repo.get('x.ogg'), 'fileid-2');
 });
+
+test('voice and audio kinds are independent for the same file', async () => {
+  const repo = new AudioCacheRepo();
+  await repo.set('x.ogg', 'voice-id', 'voice');
+  await repo.set('x.ogg', 'audio-id', 'audio');
+  assert.equal(await repo.get('x.ogg', 'voice'), 'voice-id');
+  assert.equal(await repo.get('x.ogg', 'audio'), 'audio-id');
+});
+
+test('kind defaults to voice for back-compat', async () => {
+  const repo = new AudioCacheRepo();
+  await repo.set('y.ogg', 'voice-default'); // no kind -> voice
+  assert.equal(await repo.get('y.ogg'), 'voice-default'); // no kind -> voice
+  assert.equal(await repo.get('y.ogg', 'audio'), null);   // audio kind absent
+});
