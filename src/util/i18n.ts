@@ -39,6 +39,15 @@ const strings = {
     en: 'No progress yet — tap ▶️ Practice to start!',
     ru: 'Пока нет прогресса — нажми ▶️ Практика!',
   },
+  'settings.title': { en: '⚙️ *Settings*', ru: '⚙️ *Настройки*' },
+  'settings.lang': { en: '🌐 Language', ru: '🌐 Язык' },
+  'settings.subscribe': { en: '⭐ Subscribe', ru: '⭐ Подписка' },
+  'settings.modules': { en: '🎯 Pick a module', ru: '🎯 Выбрать модуль' },
+  'settings.help': { en: '❓ Help', ru: '❓ Помощь' },
+  'settings.helpText': {
+    en: 'Tap ▶️ Practice for vocabulary drills, 🎭 Scenarios to roleplay in Indonesian. 📊 Progress shows your mastery. That\'s it — no commands to remember!',
+    ru: 'Жми ▶️ Практика для тренировки слов, 🎭 Сценарии — ролевые диалоги. 📊 Прогресс — твоё мастерство. Всё — команды не нужны!',
+  },
 } as const;
 
 export type StringKey = keyof typeof strings;
