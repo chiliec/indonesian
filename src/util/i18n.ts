@@ -34,6 +34,11 @@ const strings = {
   'quiz.missed': { en: 'Words to review:', ru: 'Слова на повтор:' },
   'quiz.again': { en: 'Practice again', ru: 'Ещё раз' },
   'quiz.pickAnother': { en: 'Pick another module', ru: 'Другой модуль' },
+  'progress.title': { en: '📊 *Your progress*', ru: '📊 *Твой прогресс*' },
+  'progress.empty': {
+    en: 'No progress yet — tap ▶️ Practice to start!',
+    ru: 'Пока нет прогресса — нажми ▶️ Практика!',
+  },
 } as const;
 
 export type StringKey = keyof typeof strings;
