@@ -5,6 +5,8 @@ import type { BotCtx, BotDeps } from '../bot.js';
 import type { Question } from '../services/quiz/types.js';
 import type { AnswerOutcome } from '../services/QuizService.js';
 import { t } from '../util/i18n.js';
+import { MIXED_MODULE_ID } from '../services/QuizService.js';
+import { mainKeyboard } from './keyboard.js';
 
 const QUIZ_AUDIO_DIR = path.resolve('content/quiz/audio');
 
@@ -41,7 +43,24 @@ export async function quizStartCallback(ctx: BotCtx): Promise<void> {
   await askQuestion(ctx.api, ctx.from.id, ctx.deps, res.session._id, res.first);
 }
 
-/** Send the quiz poll with audio embedded in the question (Bot API 10.0 media). */
+/** ▶️ Practice button — start an auto-picked Mixed session and ask Q1. */
+export async function practiceHandler(ctx: BotCtx): Promise<void> {
+  if (!ctx.from) return;
+  const en = ctx.userIsEn;
+  const res = await ctx.deps.quiz.start(ctx.from.id, MIXED_MODULE_ID);
+  if (!res) {
+    await ctx.reply(t('quiz.none', en), { reply_markup: mainKeyboard(en) });
+    return;
+  }
+  await ctx.reply(t('quiz.started', en), { reply_markup: mainKeyboard(en) });
+  await askQuestion(ctx.api, ctx.from.id, ctx.deps, res.session._id, res.first);
+}
+
+/**
+ * Send the clip as a playable voice message, then the quiz poll. Poll media
+ * (Bot API 10.0) accepts audio but the client renders it as a non-playable
+ * icon, so the audio must go in its own message for the learner to hear it.
+ */
 export async function askQuestion(
   api: Api,
   chatId: number,
@@ -49,9 +68,7 @@ export async function askQuestion(
   sessionId: import('mongoose').Types.ObjectId,
   question: Question,
 ): Promise<void> {
-  const media = question.audioFile
-    ? { type: 'audio' as const, media: await resolveQuizAudio(deps, question.audioFile) }
-    : undefined;
+  if (question.audioFile) await sendQuizAudio(api, chatId, deps, question.audioFile);
 
   const poll = await api.sendPoll(
     chatId,
@@ -62,32 +79,23 @@ export async function askQuestion(
       correct_option_ids: [question.correctIndex],
       is_anonymous: false,
       explanation: question.explanation,
-      ...(media ? { media } : {}),
     },
   );
-
-  // Cache the audio file_id Telegram surfaces on the returned poll, so the next
-  // send reuses it instead of re-uploading the OGG. (audio != voice file_id.)
-  const fileId = poll.poll.media?.audio?.file_id;
-  if (question.audioFile && fileId) {
-    await deps.audioCache.set(question.audioFile, fileId, 'audio');
-  }
 
   await deps.quiz.deps.sessions.setCurrentPoll(sessionId, poll.poll.id);
 }
 
-/**
- * Cached audio file_id, or a fresh InputFile read from disk for first upload.
- * Poll media (Bot API 10.0) only accepts a music-type audio track, so we send
- * the MP3 sibling of the card's OGG/Opus clip (same content hash, emitted at
- * prep time). The cache is keyed by the OGG reference under kind 'audio'.
- */
-async function resolveQuizAudio(deps: BotDeps, audioFile: string): Promise<string | InputFile> {
-  const cached = await deps.audioCache.get(audioFile, 'audio');
-  if (cached) return cached;
-  const mp3File = audioFile.replace(/\.ogg$/, '.mp3');
-  const buf = await fs.readFile(path.join(QUIZ_AUDIO_DIR, mp3File));
-  return new InputFile(buf, mp3File);
+/** Send the OGG/Opus clip as a voice message, reusing/caching its file_id. */
+async function sendQuizAudio(api: Api, chatId: number, deps: BotDeps, audioFile: string): Promise<void> {
+  const cached = await deps.audioCache.get(audioFile);
+  if (cached) {
+    await api.sendVoice(chatId, cached);
+    return;
+  }
+  const buf = await fs.readFile(path.join(QUIZ_AUDIO_DIR, audioFile));
+  const msg = await api.sendVoice(chatId, new InputFile(buf, audioFile));
+  const fileId = msg.voice?.file_id;
+  if (fileId) await deps.audioCache.set(audioFile, fileId);
 }
 
 /** poll_answer handler — record the answer, then ask next or show summary. */
