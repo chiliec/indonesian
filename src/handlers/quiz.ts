@@ -5,6 +5,8 @@ import type { BotCtx, BotDeps } from '../bot.js';
 import type { Question } from '../services/quiz/types.js';
 import type { AnswerOutcome } from '../services/QuizService.js';
 import { t } from '../util/i18n.js';
+import { MIXED_MODULE_ID } from '../services/QuizService.js';
+import { mainKeyboard } from './keyboard.js';
 
 const QUIZ_AUDIO_DIR = path.resolve('content/quiz/audio');
 
@@ -41,7 +43,24 @@ export async function quizStartCallback(ctx: BotCtx): Promise<void> {
   await askQuestion(ctx.api, ctx.from.id, ctx.deps, res.session._id, res.first);
 }
 
-/** Send the audio (cached file_id or upload-then-cache), then the quiz poll. */
+/** ▶️ Practice button — start an auto-picked Mixed session and ask Q1. */
+export async function practiceHandler(ctx: BotCtx): Promise<void> {
+  if (!ctx.from) return;
+  const en = ctx.userIsEn;
+  const res = await ctx.deps.quiz.start(ctx.from.id, MIXED_MODULE_ID);
+  if (!res) {
+    await ctx.reply(t('quiz.none', en), { reply_markup: mainKeyboard(en) });
+    return;
+  }
+  await ctx.reply(t('quiz.started', en), { reply_markup: mainKeyboard(en) });
+  await askQuestion(ctx.api, ctx.from.id, ctx.deps, res.session._id, res.first);
+}
+
+/**
+ * Send the clip as a playable voice message, then the quiz poll. Poll media
+ * (Bot API 10.0) accepts audio but the client renders it as a non-playable
+ * icon, so the audio must go in its own message for the learner to hear it.
+ */
 export async function askQuestion(
   api: Api,
   chatId: number,
@@ -49,7 +68,14 @@ export async function askQuestion(
   sessionId: import('mongoose').Types.ObjectId,
   question: Question,
 ): Promise<void> {
-  if (question.audioFile) await sendQuizAudio(api, chatId, deps, question.audioFile);
+  if (question.audioFile) {
+    const card = deps.quiz.deps.engine.card(question.cardId);
+    // Show the Indonesian word as a tappable spoiler above the poll — visible
+    // (not hidden) but blurred so the learner can try the audio first.
+    const caption = card ? `<tg-spoiler>${escapeHtml(card.indonesian)}</tg-spoiler>` : undefined;
+    await sendQuizAudio(api, chatId, deps, question.audioFile, caption);
+  }
+
   const poll = await api.sendPoll(
     chatId,
     question.promptText,
@@ -61,17 +87,34 @@ export async function askQuestion(
       explanation: question.explanation,
     },
   );
+
   await deps.quiz.deps.sessions.setCurrentPoll(sessionId, poll.poll.id);
 }
 
-async function sendQuizAudio(api: Api, chatId: number, deps: BotDeps, audioFile: string): Promise<void> {
+/** Escape the five HTML-significant chars so card text is safe in an HTML caption. */
+function escapeHtml(s: string): string {
+  return s
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;');
+}
+
+/** Send the OGG/Opus clip as a voice message, reusing/caching its file_id. */
+async function sendQuizAudio(
+  api: Api,
+  chatId: number,
+  deps: BotDeps,
+  audioFile: string,
+  caption?: string,
+): Promise<void> {
+  const opts = caption ? { caption, parse_mode: 'HTML' as const } : {};
   const cached = await deps.audioCache.get(audioFile);
   if (cached) {
-    await api.sendVoice(chatId, cached);
+    await api.sendVoice(chatId, cached, opts);
     return;
   }
   const buf = await fs.readFile(path.join(QUIZ_AUDIO_DIR, audioFile));
-  const msg = await api.sendVoice(chatId, new InputFile(buf, audioFile));
+  const msg = await api.sendVoice(chatId, new InputFile(buf, audioFile), opts);
   const fileId = msg.voice?.file_id;
   if (fileId) await deps.audioCache.set(audioFile, fileId);
 }

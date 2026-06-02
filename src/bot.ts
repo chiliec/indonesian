@@ -9,7 +9,8 @@ import type { TtsService } from './services/TtsService.js';
 import type { ScenarioEngine } from './services/scenarios/ScenarioEngine.js';
 import type { Entitlement } from './services/Entitlement.js';
 import { t, isEn } from './util/i18n.js';
-import { menuCommand } from './handlers/menu.js';
+import { settingsCommand, settingsHelpCallback } from './handlers/settings.js';
+import { mainKeyboard } from './handlers/keyboard.js';
 import { langCommand, langCallback } from './handlers/lang.js';
 import { scenariosCommand, startCallback } from './handlers/scenarios.js';
 import { textHandler } from './handlers/text.js';
@@ -20,6 +21,11 @@ import { statsCommand } from './handlers/stats.js';
 import { quizCommand, quizStartCallback, quizPollAnswer } from './handlers/quiz.js';
 import type { QuizService } from './services/QuizService.js';
 import type { AudioCacheRepo } from './db/audioCache.js';
+
+/** The only commands advertised in Telegram's command menu. */
+export const ADVERTISED_COMMANDS = [
+  { command: 'start', description: 'Open the bot / show the keyboard' },
+] as const;
 
 export interface BotDeps {
   token: string;
@@ -58,10 +64,15 @@ export function createBot(deps: BotDeps): Bot<BotCtx> {
   });
 
   bot.command('start', async (ctx) => {
-    await ctx.reply(t('start.welcome', ctx.userIsEn));
+    await ctx.reply(t('start.welcome', ctx.userIsEn), {
+      reply_markup: mainKeyboard(ctx.userIsEn),
+    });
   });
 
-  bot.command('menu', menuCommand);
+  bot.command('menu', settingsCommand); // silent alias
+  bot.callbackQuery('menu:settings', settingsCommand);
+  bot.callbackQuery('settings:help', settingsHelpCallback);
+  bot.callbackQuery('settings:modules', quizCommand);
   bot.command('lang', langCommand);
   bot.callbackQuery(/^lang:(en|ru)$/, langCallback);
   bot.callbackQuery('menu:lang', langCommand);

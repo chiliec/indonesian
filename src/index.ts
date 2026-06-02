@@ -20,7 +20,7 @@ import { QuizProgressRepo } from './db/quizProgress.js';
 import { AudioCacheRepo } from './db/audioCache.js';
 import { sweepStaleSessions } from './services/SessionSweeper.js';
 import { expireDueSubscriptions } from './services/SubscriptionWatcher.js';
-import { createBot } from './bot.js';
+import { createBot, ADVERTISED_COMMANDS } from './bot.js';
 
 async function main() {
   const env = EnvSchema.parse(process.env);
@@ -83,6 +83,13 @@ async function main() {
   };
   process.on('SIGINT', shutdown);
   process.on('SIGTERM', shutdown);
+
+  // Cosmetic: a transient network blip here must not block the bot from starting.
+  try {
+    await bot.api.setMyCommands([...ADVERTISED_COMMANDS]);
+  } catch (err) {
+    logger.warn({ err }, 'setMyCommands failed; continuing without updating command menu');
+  }
 
   logger.info('starting bot');
   await bot.start();

@@ -11,7 +11,7 @@ beforeEach(clearMemoryMongo);
 function q(cardId: string): Question {
   return {
     cardId,
-    type: 'id-en',
+    type: 'text',
     promptText: 'p',
     options: ['a', 'b', 'c', 'd'],
     correctIndex: 0,

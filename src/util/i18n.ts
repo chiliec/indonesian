@@ -2,8 +2,8 @@ type Locale = 'en' | 'ru';
 
 const strings = {
   'start.welcome': {
-    en: 'Welcome! I help you learn Indonesian by chatting. /menu for options.',
-    ru: 'Привет! Я помогаю учить индонезийский через диалоги. /menu — варианты.',
+    en: 'Welcome! I help you learn Indonesian. Tap ▶️ Practice to begin, or 🎭 Scenarios to chat.',
+    ru: 'Привет! Помогаю учить индонезийский. Жми ▶️ Практика или 🎭 Сценарии.',
   },
   'menu.title': {
     en: '*Menu*\nChoose what you want to do:',
@@ -34,6 +34,20 @@ const strings = {
   'quiz.missed': { en: 'Words to review:', ru: 'Слова на повтор:' },
   'quiz.again': { en: 'Practice again', ru: 'Ещё раз' },
   'quiz.pickAnother': { en: 'Pick another module', ru: 'Другой модуль' },
+  'progress.title': { en: '📊 *Your progress*', ru: '📊 *Твой прогресс*' },
+  'progress.empty': {
+    en: 'No progress yet — tap ▶️ Practice to start!',
+    ru: 'Пока нет прогресса — нажми ▶️ Практика!',
+  },
+  'settings.title': { en: '⚙️ *Settings*', ru: '⚙️ *Настройки*' },
+  'settings.lang': { en: '🌐 Language', ru: '🌐 Язык' },
+  'settings.subscribe': { en: '⭐ Subscribe', ru: '⭐ Подписка' },
+  'settings.modules': { en: '🎯 Pick a module', ru: '🎯 Выбрать модуль' },
+  'settings.help': { en: '❓ Help', ru: '❓ Помощь' },
+  'settings.helpText': {
+    en: 'Tap ▶️ Practice for vocabulary drills, 🎭 Scenarios to roleplay in Indonesian. 📊 Progress shows your mastery. That\'s it — no commands to remember!',
+    ru: 'Жми ▶️ Практика для тренировки слов, 🎭 Сценарии — ролевые диалоги. 📊 Прогресс — твоё мастерство. Всё — команды не нужны!',
+  },
 } as const;
 
 export type StringKey = keyof typeof strings;

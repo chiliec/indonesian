@@ -28,8 +28,12 @@ Run after `docker compose up -d`.
 - [ ] `/stats` from admin → table with counts
 
 ## Quiz
-- [ ] `/quiz` lists 8 modules with mastery %.
-- [ ] Picking a module sends a voice bubble + a quiz poll.
+- [ ] `/quiz` lists 8 modules (plus 🎲 Mixed) with mastery %.
+- [ ] Picking a module sends a single quiz poll with the audio player **inside** the poll question (one bubble — no separate voice message). Options are English; the Indonesian word is hidden ("listen" mode).
 - [ ] Answering reveals ✓/✗ + explanation and the next question appears.
 - [ ] After 10 questions a summary shows score + missed words + retry buttons.
-- [ ] Re-answering the same audio clip reuses the cached file_id (no re-upload).
+- [ ] Re-answering the same audio clip reuses the cached file_id, no re-upload (`db.audio_cache.find({ kind: 'audio' })` has rows).
+- [ ] A card with no audio shows the Indonesian word as text with English options ("text" mode).
+- [ ] A mastered card occasionally appears as "How do you say …?" with Indonesian options and no audio (~1-in-5, "produce" mode).
+
+> Note: on an existing DB, drop the legacy index first — `db.audio_cache.dropIndex('audioFile_1')` — so the new `{audioFile, kind}` index can store per-kind file_ids.

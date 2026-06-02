@@ -30,3 +30,25 @@ export async function startCallback(ctx: BotCtx): Promise<void> {
   const { opener } = await ctx.deps.conversation.start(ctx.from.id, m[1]);
   await ctx.reply(opener);
 }
+
+/**
+ * 🎭 Scenarios button — if a scenario is active, resume it by re-sending the
+ * last character line (with the Correct-me button); otherwise show the picker.
+ */
+export async function scenariosButtonHandler(ctx: BotCtx): Promise<void> {
+  if (!ctx.from) return;
+  const active = await ctx.deps.conversation.deps.sessions.findActive(ctx.from.id);
+  if (!active) {
+    await scenariosCommand(ctx);
+    return;
+  }
+  const en = ctx.userIsEn;
+  const lastAssistant = [...active.turns].reverse().find((tn) => tn.role === 'assistant');
+  const body = lastAssistant?.text ?? '';
+  const kb = new InlineKeyboard().text(
+    en ? '💡 Correct me' : '💡 Исправь',
+    `correct:${active._id.toString()}`,
+  );
+  const header = en ? '⏩ Resuming your scenario…\n\n' : '⏩ Продолжаем сценарий…\n\n';
+  await ctx.reply(header + body, { reply_markup: kb });
+}
