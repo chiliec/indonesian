@@ -4,7 +4,7 @@ import YAML from 'yaml';
 import { DECKS, type DeckEntry } from './anki-decks.config.js';
 import { parseApkg } from './anki/parseApkg.js';
 import { extractCards } from './anki/extractCards.js';
-import { transcodeToOgg, transcodeToMp3 } from './anki/transcode.js';
+import { transcodeToOgg } from './anki/transcode.js';
 
 const CACHE_DIR = path.resolve('.cache/anki');
 const CONTENT_DIR = path.resolve('content/quiz');
@@ -55,10 +55,7 @@ async function processDeck(deck: DeckEntry): Promise<void> {
       delete card.audio; // referenced clip missing from deck
       continue;
     }
-    const mp3 = parsed.mediaBytes(numbered);
-    // OGG/Opus for voice playback; MP3 sibling (same hash) for quiz poll media.
-    card.audio = await transcodeToOgg(mp3, AUDIO_DIR);
-    await transcodeToMp3(mp3, AUDIO_DIR);
+    card.audio = await transcodeToOgg(parsed.mediaBytes(numbered), AUDIO_DIR);
   }
 
   const module = {
