@@ -1,0 +1,46 @@
+# Kamal deploy config — grammY long-polling Telegram bot. No inbound HTTP
+# (long-poll, not webhook): role-level proxy: false, no top-level proxy:
+# block (infra runbook-viz-migration §3.1 pattern). Shared platform mongo —
+# connects at boot, covered by platform-up.sh's kamal-network bridge; the
+# post-deploy hook additionally attaches platform_net.
+
+service: indonesian-bot
+image: chiliec/indonesian-bot
+
+servers:
+  web:
+    hosts:
+      - 5.223.75.86           # axveer VPS public IPv4; IP (not host) per repo convention
+    proxy: false              # long-polling bot — nothing listens
+
+ssh:
+  user: deploy
+  port: 666
+
+registry:
+  server: ghcr.io
+  username: chiliec
+  password:
+    - KAMAL_REGISTRY_PASSWORD
+
+env:
+  clear:
+    NODE_ENV: production
+    LOG_LEVEL: info
+    ADMIN_TELEGRAM_IDS: "38968897"
+    # Google TTS auth — TtsService's TextToSpeechClient picks this up lazily,
+    # so boot succeeds even if the key file is wrong (voice replies fail caught).
+    GOOGLE_APPLICATION_CREDENTIALS: /app/gcp-tts.json
+  secret:
+    - TELEGRAM_BOT_TOKEN
+    - ANTHROPIC_API_KEY
+    - DEEPGRAM_API_KEY
+    - MONGODB_URI
+
+volumes:
+  # Service-account key shipped by the infra repo (SOPS gcp_tts_blob →
+  # /srv/indonesian-bot/gcp-tts.json). Single-file ro bind mount.
+  - /srv/indonesian-bot/gcp-tts.json:/app/gcp-tts.json:ro
+
+builder:
+  arch: amd64
