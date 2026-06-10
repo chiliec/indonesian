@@ -9,8 +9,10 @@ import type { UserStatsRepo } from '../../db/userStats.js';
 import type { UsersRepo } from '../../db/users.js';
 import { masteryOf, pickKind, buildExercise, orderByMastery } from './ExerciseFactory.js';
 import { renderQuestion, renderFeedback, renderFinish, type QuestionView } from './ExerciseRenderer.js';
+import { matchAnswer } from './normalize.js';
 import { xpFor, COMPLETION_BONUS } from './xp.js';
 import type { CardView, Exercise } from './types.js';
+import { t } from '../../util/i18n.js';
 
 const DEFAULT_SESSION_LENGTH = 10;
 
@@ -193,5 +195,81 @@ export class SessionEngine {
       en,
     );
     return { session: s, view };
+  }
+
+  async tapTile(telegramId: number, sid: string, tileIndex: number, en: boolean): Promise<TurnResult | null> {
+    const s = await this.activeById(telegramId, sid);
+    if (!s || s.phase !== 'question') return null;
+    const ex = s.exercises[s.current];
+    if (!ex || ex.kind !== 'builder' || !ex.tiles) return null;
+    if (tileIndex < 0 || tileIndex >= ex.tiles.length || s.builderPicked.includes(tileIndex)) return null;
+
+    const picked = [...s.builderPicked, tileIndex];
+    if (picked.length < ex.tiles.length) {
+      await this.deps.sessions.pushTile(s._id, tileIndex);
+      const fresh = await this.deps.sessions.findById(s._id);
+      if (!fresh) return null;
+      return { session: fresh, view: renderQuestion(await this.viewOf(fresh), fresh.exercises[fresh.current]!, en) };
+    }
+    // last tile placed → evaluate the full sentence
+    const built = picked.map((i) => ex.tiles![i]).join(' ');
+    const correct = matchAnswer(built, ex.answer) !== 'wrong';
+    return this.evaluate(s, ex, correct, en);
+  }
+
+  async undoTile(telegramId: number, sid: string, en: boolean): Promise<TurnResult | null> {
+    const s = await this.activeById(telegramId, sid);
+    if (!s || s.phase !== 'question') return null;
+    const ex = s.exercises[s.current];
+    if (!ex || ex.kind !== 'builder' || s.builderPicked.length === 0) return null;
+    await this.deps.sessions.popTile(s._id);
+    const fresh = await this.deps.sessions.findById(s._id);
+    if (!fresh) return null;
+    return { session: fresh, view: renderQuestion(await this.viewOf(fresh), fresh.exercises[fresh.current]!, en) };
+  }
+
+  /** typed text from chat; null = not ours, let conversation logic handle it.
+   *  Also accepts typed input for speak exercises (Deepgram-failure fallback). */
+  async submitTyped(telegramId: number, text: string, en: boolean): Promise<TurnResult | null> {
+    const s = await this.deps.sessions.findActive(telegramId);
+    if (!s || s.phase !== 'question') return null;
+    const ex = s.exercises[s.current];
+    if (!ex || (ex.kind !== 'type' && ex.kind !== 'speak')) return null;
+    const m = matchAnswer(text, ex.answer);
+    return this.evaluate(s, ex, m !== 'wrong', en, m === 'close' ? ex.answer : undefined);
+  }
+
+  /** voice transcript; null = not ours. */
+  async submitSpoken(telegramId: number, transcript: string, en: boolean): Promise<TurnResult | null> {
+    const s = await this.deps.sessions.findActive(telegramId);
+    if (!s || s.phase !== 'question') return null;
+    const ex = s.exercises[s.current];
+    if (!ex || ex.kind !== 'speak') return null;
+
+    let m = matchAnswer(transcript, ex.answer);
+    if (m === 'wrong' && this.deps.judge) {
+      try {
+        if (await this.deps.judge.judgeSpokenAnswer(transcript, ex.answer)) m = 'close';
+      } catch (err) {
+        this.deps.logger.warn({ err }, 'speak judge failed; falling back to strict match');
+      }
+    }
+    return this.evaluate(s, ex, m !== 'wrong', en, m === 'close' ? ex.answer : undefined);
+  }
+
+  /** Sweep idle sessions: mark expired and return finish views for the handler to render. */
+  async expireStale(maxAgeMs: number): Promise<TurnResult[]> {
+    const stale = await this.deps.sessions.findStale(new Date(Date.now() - maxAgeMs));
+    const out: TurnResult[] = [];
+    for (const s of stale) {
+      await this.deps.sessions.complete(s._id, 'expired');
+      const view: CardView = {
+        text: `${t('session.expired', true)}\n✅ ${s.correctCount}/${s.exercises.length} · ⭐ +${s.xpEarned} XP`,
+        buttons: [[{ text: t('session.again', true), data: 'p:again' }]],
+        finished: true,
+      };
+      out.push({ session: s, view });
+    }
+    return out;
   }
 }
