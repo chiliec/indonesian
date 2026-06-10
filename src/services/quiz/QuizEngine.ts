@@ -15,7 +15,7 @@ export class QuizEngine {
       const raw = await fs.readFile(path.join(dir, f), 'utf8');
       let parsed: QuizModule;
       try {
-        parsed = ModuleSchema.parse(YAML.parse(raw)) as QuizModule;
+        parsed = ModuleSchema.parse(YAML.parse(raw));
       } catch (err) {
         throw new Error(`quiz module ${f} failed validation: ${(err as Error).message}`);
       }

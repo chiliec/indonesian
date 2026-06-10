@@ -9,7 +9,7 @@ export const SentenceSchema = z
     audio: z.string().optional(),
   })
   .refine(
-    (s) => new RegExp(`(^|\\s)${s.blank.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}(\\s|$)`, 'i').test(s.text),
+    (s) => new RegExp(`\\b${s.blank.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\b`, 'i').test(s.text),
     { message: 'blank must appear as a whole word in text' },
   );
 
@@ -26,6 +26,6 @@ export const CardSchema = z.object({
 
 export const ModuleSchema = z.object({
   id: z.string().min(1),
-  title: z.object({ en: z.string(), ru: z.string() }),
+  title: z.object({ en: z.string().min(1), ru: z.string().min(1) }),
   cards: z.array(CardSchema).min(1),
 });
