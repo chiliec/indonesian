@@ -63,6 +63,9 @@ const strings = {
     ru: 'Сессия истекла — жми ▶️ Практика',
   },
   'session.autoJudged': { en: '(auto-judged)', ru: '(автооценка)' },
+  'settings.speakOn': { en: '🎤 Speaking: ON', ru: '🎤 Голос: ВКЛ' },
+  'settings.speakOff': { en: '🎤 Speaking: OFF', ru: '🎤 Голос: ВЫКЛ' },
+  'settings.length': { en: '🔢 Session length: ', ru: '🔢 Длина сессии: ' },
 } as const;
 
 export type StringKey = keyof typeof strings;

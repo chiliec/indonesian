@@ -33,6 +33,14 @@ export class UserDoc {
 
   @prop({ type: Date, default: () => new Date() })
   public lastSeenAt!: Date;
+
+  /** speaking exercises are opt-in (awkward in public places) */
+  @prop({ type: Boolean })
+  public speakOptIn?: boolean;
+
+  /** questions per practice session (5 | 10 | 20); unset = 10 */
+  @prop({ type: Number })
+  public sessionLength?: number;
 }
 
 export const UserModel = getModelForClass(UserDoc);
@@ -102,5 +110,13 @@ export class UsersRepo {
       { telegramId },
       { $set: { plan: 'free', subscriptionStatus: 'expired' } },
     );
+  }
+
+  async setSpeakOptIn(telegramId: number, on: boolean): Promise<void> {
+    await UserModel.updateOne({ telegramId }, { $set: { speakOptIn: on } });
+  }
+
+  async setSessionLength(telegramId: number, n: number): Promise<void> {
+    await UserModel.updateOne({ telegramId }, { $set: { sessionLength: n } });
   }
 }

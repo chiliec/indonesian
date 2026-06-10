@@ -9,7 +9,7 @@ import type { TtsService } from './services/TtsService.js';
 import type { ScenarioEngine } from './services/scenarios/ScenarioEngine.js';
 import type { Entitlement } from './services/Entitlement.js';
 import { t, isEn } from './util/i18n.js';
-import { settingsCommand, settingsHelpCallback } from './handlers/settings.js';
+import { settingsCommand, settingsHelpCallback, settingsSpeakCallback, settingsLengthCallback } from './handlers/settings.js';
 import { mainKeyboard } from './handlers/keyboard.js';
 import { langCommand, langCallback } from './handlers/lang.js';
 import { scenariosCommand, startCallback } from './handlers/scenarios.js';
@@ -72,6 +72,8 @@ export function createBot(deps: BotDeps): Bot<BotCtx> {
   bot.command('menu', settingsCommand); // silent alias
   bot.callbackQuery('menu:settings', settingsCommand);
   bot.callbackQuery('settings:help', settingsHelpCallback);
+  bot.callbackQuery('settings:speak', settingsSpeakCallback);
+  bot.callbackQuery('settings:length', settingsLengthCallback);
   bot.callbackQuery('settings:modules', quizCommand);
   bot.command('lang', langCommand);
   bot.callbackQuery(/^lang:(en|ru)$/, langCallback);
