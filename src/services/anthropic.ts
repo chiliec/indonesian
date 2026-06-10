@@ -88,4 +88,21 @@ ${userIsEn ? 'English' : 'Russian'}. Total under 6 lines.`;
     if (!block || block.type !== 'text') throw new Error('no text block in voice correction');
     return block.text.trim();
   }
+
+  /** Is the learner's transcript an acceptable spoken rendering of the target? */
+  async judgeSpokenAnswer(transcript: string, target: string): Promise<boolean> {
+    const res = await this.client.messages.create({
+      model: MODEL_HAIKU,
+      max_tokens: 5,
+      system:
+        'You judge Indonesian speaking practice. The learner was asked to say the target phrase. ' +
+        'Deepgram transcribed their speech. Answer YES if the transcript is an acceptable rendering ' +
+        '(same meaning, minor transcription artifacts, particles like "saya" added) and NO otherwise. ' +
+        'Answer with exactly YES or NO.',
+      messages: [{ role: 'user', content: `Target: "${target}"\nTranscript: "${transcript}"` }],
+    });
+    const block = res.content.find((c) => c.type === 'text');
+    if (!block || block.type !== 'text') throw new Error('no text block in judge response');
+    return block.text.trim().toUpperCase().startsWith('YES');
+  }
 }
