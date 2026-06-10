@@ -31,7 +31,9 @@ async function generate(card: QuizCard) {
   });
   const block = res.content.find((c) => c.type === 'text');
   if (!block || block.type !== 'text') throw new Error('no text block');
-  return GeneratedSchema.parse(JSON.parse(block.text.trim()));
+  // tolerate a markdown fence despite the strict-JSON instruction
+  const raw = block.text.trim().replace(/^```(?:json)?\n?/, '').replace(/\n?```$/, '');
+  return GeneratedSchema.parse(JSON.parse(raw));
 }
 
 async function synthesizeSentence(text: string): Promise<string> {
