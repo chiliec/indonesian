@@ -13,10 +13,10 @@ const QUIZ_AUDIO_DIR = path.resolve('content/quiz/audio');
 export function toKeyboard(view: CardView): InlineKeyboard | undefined {
   if (view.buttons.length === 0) return undefined;
   const kb = new InlineKeyboard();
-  for (const row of view.buttons) {
+  view.buttons.forEach((row, i) => {
+    if (i > 0) kb.row();
     for (const b of row) kb.text(b.text, b.data);
-    kb.row();
-  }
+  });
   return kb;
 }
 
@@ -81,7 +81,9 @@ export async function applyTurn(api: Api, deps: BotDeps, r: TurnResult): Promise
   const { session, view } = r;
   const chatId = session.chatId;
 
-  // audio: delete the previous clip, send the new one (if any) so it sits above the card
+  // audio: delete the previous clip, then send the new one (if any). On a fresh
+  // card the clip lands above it; on in-place edits Telegram appends the clip
+  // below the card — accepted trade-off of edit-in-place.
   if (session.audioMessageId) {
     try {
       await api.deleteMessage(chatId, session.audioMessageId);
@@ -115,6 +117,7 @@ export async function applyTurn(api: Api, deps: BotDeps, r: TurnResult): Promise
 /** Practice button / p:again — start (or re-focus) a session. */
 export async function practiceHandler(ctx: BotCtx): Promise<void> {
   if (!ctx.from || !ctx.chat) return;
+  if (ctx.callbackQuery) await ctx.answerCallbackQuery();
   const en = ctx.userIsEn;
 
   // one session per user: re-focus the existing card instead of starting another
@@ -159,6 +162,7 @@ export async function practiceStartCallback(ctx: BotCtx): Promise<void> {
 /** settings:modules / menu:quiz — module picker (replaces the old quizCommand). */
 export async function modulePicker(ctx: BotCtx): Promise<void> {
   if (!ctx.from) return;
+  if (ctx.callbackQuery) await ctx.answerCallbackQuery();
   const en = ctx.userIsEn;
   const modules = await ctx.deps.quiz.moduleList(ctx.from.id);
   if (modules.length === 0) {
@@ -223,6 +227,14 @@ export async function sweepStudySessions(api: Api, deps: BotDeps, maxAgeMs: numb
       await editCardSafe(api, r.session.chatId, r.session.cardMessageId, r.view.text, toKeyboard(r.view));
     } catch (err) {
       deps.logger.warn({ err }, 'expired-card edit failed');
+    }
+    if (r.session.audioMessageId) {
+      try {
+        await api.deleteMessage(r.session.chatId, r.session.audioMessageId);
+      } catch (err) {
+        deps.logger.debug({ err }, 'expired-session audio delete failed');
+      }
+      await deps.study.deps.sessions.setMessages(r.session._id, { audioMessageId: null });
     }
   }
   return expired.length;

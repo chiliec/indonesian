@@ -23,6 +23,8 @@ export async function textHandler(ctx: BotCtx): Promise<void> {
 
   const session = await ctx.deps.conversation.deps.sessions.findActive(ctx.from.id);
   if (!session) {
+    // mid-practice typing on a button-based exercise: ignore instead of scenario noise
+    if (await ctx.deps.study.deps.sessions.findActive(ctx.from.id)) return;
     await ctx.reply(
       ctx.userIsEn
         ? 'No active scenario. Use /scenarios to pick one.'
