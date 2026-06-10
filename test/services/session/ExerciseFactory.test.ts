@@ -94,3 +94,10 @@ test('orderByMastery: unseen first, then wrong, then mastered', () => {
   assert.equal(ordered[ordered.length - 1]!.id, 'c1'); // mastered last
   assert.equal(ordered[ordered.length - 2]!.id, 'c2'); // wrong second-to-last
 });
+
+test('buildExercise choice: small pool yields fewer options but stays valid', () => {
+  const tiny: QuizCard[] = [card(), { id: 'c2', indonesian: 'minum', english: 'to drink' }];
+  const ex = buildExercise(card(), tiny, 'choice', { en: true, rng: () => 0.5 });
+  assert.equal(ex.options!.length, 2);
+  assert.equal(ex.options![ex.correctIndex!], 'to eat');
+});

@@ -20,6 +20,7 @@ const BANDS: Record<ExerciseKind, [number, number]> = {
 const DIFFICULTY: ExerciseKind[] = ['choice', 'cloze', 'builder', 'type', 'speak'];
 
 const MAX_BUILDER_TILES = 8;
+const MAX_DISTRACTORS = 3;
 
 export interface KindOpts {
   speakOptIn: boolean;
@@ -94,11 +95,13 @@ function buildOptions(
     if (seen.has(v)) continue;
     seen.add(v);
     distractors.push(v);
-    if (distractors.length === 3) break;
+    if (distractors.length === MAX_DISTRACTORS) break;
+  }
+  if (distractors.length === 0) {
+    throw new Error(`no distinct distractors for card ${cardId} (all pool values match "${correct}")`);
   }
   const options = shuffle([correct, ...distractors], rng);
   const correctIndex = options.indexOf(correct);
-  if (options.length < 2) throw new Error(`pool too small to build options for ${cardId}`);
   return { options, correctIndex };
 }
 
@@ -140,6 +143,7 @@ export function buildExercise(
         new RegExp(`\\b${escapeRegExp(s.blank)}\\b`, 'i'),
         '___',
       );
+      // note: distractors may coincide with words still visible in the blanked sentence — accepted trade-off
       const { options, correctIndex } = buildOptions(s.blank, card.id, pool, 'indonesian', rng);
       const head = opts.en ? '🧩 Fill the blank:' : '🧩 Вставь слово:';
       return {
