@@ -4,6 +4,7 @@ import { t } from '../util/i18n.js';
 
 const LENGTH_CYCLE = [5, 10, 20];
 
+/** ⚙️ Settings button / /menu alias — inline menu for the rare actions. */
 export async function settingsCommand(ctx: BotCtx): Promise<void> {
   const en = ctx.userIsEn;
   const user = ctx.from ? await ctx.deps.usersRepo.getByTelegramId(ctx.from.id) : null;
