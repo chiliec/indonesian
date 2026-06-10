@@ -21,3 +21,14 @@ test('matchAnswer: exact / close (distance 1) / wrong', () => {
   assert.equal(matchAnswer('minum', 'makan'), 'wrong');
   assert.equal(matchAnswer('', 'makan'), 'wrong');
 });
+
+test('matchAnswer: short targets require exact match', () => {
+  assert.equal(matchAnswer('ta', 'ya'), 'wrong');
+  assert.equal(matchAnswer('ya', 'ya'), 'exact');
+  assert.equal(matchAnswer('mkan', 'makan'), 'close'); // 5-char target still tolerant
+});
+
+test('matchAnswer: hyphenated compounds normalize consistently', () => {
+  assert.equal(matchAnswer('baik-baik saja', 'baik-baik saja'), 'exact');
+  assert.equal(matchAnswer('baikbaik saja', 'baik-baik saja'), 'exact'); // hyphen stripped both sides
+});

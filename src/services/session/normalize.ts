@@ -29,12 +29,16 @@ export function editDistance(a: string, b: string): number {
 
 export type MatchResult = 'exact' | 'close' | 'wrong';
 
+/** Minimum length before a 1-edit typo still counts as correct — short
+ *  Indonesian words (ya, di, ke) would otherwise match almost anything. */
+const MIN_CLOSE_LENGTH = 4;
+
 /** exact after normalization; edit distance 1 counts as "close" (still correct). */
 export function matchAnswer(input: string, target: string): MatchResult {
   const a = normalizeAnswer(input);
   const b = normalizeAnswer(target);
   if (!a) return 'wrong';
   if (a === b) return 'exact';
-  if (editDistance(a, b) === 1) return 'close';
+  if (b.length >= MIN_CLOSE_LENGTH && editDistance(a, b) === 1) return 'close';
   return 'wrong';
 }
