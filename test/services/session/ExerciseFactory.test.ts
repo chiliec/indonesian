@@ -64,6 +64,13 @@ test('buildExercise cloze: blanks the word, options contain it', () => {
   assert.equal(ex.answer, 'makan');
 });
 
+test('buildExercise cloze: blanks a punctuated occurrence (no answer leak)', () => {
+  const c = card({ sentences: [{ id: 's2', text: 'Dia makan.', blank: 'makan', en: 'He eats.' }] });
+  const ex = buildExercise(c, pool, 'cloze', { en: true, rng: () => 0.5 });
+  assert.ok(ex.prompt.includes('___'));
+  assert.ok(!ex.prompt.toLowerCase().includes('makan'));
+});
+
 test('buildExercise builder: tiles are a permutation of the sentence words', () => {
   const ex = buildExercise(card(), pool, 'builder', { en: true, rng: () => 0.5 });
   assert.deepEqual([...ex.tiles!].sort(), ['Saya', 'goreng', 'makan', 'mau', 'nasi'].sort());

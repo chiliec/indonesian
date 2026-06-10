@@ -137,8 +137,8 @@ export function buildExercise(
       const s = usableSentences(card, 'cloze')[0];
       if (!s) throw new Error(`card ${card.id} has no sentences for cloze`);
       const blanked = s.text.replace(
-        new RegExp(`(^|\\s)${escapeRegExp(s.blank)}(?=\\s|$)`, 'i'),
-        '$1___',
+        new RegExp(`\\b${escapeRegExp(s.blank)}\\b`, 'i'),
+        '___',
       );
       const { options, correctIndex } = buildOptions(s.blank, card.id, pool, 'indonesian', rng);
       const head = opts.en ? '🧩 Fill the blank:' : '🧩 Вставь слово:';
