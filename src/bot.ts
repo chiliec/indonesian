@@ -18,9 +18,12 @@ import { voiceHandler } from './handlers/voice.js';
 import { endCommand } from './handlers/end.js';
 import { subscribeCommand, recordSuccessfulPayment } from './handlers/subscribe.js';
 import { statsCommand } from './handlers/stats.js';
-import { quizCommand, quizStartCallback, quizPollAnswer } from './handlers/quiz.js';
+import { quizStartCallback, quizPollAnswer } from './handlers/quiz.js';
+import { practiceHandler, practiceStartCallback, modulePicker, sessionCallback } from './handlers/practice.js';
 import type { QuizService } from './services/QuizService.js';
 import type { AudioCacheRepo } from './db/audioCache.js';
+import type { SessionEngine } from './services/session/SessionEngine.js';
+import type { UserStatsRepo } from './db/userStats.js';
 
 /** The only commands advertised in Telegram's command menu. */
 export const ADVERTISED_COMMANDS = [
@@ -38,6 +41,8 @@ export interface BotDeps {
   entitlement: Entitlement;
   quiz: QuizService;
   audioCache: AudioCacheRepo;
+  study: SessionEngine;
+  userStats: UserStatsRepo;
   adminIds: string;
   logger: Logger;
 }
@@ -74,7 +79,7 @@ export function createBot(deps: BotDeps): Bot<BotCtx> {
   bot.callbackQuery('settings:help', settingsHelpCallback);
   bot.callbackQuery('settings:speak', settingsSpeakCallback);
   bot.callbackQuery('settings:length', settingsLengthCallback);
-  bot.callbackQuery('settings:modules', quizCommand);
+  bot.callbackQuery('settings:modules', modulePicker);
   bot.command('lang', langCommand);
   bot.callbackQuery(/^lang:(en|ru)$/, langCallback);
   bot.callbackQuery('menu:lang', langCommand);
@@ -83,9 +88,12 @@ export function createBot(deps: BotDeps): Bot<BotCtx> {
   bot.callbackQuery('menu:scenarios', scenariosCommand);
   bot.callbackQuery(/^start:.+$/, startCallback);
 
-  bot.command('quiz', quizCommand);
-  bot.callbackQuery('menu:quiz', quizCommand);
+  bot.command('quiz', practiceHandler);
+  bot.callbackQuery('menu:quiz', modulePicker);
   bot.callbackQuery(/^quiz:start:.+$/, quizStartCallback);
+  bot.callbackQuery(/^practice:start:.+$/, practiceStartCallback);
+  bot.callbackQuery('p:again', practiceHandler);
+  bot.callbackQuery(/^s:[0-9a-f]{24}:.+$/, sessionCallback);
 
   bot.on('poll_answer', async (ctx) => {
     const pa = ctx.pollAnswer;

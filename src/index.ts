@@ -18,8 +18,12 @@ import { QuizService } from './services/QuizService.js';
 import { QuizSessionsRepo } from './db/quizSessions.js';
 import { QuizProgressRepo } from './db/quizProgress.js';
 import { AudioCacheRepo } from './db/audioCache.js';
+import { StudySessionsRepo } from './db/studySessions.js';
+import { UserStatsRepo } from './db/userStats.js';
+import { SessionEngine } from './services/session/SessionEngine.js';
 import { sweepStaleSessions } from './services/SessionSweeper.js';
 import { expireDueSubscriptions } from './services/SubscriptionWatcher.js';
+import { sweepStudySessions } from './handlers/practice.js';
 import { createBot, ADVERTISED_COMMANDS } from './bot.js';
 
 async function main() {
@@ -40,7 +44,18 @@ async function main() {
   const tts = new TtsService();
   const quota = new QuotaService();
   const entitlement = new Entitlement({ users: usersRepo, quota });
-  const bot = createBot({
+  const studySessions = new StudySessionsRepo();
+  const userStats = new UserStatsRepo();
+  const study = new SessionEngine({
+    engine: quizEngine,
+    sessions: studySessions,
+    progress: quizProgress,
+    stats: userStats,
+    users: usersRepo,
+    judge: anthropic,
+    logger,
+  });
+  const botDeps = {
     token: env.TELEGRAM_BOT_TOKEN,
     usersRepo,
     conversation,
@@ -51,9 +66,12 @@ async function main() {
     entitlement,
     quiz,
     audioCache,
+    study,
+    userStats,
     adminIds: env.ADMIN_TELEGRAM_IDS,
     logger,
-  });
+  };
+  const bot = createBot(botDeps);
 
   const sweepInterval = setInterval(async () => {
     try {
@@ -73,10 +91,20 @@ async function main() {
     }
   }, 15 * 60 * 1000);
 
+  const studySweepInterval = setInterval(async () => {
+    try {
+      const n = await sweepStudySessions(bot.api, botDeps, 30 * 60 * 1000);
+      if (n > 0) logger.info({ count: n }, 'expired study sessions');
+    } catch (err) {
+      logger.error({ err }, 'study sweep failed');
+    }
+  }, 15 * 60 * 1000);
+
   const shutdown = async () => {
     logger.info('shutting down');
     clearInterval(sweepInterval);
     clearInterval(expireInterval);
+    clearInterval(studySweepInterval);
     await bot.stop();
     await disconnectMongo();
     process.exit(0);

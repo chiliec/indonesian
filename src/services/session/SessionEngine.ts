@@ -257,6 +257,19 @@ export class SessionEngine {
     return this.evaluate(s, ex, m !== 'wrong', en, m === 'close' ? ex.answer : undefined);
   }
 
+  /** Re-render the current question/feedback after the card message was re-sent. */
+  async refocus(telegramId: number, en: boolean): Promise<TurnResult | null> {
+    const s = await this.deps.sessions.findActive(telegramId);
+    if (!s) return null;
+    const ex = s.exercises[s.current];
+    if (!ex) return null;
+    const view =
+      s.phase === 'feedback'
+        ? renderFeedback(await this.viewOf(s), { ...ex, feedback: ex.feedback ?? {} }, en)
+        : renderQuestion(await this.viewOf(s), ex, en);
+    return { session: s, view };
+  }
+
   /** Sweep idle sessions: mark expired and return finish views for the handler to render. */
   async expireStale(maxAgeMs: number): Promise<TurnResult[]> {
     const stale = await this.deps.sessions.findStale(new Date(Date.now() - maxAgeMs));

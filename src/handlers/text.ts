@@ -2,7 +2,7 @@ import { InlineKeyboard } from 'grammy';
 import type { BotCtx } from '../bot.js';
 import { t } from '../util/i18n.js';
 import { matchAction } from './keyboard.js';
-import { practiceHandler } from './quiz.js';
+import { practiceHandler, tryStudyTyped } from './practice.js';
 import { scenariosButtonHandler } from './scenarios.js';
 import { progressHandler } from './progress.js';
 import { settingsCommand } from './settings.js';
@@ -18,6 +18,8 @@ export async function textHandler(ctx: BotCtx): Promise<void> {
     if (action === 'progress') return progressHandler(ctx);
     if (action === 'settings') return settingsCommand(ctx);
   }
+
+  if (await tryStudyTyped(ctx)) return;
 
   const session = await ctx.deps.conversation.deps.sessions.findActive(ctx.from.id);
   if (!session) {
