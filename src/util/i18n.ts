@@ -48,6 +48,21 @@ const strings = {
     en: 'Tap ▶️ Practice for vocabulary drills, 🎭 Scenarios to roleplay in Indonesian. 📊 Progress shows your mastery. That\'s it — no commands to remember!',
     ru: 'Жми ▶️ Практика для тренировки слов, 🎭 Сценарии — ролевые диалоги. 📊 Прогресс — твоё мастерство. Всё — команды не нужны!',
   },
+  'session.correct': { en: '✅ Benar!', ru: '✅ Benar!' },
+  'session.almost': { en: '✅ Almost — correct spelling:', ru: '✅ Почти — правильно пишется:' },
+  'session.wrong': { en: '❌ Not quite. Correct answer:', ru: '❌ Не совсем. Правильный ответ:' },
+  'session.next': { en: '▶️ Next', ru: '▶️ Дальше' },
+  'session.undo': { en: '↩️ Undo', ru: '↩️ Отмена' },
+  'session.soFar': { en: 'So far:', ru: 'Пока:' },
+  'session.done': { en: '🏁 Session done!', ru: '🏁 Сессия завершена!' },
+  'session.review': { en: 'Words to review:', ru: 'Слова на повтор:' },
+  'session.again': { en: '▶️ Practice again', ru: '▶️ Ещё раз' },
+  'session.expired': { en: '⌛ Session expired.', ru: '⌛ Сессия истекла.' },
+  'session.expiredToast': {
+    en: 'Session expired — tap ▶️ Practice',
+    ru: 'Сессия истекла — жми ▶️ Практика',
+  },
+  'session.autoJudged': { en: '(auto-judged)', ru: '(автооценка)' },
 } as const;
 
 export type StringKey = keyof typeof strings;
