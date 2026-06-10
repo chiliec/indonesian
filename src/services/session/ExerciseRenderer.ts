@@ -1,5 +1,7 @@
 import { t } from '../../util/i18n.js';
 import type { CardView, Exercise } from './types.js';
+import { escapeHtml } from './html.js';
+export { escapeHtml } from './html.js';
 
 export interface QuestionView {
   sessionId: string;
@@ -12,10 +14,6 @@ export interface QuestionView {
   builderPicked: number[];
   /** result of the previous answer, flashed above the question */
   flash?: { correct: boolean; xp: number; corrected?: string };
-}
-
-export function escapeHtml(s: string): string {
-  return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 }
 
 function header(v: QuestionView, en: boolean): string {

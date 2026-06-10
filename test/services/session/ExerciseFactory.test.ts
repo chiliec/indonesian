@@ -101,3 +101,10 @@ test('buildExercise choice: small pool yields fewer options but stays valid', ()
   assert.equal(ex.options!.length, 2);
   assert.equal(ex.options![ex.correctIndex!], 'to eat');
 });
+
+test('buildExercise escapes HTML-significant chars in prompts', () => {
+  const c: QuizCard = { id: 'c1', indonesian: 'makan', english: 'a < b & c' };
+  const ty = buildExercise(c, pool, 'type', { en: true, rng: () => 0.5 });
+  assert.ok(ty.prompt.includes('a &lt; b &amp; c'));
+  assert.ok(!ty.prompt.includes('a < b'));
+});

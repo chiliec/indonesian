@@ -1,6 +1,7 @@
 import type { QuizCard, QuizSentence } from '../quiz/types.js';
 import type { QuizProgress } from '../../db/quizProgress.js';
 import type { Exercise, ExerciseKind } from './types.js';
+import { escapeHtml } from './html.js';
 
 /** 0 unseen · 1 last answer wrong · else lifetime correct count capped at 4. */
 export function masteryOf(p?: Pick<QuizProgress, 'seen' | 'correct' | 'lastResult'>): number {
@@ -131,7 +132,7 @@ export function buildExercise(
       const { options, correctIndex } = buildOptions(card.english, card.id, pool, 'english', rng);
       const prompt = card.audio
         ? (opts.en ? '🔊 What does this mean?' : '🔊 Что это значит?')
-        : (opts.en ? `What does "${card.indonesian}" mean?` : `Что значит «${card.indonesian}»?`);
+        : (opts.en ? `What does "${escapeHtml(card.indonesian)}" mean?` : `Что значит «${escapeHtml(card.indonesian)}»?`);
       const ex: Exercise = { ...base, prompt, options, correctIndex, answer: card.english };
       if (card.audio) ex.audioFile = card.audio;
       return ex;
@@ -148,7 +149,7 @@ export function buildExercise(
       const head = opts.en ? '🧩 Fill the blank:' : '🧩 Вставь слово:';
       return {
         ...base,
-        prompt: `${head}\n<i>${blanked}</i>\n(${s.en})`,
+        prompt: `${head}\n<i>${escapeHtml(blanked)}</i>\n(${escapeHtml(s.en)})`,
         options,
         correctIndex,
         answer: s.blank,
@@ -161,20 +162,20 @@ export function buildExercise(
       const head = opts.en ? '🧱 Build the sentence:' : '🧱 Собери предложение:';
       return {
         ...base,
-        prompt: `${head}\n"${s.en}"`,
+        prompt: `${head}\n"${escapeHtml(s.en)}"`,
         tiles: shuffle(words, rng),
         answer: s.text,
       };
     }
     case 'type': {
       const head = opts.en ? '✍️ Type it in Indonesian:' : '✍️ Напиши по-индонезийски:';
-      return { ...base, prompt: `${head} "${card.english}"`, answer: card.indonesian };
+      return { ...base, prompt: `${head} "${escapeHtml(card.english)}"`, answer: card.indonesian };
     }
     case 'speak': {
       const head = opts.en
         ? '🎤 Say it in Indonesian (send a voice message):'
         : '🎤 Скажи по-индонезийски (голосовым):';
-      return { ...base, prompt: `${head} "${card.english}"`, answer: card.indonesian };
+      return { ...base, prompt: `${head} "${escapeHtml(card.english)}"`, answer: card.indonesian };
     }
   }
 }
