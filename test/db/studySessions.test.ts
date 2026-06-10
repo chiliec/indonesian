@@ -31,21 +31,23 @@ test('create + findActive + abandonActive', async () => {
   assert.equal(await repo.findActive(1), null);
 });
 
-test('advance increments counters and resets tiles/phase', async () => {
+test('advance increments counters, resets tiles/phase, and guards against races', async () => {
   const s = await repo.create(1, 100, 'mixed', [ex('c1'), ex('c2')]);
   await repo.pushTile(s._id, 3);
-  await repo.markWrong(s._id, 'c1', ex('c1'));
+  assert.equal(await repo.markWrong(s._id, 'c1', ex('c1')), true);
+  assert.equal(await repo.markWrong(s._id, 'c1', ex('c1')), false); // double-tap: phase guard
   let cur = await repo.findActive(1);
   assert.equal(cur!.phase, 'feedback');
   assert.deepEqual(cur!.missed, ['c1']);
   assert.deepEqual(cur!.requeued, ['c1']);
-  assert.equal(cur!.exercises.length, 3); // requeued exercise appended
-  await repo.advance(s._id, { correct: false, xp: 0 });
+  assert.equal(cur!.exercises.length, 3); // requeued exercise appended once
+  assert.equal(await repo.advance(s._id, { correct: false, xp: 0, expectedCurrent: 0 }), true);
+  assert.equal(await repo.advance(s._id, { correct: false, xp: 0, expectedCurrent: 0 }), false); // stale cursor
   cur = await repo.findActive(1);
   assert.equal(cur!.current, 1);
   assert.equal(cur!.phase, 'question');
   assert.deepEqual(cur!.builderPicked, []);
-  await repo.advance(s._id, { correct: true, xp: 12 });
+  assert.equal(await repo.advance(s._id, { correct: true, xp: 12, expectedCurrent: 1 }), true);
   cur = await repo.findActive(1);
   assert.equal(cur!.correctCount, 1);
   assert.equal(cur!.xpEarned, 12);

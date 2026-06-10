@@ -38,9 +38,9 @@ export class StudySession {
   public status!: StudyStatus;
   @prop({ type: String, required: true, enum: ['question', 'feedback'], default: 'question' })
   public phase!: StudyPhase;
-  @prop({ type: () => [Number], default: [] }) public builderPicked!: number[];
-  @prop({ type: () => [String], default: [] }) public requeued!: string[];
-  @prop({ type: () => [String], default: [] }) public missed!: string[];
+  @prop({ type: () => [Number], required: true, default: [] }) public builderPicked!: number[];
+  @prop({ type: () => [String], required: true, default: [] }) public requeued!: string[];
+  @prop({ type: () => [String], required: true, default: [] }) public missed!: string[];
   @prop({ type: Number }) public cardMessageId?: number;
   @prop({ type: Number }) public audioMessageId?: number;
 }
@@ -49,7 +49,7 @@ export const StudySessionModel = getModelForClass(StudySession);
 
 export class StudySessionsRepo {
   async create(telegramId: number, chatId: number, moduleId: string, exercises: Exercise[]): Promise<StudySession> {
-    return StudySessionModel.create({ telegramId, chatId, moduleId, exercises });
+    return (await StudySessionModel.create({ telegramId, chatId, moduleId, exercises })).toObject<StudySession>();
   }
 
   async findActive(telegramId: number): Promise<StudySession | null> {
@@ -77,26 +77,33 @@ export class StudySessionsRepo {
     await StudySessionModel.updateOne({ _id: id }, update);
   }
 
-  /** wrong answer: enter feedback phase; requeue the card once (appends a fresh exercise). */
-  async markWrong(id: Types.ObjectId, cardId: string, requeueExercise: Exercise | null): Promise<void> {
+  /** wrong answer: enter feedback phase; requeue the card once (appends a fresh exercise).
+   *  Guarded on phase so a double-tap race applies at most once. */
+  async markWrong(id: Types.ObjectId, cardId: string, requeueExercise: Exercise | null): Promise<boolean> {
     const update: Record<string, unknown> = {
       $set: { phase: 'feedback' },
       $push: requeueExercise
         ? { missed: cardId, exercises: requeueExercise, requeued: cardId }
         : { missed: cardId },
     };
-    await StudySessionModel.updateOne({ _id: id }, update);
+    const res = await StudySessionModel.updateOne({ _id: id, phase: 'question' }, update);
+    return res.modifiedCount === 1;
   }
 
-  /** move to the next exercise (after a correct answer or feedback-next). */
-  async advance(id: Types.ObjectId, res: { correct: boolean; xp: number }): Promise<void> {
-    await StudySessionModel.updateOne(
-      { _id: id },
+  /** move to the next exercise (after a correct answer or feedback-next).
+   *  Guarded on the expected cursor so a double-tap race advances at most once. */
+  async advance(
+    id: Types.ObjectId,
+    res: { correct: boolean; xp: number; expectedCurrent: number },
+  ): Promise<boolean> {
+    const out = await StudySessionModel.updateOne(
+      { _id: id, current: res.expectedCurrent },
       {
         $inc: { current: 1, correctCount: res.correct ? 1 : 0, xpEarned: res.xp },
         $set: { phase: 'question', builderPicked: [] },
       },
     );
+    return out.modifiedCount === 1;
   }
 
   async pushTile(id: Types.ObjectId, tileIndex: number): Promise<void> {
