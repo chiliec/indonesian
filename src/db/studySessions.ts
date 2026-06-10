@@ -12,7 +12,7 @@ class StoredExercise {
   @prop({ type: () => [String] }) public tiles?: string[];
   @prop({ type: String, required: true }) public answer!: string;
   @prop({ type: String }) public audioFile?: string;
-  @prop({ type: Object, default: {} }) public feedback!: Exercise['feedback'];
+  @prop({ type: Object, default: {} }) public feedback?: Exercise['feedback'];
 }
 
 export type StudyStatus = 'active' | 'completed' | 'expired' | 'abandoned';
@@ -30,7 +30,7 @@ export class StudySession {
   @prop({ type: Number, required: true }) public telegramId!: number;
   @prop({ type: Number, required: true }) public chatId!: number;
   @prop({ type: String, required: true }) public moduleId!: string;
-  @prop({ type: () => [StoredExercise], required: true }) public exercises!: StoredExercise[];
+  @prop({ type: () => [StoredExercise], required: true }) public exercises!: Exercise[];
   @prop({ type: Number, required: true, default: 0 }) public current!: number;
   @prop({ type: Number, required: true, default: 0 }) public correctCount!: number;
   @prop({ type: Number, required: true, default: 0 }) public xpEarned!: number;
@@ -56,6 +56,10 @@ export class StudySessionsRepo {
     return StudySessionModel.findOne({ telegramId, status: 'active' })
       .sort({ createdAt: -1 })
       .lean<StudySession>();
+  }
+
+  async findById(id: Types.ObjectId): Promise<StudySession | null> {
+    return StudySessionModel.findOne({ _id: id, status: 'active' }).lean<StudySession>();
   }
 
   async abandonActive(telegramId: number): Promise<void> {

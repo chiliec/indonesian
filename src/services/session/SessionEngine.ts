@@ -35,6 +35,7 @@ export interface TurnResult {
 }
 
 export class SessionEngine {
+  // deps is public: handlers reach the repos through the engine (e.g. setMessages)
   constructor(public readonly deps: SessionEngineDeps) {}
 
   private pool(moduleId: string): QuizCard[] {
@@ -66,7 +67,7 @@ export class SessionEngine {
     });
 
     const session = await this.deps.sessions.create(telegramId, chatId, moduleId, exercises);
-    const view = renderQuestion(await this.viewOf(session), session.exercises[0] as Exercise, en);
+    const view = renderQuestion(await this.viewOf(session), session.exercises[0]!, en);
     return { session, view };
   }
 
@@ -104,7 +105,7 @@ export class SessionEngine {
   ): Promise<TurnResult | null> {
     const s = await this.activeById(telegramId, sid);
     if (!s || s.phase !== 'question') return null;
-    const ex = s.exercises[s.current] as Exercise | undefined;
+    const ex = s.exercises[s.current];
     if (!ex || (ex.kind !== 'choice' && ex.kind !== 'cloze')) return null;
     return this.evaluate(s, ex, optionIndex === ex.correctIndex, en);
   }
@@ -119,12 +120,12 @@ export class SessionEngine {
       expectedCurrent: s.current,
     });
     if (!applied) return null;
-    return this.renderCurrent(telegramId, en);
+    return this.renderCurrent(s._id, telegramId, en);
   }
 
   /** Shared outcome path for every exercise kind. Guarded writes first;
    *  progress/XP recorded only when the guard applied (race-safe). */
-  protected async evaluate(
+  private async evaluate(
     s: StudySession,
     ex: Exercise,
     correct: boolean,
@@ -141,7 +142,8 @@ export class SessionEngine {
       const applied = await this.deps.sessions.markWrong(s._id, ex.cardId, requeue);
       if (!applied) return null;
       await this.deps.progress.record(s.telegramId, ex.cardId, false);
-      const fresh = (await this.deps.sessions.findActive(s.telegramId))!;
+      const fresh = await this.deps.sessions.findById(s._id);
+      if (!fresh) return null;
       const exForFeedback: Exercise = { ...ex, feedback: ex.feedback ?? {} };
       return { session: fresh, view: renderFeedback(await this.viewOf(fresh), exForFeedback, en) };
     }
@@ -158,18 +160,19 @@ export class SessionEngine {
     const flash: QuestionView['flash'] = corrected
       ? { correct: true, xp, corrected }
       : { correct: true, xp };
-    return this.renderCurrent(s.telegramId, en, flash);
+    return this.renderCurrent(s._id, s.telegramId, en, flash);
   }
 
   /** Render the current question, or the finish screen when past the end. */
   private async renderCurrent(
+    sessionId: Types.ObjectId,
     telegramId: number,
     en: boolean,
     flash?: QuestionView['flash'],
   ): Promise<TurnResult | null> {
-    const s = await this.deps.sessions.findActive(telegramId);
+    const s = await this.deps.sessions.findById(sessionId);
     if (!s) return null;
-    const ex = s.exercises[s.current] as Exercise | undefined;
+    const ex = s.exercises[s.current];
     if (ex) {
       return { session: s, view: renderQuestion(await this.viewOf(s, flash), ex, en) };
     }
