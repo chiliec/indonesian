@@ -10,7 +10,8 @@
     "start": "node dist/index.js",
     "typecheck": "tsc -p tsconfig.json --noEmit && tsc -p tsconfig.test.json --noEmit",
     "test": "tsx --test 'test/**/*.test.ts'",
-    "prep:anki": "tsx scripts/prep-anki.ts"
+    "prep:anki": "tsx scripts/prep-anki.ts",
+    "enrich:content": "tsx scripts/enrich-content.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.30.1",
