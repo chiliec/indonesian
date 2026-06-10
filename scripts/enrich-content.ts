@@ -1,5 +1,7 @@
 // Usage: ANTHROPIC_API_KEY=... GOOGLE_APPLICATION_CREDENTIALS=... \
-//   npm run enrich:content -- [--module=module-1] [--force] [--dry-run]
+//   npm run enrich:content -- [--module=module-1] [--force] [--dry-run] [--no-audio]
+// --no-audio: write sentences/notes without TTS (no Google credentials needed);
+//             backfill audio later with --force once TTS is available.
 import 'dotenv/config';
 import fs from 'node:fs/promises';
 import path from 'node:path';
@@ -19,6 +21,7 @@ const args = process.argv.slice(2);
 const onlyModule = args.find((a) => a.startsWith('--module='))?.split('=')[1];
 const force = args.includes('--force');
 const dryRun = args.includes('--dry-run');
+const noAudio = args.includes('--no-audio');
 
 const anthropic = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
 const tts = new TtsService();
@@ -64,7 +67,7 @@ async function main() {
         const gen = await generate(card);
         const audio: (string | null)[] = [];
         for (const s of gen.sentences) {
-          audio.push(dryRun ? null : await synthesizeSentence(s.text));
+          audio.push(dryRun || noAudio ? null : await synthesizeSentence(s.text));
         }
         mod.cards[i] = applyEnrichment(card, gen, audio);
         changed = true;
