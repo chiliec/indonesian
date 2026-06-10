@@ -23,17 +23,11 @@ const strings = {
     en: '⚠️ Something went wrong. Try again in a moment.',
     ru: '⚠️ Что-то пошло не так. Попробуй через минуту.',
   },
-  'menu.quiz': { en: 'Quiz', ru: 'Квиз' },
   'quiz.pick': { en: 'Pick a module to practice:', ru: 'Выбери модуль:' },
   'quiz.none': {
     en: 'No quiz content available yet.',
     ru: 'Контент для квиза ещё не готов.',
   },
-  'quiz.started': { en: 'Quiz started! 10 questions.', ru: 'Квиз начат! 10 вопросов.' },
-  'quiz.summary': { en: 'Done! Score: ', ru: 'Готово! Результат: ' },
-  'quiz.missed': { en: 'Words to review:', ru: 'Слова на повтор:' },
-  'quiz.again': { en: 'Practice again', ru: 'Ещё раз' },
-  'quiz.pickAnother': { en: 'Pick another module', ru: 'Другой модуль' },
   'progress.title': { en: '📊 *Your progress*', ru: '📊 *Твой прогресс*' },
   'progress.empty': {
     en: 'No progress yet — tap ▶️ Practice to start!',
