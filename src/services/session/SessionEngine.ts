@@ -12,7 +12,7 @@ import { renderQuestion, renderFeedback, renderFinish, type QuestionView } from 
 import { matchAnswer } from './normalize.js';
 import { xpFor, COMPLETION_BONUS } from './xp.js';
 import type { CardView, Exercise } from './types.js';
-import { t } from '../../util/i18n.js';
+import { t, isEn } from '../../util/i18n.js';
 
 const DEFAULT_SESSION_LENGTH = 10;
 
@@ -275,10 +275,12 @@ export class SessionEngine {
     const stale = await this.deps.sessions.findStale(new Date(Date.now() - maxAgeMs));
     const out: TurnResult[] = [];
     for (const s of stale) {
+      const user = await this.deps.users.getByTelegramId(s.telegramId);
+      const en = isEn(user?.locale);
       await this.deps.sessions.complete(s._id, 'expired');
       const view: CardView = {
-        text: `${t('session.expired', true)}\n✅ ${s.correctCount}/${s.exercises.length} · ⭐ +${s.xpEarned} XP`,
-        buttons: [[{ text: t('session.again', true), data: 'p:again' }]],
+        text: `${t('session.expired', en)}\n✅ ${s.correctCount}/${s.exercises.length} · ⭐ +${s.xpEarned} XP`,
+        buttons: [[{ text: t('session.again', en), data: 'p:again' }]],
         finished: true,
       };
       out.push({ session: s, view });

@@ -90,7 +90,7 @@ export class StudySessionsRepo {
         ? { missed: cardId, exercises: requeueExercise, requeued: cardId }
         : { missed: cardId },
     };
-    const res = await StudySessionModel.updateOne({ _id: id, phase: 'question' }, update);
+    const res = await StudySessionModel.updateOne({ _id: id, phase: 'question', status: 'active' }, update);
     return res.modifiedCount === 1;
   }
 
@@ -101,7 +101,7 @@ export class StudySessionsRepo {
     res: { correct: boolean; xp: number; expectedCurrent: number },
   ): Promise<boolean> {
     const out = await StudySessionModel.updateOne(
-      { _id: id, current: res.expectedCurrent },
+      { _id: id, current: res.expectedCurrent, status: 'active' },
       {
         $inc: { current: 1, correctCount: res.correct ? 1 : 0, xpEarned: res.xp },
         $set: { phase: 'question', builderPicked: [] },

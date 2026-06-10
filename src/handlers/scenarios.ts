@@ -27,6 +27,8 @@ export async function startCallback(ctx: BotCtx): Promise<void> {
     );
     return;
   }
+  // one input consumer at a time: starting a scenario retires any active practice card
+  await ctx.deps.study.deps.sessions.abandonActive(ctx.from.id);
   const { opener } = await ctx.deps.conversation.start(ctx.from.id, m[1]);
   await ctx.reply(opener);
 }

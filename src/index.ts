@@ -65,7 +65,6 @@ async function main() {
     quiz,
     audioCache,
     study,
-    userStats,
     adminIds: env.ADMIN_TELEGRAM_IDS,
     logger,
   };
