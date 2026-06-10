@@ -1,0 +1,41 @@
+import { test } from 'node:test';
+import assert from 'node:assert/strict';
+import { ModuleSchema } from '../../src/services/quiz/cardSchema.js';
+
+const base = {
+  id: 'module-1',
+  title: { en: 'M1', ru: 'М1' },
+  cards: [{ id: 'm1-0001', indonesian: 'makan', english: 'to eat' }],
+};
+
+test('accepts a plain module without enrichment', () => {
+  assert.deepEqual(ModuleSchema.parse(base).id, 'module-1');
+});
+
+test('accepts enriched cards', () => {
+  const enriched = {
+    ...base,
+    cards: [{
+      id: 'm1-0001', indonesian: 'makan', english: 'to eat', audio: 'abc.ogg',
+      note: { en: 'Also "to have a meal".', ru: 'Также «принимать пищу».' },
+      sentences: [{ id: 'm1-0001-s1', text: 'Saya mau makan nasi goreng', blank: 'makan', en: 'I want to eat fried rice', audio: 'def.ogg' }],
+    }],
+  };
+  const parsed = ModuleSchema.parse(enriched);
+  assert.equal(parsed.cards[0]!.sentences![0]!.blank, 'makan');
+});
+
+test('rejects a sentence whose blank is missing from the text', () => {
+  const bad = {
+    ...base,
+    cards: [{
+      id: 'm1-0001', indonesian: 'makan', english: 'to eat',
+      sentences: [{ id: 's1', text: 'Saya mau minum', blank: 'makan', en: 'x' }],
+    }],
+  };
+  assert.throws(() => ModuleSchema.parse(bad), /blank/);
+});
+
+test('rejects a module with no cards', () => {
+  assert.throws(() => ModuleSchema.parse({ ...base, cards: [] }));
+});
