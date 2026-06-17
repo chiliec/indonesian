@@ -20,7 +20,7 @@ const choiceEx: Exercise = {
 };
 
 test('renderQuestion: header bar, prompt, option buttons with callback protocol', () => {
-  const v = renderQuestion(view, choiceEx, true);
+  const v = renderQuestion(view, choiceEx);
   assert.ok(v.text.includes('▰▰▱▱▱▱▱▱▱▱'));
   assert.ok(v.text.includes('3/10'));
   assert.ok(v.text.includes('⭐ 120 XP'));
@@ -32,7 +32,7 @@ test('renderQuestion: header bar, prompt, option buttons with callback protocol'
 });
 
 test('renderQuestion: flash line from previous answer', () => {
-  const v = renderQuestion({ ...view, flash: { correct: true, xp: 12 } }, choiceEx, true);
+  const v = renderQuestion({ ...view, flash: { correct: true, xp: 12 } }, choiceEx);
   assert.ok(v.text.includes('✅ Benar! +12 XP'));
 });
 
@@ -41,7 +41,7 @@ test('renderQuestion builder: unpicked tiles + undo, picked words shown', () => 
     cardId: 'c1', kind: 'builder', prompt: '🧱 Build the sentence:\n"I want to eat"',
     tiles: ['mau', 'Saya', 'makan'], answer: 'Saya mau makan', feedback: {},
   };
-  const v = renderQuestion({ ...view, builderPicked: [1] }, ex, true);
+  const v = renderQuestion({ ...view, builderPicked: [1] }, ex);
   assert.ok(v.text.includes('Saya'));            // picked word echoed in text
   const labels = v.buttons.flat().map((b) => b.text);
   assert.ok(!labels.includes('Saya'));            // picked tile removed from keyboard
@@ -54,12 +54,12 @@ test('renderQuestion type/speak: no buttons', () => {
     cardId: 'c1', kind: 'type', prompt: '✍️ Type it in Indonesian: "to eat"',
     answer: 'makan', feedback: {},
   };
-  const v = renderQuestion(view, ex, true);
+  const v = renderQuestion(view, ex);
   assert.equal(v.buttons.length, 0);
 });
 
 test('renderFeedback: correct answer, sentence, note, next button', () => {
-  const v = renderFeedback(view, choiceEx, true);
+  const v = renderFeedback(view, choiceEx);
   assert.ok(v.text.includes('to eat'));
   assert.ok(v.text.includes('Saya mau makan'));
   assert.ok(v.text.includes('I want to eat'));
@@ -68,7 +68,7 @@ test('renderFeedback: correct answer, sentence, note, next button', () => {
 
 test('renderFinish: score, xp, review list, again button', () => {
   const v = renderFinish(
-    { correctCount: 9, total: 12, xpEarned: 120, missedWords: ['makan — to eat'] }, true,
+    { correctCount: 9, total: 12, xpEarned: 120, missedWords: ['makan — to eat'] },
   );
   assert.ok(v.text.includes('9/12'));
   assert.ok(v.text.includes('+120 XP'));

@@ -3,13 +3,11 @@ import type { BotCtx } from '../bot.js';
 
 export async function scenariosCommand(ctx: BotCtx): Promise<void> {
   const list = ctx.deps.scenarioEngine.list();
-  const en = ctx.userIsEn;
   const kb = new InlineKeyboard();
   for (const s of list) {
-    const title = en ? s.title.en : s.title.ru;
-    kb.text(`${title} [${s.difficulty}]`, `start:${s.id}`).row();
+    kb.text(`${s.title.en} [${s.difficulty}]`, `start:${s.id}`).row();
   }
-  await ctx.reply(en ? 'Pick a scenario:' : 'Выбери сценарий:', { reply_markup: kb });
+  await ctx.reply('Pick a scenario:', { reply_markup: kb });
 }
 
 export async function startCallback(ctx: BotCtx): Promise<void> {
@@ -21,9 +19,7 @@ export async function startCallback(ctx: BotCtx): Promise<void> {
   const ent = await ctx.deps.entitlement.canStartScenario(ctx.from.id);
   if (!ent.allowed) {
     await ctx.reply(
-      ctx.userIsEn
-        ? '⏳ Free limit reached for today. /subscribe for unlimited practice, or come back tomorrow.'
-        : '⏳ Дневной лимит исчерпан. /subscribe — безлимит, или возвращайся завтра.',
+      '⏳ Free limit reached for today. /subscribe for unlimited practice, or come back tomorrow.',
     );
     return;
   }
@@ -44,13 +40,8 @@ export async function scenariosButtonHandler(ctx: BotCtx): Promise<void> {
     await scenariosCommand(ctx);
     return;
   }
-  const en = ctx.userIsEn;
   const lastAssistant = [...active.turns].reverse().find((tn) => tn.role === 'assistant');
   const body = lastAssistant?.text ?? '';
-  const kb = new InlineKeyboard().text(
-    en ? '💡 Correct me' : '💡 Исправь',
-    `correct:${active._id.toString()}`,
-  );
-  const header = en ? '⏩ Resuming your scenario…\n\n' : '⏩ Продолжаем сценарий…\n\n';
-  await ctx.reply(header + body, { reply_markup: kb });
+  const kb = new InlineKeyboard().text('💡 Correct me', `correct:${active._id.toString()}`);
+  await ctx.reply('⏩ Resuming your scenario…\n\n' + body, { reply_markup: kb });
 }

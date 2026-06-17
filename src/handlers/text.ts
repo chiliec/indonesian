@@ -1,6 +1,5 @@
 import { InlineKeyboard } from 'grammy';
 import type { BotCtx } from '../bot.js';
-import { t } from '../util/i18n.js';
 import { matchAction } from './keyboard.js';
 import { practiceHandler, tryStudyTyped } from './practice.js';
 import { scenariosButtonHandler } from './scenarios.js';
@@ -25,22 +24,15 @@ export async function textHandler(ctx: BotCtx): Promise<void> {
   if (!session) {
     // mid-practice typing on a button-based exercise: ignore instead of scenario noise
     if (await ctx.deps.study.deps.sessions.findActive(ctx.from.id)) return;
-    await ctx.reply(
-      ctx.userIsEn
-        ? 'No active scenario. Use /scenarios to pick one.'
-        : 'Нет активного сценария. Открой /scenarios.',
-    );
+    await ctx.reply('No active scenario. Use /scenarios to pick one.');
     return;
   }
   try {
     const result = await ctx.deps.conversation.handleUserTurn(session._id, ctx.message.text);
-    const kb = new InlineKeyboard().text(
-      ctx.userIsEn ? '💡 Correct me' : '💡 Исправь',
-      `correct:${session._id.toString()}`,
-    );
+    const kb = new InlineKeyboard().text('💡 Correct me', `correct:${session._id.toString()}`);
     await ctx.reply(result.characterReply, { reply_markup: kb });
   } catch (err) {
     ctx.deps.logger.error({ err }, 'handleUserTurn failed');
-    await ctx.reply(t('error.generic', ctx.userIsEn));
+    await ctx.reply('⚠️ Something went wrong. Try again in a moment.');
   }
 }

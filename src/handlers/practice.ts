@@ -6,7 +6,6 @@ import type { TurnResult } from '../services/session/SessionEngine.js';
 import type { CardView } from '../services/session/types.js';
 import { MIXED_MODULE_ID } from '../services/QuizService.js';
 import { mainKeyboard } from './keyboard.js';
-import { t } from '../util/i18n.js';
 
 const QUIZ_AUDIO_DIR = path.resolve('content/quiz/audio');
 
@@ -118,7 +117,6 @@ export async function applyTurn(api: Api, deps: BotDeps, r: TurnResult): Promise
 export async function practiceHandler(ctx: BotCtx): Promise<void> {
   if (!ctx.from || !ctx.chat) return;
   if (ctx.callbackQuery) await ctx.answerCallbackQuery();
-  const en = ctx.userIsEn;
 
   // one session per user: re-focus the existing card instead of starting another
   const existing = await ctx.deps.study.deps.sessions.findActive(ctx.from.id);
@@ -130,16 +128,16 @@ export async function practiceHandler(ctx: BotCtx): Promise<void> {
     }
     await ctx.deps.study.deps.sessions.setMessages(existing._id, { cardMessageId: 0 });
     // re-render current question as a fresh message at the bottom of the chat
-    const refocus = await ctx.deps.study.refocus(ctx.from.id, en);
+    const refocus = await ctx.deps.study.refocus(ctx.from.id);
     if (refocus) {
       await applyTurn(ctx.api, ctx.deps, refocus);
       return;
     }
   }
 
-  const r = await ctx.deps.study.start(ctx.from.id, ctx.chat.id, MIXED_MODULE_ID, en);
+  const r = await ctx.deps.study.start(ctx.from.id, ctx.chat.id, MIXED_MODULE_ID);
   if (!r) {
-    await ctx.reply(t('quiz.none', en), { reply_markup: mainKeyboard(en) });
+    await ctx.reply('No quiz content available yet.', { reply_markup: mainKeyboard() });
     return;
   }
   await applyTurn(ctx.api, ctx.deps, r);
@@ -151,9 +149,9 @@ export async function practiceStartCallback(ctx: BotCtx): Promise<void> {
   const m = ctx.callbackQuery.data.match(/^practice:start:(.+)$/);
   if (!m || !m[1]) return;
   await ctx.answerCallbackQuery();
-  const r = await ctx.deps.study.start(ctx.from.id, ctx.chat.id, m[1], ctx.userIsEn);
+  const r = await ctx.deps.study.start(ctx.from.id, ctx.chat.id, m[1]);
   if (!r) {
-    await ctx.reply(t('quiz.none', ctx.userIsEn));
+    await ctx.reply('No quiz content available yet.');
     return;
   }
   await applyTurn(ctx.api, ctx.deps, r);
@@ -163,17 +161,16 @@ export async function practiceStartCallback(ctx: BotCtx): Promise<void> {
 export async function modulePicker(ctx: BotCtx): Promise<void> {
   if (!ctx.from) return;
   if (ctx.callbackQuery) await ctx.answerCallbackQuery();
-  const en = ctx.userIsEn;
   const modules = await ctx.deps.quiz.moduleList(ctx.from.id);
   if (modules.length === 0) {
-    await ctx.reply(t('quiz.none', en));
+    await ctx.reply('No quiz content available yet.');
     return;
   }
   const kb = new InlineKeyboard();
   for (const m of modules) {
-    kb.text(`${en ? m.titleEn : m.titleRu} · ${m.pct}%`, `practice:start:${m.id}`).row();
+    kb.text(`${m.title} · ${m.pct}%`, `practice:start:${m.id}`).row();
   }
-  await ctx.reply(t('quiz.pick', en), { reply_markup: kb });
+  await ctx.reply('Pick a module to practice:', { reply_markup: kb });
 }
 
 /** s:<sid>:<op>[:<arg>] — all in-session button taps. */
@@ -184,16 +181,15 @@ export async function sessionCallback(ctx: BotCtx): Promise<void> {
     await ctx.answerCallbackQuery();
     return;
   }
-  const en = ctx.userIsEn;
   const eng = ctx.deps.study;
   let r = null;
-  if (p.op === 'a' && p.arg !== null) r = await eng.submitChoice(ctx.from.id, p.sid, p.arg, en);
-  else if (p.op === 't' && p.arg !== null) r = await eng.tapTile(ctx.from.id, p.sid, p.arg, en);
-  else if (p.op === 'u') r = await eng.undoTile(ctx.from.id, p.sid, en);
-  else if (p.op === 'n') r = await eng.next(ctx.from.id, p.sid, en);
+  if (p.op === 'a' && p.arg !== null) r = await eng.submitChoice(ctx.from.id, p.sid, p.arg);
+  else if (p.op === 't' && p.arg !== null) r = await eng.tapTile(ctx.from.id, p.sid, p.arg);
+  else if (p.op === 'u') r = await eng.undoTile(ctx.from.id, p.sid);
+  else if (p.op === 'n') r = await eng.next(ctx.from.id, p.sid);
 
   if (!r) {
-    await ctx.answerCallbackQuery({ text: t('session.expiredToast', en) });
+    await ctx.answerCallbackQuery({ text: 'Session expired — tap ▶️ Practice' });
     return;
   }
   await ctx.answerCallbackQuery();
@@ -203,7 +199,7 @@ export async function sessionCallback(ctx: BotCtx): Promise<void> {
 /** typed text → study session? true = consumed. */
 export async function tryStudyTyped(ctx: BotCtx): Promise<boolean> {
   if (!ctx.from || !ctx.message?.text) return false;
-  const r = await ctx.deps.study.submitTyped(ctx.from.id, ctx.message.text, ctx.userIsEn);
+  const r = await ctx.deps.study.submitTyped(ctx.from.id, ctx.message.text);
   if (!r) return false;
   await applyTurn(ctx.api, ctx.deps, r);
   return true;
@@ -212,7 +208,7 @@ export async function tryStudyTyped(ctx: BotCtx): Promise<boolean> {
 /** voice transcript → study session? true = consumed. */
 export async function tryStudyVoice(ctx: BotCtx, transcript: string): Promise<boolean> {
   if (!ctx.from) return false;
-  const r = await ctx.deps.study.submitSpoken(ctx.from.id, transcript, ctx.userIsEn);
+  const r = await ctx.deps.study.submitSpoken(ctx.from.id, transcript);
   if (!r) return false;
   await applyTurn(ctx.api, ctx.deps, r);
   return true;

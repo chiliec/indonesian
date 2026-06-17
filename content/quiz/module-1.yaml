@@ -1,7 +1,6 @@
 id: module-1
 title:
   en: Module 1
-  ru: Модуль 1
 cards:
   - id: module-1-0001
     indonesian: Anda
@@ -10,8 +9,6 @@ cards:
     note:
       en: "'Anda' is a formal/polite 'you', used with strangers or in professional
         settings; 'kamu' is the informal version used with friends."
-      ru: "'Anda' — это вежливое 'вы/ты', используется с незнакомыми людьми или в
-        официальных ситуациях; 'kamu' — неформальный вариант для друзей."
     sentences:
       - id: module-1-0001-s1
         text: Anda tinggal di mana?
@@ -32,9 +29,6 @@ cards:
       en: '"Apa kabar?" is an informal, everyday greeting used between friends and
         acquaintances; respond with "baik" (good) or "baik-baik saja" (fine);
         literally means "what news?"'
-      ru: "«Apa kabar?» — неформальное повседневное приветствие, используемое между
-        друзьями и знакомыми; ответ: «baik» (хорошо) или «baik-baik saja» (всё
-        хорошо); буквально означает «какие новости?»"
     sentences:
       - id: module-1-0002-s1
         text: Halo, apa kabar hari ini?
@@ -56,9 +50,6 @@ cards:
       en: "'Apa?' means 'what' and is used in both formal and informal speech; it also
         appears in yes/no questions as a sentence-opener (e.g. 'Apa kamu
         suka...?'); related: 'apa-apa' (anything/nothing)."
-      ru: "'Apa?' означает 'что' и используется как в формальной, так и в неформальной
-        речи; также ставится в начале вопросов для уточнения (например, 'Apa
-        kamu suka...?'); связанное слово: 'apa-apa' (что-либо/ничего)."
     sentences:
       - id: module-1-0003-s1
         text: Ini apa?
@@ -79,9 +70,6 @@ cards:
     note:
       en: "Used as a polite reply meaning 'I'm fine'; often heard as a response to
         'Apa kabar?'; related phrase: 'tidak apa-apa' (it's okay/no problem)."
-      ru: "Вежливый ответ со значением «всё хорошо»; часто звучит в ответ на «Apa
-        kabar?»; похожая фраза: «tidak apa-apa» (всё в порядке/ничего
-        страшного)."
     sentences:
       - id: module-1-0004-s1
         text: Saya baik-baik saja, terima kasih.
@@ -103,9 +91,6 @@ cards:
       en: "'Biasa' means usual/ordinary/normal; 'biasa saja' means just okay/nothing
         special; often confused with 'normal' (borrowed word); related: 'seperti
         biasa' = as usual"
-      ru: "'Biasa' означает обычный/нормальный; 'biasa saja' — просто так/ничего
-        особенного; часто путают с 'normal' (заимствованное слово); связанное:
-        'seperti biasa' = как обычно"
     sentences:
       - id: module-1-0005-s1
         text: Saya minum kopi seperti biasa setiap pagi.
@@ -127,9 +112,6 @@ cards:
       en: "'Dan' means 'and', used to connect nouns or clauses; neutral register, very
         common in speech and writing; similar to 'serta' (more formal) or 'sama'
         (informal spoken)."
-      ru: "'Dan' означает 'и', используется для соединения существительных или
-        предложений; нейтральный стиль, очень распространено в речи и письме;
-        похоже на 'serta' (более официально) или 'sama' (разговорное)."
     sentences:
       - id: module-1-0006-s1
         text: Saya makan nasi dan ayam.
@@ -151,9 +133,6 @@ cards:
       en: "'Duduk' means to sit or sit down; often paired with 'di' (at/on) to
         indicate location, e.g. 'duduk di kursi' (sit on the chair); related
         word: 'tempat duduk' (seat)."
-      ru: "'Duduk' означает 'сидеть' или 'садиться'; часто используется с предлогом
-        'di' для указания места, например 'duduk di kursi' (сидеть на стуле);
-        связанное слово: 'tempat duduk' (место для сидения)."
     sentences:
       - id: module-1-0007-s1
         text: Saya duduk di kursi merah.
@@ -175,9 +154,6 @@ cards:
       en: "'Kenalkan' is an informal contraction of 'perkenalkan' (formal); use it
         when introducing a person, not a thing; often followed by 'ini' or a
         name."
-      ru: "'Kenalkan' — неформальное сокращение от 'perkenalkan' (формальное);
-        используется при представлении человека, не предмета; часто следует
-        'ini' или имя."
     sentences:
       - id: module-1-0008-s1
         text: Kenalkan, ini teman saya, Budi.
@@ -199,9 +175,6 @@ cards:
       en: "'Makan' means 'to eat' and is used for all meals; related words include
         'makanan' (food) and 'minum' (to drink); it is neutral register and very
         common in daily speech."
-      ru: "'Makan' означает 'есть/кушать' и используется для всех приёмов пищи;
-        связанные слова: 'makanan' (еда) и 'minum' (пить); нейтральный стиль
-        речи, очень употребительно в повседневной жизни."
     sentences:
       - id: module-1-0009-s1
         text: Saya makan nasi setiap hari.
@@ -223,9 +196,6 @@ cards:
       en: "'Malam' means 'night' and is also used as a greeting 'Selamat malam' (Good
         evening/night); do not confuse with 'malam-malam' which means 'late at
         night'."
-      ru: "'Malam' означает 'ночь' и используется в приветствии 'Selamat malam'
-        (Добрый вечер/ночи); не путайте с 'malam-malam', что означает 'поздно
-        ночью'."
     sentences:
       - id: module-1-0010-s1
         text: Selamat malam, apa kabar?
@@ -246,8 +216,6 @@ cards:
     note:
       en: "'Masuk' is a common everyday verb used for entering rooms, buildings, or
         joining groups; opposite is 'keluar' (to go out)."
-      ru: "'Masuk' — распространённый глагол, означающий вход в комнату, здание или
-        вступление в группу; антоним — 'keluar' (выходить)."
     sentences:
       - id: module-1-0011-s1
         text: Silakan masuk ke dalam rumah.
@@ -269,9 +237,6 @@ cards:
       en: "'Minum' means 'to drink'; used for all beverages; related word 'minuman'
         means 'drink/beverage' (noun); not to be confused with 'makan' (to
         eat)."
-      ru: "'Minum' означает 'пить'; используется для любых напитков; родственное слово
-        'minuman' означает 'напиток' (существительное); не путать с 'makan'
-        (есть)."
     sentences:
       - id: module-1-0012-s1
         text: Saya minum air setiap pagi.
@@ -293,9 +258,6 @@ cards:
       en: "'Nama' is a neutral, everyday word for 'name'; commonly used in
         introductions with 'Nama saya...' (My name is...); related phrase:
         'siapa namamu?' (what is your name?)."
-      ru: "'Nama' — нейтральное повседневное слово для обозначения имени; часто
-        используется в представлениях: 'Nama saya...' (Меня зовут...); связанная
-        фраза: 'siapa namamu?' (как тебя зовут?)."
     sentences:
       - id: module-1-0013-s1
         text: Nama saya Budi.
@@ -317,9 +279,6 @@ cards:
       en: "'Pagi' means 'morning' and is also used as an informal greeting 'Selamat
         pagi' (Good morning); related words: 'siang' (midday), 'sore'
         (afternoon), 'malam' (evening/night)."
-      ru: "'Pagi' означает 'утро' и используется в приветствии 'Selamat pagi' (Доброе
-        утро); связанные слова: 'siang' (полдень), 'sore' (вечер), 'malam'
-        (ночь)."
     sentences:
       - id: module-1-0014-s1
         text: Selamat pagi, Bu Made!
@@ -341,9 +300,6 @@ cards:
       en: "'Saja' means 'just/only' and is placed after the word it limits; very
         common in casual speech, often confused with 'hanya' which is more
         formal and placed before the word."
-      ru: "'Saja' означает 'просто/только' и ставится после ограничиваемого слова;
-        очень распространено в разговорной речи, часто путают с 'hanya' — более
-        формальным словом, которое ставится перед словом."
     sentences:
       - id: module-1-0015-s1
         text: Saya mau air saja, terima kasih.
@@ -364,9 +320,6 @@ cards:
     note:
       en: "'Saya' is a polite, neutral first-person pronoun; more formal than 'aku',
         suitable for talking to strangers or in most everyday situations."
-      ru: "'Saya' — вежливое нейтральное местоимение первого лица; более формальное,
-        чем 'aku', подходит для общения с незнакомыми людьми и большинства
-        повседневных ситуаций."
     sentences:
       - id: module-1-0016-s1
         text: Saya mau pesan nasi goreng.
@@ -388,9 +341,6 @@ cards:
       en: '"Selamat" means both "safe/well" and is used in congratulatory phrases like
         "Selamat pagi" (Good morning) or "Selamat ulang tahun" (Happy birthday);
         very common in greetings.'
-      ru: «Selamat» означает и «в безопасности/благополучно», и используется в
-        поздравлениях, например «Selamat pagi» (Доброе утро) или «Selamat ulang
-        tahun» (С днём рождения); очень часто встречается в приветствиях.
     sentences:
       - id: module-1-0017-s1
         text: Selamat pagi, Bu Wayan!
@@ -411,9 +361,6 @@ cards:
     note:
       en: "'Siang' covers roughly 11am–3pm; often used in greetings ('Selamat siang')
         and confused with 'sore' (late afternoon) or 'malam' (evening/night)."
-      ru: "'Siang' охватывает примерно 11:00–15:00; часто используется в приветствиях
-        ('Selamat siang') и путается с 'sore' (поздний день) или 'malam'
-        (вечер/ночь)."
     sentences:
       - id: module-1-0018-s1
         text: Selamat siang, apa kabar?
@@ -434,8 +381,6 @@ cards:
     note:
       en: "'Siapa' means 'who' and is used for people only; do not confuse with 'apa'
         (what) or 'mana' (which/where)."
-      ru: "'Siapa' означает 'кто' и используется только для людей; не путайте с 'apa'
-        (что) или 'mana' (который/где)."
     sentences:
       - id: module-1-0019-s1
         text: Siapa nama kamu?
@@ -457,9 +402,6 @@ cards:
       en: "'Silakan' is a polite word meaning 'please go ahead' or 'you are welcome
         to'; often used to invite someone to do something, not to be confused
         with 'tolong' which asks for help."
-      ru: "'Silakan' — вежливое слово, означающее 'пожалуйста, проходите' или 'прошу
-        вас'; используется для приглашения кого-либо что-то сделать, не путать с
-        'tolong', которое означает просьбу о помощи."
     sentences:
       - id: module-1-0020-s1
         text: Silakan duduk di kursi ini.
@@ -480,8 +422,6 @@ cards:
     note:
       en: "'Sore' means roughly 3–6 PM; do not confuse with 'malam' (night) or 'siang'
         (midday); commonly used in greetings as 'selamat sore'."
-      ru: "'Sore' означает примерно 15:00–18:00; не путайте с 'malam' (ночь) или
-        'siang' (полдень); часто используется в приветствии 'selamat sore'."
     sentences:
       - id: module-1-0021-s1
         text: Selamat sore, apa kabar?
@@ -503,9 +443,6 @@ cards:
       en: "\"Terima kasih\" is neutral and polite in all registers; the informal
         shortening \"makasih\" is very common in casual speech; the response is
         \"sama-sama\" (you're welcome)."
-      ru: «Terima kasih» — нейтральное вежливое выражение для любого стиля общения; в
-        разговорной речи часто сокращают до «makasih»; ответ на благодарность —
-        «sama-sama» (пожалуйста).
     sentences:
       - id: module-1-0022-s1
         text: Terima kasih atas bantuannya, Pak.
@@ -527,9 +464,6 @@ cards:
       en: '"Amerika Serikat" is the formal name for the USA; informally Indonesians
         also say "Amerika" alone. Do not confuse with "Amerika Selatan" (South
         America).'
-      ru: '"Amerika Serikat" — официальное название США; в разговорной речи
-        индонезийцы также говорят просто "Amerika". Не путайте с "Amerika
-        Selatan" (Южная Америка).'
     sentences:
       - id: module-1-0023-s1
         text: Dia berasal dari Amerika Serikat.
@@ -551,8 +485,6 @@ cards:
       en: "'Arab Saudi' is the standard Indonesian name for Saudi Arabia; always used
         as a two-word proper noun, never shortened in formal or everyday
         speech."
-      ru: "'Arab Saudi' — стандартное индонезийское название Саудовской Аравии; всегда
-        используется как двухсловное имя собственное, не сокращается."
     sentences:
       - id: module-1-0024-s1
         text: Dia bekerja di Arab Saudi.
@@ -574,10 +506,6 @@ cards:
       en: "'Belanda' refers to the Netherlands/Holland and is also used informally to
         describe Dutch people or things (e.g., 'orang Belanda' = Dutch person);
         commonly heard in historical and travel contexts in Indonesia."
-      ru: "'Belanda' означает Нидерланды/Голландия и также используется неформально
-        для обозначения голландцев или голландских вещей (например, 'orang
-        Belanda' = голландец); часто встречается в историческом и туристическом
-        контексте в Индонезии."
     sentences:
       - id: module-1-0025-s1
         text: Dia turis dari Belanda yang ramah.
@@ -598,8 +526,6 @@ cards:
     note:
       en: "'Berasal' is always followed by 'dari' (from); common in introductions;
         related: 'asal' (origin/hometown)."
-      ru: "'Berasal' всегда используется с 'dari' (из); часто в представлении себя;
-        родственное слово: 'asal' (происхождение/родной город)."
     sentences:
       - id: module-1-0026-s1
         text: Saya berasal dari Jakarta.
@@ -620,8 +546,6 @@ cards:
     note:
       en: "'Cina' is an informal/colloquial term for China or Chinese; the neutral
         formal term is 'Tiongkok' (country) or 'Tionghoa' (people/ethnicity)."
-      ru: "'Cina' — разговорное слово для обозначения Китая или китайцев; нейтральные
-        формальные варианты: 'Tiongkok' (страна) и 'Tionghoa' (народ/этнос)."
     sentences:
       - id: module-1-0027-s1
         text: Dia datang dari Cina bulan lalu.
@@ -642,9 +566,6 @@ cards:
     note:
       en: "'Dari' means 'from' and is used for origin of place or time; do not confuse
         with 'dari' in comparisons (lebih ... dari = more ... than)."
-      ru: "'Dari' означает 'из/от' и используется для указания места или времени; не
-        путайте с употреблением 'dari' в сравнениях (lebih ... dari = более ...
-        чем)."
     sentences:
       - id: module-1-0028-s1
         text: Saya dari Indonesia.
@@ -666,8 +587,6 @@ cards:
       en: '"Dari mana" means "from where" and is used to ask about origin or
         direction; commonly confused with "di mana" (where/location) and "ke
         mana" (to where).'
-      ru: '"Dari mana" означает «откуда» и используется для вопроса о происхождении
-        или направлении; часто путают с "di mana" (где) и "ke mana" (куда).'
     sentences:
       - id: module-1-0029-s1
         text: Kamu dari mana asalnya?
@@ -688,8 +607,6 @@ cards:
     note:
       en: "'Dari sini' means 'from here'; pair with 'dari sana' (from there) and 'ke
         sini' (to here) to express movement directions."
-      ru: "'Dari sini' означает 'отсюда'; используйте вместе с 'dari sana' (оттуда) и
-        'ke sini' (сюда) для выражения направления движения."
     sentences:
       - id: module-1-0030-s1
         text: Pantai itu jauh dari sini.
@@ -710,8 +627,6 @@ cards:
     note:
       en: "'Filipina' refers to the country The Philippines; note it also means
         'Filipino woman' in Indonesian, so context matters."
-      ru: "'Filipina' означает страну Филиппины, но также может означать 'филиппинка'
-        (женщина из Филиппин) — важен контекст."
     sentences:
       - id: module-1-0031-s1
         text: Dia datang dari Filipina.
@@ -732,9 +647,6 @@ cards:
     note:
       en: "'Inggris' means both 'English' (language) and 'Britain/England' (country);
         often used in phrases like 'bahasa Inggris' (English language)."
-      ru: "'Inggris' означает и 'английский' (язык), и 'Великобритания/Англия'
-        (страна); часто используется в выражении 'bahasa Inggris' (английский
-        язык)."
     sentences:
       - id: module-1-0032-s1
         text: Saya belajar bahasa Inggris setiap hari.
@@ -756,9 +668,6 @@ cards:
       en: "'Ini' means 'this' and points to something nearby; often confused with
         'itu' (that, for things farther away); used in everyday speech at all
         registers."
-      ru: "'Ini' означает 'это' и указывает на что-то близкое; часто путают с 'itu'
-        (то, для вещей подальше); используется в повседневной речи на всех
-        уровнях."
     sentences:
       - id: module-1-0033-s1
         text: Ini nasi goreng saya.
@@ -780,9 +689,6 @@ cards:
       en: "'Italia' is the Indonesian word for Italy; used as a proper noun for the
         country, also seen in 'bahasa Italia' (Italian language) and 'pizza
         Italia'."
-      ru: "'Italia' — индонезийское слово для обозначения Италии; используется как имя
-        собственное, встречается в выражениях 'bahasa Italia' (итальянский язык)
-        и 'pizza Italia'."
     sentences:
       - id: module-1-0034-s1
         text: Dia datang dari Italia minggu lalu.
@@ -803,9 +709,6 @@ cards:
     note:
       en: "'Jauh' is a common adjective/adverb meaning 'far' or 'distant'; opposite is
         'dekat' (near); also used in 'jauh-jauh' for emphasis."
-      ru: "'Jauh' — распространённое прилагательное/наречие со значением 'далеко,
-        далёкий'; антоним — 'dekat' (близко); также используется в форме
-        'jauh-jauh' для усиления."
     sentences:
       - id: module-1-0035-s1
         text: Pantai itu jauh dari hotel saya.
@@ -826,9 +729,6 @@ cards:
     note:
       en: "'Jepang' is the standard Indonesian word for Japan; used in both formal and
         informal contexts, not to be confused with 'Jawa' (Java island)."
-      ru: "'Jepang' — стандартное индонезийское слово для обозначения Японии;
-        используется в формальных и неформальных ситуациях, не путать с 'Jawa'
-        (остров Ява)."
     sentences:
       - id: module-1-0036-s1
         text: Dia datang dari Jepang.
@@ -850,9 +750,6 @@ cards:
       en: '"Jerman" is the Indonesian word for Germany (the country); the adjective
         form for German things is "bahasa Jerman" (German language) or "orang
         Jerman" (a German person).'
-      ru: '"Jerman" — это индонезийское слово для обозначения Германии; для
-        прилагательного используется «bahasa Jerman» (немецкий язык) или «orang
-        Jerman» (немец/немка).'
     sentences:
       - id: module-1-0037-s1
         text: Dia berasal dari Jerman.
@@ -874,9 +771,6 @@ cards:
       en: "'Maaf' is neutral/polite and used in everyday speech; say 'maaf' alone or
         add 'ya' for softer tone; related: 'minta maaf' (to apologise
         formally)."
-      ru: "'Maaf' — нейтральное вежливое слово; можно сказать просто 'maaf' или
-        добавить 'ya' для мягкости; похожее выражение: 'minta maaf' (официальные
-        извинения)."
     sentences:
       - id: module-1-0038-s1
         text: Maaf, saya terlambat hari ini.
@@ -897,8 +791,6 @@ cards:
     note:
       en: "'Mesir' is a proper noun for Egypt; not to be confused with 'jagung' (corn)
         or any food term; related word: 'orang Mesir' (Egyptian person)."
-      ru: "'Mesir' — имя собственное, обозначающее Египет; не путать с пищевыми
-        терминами; связанное слово: 'orang Mesir' (египтянин/египтянка)."
     sentences:
       - id: module-1-0039-s1
         text: Dia ingin pergi ke Mesir.
@@ -924,9 +816,6 @@ cards:
       en: "'Perancis' means France (country); 'bahasa Perancis' means French
         (language); not to be confused with 'Prancis' which is an informal
         variant spelling."
-      ru: "'Perancis' означает Франция (страна); 'bahasa Perancis' означает
-        французский язык; не путать с 'Prancis' — неформальным вариантом
-        написания."
     sentences:
       - id: module-1-0041-s1
         text: Dia datang dari Perancis.
@@ -947,9 +836,6 @@ cards:
     note:
       en: "'Rusia' is the standard Indonesian word for Russia; used in formal and
         informal contexts alike, no common confusion with other words."
-      ru: "'Rusia' — стандартное индонезийское слово для обозначения России;
-        используется как в формальном, так и в неформальном контексте, путаницы
-        с другими словами не вызывает."
     sentences:
       - id: module-1-0042-s1
         text: Dia berasal dari Rusia.
@@ -970,8 +856,6 @@ cards:
     note:
       en: '"Selandia Baru" is the standard formal name for New Zealand; always written
         as two words and used in everyday conversation and writing.'
-      ru: «Selandia Baru» — стандартное официальное название Новой Зеландии; всегда
-        пишется двумя словами и используется в повседневной речи и письме.
     sentences:
       - id: module-1-0043-s1
         text: Dia berasal dari Selandia Baru.
@@ -993,9 +877,6 @@ cards:
       en: "'Saya kira' means 'I thought' or 'I think' and is used for assumptions or
         mistaken beliefs; often confused with 'saya pikir' (same meaning,
         slightly more formal) or 'saya tahu' (I know)."
-      ru: "'Saya kira' означает 'я думал' или 'я думаю' и используется для
-        предположений или ошибочных мнений; часто путают с 'saya pikir' (то же
-        значение, чуть формальнее) или 'saya tahu' (я знаю)."
     sentences:
       - id: module-1-0044-s1
         text: Saya kira warung ini tutup hari ini.
@@ -1017,9 +898,6 @@ cards:
       en: "Singapura is the standard Indonesian name for Singapore; used in formal and
         informal contexts alike; related words: negara (country), tetangga
         (neighbor)."
-      ru: "Singapura — стандартное индонезийское название Сингапура; используется как
-        в формальной, так и в неформальной речи; связанные слова: negara
-        (страна), tetangga (сосед)."
     sentences:
       - id: module-1-0045-s1
         text: Saya ingin pergi ke Singapura.
@@ -1041,10 +919,6 @@ cards:
       en: "'Tidak' is used to negate verbs, adjectives, and prepositions in formal or
         standard Indonesian; for casual speech 'nggak' or 'enggak' is more
         common. Do not confuse with 'bukan', which negates nouns or pronouns."
-      ru: "'Tidak' используется для отрицания глаголов, прилагательных и предлогов в
-        формальном индонезийском; в разговорной речи чаще используют 'nggak' или
-        'enggak'. Не путайте с 'bukan', которое отрицает существительные и
-        местоимения."
     sentences:
       - id: module-1-0046-s1
         text: Saya tidak mau makan nasi goreng.
@@ -1066,9 +940,6 @@ cards:
       en: "'Yunani' is the standard Indonesian word for Greece; not to be confused
         with 'Yunani' also used as a historical term for 'Greek' (ancient Greek
         medicine/philosophy)."
-      ru: "'Yunani' — стандартное индонезийское слово для обозначения Греции; не
-        путать с его же использованием как прилагательного 'греческий' в
-        историческом контексте (например, древнегреческая медицина)."
     sentences:
       - id: module-1-0047-s1
         text: Saya ingin pergi ke Yunani.
@@ -1089,8 +960,6 @@ cards:
     note:
       en: "'Bu' is a respectful title for adult women (short for 'Ibu'); used before a
         name or alone to address someone, similar to 'Ma'am' or 'Mrs'."
-      ru: "'Bu' — уважительное обращение к взрослой женщине (сокращение от 'Ibu');
-        используется перед именем или отдельно, аналог 'Мадам' или 'Госпожа'."
     sentences:
       - id: module-1-0048-s1
         text: Selamat pagi, Bu Sari!
@@ -1111,8 +980,6 @@ cards:
     note:
       en: "'Gedung' refers to a large or formal building (office, school, government);
         for a simple house use 'rumah' instead."
-      ru: "'Gedung' означает большое или официальное здание (офис, школа,
-        госучреждение); для обычного дома используйте 'rumah'."
     sentences:
       - id: module-1-0049-s1
         text: Gedung itu sangat tinggi dan besar.
@@ -1133,8 +1000,6 @@ cards:
     note:
       en: "'Gereja' is a neutral, everyday word for a Christian church; not to be
         confused with 'masjid' (mosque) or 'pura' (Balinese Hindu temple)."
-      ru: "'Gereja' — нейтральное повседневное слово для христианской церкви; не
-        путайте с 'masjid' (мечеть) или 'pura' (балийский индуистский храм)."
     sentences:
       - id: module-1-0050-s1
         text: Saya pergi ke gereja setiap Minggu.
@@ -1155,8 +1020,6 @@ cards:
     note:
       en: "'Kantor' means office or workplace; 'kantor pos' = post office, 'kantor
         polisi' = police station; neutral everyday register."
-      ru: "'Kantor' означает офис или место работы; 'kantor pos' = почта, 'kantor
-        polisi' = полицейский участок; нейтральный повседневный стиль."
     sentences:
       - id: module-1-0051-s1
         text: Saya pergi ke kantor setiap hari.
@@ -1178,9 +1041,6 @@ cards:
       en: "\"ke\" is an informal preposition meaning 'to' or 'towards' a place; often
         confused with \"di\" (at/in) — use \"ke\" for movement and \"di\" for
         location."
-      ru: "\"ke\" — разговорный предлог со значением 'в/к' (направление); часто путают
-        с \"di\" (нахождение в месте) — используйте \"ke\" для движения и \"di\"
-        для местонахождения."
     sentences:
       - id: module-1-0052-s1
         text: Saya pergi ke pasar setiap pagi.
@@ -1201,8 +1061,6 @@ cards:
     note:
       en: "'Ke mana' asks about destination ('to where'); don't confuse with 'di mana'
         (where/location) or 'dari mana' (from where)."
-      ru: "'Ke mana' спрашивает о направлении ('куда'); не путайте с 'di mana' (где)
-        или 'dari mana' (откуда)."
     sentences:
       - id: module-1-0053-s1
         text: Kamu mau pergi ke mana hari ini?
@@ -1224,10 +1082,6 @@ cards:
       en: "'Mari' is a polite, friendly invitation meaning 'let's', 'come on', or
         'please (join)'; also used as a casual farewell like 'bye'; more formal
         than 'ayo' but very common in everyday speech."
-      ru: "'Mari' — вежливое дружеское приглашение со значением 'давай', 'пойдём' или
-        'пожалуйста (присоединяйся)'; также используется как непринуждённое
-        прощание ('пока'); более вежливо, чем 'ayo', но очень распространено в
-        повседневной речи."
     sentences:
       - id: module-1-0054-s1
         text: Mari kita makan bersama di sini.
@@ -1249,9 +1103,6 @@ cards:
       en: "'Mau' is informal/colloquial for wanting or intending to do something; more
         formal alternatives are 'ingin' or 'hendak', and it can also mean
         'will/about to' in casual speech."
-      ru: "'Mau' — разговорное слово, означающее желание или намерение что-то сделать;
-        более формальные варианты — 'ingin' и 'hendak'; в обиходной речи также
-        может означать 'собираться/сейчас будет'."
     sentences:
       - id: module-1-0055-s1
         text: Saya mau makan nasi goreng sekarang.
@@ -1272,8 +1123,6 @@ cards:
     note:
       en: '"Mesjid" is an informal/regional spelling of "masjid" (the standard form);
         both mean mosque and are widely understood across Indonesia.'
-      ru: «Mesjid» — неформальное/региональное написание слова «masjid» (стандартная
-        форма); оба варианта означают мечеть и широко понятны по всей Индонезии.
     sentences:
       - id: module-1-0056-s1
         text: Saya pergi ke mesjid setiap Jumat.
@@ -1295,9 +1144,6 @@ cards:
       en: "'Pabrik' means factory or manufacturing plant; commonly used in everyday
         speech; related words: 'pekerja pabrik' (factory worker), 'buruh pabrik'
         (factory laborer)."
-      ru: "'Pabrik' означает фабрика или завод; часто используется в повседневной
-        речи; связанные слова: 'pekerja pabrik' (рабочий фабрики), 'buruh
-        pabrik' (рабочий завода)."
     sentences:
       - id: module-1-0057-s1
         text: Ayah saya bekerja di pabrik tekstil.
@@ -1318,9 +1164,6 @@ cards:
     note:
       en: Used before a man's name or alone as 'sir'; informal male equivalent is
         'Mas' in Java, while 'Bu' is the female counterpart for 'Ibu'.
-      ru: Используется перед именем мужчины или отдельно как «сэр»; неформальный
-        мужской аналог — «Mas» на Яве, а женский аналог — «Bu» (сокращение от
-        «Ibu»).
     sentences:
       - id: module-1-0058-s1
         text: Selamat pagi, Pak Budi!
@@ -1341,9 +1184,6 @@ cards:
     note:
       en: "'Pasar' means market (open-air or traditional); common phrase 'pasar malam'
         = night market; not to be confused with 'toko' (small shop)."
-      ru: "'Pasar' означает рынок (открытый или традиционный); распространённое
-        выражение 'pasar malam' = ночной рынок; не путать с 'toko' (небольшой
-        магазин)."
     sentences:
       - id: module-1-0059-s1
         text: Ibu pergi ke pasar setiap pagi.
@@ -1364,8 +1204,6 @@ cards:
     note:
       en: "'Restoran' is a neutral, everyday word for restaurant; 'warung' refers to a
         smaller, cheaper local eatery."
-      ru: "'Restoran' — нейтральное повседневное слово для ресторана; 'warung'
-        означает небольшое дешёвое местное кафе."
     sentences:
       - id: module-1-0060-s1
         text: Saya makan malam di restoran itu.
@@ -1387,9 +1225,6 @@ cards:
       en: "'Rumah sakit' literally means 'sick house'; often abbreviated as 'RS' on
         signs; not to be confused with 'klinik' (small clinic) or 'puskesmas'
         (community health center)."
-      ru: "'Rumah sakit' буквально означает 'больной дом'; часто сокращается как 'RS'
-        на вывесках; не путать с 'klinik' (небольшая клиника) или 'puskesmas'
-        (районный медпункт)."
     sentences:
       - id: module-1-0061-s1
         text: Ibu saya bekerja di rumah sakit.
@@ -1410,8 +1245,6 @@ cards:
     note:
       en: "'Rumah' means 'house/home' in everyday speech; often combined as 'di rumah'
         (at home) or 'rumah sakit' (hospital, lit. 'sick house')."
-      ru: "'Rumah' означает 'дом' в повседневной речи; часто используется в сочетаниях
-        'di rumah' (дома) или 'rumah sakit' (больница, букв. 'больной дом')."
     sentences:
       - id: module-1-0062-s1
         text: Saya tinggal di rumah besar.
@@ -1433,9 +1266,6 @@ cards:
       en: "'Sekolah' means 'school' as a noun; it can also mean 'to go to school' as a
         verb; related words: 'bersekolah' (to attend school), 'pelajaran'
         (lesson)."
-      ru: "'Sekolah' означает 'школа' как существительное; также может использоваться
-        как глагол 'учиться в школе'; связанные слова: 'bersekolah' (посещать
-        школу), 'pelajaran' (урок)."
     sentences:
       - id: module-1-0063-s1
         text: Saya pergi ke sekolah setiap hari.
@@ -1457,9 +1287,6 @@ cards:
       en: "'Toko' means a small shop or store; related words include 'toko online'
         (online shop) and 'penjual' (seller); do not confuse with 'pasar'
         (market)."
-      ru: "'Toko' означает небольшой магазин или лавка; связанные слова: 'toko online'
-        (интернет-магазин) и 'penjual' (продавец); не путайте с 'pasar'
-        (рынок)."
     sentences:
       - id: module-1-0064-s1
         text: Saya pergi ke toko beli air.
@@ -1480,8 +1307,6 @@ cards:
     note:
       en: "'Air' means water or any liquid/fluid (e.g. juice, milk); do not confuse
         with English 'air' (udara in Indonesian)."
-      ru: "'Air' означает вода или любая жидкость (например, сок, молоко); не путайте
-        с английским 'air' (по-индонезийски — udara)."
     sentences:
       - id: module-1-0065-s1
         text: Saya minum air setiap pagi.
@@ -1502,9 +1327,6 @@ cards:
     note:
       en: "'Akan' is a neutral future marker used before a verb; common in speech and
         writing, similar to 'will' or 'going to' in English."
-      ru: "'Akan' — нейтральный маркер будущего времени, ставится перед глаголом;
-        используется как в речи, так и на письме, аналог 'will' или 'going to' в
-        английском."
     sentences:
       - id: module-1-0066-s1
         text: Saya akan pergi ke pantai besok.
@@ -1525,8 +1347,6 @@ cards:
     note:
       en: "'Aku' is the informal/casual form of 'I/me'; use 'saya' in formal
         situations; related words: 'kamu' (you, informal), 'kami/kita' (we)."
-      ru: "'Aku' — неформальное слово для 'я/меня'; в официальных ситуациях
-        используйте 'saya'; связанные слова: 'kamu' (ты), 'kami/kita' (мы)."
     sentences:
       - id: module-1-0067-s1
         text: Aku mau makan nasi goreng.
@@ -1547,8 +1367,6 @@ cards:
     note:
       en: "'Apakah' opens formal yes/no questions; in casual speech Indonesians often
         drop it and use rising intonation instead."
-      ru: "'Apakah' открывает формальные вопросы, требующие ответа «да/нет»; в
-        разговорной речи его часто опускают, заменяя вопросительной интонацией."
     sentences:
       - id: module-1-0068-s1
         text: Apakah kamu suka nasi goreng?
@@ -1569,9 +1387,6 @@ cards:
     note:
       en: "'Ayam' means chicken (the animal or the meat); commonly seen in dishes like
         'ayam goreng' (fried chicken) and 'ayam bakar' (grilled chicken)."
-      ru: "'Ayam' означает курица (животное или мясо); часто встречается в блюдах,
-        например 'ayam goreng' (жареная курица) и 'ayam bakar' (курица на
-        гриле)."
     sentences:
       - id: module-1-0069-s1
         text: Saya makan ayam goreng setiap hari.
@@ -1593,9 +1408,6 @@ cards:
       en: "'Bisa' is informal/neutral for 'can/able to'; often interchangeable with
         'dapat' but 'bisa' is more colloquial and everyday; also means 'venom'
         as a noun."
-      ru: "'Bisa' — разговорное/нейтральное слово со значением 'мочь/уметь'; часто
-        взаимозаменяемо с 'dapat', но 'bisa' более разговорное; также означает
-        'яд' как существительное."
     sentences:
       - id: module-1-0070-s1
         text: Saya bisa berbicara bahasa Indonesia sedikit.
@@ -1616,8 +1428,6 @@ cards:
     note:
       en: "'Daging' is the general word for meat; specify the type with 'daging sapi'
         (beef), 'daging ayam' (chicken), or 'daging babi' (pork)."
-      ru: "'Daging' — общее слово для мяса; уточняйте тип: 'daging sapi' (говядина),
-        'daging ayam' (курица), 'daging babi' (свинина)."
     sentences:
       - id: module-1-0071-s1
         text: Saya mau beli daging di pasar.
@@ -1638,8 +1448,6 @@ cards:
     note:
       en: "'Dapat' means 'can/able to'; interchangeable with 'bisa' in everyday
         speech, but also means 'to get/receive' in other contexts."
-      ru: "'Dapat' означает 'мочь/уметь'; в разговорной речи взаимозаменяемо с 'bisa',
-        но также может означать 'получать' в других контекстах."
     sentences:
       - id: module-1-0072-s1
         text: Saya dapat berbicara bahasa Indonesia sedikit.
@@ -1660,8 +1468,6 @@ cards:
     note:
       en: "'di' is a preposition meaning 'at/in/on'; do not confuse with 'di-' verb
         prefix; commonly used before place words"
-      ru: "'di' — предлог со значением 'в/на/у'; не путайте с префиксом глагола 'di-';
-        часто используется перед названиями мест"
     sentences:
       - id: module-1-0073-s1
         text: Saya makan di warung setiap pagi.
@@ -1682,8 +1488,6 @@ cards:
     note:
       en: "'Ikan' means fish (as food or animal); no article needed; related: 'ikan
         bakar' (grilled fish), 'ikan goreng' (fried fish)."
-      ru: "'Ikan' означает рыба (как еда или животное); артикль не нужен; связанные
-        слова: 'ikan bakar' (рыба на гриле), 'ikan goreng' (жареная рыба)."
     sentences:
       - id: module-1-0074-s1
         text: Saya makan ikan di warung.
@@ -1705,10 +1509,6 @@ cards:
       en: "'Kamu' is an informal 'you' used with friends or peers; more formal
         alternatives are 'Anda' (polite) or 'Bapak/Ibu' (respectful); avoid
         'kamu' with elders or strangers."
-      ru: "'Kamu' — неформальное 'ты/вы', используется с друзьями и ровесниками; более
-        вежливые варианты — 'Anda' (нейтрально-вежливо) или 'Bapak/Ibu'
-        (уважительно); не используйте 'kamu' со старшими или незнакомыми
-        людьми."
     sentences:
       - id: module-1-0075-s1
         text: Kamu mau makan nasi goreng?
@@ -1730,9 +1530,6 @@ cards:
       en: "'Kepingin' is an informal/colloquial synonym of 'ingin' (want/wish); more
         common in everyday spoken Indonesian, especially in Java and Bali; avoid
         in formal writing."
-      ru: "'Kepingin' — разговорный синоним слова 'ingin' (хотеть/желать); чаще
-        используется в повседневной речи, особенно на Яве и Бали; в официальных
-        текстах не употребляется."
     sentences:
       - id: module-1-0076-s1
         text: Saya kepingin makan nasi goreng sekarang.
@@ -1753,9 +1550,6 @@ cards:
     note:
       en: "'Kopi' is the everyday word for coffee; used in all registers; common in
         'kopi susu' (coffee with milk) and 'kopi hitam' (black coffee)."
-      ru: "'Kopi' — повседневное слово для обозначения кофе; используется в любом
-        стиле речи; часто встречается в сочетаниях 'kopi susu' (кофе с молоком)
-        и 'kopi hitam' (чёрный кофе)."
     sentences:
       - id: module-1-0077-s1
         text: Saya mau minum kopi pagi ini.
@@ -1777,9 +1571,6 @@ cards:
       en: "'Nasi' means cooked rice specifically; 'beras' is uncooked rice. Used in
         many dish names like 'nasi goreng' (fried rice) and 'nasi putih' (plain
         white rice)."
-      ru: "'Nasi' означает варёный рис; 'beras' — сырой рис. Слово входит в названия
-        многих блюд: 'nasi goreng' (жареный рис), 'nasi putih' (простой белый
-        рис)."
     sentences:
       - id: module-1-0078-s1
         text: Saya makan nasi setiap hari.
@@ -1802,10 +1593,6 @@ cards:
         casual conversation, avoid in formal or written Indonesian; related
         forms: 'nggak ada' (there isn't any), 'enggak' (same word, slightly
         different spelling)."
-      ru: "'nggak' — очень разговорная форма слова 'tidak' (нет/не); используется в
-        неформальном общении, не подходит для официальной речи или письма;
-        похожие формы: 'nggak ada' (нет ничего/нет никого), 'enggak' (то же
-        слово, другое написание)."
     sentences:
       - id: module-1-0079-s1
         text: Saya nggak mau makan nasi goreng.
@@ -1826,8 +1613,6 @@ cards:
     note:
       en: "'Pisang' is the everyday word for banana; also appears in dish names like
         'pisang goreng' (fried banana)."
-      ru: "'Pisang' — обычное слово для банана; встречается в названиях блюд, например
-        'pisang goreng' (жареный банан)."
     sentences:
       - id: module-1-0080-s1
         text: Saya makan pisang setiap pagi.
@@ -1849,9 +1634,6 @@ cards:
       en: "'Roti' broadly means bread but also covers biscuits and cookies in everyday
         Indonesian; 'roti tawar' is plain sliced bread, 'biskuit' is also used
         for crackers."
-      ru: "'Roti' широко означает хлеб, но в повседневном индонезийском также включает
-        печенье и бисквиты; 'roti tawar' — простой нарезной хлеб, 'biskuit' тоже
-        используется для крекеров."
     sentences:
       - id: module-1-0081-s1
         text: Saya makan roti setiap pagi.
@@ -1873,9 +1655,6 @@ cards:
       en: "'Rumah makan' is an informal, everyday word for a local eatery or
         restaurant; 'restoran' is used for more formal/Western-style places,
         while 'warung' refers to a small roadside food stall."
-      ru: "'Rumah makan' — неформальное повседневное слово для местного кафе или
-        ресторана; 'restoran' используется для более формальных/западных
-        заведений, а 'warung' — небольшой уличный ларёк с едой."
     sentences:
       - id: module-1-0082-s1
         text: Saya makan siang di rumah makan ini.
@@ -1897,9 +1676,6 @@ cards:
       en: "'Suka' means 'to like/love' and is used without conjugation for all
         subjects; often confused with 'mau' (to want) — 'suka' expresses
         preference, not immediate desire."
-      ru: "'Suka' означает 'нравиться/любить' и не изменяется по лицам; часто путают с
-        'mau' (хотеть) — 'suka' выражает предпочтение, а не сиюминутное
-        желание."
     sentences:
       - id: module-1-0083-s1
         text: Saya suka nasi goreng sekali.
@@ -1921,9 +1697,6 @@ cards:
       en: "'Susu' means milk in everyday speech; also informally means breast, so
         context matters; related words: 'susu sapi' (cow's milk), 'susu bubuk'
         (powdered milk)."
-      ru: "'Susu' означает молоко в повседневной речи; также разговорно означает
-        грудь, поэтому важен контекст; связанные слова: 'susu sapi' (коровье
-        молоко), 'susu bubuk' (сухое молоко)."
     sentences:
       - id: module-1-0084-s1
         text: Saya minum susu setiap pagi.
@@ -1944,9 +1717,6 @@ cards:
     note:
       en: Spelled and pronounced the same as 'tahu' (verb, to know), so context is
         key; a common, cheap protein food sold at markets and warungs.
-      ru: Пишется и произносится так же, как глагол 'tahu' (знать), поэтому важен
-        контекст; распространённый дешёвый продукт из сои, который продают на
-        рынках и в варунгах.
     sentences:
       - id: module-1-0085-s1
         text: Saya makan tahu goreng setiap hari.
@@ -1968,9 +1738,6 @@ cards:
       en: "'Teh' means tea; very common drink in Indonesia, often served sweet ('teh
         manis') or with ice ('es teh'); do not confuse with 'teh' used in
         Sundanese/Javanese as a term of address."
-      ru: "'Teh' означает чай; очень распространённый напиток в Индонезии, часто
-        подают сладким ('teh manis') или со льдом ('es teh'); не путайте с 'teh'
-        в сунданском/яванском языке как формой обращения."
     sentences:
       - id: module-1-0086-s1
         text: Saya minum teh setiap pagi.
@@ -1992,9 +1759,6 @@ cards:
       en: "'Telur' is a neutral everyday word for egg; used for both raw and cooked
         eggs; related words: 'telur dadar' (omelette), 'telur rebus' (boiled
         egg)."
-      ru: "'Telur' — нейтральное повседневное слово для яйца; используется как для
-        сырых, так и для варёных яиц; связанные слова: 'telur dadar' (омлет),
-        'telur rebus' (варёное яйцо)."
     sentences:
       - id: module-1-0087-s1
         text: Saya makan telur setiap pagi.
@@ -2016,9 +1780,6 @@ cards:
       en: Tempe is a fermented soybean cake, a very common and affordable Indonesian
         food; often confused with 'tahu' (tofu), but tempe is firmer and
         nuttier.
-      ru: Темпе — это ферментированный соевый продукт, очень распространённая и
-        доступная индонезийская еда; часто путают с 'тahu' (тофу), но темпе
-        твёрже и имеет ореховый вкус.
     sentences:
       - id: module-1-0088-s1
         text: Saya suka makan tempe goreng setiap hari.
@@ -2040,9 +1801,6 @@ cards:
       en: "'Tinggal' means to live/reside somewhere; don't confuse with 'tinggal'
         meaning 'only/just left' (context-dependent); related: 'tempat tinggal'
         (residence)."
-      ru: "'Tinggal' означает жить/проживать где-то; не путайте с 'tinggal' в значении
-        'осталось только' (зависит от контекста); связанное слово: 'tempat
-        tinggal' (место жительства)."
     sentences:
       - id: module-1-0089-s1
         text: Saya tinggal di Bali bersama keluarga.
@@ -2064,9 +1822,6 @@ cards:
       en: "'Air jeruk' literally means 'orange water'; 'air' means water/juice in this
         context — don't confuse with 'jus jeruk' which is also used but more
         formal."
-      ru: "'Air jeruk' буквально означает 'апельсиновая вода'; слово 'air' здесь
-        значит сок — не путайте с 'jus jeruk', которое тоже употребляется, но
-        более формально."
     sentences:
       - id: module-1-0090-s1
         text: Saya mau minum air jeruk, terima kasih.
@@ -2087,8 +1842,6 @@ cards:
     note:
       en: "'Atau' means 'or' and is used in both questions and statements; it is
         neutral/everyday register and should not be confused with 'dan' (and)."
-      ru: "'Atau' означает 'или' и используется как в вопросах, так и в утверждениях;
-        это нейтральное повседневное слово, его не следует путать с 'dan' (и)."
     sentences:
       - id: module-1-0091-s1
         text: Kamu mau kopi atau teh?
@@ -2110,9 +1863,6 @@ cards:
       en: "'Ayam goreng' is everyday informal food vocabulary; 'ayam' means chicken
         and 'goreng' means fried — 'goreng' can also combine with other foods
         (e.g., nasi goreng, tempe goreng)."
-      ru: "'Ayam goreng' — повседневная неформальная лексика еды; 'ayam' означает
-        курица, а 'goreng' — жареный; 'goreng' сочетается и с другими продуктами
-        (например, nasi goreng, tempe goreng)."
     sentences:
       - id: module-1-0092-s1
         text: Saya mau makan ayam goreng hari ini.
@@ -2133,8 +1883,6 @@ cards:
     note:
       en: '"Bioskop" is the everyday informal word for cinema/movie theatre; related
         word: "film" (movie), "nonton" (to watch).'
-      ru: "«Bioskop» — повседневное разговорное слово для обозначения кинотеатра;
-        связанные слова: «film» (фильм), «nonton» (смотреть)."
     sentences:
       - id: module-1-0093-s1
         text: Aku mau nonton film di bioskop.
@@ -2155,9 +1903,6 @@ cards:
     note:
       en: "'Bir' is a neutral/informal word for beer; common in restaurants and
         warung; related: 'bir dingin' (cold beer), 'bir botol' (bottled beer)."
-      ru: "'Bir' — нейтральное/разговорное слово для обозначения пива; часто
-        используется в ресторанах и варунгах; связанные слова: 'bir dingin'
-        (холодное пиво), 'bir botol' (бутылочное пиво)."
     sentences:
       - id: module-1-0094-s1
         text: Saya mau pesan bir dingin, please.
@@ -2178,9 +1923,6 @@ cards:
     note:
       en: "'Buah' means fruit in general; also used as a counter word for round
         objects (e.g. satu buah apel = one apple); very common in daily speech."
-      ru: "'Buah' означает фрукт в общем смысле; также используется как счётное слово
-        для круглых предметов (например, satu buah apel = одно яблоко); очень
-        часто встречается в повседневной речи."
     sentences:
       - id: module-1-0095-s1
         text: Saya suka makan buah setiap hari.
@@ -2201,8 +1943,6 @@ cards:
     note:
       en: "'Coklat' means both 'chocolate' (the food) and 'brown' (the color); context
         makes the meaning clear."
-      ru: "'Coklat' означает и 'шоколад' (еда), и 'коричневый' (цвет); значение
-        определяется по контексту."
     sentences:
       - id: module-1-0096-s1
         text: Saya suka minum es coklat.
@@ -2223,8 +1963,6 @@ cards:
     note:
       en: "'Di sana' means 'there/over there' (a place away from both speaker and
         listener); contrast with 'di sini' (here) and 'di mana' (where)."
-      ru: "'Di sana' означает 'там/вон там' (место вдали от обоих собеседников);
-        сравните с 'di sini' (здесь) и 'di mana' (где)."
     sentences:
       - id: module-1-0097-s1
         text: Pantai Kuta ada di sana.
@@ -2245,9 +1983,6 @@ cards:
     note:
       en: "'Durian' is a neutral everyday noun; often called 'raja buah' (king of
         fruit); related words: buah (fruit), bau (smell), manis (sweet)."
-      ru: "'Durian' — нейтральное повседневное существительное; часто называют 'raja
-        buah' (король фруктов); связанные слова: buah (фрукт), bau (запах),
-        manis (сладкий)."
     sentences:
       - id: module-1-0098-s1
         text: Saya suka makan durian setiap hari.
@@ -2268,8 +2003,6 @@ cards:
     note:
       en: "'Hotel' is used the same as in English; also related words: 'penginapan'
         (guesthouse), 'kamar' (room), 'menginap' (to stay overnight)."
-      ru: "'Hotel' используется так же, как в английском; связанные слова:
-        'penginapan' (гостевой дом), 'kamar' (комната), 'menginap' (ночевать)."
     sentences:
       - id: module-1-0099-s1
         text: Saya menginap di hotel ini.
@@ -2291,8 +2024,6 @@ cards:
       en: "'Jeruk' commonly refers to oranges or citrus fruit in general; 'jeruk
         nipis' means lime and 'jeruk lemon' means lemon — context clarifies the
         specific fruit."
-      ru: "'Jeruk' обычно означает апельсин или цитрусовые в целом; 'jeruk nipis' —
-        лайм, 'jeruk lemon' — лимон; конкретный фрукт уточняется по контексту."
     sentences:
       - id: module-1-0100-s1
         text: Saya mau beli jeruk di pasar.
@@ -2313,8 +2044,6 @@ cards:
     note:
       en: "'Juga' means 'also/too' and is placed after the subject or verb; similar to
         'pun' but more common in everyday speech."
-      ru: "'Juga' означает 'тоже/также' и ставится после подлежащего или глагола;
-        похоже на 'pun', но чаще используется в повседневной речи."
     sentences:
       - id: module-1-0101-s1
         text: Saya juga suka nasi goreng.
@@ -2335,9 +2064,6 @@ cards:
     note:
       en: "'Kantor pos' is the standard term for post office; 'pos' alone can mean
         'post/mail'; related: 'surat' (letter), 'paket' (package)."
-      ru: "'Kantor pos' — стандартное слово для почты; 'pos' само по себе может
-        означать 'почта/письмо'; связанные слова: 'surat' (письмо), 'paket'
-        (посылка)."
     sentences:
       - id: module-1-0102-s1
         text: Saya pergi ke kantor pos hari ini.
@@ -2359,9 +2085,6 @@ cards:
       en: "'Kentang' is the standard everyday word for potato; commonly seen in
         'kentang goreng' (french fries) and 'perkedel kentang' (potato
         fritters)."
-      ru: "'Kentang' — стандартное повседневное слово для картофеля; часто встречается
-        в сочетаниях 'kentang goreng' (картофель фри) и 'perkedel kentang'
-        (картофельные котлеты)."
     sentences:
       - id: module-1-0103-s1
         text: Saya suka makan kentang goreng.
@@ -2383,9 +2106,6 @@ cards:
       en: "'Mal' is a casual Indonesian word for shopping mall, borrowed from English;
         commonly used in everyday speech alongside 'pusat perbelanjaan' (formal
         term)."
-      ru: "'Mal' — разговорное индонезийское слово для обозначения торгового центра,
-        заимствованное из английского; часто используется наряду с формальным
-        'pusat perbelanjaan'."
     sentences:
       - id: module-1-0104-s1
         text: Saya pergi ke mal bersama teman.
@@ -2407,9 +2127,6 @@ cards:
       en: "'Nasi goreng' is a very common everyday dish; 'nasi' means rice and
         'goreng' means fried — you will also see 'ayam goreng' (fried chicken)
         using the same 'goreng'."
-      ru: "'Nasi goreng' — очень распространённое повседневное блюдо; 'nasi' означает
-        рис, а 'goreng' — жареный; то же слово 'goreng' встречается в 'ayam
-        goreng' (жареная курица)."
     sentences:
       - id: module-1-0105-s1
         text: Saya makan nasi goreng setiap pagi.
@@ -2431,9 +2148,6 @@ cards:
       en: "'Pasar swalayan' is a formal/standard term for supermarket; many
         Indonesians also say 'supermarket' directly; not to be confused with
         'pasar' alone, which means a traditional open market."
-      ru: "'Pasar swalayan' — официальное название супермаркета; многие индонезийцы
-        также используют слово 'supermarket'; не путайте с 'pasar' — это
-        традиционный рынок."
     sentences:
       - id: module-1-0106-s1
         text: Ibu membeli sayur di pasar swalayan.
@@ -2455,9 +2169,6 @@ cards:
       en: "'Sekarang' means 'now' or 'currently'; it is neutral in register and very
         common in daily speech; related words include 'sekarang ini' (right now)
         and 'saat ini' (at this moment)."
-      ru: "'Sekarang' означает 'сейчас' или 'в настоящее время'; слово нейтральное и
-        очень распространено в повседневной речи; похожие выражения: 'sekarang
-        ini' (прямо сейчас) и 'saat ini' (в данный момент)."
     sentences:
       - id: module-1-0107-s1
         text: Saya makan nasi sekarang.
@@ -2479,9 +2190,6 @@ cards:
       en: '"Terminal bus" is the standard everyday term for a bus station in
         Indonesia; also commonly shortened to just "terminal". Not to be
         confused with "stasiun" which refers to a train station.'
-      ru: '"Terminal bus" — стандартное повседневное выражение для автобусной станции
-        в Индонезии; также часто сокращается до просто "terminal". Не следует
-        путать с "stasiun", которое означает железнодорожную станцию.'
     sentences:
       - id: module-1-0108-s1
         text: Saya pergi ke terminal bus naik ojek.
@@ -2502,8 +2210,6 @@ cards:
     note:
       en: "'Tapi' means 'but' and is the everyday spoken form; 'tetapi' is the more
         formal written version."
-      ru: "'Tapi' означает 'но' и используется в разговорной речи; 'tetapi' — более
-        формальный письменный вариант."
     sentences:
       - id: module-1-0109-s1
         text: Saya lapar tapi tidak ada makanan.
@@ -2525,9 +2231,6 @@ cards:
       en: '"Universitas" is the standard formal word for university; often shortened
         to "uni" in casual speech; related: "mahasiswa" (university student),
         "kampus" (campus).'
-      ru: '"Universitas" — стандартное формальное слово для обозначения университета;
-        в разговорной речи часто сокращается до "uni"; связанные слова:
-        "mahasiswa" (студент университета), "kampus" (кампус).'
     sentences:
       - id: module-1-0110-s1
         text: Saya belajar di universitas di Bali.
@@ -2549,9 +2252,6 @@ cards:
       en: '"Warung" is an informal, everyday word for a small local food stall or
         simple eatery; very common across Indonesia and Bali; related: "warung
         kopi" (coffee stall), "warung makan" (food stall).'
-      ru: '"Warung" — неформальное повседневное слово для небольшого уличного кафе или
-        закусочной; очень распространено по всей Индонезии и Бали; связанные
-        слова: "warung kopi" (кофейный ларёк), "warung makan" (кафе с едой).'
     sentences:
       - id: module-1-0111-s1
         text: Saya makan siang di warung itu.
@@ -2572,8 +2272,6 @@ cards:
     note:
       en: Commonly shortened to 'warnet' in everyday speech; a casual/informal term
         for a place with public internet access.
-      ru: В повседневной речи часто сокращается до 'warnet'; разговорное название
-        места с общественным доступом в интернет.
     sentences:
       - id: module-1-0112-s1
         text: Saya pergi ke warung internet sekarang.
@@ -2594,9 +2292,6 @@ cards:
     note:
       en: "'Administrasi' is a formal/neutral word used for paperwork or office
         procedures; also seen as 'biaya administrasi' (administration fee)."
-      ru: "'Administrasi' — формальное/нейтральное слово для обозначения
-        делопроизводства или офисных процедур; также встречается в выражении
-        'biaya administrasi' (административный сбор)."
     sentences:
       - id: module-1-0113-s1
         text: Saya perlu mengurus administrasi di kantor.
@@ -2618,9 +2313,6 @@ cards:
       en: "'Angkot' (short for 'angkutan kota') is an informal everyday word for
         shared minivan taxis common in Indonesian cities; often confused with
         'bus' (larger vehicle) or 'ojek' (motorcycle taxi)."
-      ru: "'Angkot' (сокращение от 'angkutan kota') — разговорное повседневное слово
-        для маршрутных микроавтобусов в индонезийских городах; часто путают с
-        'bus' (большой автобус) или 'ojek' (мотоциклетное такси)."
     sentences:
       - id: module-1-0114-s1
         text: Saya naik angkot ke pasar setiap hari.
@@ -2641,8 +2333,6 @@ cards:
     note:
       en: "'Bank' is borrowed directly from English and used identically in
         Indonesian; also refers to the building itself."
-      ru: Слово 'bank' заимствовано из английского и используется в индонезийском так
-        же; может означать и само здание банка.
     sentences:
       - id: module-1-0115-s1
         text: Saya pergi ke bank hari ini.
@@ -2663,8 +2353,6 @@ cards:
     note:
       en: "'Buku' means book in everyday speech; not to be confused with 'buku jari'
         (knuckle); related: 'membaca buku' (to read a book)."
-      ru: "'Buku' означает книга в повседневной речи; не путать с 'buku jari'
-        (костяшка пальца); связанные слова: 'membaca buku' (читать книгу)."
     sentences:
       - id: module-1-0116-s1
         text: Saya membaca buku di perpustakaan.
@@ -2685,8 +2373,6 @@ cards:
     note:
       en: "\"Di antara\" means 'between' (two things) or 'among' (a group); don't
         confuse with \"di\" alone, which just marks location."
-      ru: "\"Di antara\" означает 'между' (двумя предметами) или 'среди' (группы); не
-        путайте с просто \"di\", которое обозначает местонахождение."
     sentences:
       - id: module-1-0117-s1
         text: Toko itu di antara bank dan pasar.
@@ -2707,8 +2393,6 @@ cards:
     note:
       en: "'Di belakang' means 'behind/at the back of'; pair it with 'di depan' (in
         front of) — both use the location prefix 'di'."
-      ru: "'Di belakang' означает 'сзади/позади'; используйте вместе с 'di depan'
-        (перед) — оба слова используют префикс места 'di'."
     sentences:
       - id: module-1-0118-s1
         text: Kucing itu tidur di belakang rumah.
@@ -2730,9 +2414,6 @@ cards:
       en: "'Di dekat' means 'near/close to' and is used before a place noun; don't
         confuse it with 'di' alone (at/in) or 'dekat' alone (close/nearby as
         adjective)."
-      ru: "'Di dekat' означает 'рядом с' и используется перед существительным места;
-        не путайте с 'di' (в/на) или 'dekat' отдельно (близкий, как
-        прилагательное)."
     sentences:
       - id: module-1-0119-s1
         text: Warung itu ada di dekat pantai.
@@ -2754,8 +2435,6 @@ cards:
       en: "'Di depan' means 'in front of' or 'in the front'; often confused with 'di
         depan' (ahead/in front) vs 'di belakang' (behind) — used with locations
         and objects."
-      ru: "'Di depan' означает 'перед' или 'впереди'; часто путают с 'di belakang'
-        (сзади) — используется с местами и предметами."
     sentences:
       - id: module-1-0120-s1
         text: Kucing itu duduk di depan pintu.
@@ -2776,8 +2455,6 @@ cards:
     note:
       en: "'Di mana' asks about location ('where is/are'); don't confuse with 'ke
         mana' (where to) or 'dari mana' (where from)."
-      ru: "'Di mana' используется для вопроса о местонахождении ('где'); не путайте с
-        'ke mana' (куда) и 'dari mana' (откуда)."
     sentences:
       - id: module-1-0121-s1
         text: Di mana toilet di sini?
@@ -2799,9 +2476,6 @@ cards:
       en: "'Di samping' means 'beside/next to' (physical position) and also 'in
         addition to' (figurative); do not confuse with 'di sebelah' which is
         more strictly directional."
-      ru: "'Di samping' означает 'рядом/сбок' (физическое положение) и 'в дополнение
-        к' (переносное значение); не путайте с 'di sebelah', которое строго
-        указывает направление."
     sentences:
       - id: module-1-0122-s1
         text: Saya duduk di samping ibu saya.
@@ -2822,9 +2496,6 @@ cards:
     note:
       en: "Used for the immigration office or process; often heard at airports;
         related: 'visa', 'paspor' (passport), 'bea cukai' (customs)."
-      ru: "Используется для обозначения иммиграционной службы или процесса; часто
-        слышно в аэропортах; связанные слова: 'visa', 'paspor' (паспорт), 'bea
-        cukai' (таможня)."
     sentences:
       - id: module-1-0123-s1
         text: Saya antri di kantor imigrasi.
@@ -2845,8 +2516,6 @@ cards:
     note:
       en: "'Jalan' means 'street/road' as a noun, but also 'to walk/to go' as a verb;
         often abbreviated 'Jl.' in addresses."
-      ru: "'Jalan' означает 'улица/дорога' как существительное, но также 'идти/ходить'
-        как глагол; в адресах часто сокращается до 'Jl.'"
     sentences:
       - id: module-1-0124-s1
         text: Rumah saya ada di jalan ini.
@@ -2867,9 +2536,6 @@ cards:
     note:
       en: '"Kampus" is a common everyday word for university campus; used in both
         formal and informal speech, often paired with "di kampus" (at campus).'
-      ru: «Kampus» — распространённое слово для обозначения студенческого кампуса;
-        используется в формальной и неформальной речи, часто с предлогом «di
-        kampus» (в кампусе).
     sentences:
       - id: module-1-0125-s1
         text: Saya belajar di kampus setiap hari.
@@ -2890,8 +2556,6 @@ cards:
     note:
       en: '"Kantor polisi" is the standard term for police station; "pos polisi"
         refers to a smaller police post. Both are neutral, everyday register.'
-      ru: '"Kantor polisi" — стандартное слово для полицейского участка; "pos polisi"
-        — небольшой полицейский пост. Оба выражения нейтральные, повседневные.'
     sentences:
       - id: module-1-0126-s1
         text: Di mana kantor polisi terdekat?
@@ -2912,9 +2576,6 @@ cards:
     note:
       en: "'Kota' means city or town; often used in place names like 'Kota Bali'; do
         not confuse with 'desa' (village) or 'negara' (country/state)."
-      ru: "'Kota' означает город или городок; часто используется в названиях мест,
-        например 'Kota Bali'; не путайте с 'desa' (деревня) или 'negara'
-        (страна/государство)."
     sentences:
       - id: module-1-0127-s1
         text: Saya tinggal di kota yang besar.
@@ -2936,10 +2597,6 @@ cards:
       en: Used in formal and semi-formal contexts; often seen in compound words like
         'hari nasional' (national day) or 'lagu nasional' (national anthem);
         borrowed from Dutch 'nationaal'.
-      ru: Используется в формальном и полуформальном контексте; часто встречается в
-        составных словах, например 'hari nasional' (национальный день) или 'lagu
-        nasional' (национальный гимн); заимствовано из нидерландского
-        'nationaal'.
     sentences:
       - id: module-1-0128-s1
         text: Hari ini adalah hari nasional Indonesia.
@@ -2961,9 +2618,6 @@ cards:
       en: "'Pemerintah' means 'the government' (neutral, formal register); related:
         'pemerintahan' (governance/administration), not to be confused with
         'pemimpin' (leader)."
-      ru: "'Pemerintah' означает 'правительство' (нейтральный, формальный стиль);
-        связанное слово: 'pemerintahan' (управление), не путать с 'pemimpin'
-        (лидер)."
     sentences:
       - id: module-1-0129-s1
         text: Pemerintah membangun jalan baru di sini.
@@ -2985,9 +2639,6 @@ cards:
       en: "'Perpustakaan' is a formal/neutral word for library; commonly used in
         schools and universities; related word: 'buku' (book), 'membaca' (to
         read)."
-      ru: "'Perpustakaan' — нейтральное слово для обозначения библиотеки; часто
-        используется в школах и университетах; связанные слова: 'buku' (книга),
-        'membaca' (читать)."
     sentences:
       - id: module-1-0130-s1
         text: Saya pergi ke perpustakaan setiap hari.
@@ -3008,9 +2659,6 @@ cards:
     note:
       en: "'Polisi' is neutral/formal for police or police officer; related: 'kantor
         polisi' (police station), 'pak polisi' (polite address to an officer)."
-      ru: "'Polisi' — нейтральное/формальное слово для полиции или полицейского;
-        связанные слова: 'kantor polisi' (полицейский участок), 'pak polisi'
-        (вежливое обращение к офицеру)."
     sentences:
       - id: module-1-0131-s1
         text: Polisi itu berdiri di jalan.
@@ -3032,9 +2680,6 @@ cards:
       en: "'Pusat' means centre or hub; used in phrases like 'pusat kota' (city
         centre) and 'pusat perbelanjaan' (shopping centre); neutral everyday
         register."
-      ru: "'Pusat' означает центр или узел; используется в выражениях 'pusat kota'
-        (центр города) и 'pusat perbelanjaan' (торговый центр); нейтральный
-        повседневный стиль."
     sentences:
       - id: module-1-0132-s1
         text: Pusat kota Denpasar sangat ramai sekali.
@@ -3056,8 +2701,6 @@ cards:
       en: "'Ya' means 'yes' in informal speech; very common in conversation; can also
         soften questions at the end of a sentence, similar to 'right?' or
         'okay?'"
-      ru: "'Ya' означает 'да' в разговорной речи; очень часто используется; также
-        может смягчать вопросы в конце предложения, как 'правда?' или 'хорошо?'"
     sentences:
       - id: module-1-0133-s1
         text: Ya, saya mau nasi goreng.
@@ -3079,9 +2722,6 @@ cards:
       en: "'Ada' is a versatile everyday word meaning 'there is/are' or 'to be
         present/available'; don't confuse it with 'adalah' (is/are for
         definitions) or 'berada' (to be located, more formal)."
-      ru: "'Ada' — универсальное повседневное слово, означающее 'есть/имеется' или
-        'присутствовать/быть дома'; не путайте с 'adalah' (является — для
-        определений) или 'berada' (находиться — более формально)."
     sentences:
       - id: module-1-0134-s1
         text: Ada nasi goreng di warung itu.
@@ -3102,8 +2742,6 @@ cards:
     note:
       en: "'Dekat' means 'near/close'; often paired with 'dengan' (dekat dengan =
         close to); don't confuse with 'dekati' (to approach)."
-      ru: "'Dekat' означает 'близко/рядом'; часто используется с 'dengan' (dekat
-        dengan = рядом с); не путайте с 'dekati' (приближаться)."
     sentences:
       - id: module-1-0135-s1
         text: Pantai itu dekat dari hotel saya.
@@ -3125,9 +2763,6 @@ cards:
       en: "'Itu' means 'that' or 'those' and is placed after the noun it refers to;
         beginners often confuse it with 'ini' (this/these) which refers to
         things nearby."
-      ru: "'Itu' означает 'тот/та/то/те' и ставится после существительного; начинающие
-        часто путают его с 'ini' (этот/эта/это/эти), которое указывает на
-        близкие предметы."
     sentences:
       - id: module-1-0136-s1
         text: Rumah itu sangat besar.
@@ -3149,9 +2784,6 @@ cards:
       en: "'-mu' is an informal possessive suffix meaning 'your'; attach it directly
         to a noun (e.g., nama + mu = namamu); used with friends or younger
         people, not in formal situations."
-      ru: "'-mu' — неформальный притяжательный суффикс, означающий 'твой/твоя';
-        добавляется прямо к существительному (например, nama + mu = namamu);
-        используется с друзьями или младшими, не в официальных ситуациях."
     sentences:
       - id: module-1-0137-s1
         text: Siapa namamu?
@@ -3173,10 +2805,6 @@ cards:
       en: "'-ku' is an informal possessive suffix meaning 'my', attached directly to a
         noun (e.g., 'bukuku' = 'my book'); more casual than 'saya' and very
         common in everyday speech."
-      ru: "'-ku' — неформальный притяжательный суффикс со значением 'мой/моя',
-        присоединяется прямо к существительному (например, 'bukuku' = 'моя
-        книга'); более разговорный вариант, чем 'saya', очень распространён в
-        повседневной речи."
     sentences:
       - id: module-1-0138-s1
         text: Di mana tasku?
@@ -3197,8 +2825,6 @@ cards:
     note:
       en: "\"Tahu\" as a verb means \"to know\" (a fact); don't confuse it with the
         noun \"tahu\" meaning tofu — context makes the difference clear."
-      ru: «Tahu» как глагол означает «знать» (факт); не путайте с существительным
-        «tahu» — «тофу», контекст всегда проясняет значение.
     sentences:
       - id: module-1-0139-s1
         text: Saya tidak tahu jalannya ke pantai.
@@ -3220,9 +2846,6 @@ cards:
       en: "'Tau' is the colloquial/informal form of 'tahu' (to know); used in casual
         speech; do not confuse with 'tahu' meaning tofu (same spelling,
         different context)."
-      ru: "'Tau' — разговорная форма слова 'tahu' (знать); используется в неформальной
-        речи; не путайте с 'tahu' в значении «тофу» (одинаковое написание,
-        разный контекст)."
     sentences:
       - id: module-1-0140-s1
         text: Kamu tau di mana warung itu?
@@ -3244,9 +2867,6 @@ cards:
       en: "Becak is an everyday word for a three-wheeled cycle rickshaw; common in
         Java and Sumatra but rare in Bali; related word: 'ojek' (motorcycle
         taxi)."
-      ru: "Becak — повседневное слово для трёхколёсного велорикши; распространено на
-        Яве и Суматре, но редко встречается на Бали; похожее слово: 'ojek'
-        (мотоциклетное такси)."
     sentences:
       - id: module-1-0141-s1
         text: Saya naik becak ke pasar pagi.
@@ -3267,9 +2887,6 @@ cards:
     note:
       en: '"Bemo" is an informal, everyday word for a small three-wheeled or minivan
         taxi common in Indonesia; older and more regional than "taksi".'
-      ru: «Bemo» — разговорное повседневное слово для маленького трёхколёсного такси
-        или маршрутки, распространённого в Индонесии; более старое и
-        региональное, чем «taksi».
     sentences:
       - id: module-1-0142-s1
         text: Saya naik bemo ke pasar pagi.
@@ -3291,9 +2908,6 @@ cards:
       en: "'Berjalan' means to walk or move forward; often confused with 'pergi' (to
         go somewhere); related words: 'jalan' (road/walk), 'berjalan-jalan' (to
         take a stroll)."
-      ru: "'Berjalan' означает идти пешком или двигаться вперёд; часто путают с
-        'pergi' (уходить куда-то); связанные слова: 'jalan' (дорога/ходьба),
-        'berjalan-jalan' (прогуливаться)."
     sentences:
       - id: module-1-0143-s1
         text: Saya berjalan ke pasar setiap pagi.
@@ -3314,8 +2928,6 @@ cards:
     note:
       en: '"Bus" is used in Indonesian just like in English; also commonly heard as
         "bis" in informal speech.'
-      ru: '"Bus" используется в индонезийском так же, как в английском; в разговорной
-        речи часто говорят "bis".'
     sentences:
       - id: module-1-0144-s1
         text: Saya naik bus ke sekolah setiap hari.
@@ -3336,8 +2948,6 @@ cards:
     note:
       en: "'Dari sana' means 'from there'; 'sana' alone means 'there (far)', often
         confused with 'sini' (here) and 'situ' (there, closer)."
-      ru: "'Dari sana' означает 'оттуда'; 'sana' само по себе значит 'там (далеко)',
-        часто путают с 'sini' (здесь) и 'situ' (там, поближе)."
     sentences:
       - id: module-1-0145-s1
         text: Dia baru datang dari sana tadi.
@@ -3359,9 +2969,6 @@ cards:
       en: "'Datang' means 'to come' or 'to arrive'; it is neutral/everyday register
         and often confused with 'pergi' (to go); related words include
         'kedatangan' (arrival)."
-      ru: "'Datang' означает 'приходить' или 'приезжать'; это нейтральное повседневное
-        слово, которое часто путают с 'pergi' (уходить/уезжать); родственное
-        слово — 'kedatangan' (прибытие)."
     sentences:
       - id: module-1-0146-s1
         text: Dia datang ke pasar setiap pagi.
@@ -3382,8 +2989,6 @@ cards:
     note:
       en: "'Di sini' means 'here' (a location); don't confuse with 'di sana' (there)
         or 'di mana' (where); used in both formal and informal speech."
-      ru: "'Di sini' означает 'здесь'; не путайте с 'di sana' (там) и 'di mana' (где);
-        используется как в формальной, так и в неформальной речи."
     sentences:
       - id: module-1-0147-s1
         text: Saya tinggal di sini.
@@ -3404,9 +3009,6 @@ cards:
     note:
       en: A 'dokar' is a traditional two-wheeled horse-drawn cart; common in rural
         Indonesia and Bali; also called 'delman' in some regions.
-      ru: "'Dokar' — традиционная двухколёсная повозка, запряжённая лошадью;
-        распространена в сельской Индонезии и на Бали; в некоторых регионах
-        называется 'delman'."
     sentences:
       - id: module-1-0148-s1
         text: Kami naik dokar ke pasar pagi ini.
@@ -3427,8 +3029,6 @@ cards:
     note:
       en: "'Harus' expresses obligation or necessity; similar to 'wajib' (more formal)
         but more common in everyday speech."
-      ru: "'Harus' выражает обязательность или необходимость; похоже на 'wajib' (более
-        формальное), но чаще используется в повседневной речи."
     sentences:
       - id: module-1-0149-s1
         text: Kamu harus minum air setiap hari.
@@ -3449,8 +3049,6 @@ cards:
     note:
       en: "'Kaki' means both 'leg' and 'foot' in Indonesian; also used in 'kaki lima'
         (street vendor stall); not to be confused with 'tangan' (hand/arm)."
-      ru: "'Kaki' означает и 'нога', и 'ступня' по-индонезийски; также входит в
-        выражение 'kaki lima' (уличный торговец); не путать с 'tangan' (рука)."
     sentences:
       - id: module-1-0150-s1
         text: Kaki saya sakit setelah berjalan jauh.
@@ -3471,8 +3069,6 @@ cards:
     note:
       en: "'Kapal' means ship or large boat; for small boats use 'perahu'; common in
         island travel contexts."
-      ru: "'Kapal' означает корабль или большое судно; для маленьких лодок используйте
-        'perahu'; часто встречается в контексте путешествий между островами."
     sentences:
       - id: module-1-0151-s1
         text: Kapal itu besar dan putih.
@@ -3493,9 +3089,6 @@ cards:
     note:
       en: "'Katanya' is casual/informal, used to report hearsay; it combines 'kata'
         (word/say) + '-nya' (he/she/they); avoid in formal writing."
-      ru: "'Katanya' — разговорное слово для передачи слухов или чужих слов; состоит
-        из 'kata' (слово/говорить) + '-nya' (он/она/они); не используется в
-        официальной речи."
     sentences:
       - id: module-1-0152-s1
         text: Katanya pantai ini sangat indah.
@@ -3516,8 +3109,6 @@ cards:
     note:
       en: "'Ke sana' means moving toward 'there' (away from speaker); contrast with
         'di sana' (at/in there, no movement) and 'dari sana' (from there)."
-      ru: "'Ke sana' означает движение 'туда' (от говорящего); не путайте с 'di sana'
-        (там, без движения) и 'dari sana' (оттуда)."
     sentences:
       - id: module-1-0153-s1
         text: Saya mau pergi ke sana besok.
@@ -3538,8 +3129,6 @@ cards:
     note:
       en: "'Ke sini' means movement toward the speaker ('come here'); contrast with
         'ke sana' (there, away from speaker) and 'di sini' (here, no movement)."
-      ru: "'Ke sini' означает движение к говорящему ('сюда'); не путайте с 'ke sana'
-        (туда, от говорящего) и 'di sini' (здесь, без движения)."
     sentences:
       - id: module-1-0154-s1
         text: Ayo datang ke sini sekarang!
@@ -3561,9 +3150,6 @@ cards:
       en: "\"Kembali\" means both 'to return/come back' and 'you're welcome'; in shops
         you may also hear \"sama-sama\" for 'you're welcome', but \"kembali\" is
         equally common and natural."
-      ru: "\"Kembali\" означает и 'вернуться/возвращаться', и 'пожалуйста' (в ответ на
-        'спасибо'); в магазинах также можно услышать \"sama-sama\", но
-        \"kembali\" столь же распространено."
     sentences:
       - id: module-1-0155-s1
         text: Saya ingin kembali ke Bali besok.
@@ -3585,9 +3171,6 @@ cards:
       en: "'Kereta api' means train (lit. 'fire vehicle'); often shortened to 'kereta'
         in casual speech; not to be confused with 'kereta' alone which can also
         mean cart/carriage in older usage."
-      ru: "'Kereta api' означает поезд (букв. 'огненный экипаж'); в разговорной речи
-        часто сокращается до 'kereta'; не путать со старым значением слова
-        'kereta' — повозка или карета."
     sentences:
       - id: module-1-0156-s1
         text: Saya naik kereta api ke Jakarta.
@@ -3608,8 +3191,6 @@ cards:
     note:
       en: "'Mobil' means car (four-wheeled vehicle); distinct from 'motor'
         (motorcycle), which is very common in Indonesia."
-      ru: "'Mobil' означает легковой автомобиль; не путайте с 'motor' (мотоцикл),
-        который очень распространён в Индонезии."
     sentences:
       - id: module-1-0157-s1
         text: Saya pergi ke pasar naik mobil.
@@ -3632,9 +3213,6 @@ cards:
       en: "\"Naik\" is used for riding or boarding vehicles (naik motor, naik bus) and
         also means to go up/rise; don't confuse with \"mengendarai\" which
         emphasizes driving/controlling a vehicle."
-      ru: '"Naik" используется для обозначения езды или посадки в транспорт (naik
-        motor, naik bus), а также означает подниматься/расти; не путайте с
-        "mengendarai", которое подчёркивает управление транспортным средством.'
     sentences:
       - id: module-1-0158-s1
         text: Saya naik motor ke sekolah setiap hari.
@@ -3656,9 +3234,6 @@ cards:
       en: "'Pergi' means 'to go' and is used for leaving or traveling; often paired
         with 'ke' (to a place); related words: 'berangkat' (to depart), 'pulang'
         (to go home)."
-      ru: "'Pergi' означает 'идти/ехать' и используется для обозначения ухода или
-        поездки; часто сочетается с 'ke' (в какое-то место); связанные слова:
-        'berangkat' (отправляться), 'pulang' (возвращаться домой)."
     sentences:
       - id: module-1-0159-s1
         text: Saya pergi ke pasar setiap pagi.
@@ -3680,8 +3255,6 @@ cards:
       en: "'Pesawat terbang' means aeroplane; often shortened to just 'pesawat' in
         everyday speech; not to be confused with 'kapal' (ship) or 'kereta'
         (train)."
-      ru: "'Pesawat terbang' означает самолёт; в повседневной речи часто сокращается
-        до 'pesawat'; не путать с 'kapal' (корабль) и 'kereta' (поезд)."
     sentences:
       - id: module-1-0160-s1
         text: Saya naik pesawat terbang ke Bali.
@@ -3703,10 +3276,6 @@ cards:
       en: "'Sana' means 'over there' or is used informally as 'go on' / 'off you go'
         to shoo someone away; often paired with 'pergi' (go) for emphasis; not
         to be confused with 'sini' (here) or 'situ' (there, mid-distance)."
-      ru: "'Sana' означает 'вон там' или используется неформально как 'иди уже' /
-        'давай, иди' чтобы отправить кого-то; часто сочетается с 'pergi' (идти)
-        для усиления; не путать с 'sini' (здесь) и 'situ' (там, на среднем
-        расстоянии)."
     sentences:
       - id: module-1-0161-s1
         text: Pergi sana, ibu sedang masak sekarang.
@@ -3727,8 +3296,6 @@ cards:
     note:
       en: "'Sepeda' means bicycle (non-motorized); don't confuse with 'sepeda motor'
         (motorcycle). Common in everyday transport and exercise contexts."
-      ru: "'Sepeda' означает велосипед (без мотора); не путайте с 'sepeda motor'
-        (мотоцикл). Часто используется в контексте транспорта и прогулок."
     sentences:
       - id: module-1-0162-s1
         text: Saya naik sepeda ke sekolah setiap hari.
@@ -3750,9 +3317,6 @@ cards:
       en: '"Sepeda motor" is the standard term for motorbike/motorcycle; informally
         often shortened to "motor". Do not confuse with "sepeda" alone, which
         means bicycle.'
-      ru: '"Sepeda motor" — стандартное слово для мотоцикла; в разговорной речи часто
-        сокращается до "motor". Не путайте с "sepeda" (без motor), что означает
-        велосипед.'
     sentences:
       - id: module-1-0163-s1
         text: Saya pergi ke pasar naik sepeda motor.
@@ -3774,8 +3338,6 @@ cards:
       en: '"Taksi" is a loanword from English, used in everyday informal and formal
         speech; similar word: "ojek" (motorbike taxi), "becak" (cycle
         rickshaw).'
-      ru: "«Taksi» — заимствование из английского, используется в повседневной речи;
-        похожие слова: «ojek» (мото-такси), «becak» (велорикша)."
     sentences:
       - id: module-1-0164-s1
         text: Saya naik taksi ke bandara.
@@ -3797,9 +3359,6 @@ cards:
       en: "'Bagus' is a versatile, everyday word for 'good/great'; closely related to
         'baik' (good/kind) but 'bagus' focuses more on quality or appearance;
         very common in casual speech."
-      ru: "'Bagus' — универсальное повседневное слово со значением «хорошо/отлично»;
-        похоже на 'baik' (хороший/добрый), но 'bagus' больше относится к
-        качеству или внешнему виду; очень распространено в разговорной речи."
     sentences:
       - id: module-1-0165-s1
         text: Foto ini sangat bagus sekali!
@@ -3820,9 +3379,6 @@ cards:
     note:
       en: "'Baru' means 'new' (adjective) but also 'just/recently' (adverb); e.g.
         'baru saja' = 'just now'; very common in everyday speech."
-      ru: "'Baru' означает 'новый' (прилагательное), но также 'только что/недавно'
-        (наречие); например, 'baru saja' = 'только что'; очень часто
-        используется в повседневной речи."
     sentences:
       - id: module-1-0166-s1
         text: Saya punya sepeda baru.
@@ -3844,9 +3400,6 @@ cards:
       en: "'Bersih' means clean or pure; used for objects, places, and people;
         opposite is 'kotor' (dirty); also used in 'bersih-bersih' (cleaning
         up)."
-      ru: "'Bersih' означает чистый или чистая; используется для предметов, мест и
-        людей; противоположное слово — 'kotor' (грязный); также используется в
-        'bersih-bersih' (уборка)."
     sentences:
       - id: module-1-0167-s1
         text: Kamar mandi ini sangat bersih.
@@ -3868,9 +3421,6 @@ cards:
       en: "'Besar' means big/large and is used for size; opposite is 'kecil' (small);
         do not confuse with 'tua' (old/mature) which sometimes translates 'big'
         in age contexts."
-      ru: "'Besar' означает большой/крупный и используется для размера; антоним —
-        'kecil' (маленький); не путайте с 'tua' (старый/взрослый), которое
-        иногда переводится как 'большой' в контексте возраста."
     sentences:
       - id: module-1-0168-s1
         text: Rumah itu sangat besar dan indah.
@@ -3892,9 +3442,6 @@ cards:
       en: "'Buah-buahan' is the plural/collective form of 'buah' (fruit);
         reduplication signals variety or plurality; often seen on market signs
         and menus."
-      ru: "'Buah-buahan' — это множественная/собирательная форма слова 'buah' (фрукт);
-        удвоение слова указывает на разнообразие или множественность; часто
-        встречается на вывесках рынков и в меню."
     sentences:
       - id: module-1-0169-s1
         text: Pasar ini menjual banyak buah-buahan segar.
@@ -3915,8 +3462,6 @@ cards:
     note:
       en: "'Cepat' means fast/quick and is used for both speed and urgency; related
         words include 'lambat' (slow) as its opposite."
-      ru: "'Cepat' означает быстрый/скорый и используется как для скорости, так и для
-        срочности; антоним — 'lambat' (медленный)."
     sentences:
       - id: module-1-0170-s1
         text: Dia berlari sangat cepat di pantai.
@@ -3937,9 +3482,6 @@ cards:
     note:
       en: "'Enak' means delicious or tasty for food/drink; also used informally to
         mean 'comfortable' or 'good feeling'; very common in daily speech."
-      ru: "'Enak' означает вкусный для еды и напитков; также неформально используется
-        в значении 'удобный' или 'приятный'; очень распространено в повседневной
-        речи."
     sentences:
       - id: module-1-0171-s1
         text: Nasi goreng ini sangat enak!
@@ -3960,8 +3502,6 @@ cards:
     note:
       en: "'Indah' describes beauty of scenery, art, or objects; use 'cantik' for
         people and 'tampan' for handsome men instead."
-      ru: "'Indah' описывает красоту пейзажей, искусства или предметов; для людей
-        используйте 'cantik' (красивая) или 'tampan' (красивый)."
     sentences:
       - id: module-1-0172-s1
         text: Pantai ini sangat indah sekali.
@@ -3983,9 +3523,6 @@ cards:
       en: "'Jagung' is the everyday neutral word for corn/maize; commonly eaten
         grilled ('jagung bakar') or boiled ('jagung rebus') as a street snack in
         Indonesia."
-      ru: "'Jagung' — обычное нейтральное слово для кукурузы; в Индонезии её часто
-        едят жареной ('jagung bakar') или варёной ('jagung rebus') как уличную
-        закуску."
     sentences:
       - id: module-1-0173-s1
         text: Saya suka makan jagung bakar.
@@ -4006,9 +3543,6 @@ cards:
     note:
       en: "'Kecil' means small/little in size; opposite is 'besar' (big); also used in
         'kecil hati' (discouraged) and 'sejak kecil' (since childhood)."
-      ru: "'Kecil' означает маленький/небольшой по размеру; антоним — 'besar'
-        (большой); также встречается в выражениях 'kecil hati' (расстроенный) и
-        'sejak kecil' (с детства)."
     sentences:
       - id: module-1-0174-s1
         text: Rumah saya sangat kecil.
@@ -4030,9 +3564,6 @@ cards:
       en: '"Kosong" is everyday Indonesian for empty/vacant and also means zero (e.g.
         in phone numbers or scores); do not confuse with "tidak ada" (there is
         none).'
-      ru: '"Kosong" — повседневное слово для обозначения пустого/свободного места, а
-        также ноля (например, в номерах телефонов или счёте); не путайте с
-        "tidak ada" (этого нет).'
     sentences:
       - id: module-1-0175-s1
         text: Botol ini kosong, tolong isi air.
@@ -4053,8 +3584,6 @@ cards:
     note:
       en: "'Kotor' means dirty/unclean; opposite is 'bersih' (clean); commonly used
         for objects, clothes, places, and hands."
-      ru: "'Kotor' означает грязный/нечистый; антоним — 'bersih' (чистый); часто
-        используется для предметов, одежды, мест и рук."
     sentences:
       - id: module-1-0176-s1
         text: Tangan saya kotor setelah bermain.
@@ -4075,8 +3604,6 @@ cards:
     note:
       en: '"Mahal" means expensive; its opposite is "murah" (cheap); used in everyday
         shopping and market situations.'
-      ru: '"Mahal" означает «дорогой»; антоним — "murah" (дешёвый); используется в
-        повседневных ситуациях при покупках и на рынке.'
     sentences:
       - id: module-1-0177-s1
         text: Baju ini sangat mahal di toko.
@@ -4097,8 +3624,6 @@ cards:
     note:
       en: "'Makanan' is a neutral everyday noun for food; related words include
         'makan' (to eat) and 'minuman' (drink)."
-      ru: "'Makanan' — нейтральное повседневное существительное, обозначающее еду;
-        родственные слова: 'makan' (есть) и 'minuman' (напиток)."
     sentences:
       - id: module-1-0178-s1
         text: Makanan di sini sangat enak.
@@ -4119,9 +3644,6 @@ cards:
     note:
       en: "'Manis' means sweet (taste or personality); also used to describe a
         cute/sweet person; opposite is 'pahit' (bitter) or 'asin' (salty)."
-      ru: "'Manis' означает сладкий (вкус или характер); также используется для
-        описания милого человека; антонимы — 'pahit' (горький) и 'asin'
-        (солёный)."
     sentences:
       - id: module-1-0179-s1
         text: Kopi ini terlalu manis untuk saya.
@@ -4143,9 +3665,6 @@ cards:
       en: "'Menyenangkan' is the active/adjectival form of 'senang' (happy/glad); use
         'menyenangkan' to describe something that brings pleasure, and 'senang'
         to describe a person's feeling."
-      ru: "'Menyenangkan' — это активная/адъективная форма слова 'senang'
-        (счастливый/рад); используйте 'menyenangkan' для описания того, что
-        приносит удовольствие, а 'senang' — для описания чувства человека."
     sentences:
       - id: module-1-0180-s1
         text: Liburan di Bali sangat menyenangkan.
@@ -4166,8 +3685,6 @@ cards:
     note:
       en: "'Minuman' means 'drink' or 'beverage' (noun); the verb 'to drink' is
         'minum' — a common source of confusion for beginners."
-      ru: "'Minuman' означает 'напиток' (существительное); глагол 'пить' — 'minum';
-        начинающие часто их путают."
     sentences:
       - id: module-1-0181-s1
         text: Saya mau pesan minuman dingin.
@@ -4188,8 +3705,6 @@ cards:
     note:
       en: "'Murah' means cheap/inexpensive; opposite is 'mahal' (expensive); commonly
         used when shopping or bargaining at markets."
-      ru: "'Murah' означает дешёвый/недорогой; антоним — 'mahal' (дорогой); часто
-        используется при покупках или торговле на рынке."
     sentences:
       - id: module-1-0182-s1
         text: Harga mangga ini sangat murah.
@@ -4210,8 +3725,6 @@ cards:
     note:
       en: "'Penuh' means full (of space, capacity, or emotion); often confused with
         'kenyang' (full from eating); related: 'memenuhi' (to fill)."
-      ru: "'Penuh' означает 'полный' (о пространстве, вместимости или эмоциях); часто
-        путают с 'kenyang' (наелся); родственное слово: 'memenuhi' (заполнять)."
     sentences:
       - id: module-1-0183-s1
         text: Pantai ini sangat penuh hari ini.
@@ -4233,9 +3746,6 @@ cards:
       en: "'Ramai' describes a place or event full of people and noise; often confused
         with 'bising' (just noisy) — 'ramai' implies lively activity, not mere
         noise."
-      ru: "'Ramai' описывает место или событие, полное людей и шума; часто путают с
-        'bising' (просто шумный) — 'ramai' подразумевает оживлённую активность,
-        а не просто шум."
     sentences:
       - id: module-1-0184-s1
         text: Pasar ini sangat ramai setiap pagi.
@@ -4256,8 +3766,6 @@ cards:
     note:
       en: "'Bagaimana' means 'how' or 'what is ... like?'; used in questions;
         beginners sometimes confuse it with 'kenapa' (why) or 'apa' (what)."
-      ru: "'Bagaimana' означает 'как' или 'каково что-то?'; используется в вопросах;
-        новички иногда путают его с 'kenapa' (почему) или 'apa' (что)."
     sentences:
       - id: module-1-0185-s1
         text: Bagaimana cuaca di Bali hari ini?
@@ -4279,9 +3787,6 @@ cards:
       en: "'Belajar' means 'to study' or 'to learn'; often used with 'di sekolah' (at
         school) or 'bahasa' (language); do not confuse with 'mengajar' which
         means 'to teach'."
-      ru: "'Belajar' означает 'учиться' или 'изучать'; часто используется с 'di
-        sekolah' (в школе) или 'bahasa' (язык); не путайте с 'mengajar', что
-        означает 'преподавать'."
     sentences:
       - id: module-1-0186-s1
         text: Saya belajar bahasa Indonesia setiap hari.
@@ -4302,8 +3807,6 @@ cards:
     note:
       en: "'Cukup' means both 'enough' (sufficient) and 'quite/pretty' (moderately);
         it comes before adjectives or stands alone as a complete answer."
-      ru: "'Cukup' означает как 'достаточно', так и 'довольно/весьма'; ставится перед
-        прилагательными или используется как самостоятельный ответ."
     sentences:
       - id: module-1-0187-s1
         text: Harganya cukup murah di pasar ini.
@@ -4325,9 +3828,6 @@ cards:
       en: "'Sekali' meaning 'very' is placed AFTER the adjective (e.g., 'bagus
         sekali'), unlike English; do not confuse with 'sekali' meaning 'once/one
         time'."
-      ru: "'Sekali' в значении 'очень' ставится ПОСЛЕ прилагательного (например,
-        'bagus sekali'), в отличие от русского; не путайте с 'sekali' в значении
-        'один раз'."
     sentences:
       - id: module-1-0188-s1
         text: Pantai ini indah sekali.
@@ -4349,9 +3849,6 @@ cards:
       en: "'Biasanya' means 'usually/normally'; informal everyday speech; related
         words: 'selalu' (always), 'sering' (often), 'kadang-kadang'
         (sometimes)."
-      ru: "'Biasanya' означает 'обычно/как правило'; используется в повседневной
-        разговорной речи; похожие слова: 'selalu' (всегда), 'sering' (часто),
-        'kadang-kadang' (иногда)."
     sentences:
       - id: module-1-0189-s1
         text: Saya biasanya makan nasi setiap hari.
@@ -4372,8 +3869,6 @@ cards:
     note:
       en: Use 'bukan' to negate nouns and noun phrases; use 'tidak' for verbs and
         adjectives. Often confused with 'tidak'.
-      ru: Используйте 'bukan' для отрицания существительных и именных групп; для
-        глаголов и прилагательных используйте 'tidak'. Часто путают с 'tidak'.
     sentences:
       - id: module-1-0190-s1
         text: Ini bukan kopi, ini teh.
@@ -4394,8 +3889,6 @@ cards:
     note:
       en: "'Dingin' means cold (temperature); used for weather, drinks, and objects;
         do not confuse with 'sakit' (sick/pain)."
-      ru: "'Dingin' означает холодный (температура); используется для погоды, напитков
-        и предметов; не путайте с 'sakit' (больной/боль)."
     sentences:
       - id: module-1-0191-s1
         text: Air ini sangat dingin sekali.
@@ -4417,9 +3910,6 @@ cards:
       en: '"Jelek" is informal/colloquial for ugly or bad quality; the more polite
         synonym is "buruk"; often used to describe appearance, weather, or
         quality of items.'
-      ru: «Jelek» — разговорное слово, означающее «некрасивый» или «плохого качества»;
-        более вежливый синоним — «buruk»; часто используется для описания
-        внешности, погоды или качества вещей.
     sentences:
       - id: module-1-0192-s1
         text: Cuaca hari ini sangat jelek.
@@ -4440,9 +3930,6 @@ cards:
     note:
       en: '"Kurang" means "minus" or "less than" in math; also used in daily speech to
         mean "not enough" or "not very"; do not confuse with "tidak" (no/not).'
-      ru: «Kurang» означает «минус» или «меньше» в математике; также используется в
-        разговорной речи в значении «недостаточно» или «не очень»; не путайте с
-        «tidak» (нет/не).
     sentences:
       - id: module-1-0193-s1
         text: Sepuluh kurang tiga sama dengan tujuh.
@@ -4463,8 +3950,6 @@ cards:
     note:
       en: "'Lambat' means slow and is the opposite of 'cepat' (fast); used for speed
         of movement, speech, or progress."
-      ru: "'Lambat' означает 'медленный' и является антонимом 'cepat' (быстрый);
-        используется для описания скорости движения, речи или прогресса."
     sentences:
       - id: module-1-0194-s1
         text: Mobil ini sangat lambat di jalan.
@@ -4485,9 +3970,6 @@ cards:
     note:
       en: "'Negara' means 'country/nation' (formal); commonly used in school and news
         contexts; not to be confused with 'kota' (city) or 'desa' (village)."
-      ru: "'Negara' означает 'страна/государство' (формально); часто используется в
-        школьных и новостных контекстах; не путать с 'kota' (город) или 'desa'
-        (деревня)."
     sentences:
       - id: module-1-0195-s1
         text: Indonesia adalah negara yang sangat indah.
@@ -4509,10 +3991,6 @@ cards:
       en: "'Orang' means 'person' or 'people' (e.g. 'dua orang' = two people); also
         used as a prefix meaning 'someone from' (e.g. 'orang Bali'); do not
         confuse with 'laki-laki/perempuan' for male/female."
-      ru: "'Orang' означает 'человек' или 'люди' (например, 'dua orang' = два
-        человека); также используется как префикс со значением 'человек из...'
-        (например, 'orang Bali'); не путайте с 'laki-laki/perempuan' для
-        обозначения пола."
     sentences:
       - id: module-1-0196-s1
         text: Ada satu orang di warung itu.
@@ -4533,8 +4011,6 @@ cards:
     note:
       en: "'Pahit' means bitter taste or unsweetened drinks; say 'kopi pahit' for
         black coffee without sugar, opposite of 'manis' (sweet)."
-      ru: "'Pahit' означает горький вкус или напиток без сахара; 'kopi pahit' — чёрный
-        кофе без сахара, антоним — 'manis' (сладкий)."
     sentences:
       - id: module-1-0197-s1
         text: Kopi ini pahit sekali.
@@ -4555,8 +4031,6 @@ cards:
     note:
       en: "'Panas' means hot (temperature/weather); commonly confused with 'pedas'
         (spicy hot); related: 'kepanasan' (feeling too hot)."
-      ru: "'Panas' означает горячий/жаркий (температура/погода); часто путают с
-        'pedas' (острый); родственное слово: 'kepanasan' (чувствовать жару)."
     sentences:
       - id: module-1-0198-s1
         text: Cuaca hari ini sangat panas.
@@ -4578,9 +4052,6 @@ cards:
       en: "'Pedas' means spicy/hot in taste; do not confuse with 'panas' (hot in
         temperature); related words: 'kepedasan' (too spicy), 'tidak pedas' (not
         spicy)."
-      ru: "'Pedas' означает острый на вкус; не путайте с 'panas' (горячий по
-        температуре); связанные слова: 'kepedasan' (слишком острый), 'tidak
-        pedas' (не острый)."
     sentences:
       - id: module-1-0199-s1
         text: Makanan ini sangat pedas sekali.
@@ -4601,9 +4072,6 @@ cards:
     note:
       en: "'Yang' is a versatile relative pronoun used in all registers; it links a
         noun to a description, similar to 'that/which/who' in English."
-      ru: "'Yang' — универсальное относительное местоимение, используется во всех
-        стилях речи; связывает существительное с описанием, аналогично
-        'который/которая/которое' в русском языке."
     sentences:
       - id: module-1-0200-s1
         text: Ini buku yang saya beli kemarin.
@@ -4625,9 +4093,6 @@ cards:
     note:
       en: "Polite/formal way to offer or ask about desires; 'Anda' is formal 'you',
         use 'kamu' with friends; related: 'mau' (want), 'ingin' (wish/want)."
-      ru: "Вежливый/формальный способ предложить что-либо или спросить о желании;
-        'Anda' — формальное 'вы/ты', с друзьями используют 'kamu'; похожие
-        слова: 'mau' (хотеть), 'ingin' (желать)."
     sentences:
       - id: module-1-0201-s1
         text: Apakah Anda mau minum kopi sekarang?
@@ -4649,10 +4114,6 @@ cards:
       en: "'Baik' means 'good/fine/very well' and is used both as an adjective and as
         a polite response; often confused with 'bagus' (good quality/nice), but
         'baik' refers more to character, health, or agreement."
-      ru: "'Baik' означает 'хорошо/ладно/всё в порядке' и используется как
-        прилагательное и как вежливый ответ; часто путают с 'bagus' (хороший по
-        качеству), но 'baik' больше относится к характеру, здоровью или
-        согласию."
     sentences:
       - id: module-1-0202-s1
         text: Dia orang yang sangat baik.
@@ -4674,8 +4135,6 @@ cards:
       en: "'Dengan' means 'with' or 'together with'; it is neutral/formal register and
         should not be confused with 'sama' which is its informal equivalent in
         everyday speech."
-      ru: "'Dengan' означает 'с' или 'вместе с'; это нейтрально-формальный стиль, не
-        путайте с 'sama' — разговорным аналогом в повседневной речи."
     sentences:
       - id: module-1-0203-s1
         text: Saya pergi ke pasar dengan ibu.
@@ -4696,9 +4155,6 @@ cards:
     note:
       en: '"Goreng" means fried and appears in many food names (nasi goreng, mie
         goreng, ayam goreng); it can also be used as a verb meaning "to fry".'
-      ru: «Goreng» означает «жареный» и встречается во многих названиях блюд (nasi
-        goreng, mie goreng, ayam goreng); также используется как глагол
-        «жарить».
     sentences:
       - id: module-1-0204-s1
         text: Saya makan nasi goreng setiap pagi.
@@ -4719,8 +4175,6 @@ cards:
     note:
       en: "'Jawaban' is a noun meaning 'answer/response'; related verb is 'menjawab'
         (to answer); commonly confused with 'pertanyaan' (question)."
-      ru: "'Jawaban' — существительное, означающее 'ответ'; связанный глагол —
-        'menjawab' (отвечать); часто путают с 'pertanyaan' (вопрос)."
     sentences:
       - id: module-1-0205-s1
         text: Jawaban kamu salah, coba lagi.
@@ -4741,8 +4195,6 @@ cards:
     note:
       en: "'Minta' means to ask for or request something; more polite than 'ambil' (to
         take); often used with 'tolong' (please) for extra politeness."
-      ru: "'Minta' означает попросить что-либо; вежливее, чем 'ambil' (взять); часто
-        используется с 'tolong' (пожалуйста) для большей вежливости."
     sentences:
       - id: module-1-0206-s1
         text: Saya minta air putih, terima kasih.
@@ -4764,9 +4216,6 @@ cards:
       en: "'Pertanyaan' means 'question' (noun); do not confuse with 'bertanya' (to
         ask) or 'tanya' (ask, verb root); commonly used in schools and
         conversations."
-      ru: "'Pertanyaan' означает 'вопрос' (существительное); не путайте с 'bertanya'
-        (задавать вопрос) или 'tanya' (глагольный корень); часто используется в
-        школе и разговорах."
     sentences:
       - id: module-1-0207-s1
         text: Saya punya pertanyaan untuk guru.
@@ -4788,9 +4237,6 @@ cards:
       en: '"Rambutan" is the same in both Indonesian and English; it refers to the
         sweet, hairy tropical fruit common in Bali and across Indonesia, often
         sold at traditional markets.'
-      ru: «Rambutan» звучит одинаково на индонезийском и английском; это сладкий
-        тропический фрукт с мягкими шипами, широко распространённый на Бали и по
-        всей Индонезии, часто продаётся на традиционных рынках.
     sentences:
       - id: module-1-0208-s1
         text: Saya suka makan rambutan yang manis.
@@ -4812,9 +4258,6 @@ cards:
       en: "\"Sama\" is informal/colloquial; it can mean 'with', 'together with', 'the
         same as', or act like 'and' between nouns. In formal writing, use
         \"dengan\" (with) or \"dan\" (and) instead."
-      ru: «Sama» — разговорное слово; может означать «с», «вместе с», «такой же, как»
-        или «и» между существительными. В официальной речи используйте «dengan»
-        (с) или «dan» (и).
     sentences:
       - id: module-1-0209-s1
         text: Saya pergi ke pasar sama ibu.
@@ -4835,8 +4278,6 @@ cards:
     note:
       en: '"Satai" (also spelled "sate") refers to skewered and grilled meat served
         with sauce; very common street food across Indonesia.'
-      ru: «Satai» (также пишется «sate») — мясо на шпажках, приготовленное на гриле;
-        очень популярная уличная еда по всей Индонезии.
     sentences:
       - id: module-1-0210-s1
         text: Saya mau makan satai malam ini.
@@ -4857,9 +4298,6 @@ cards:
     note:
       en: "Informal/colloquial verb meaning to pay for someone else's food or drinks;
         very common in social settings; related: 'traktiran' (a treat/freebie)."
-      ru: "Разговорный глагол, означающий угостить кого-либо едой или напитками за
-        свой счёт; очень распространён в социальных ситуациях; связанное слово:
-        'traktiran' (угощение, халява)."
     sentences:
       - id: module-1-0211-s1
         text: Aku mau traktir kamu makan siang.
@@ -4880,9 +4318,6 @@ cards:
     note:
       en: '"Wah" is an informal exclamation used to express surprise, admiration, or
         amazement; very common in everyday speech across all ages.'
-      ru: «Wah» — неформальное восклицание, выражающее удивление, восхищение или
-        изумление; очень распространено в повседневной речи среди людей всех
-        возрастов.
     sentences:
       - id: module-1-0212-s1
         text: Wah, pantainya sangat indah!
@@ -4904,9 +4339,6 @@ cards:
       en: Casual/informal phrase used to suggest an idea or alternative, similar to
         'how about...' or 'what if...'; often interchangeable with 'bagaimana
         jika' in everyday speech.
-      ru: Разговорная фраза для предложения идеи или альтернативы, похожа на 'а как
-        насчёт...' или 'что если...'; в повседневной речи часто взаимозаменяема
-        с 'bagaimana jika'.
     sentences:
       - id: module-1-0213-s1
         text: Bagaimana kalau kita makan di sini?
@@ -4928,9 +4360,6 @@ cards:
       en: "'Bahasa Indonesia' refers to the Indonesian language; 'bahasa' alone means
         'language', so you can say 'bahasa Inggris' (English), 'bahasa Jepang'
         (Japanese), etc."
-      ru: "'Bahasa Indonesia' означает индонезийский язык; слово 'bahasa' само по себе
-        означает 'язык', поэтому можно сказать 'bahasa Inggris' (английский),
-        'bahasa Jepang' (японский) и т.д."
     sentences:
       - id: module-1-0214-s1
         text: Saya belajar bahasa Indonesia setiap hari.
@@ -4952,9 +4381,6 @@ cards:
       en: "'Bahasa' means 'language'; often used alone to refer to Indonesian (Bahasa
         Indonesia); also used in 'bahasa Inggris' (English) and 'bahasa Bali'
         (Balinese)."
-      ru: "'Bahasa' означает 'язык'; часто используется отдельно для обозначения
-        индонезийского языка (Bahasa Indonesia); также в выражениях 'bahasa
-        Inggris' (английский) и 'bahasa Bali' (балийский)."
     sentences:
       - id: module-1-0215-s1
         text: Saya belajar bahasa Indonesia setiap hari.
@@ -4976,9 +4402,6 @@ cards:
       en: "'Baiklah' is a slightly formal but common way to say 'okay/alright'; more
         polite than 'oke' and often used to agree or give permission; related to
         'baik' meaning 'good/fine'."
-      ru: "'Baiklah' — немного формальный, но распространённый способ сказать
-        «хорошо/ладно»; более вежливый, чем 'oke'; часто используется для
-        согласия или разрешения; связан со словом 'baik' — «хороший/добрый»."
     sentences:
       - id: module-1-0216-s1
         text: Baiklah, kita pergi ke pantai sekarang.
@@ -5000,9 +4423,6 @@ cards:
       en: '"Berjalan-jalan" is casual/informal, used for leisurely walking or
         travelling around; related words: "jalan-jalan" (same meaning, even more
         colloquial), "pergi" (to go).'
-      ru: "«Berjalan-jalan» — разговорное выражение для прогулки или путешествия;
-        похожие слова: «jalan-jalan» (то же значение, ещё более разговорное),
-        «pergi» (идти, ехать)."
     sentences:
       - id: module-1-0217-s1
         text: Kami berjalan-jalan di pantai setiap pagi.
@@ -5023,9 +4443,6 @@ cards:
     note:
       en: "'Boleh' means 'may/can' for permission or polite requests; less formal than
         'dapat'; also used alone as 'Sure!' in reply."
-      ru: "'Boleh' означает 'можно/можешь' для разрешения или вежливых просьб; менее
-        официально, чем 'dapat'; также используется отдельно как 'Конечно!' в
-        ответ."
     sentences:
       - id: module-1-0218-s1
         text: Boleh saya duduk di sini?
@@ -5046,8 +4463,6 @@ cards:
     note:
       en: "'Kalau' means 'if' in everyday spoken Indonesian; more colloquial than
         'jika' or 'apabila', which are used in formal writing."
-      ru: "'Kalau' означает 'если' в разговорном индонезийском; более разговорное, чем
-        'jika' или 'apabila', которые используются в формальных текстах."
     sentences:
       - id: module-1-0219-s1
         text: Kalau hujan, kita tidak pergi ke pantai.
@@ -5069,9 +4484,6 @@ cards:
       en: "'Keluar' is an everyday verb meaning to go/come out or exit; its opposite
         is 'masuk' (to enter/go in); commonly used for leaving rooms, buildings,
         or exiting apps."
-      ru: "'Keluar' — повседневный глагол, означающий 'выходить' или 'выйти'; его
-        антоним — 'masuk' (входить); часто используется при выходе из комнаты,
-        здания или приложения."
     sentences:
       - id: module-1-0220-s1
         text: Dia keluar dari kamar mandi sekarang.
@@ -5092,8 +4504,6 @@ cards:
     note:
       en: "'Nanti' means 'later / in a short while'; used in everyday informal speech;
         don't confuse with 'besok' (tomorrow) or 'segera' (immediately/soon)."
-      ru: "'Nanti' означает 'позже / скоро'; используется в повседневной разговорной
-        речи; не путайте с 'besok' (завтра) или 'segera' (немедленно/скоро)."
     sentences:
       - id: module-1-0221-s1
         text: Saya makan nanti, sekarang saya sibuk.
@@ -5114,9 +4524,6 @@ cards:
     note:
       en: '"Tidak apa-apa" is neutral/informal, used to reassure someone or accept an
         apology; often shortened to "nggak apa-apa" in casual speech.'
-      ru: «Tidak apa-apa» — нейтральное/разговорное выражение, используется чтобы
-        успокоить кого-то или принять извинение; в повседневной речи часто
-        сокращается до «nggak apa-apa».
     sentences:
       - id: module-1-0222-s1
         text: Maaf, saya terlambat. Tidak apa-apa.
@@ -5138,9 +4545,6 @@ cards:
       en: '"Asrama" is a neutral everyday word for a dormitory or boarding house;
         often used for school or university housing; related: "kos" (rented
         room), "kamar" (room).'
-      ru: "«Asrama» — нейтральное повседневное слово для общежития или пансиона; часто
-        используется для школьного или университетского жилья; похожие слова:
-        «kos» (арендуемая комната), «kamar» (комната)."
     sentences:
       - id: module-1-0223-s1
         text: Saya tinggal di asrama kampus.
@@ -5162,9 +4566,6 @@ cards:
       en: '"Bahasa Cina" is the everyday informal term for the Chinese language; more
         formally you may hear "bahasa Mandarin" for Mandarin specifically. Do
         not confuse with "orang Cina" (Chinese person).'
-      ru: '"Bahasa Cina" — повседневное разговорное название китайского языка; более
-        официально для мандаринского диалекта используют "bahasa Mandarin". Не
-        путайте с "orang Cina" (китаец/китаянка).'
     sentences:
       - id: module-1-0224-s1
         text: Saya belajar bahasa Cina di sekolah.
@@ -5186,9 +4587,6 @@ cards:
       en: "'Bahasa Inggris' literally means 'English language'; use 'bahasa' before
         any language name (bahasa Indonesia, bahasa Jepang); don't say just
         'Inggris' when referring to the language."
-      ru: "'Bahasa Inggris' буквально означает 'английский язык'; используйте 'bahasa'
-        перед названием любого языка (bahasa Indonesia, bahasa Jepang); не
-        говорите просто 'Inggris', имея в виду язык."
     sentences:
       - id: module-1-0225-s1
         text: Saya belajar bahasa Inggris di sekolah.
@@ -5209,9 +4607,6 @@ cards:
     note:
       en: "'Bapak' means father but is also used as a respectful title for older men
         (like 'sir'); often shortened to 'Pak' in everyday speech."
-      ru: "'Bapak' означает 'отец', но также используется как уважительное обращение к
-        пожилым мужчинам (как 'господин'); в повседневной речи часто сокращается
-        до 'Pak'."
     sentences:
       - id: module-1-0226-s1
         text: Bapak saya bekerja di Bali.
@@ -5233,9 +4628,6 @@ cards:
       en: '"Bapak" (or "Pak") is a polite title used to address or refer to an older
         or respected male; similar to "Sir" or "Mr."; often confused with "Ayah"
         which means father in a family context.'
-      ru: «Bapak» (или «Pak») — вежливое обращение к пожилому или уважаемому мужчине;
-        похоже на «сэр» или «господин»; часто путают с «Ayah», что означает
-        «отец» в семейном контексте.
     sentences:
       - id: module-1-0227-s1
         text: Selamat pagi, Bapak! Apa kabar?
@@ -5256,9 +4648,6 @@ cards:
     note:
       en: "'Belok' is casual everyday speech for turning (left/right); say 'belok
         kiri' or 'belok kanan'; related: 'tikungan' (a bend/curve in the road)."
-      ru: "'Belok' — разговорное повседневное слово для поворота (налево/направо);
-        говорят 'belok kiri' или 'belok kanan'; связанное слово: 'tikungan'
-        (изгиб дороги)."
     sentences:
       - id: module-1-0228-s1
         text: Tolong belok kiri di perempatan itu.
@@ -5280,9 +4669,6 @@ cards:
       en: "'Di seberang' means 'across from' or 'on the other side of'; often used
         with streets, rivers, or buildings; don't confuse with 'di samping'
         (next to) or 'di depan' (in front of)."
-      ru: "'Di seberang' означает 'напротив' или 'на другой стороне'; часто
-        используется с улицами, реками или зданиями; не путайте с 'di samping'
-        (рядом) или 'di depan' (перед)."
     sentences:
       - id: module-1-0229-s1
         text: Warung itu ada di seberang jalan.
@@ -5303,8 +4689,6 @@ cards:
     note:
       en: '"Dosen" refers specifically to a university-level lecturer or professor;
         for school teachers use "guru" instead.'
-      ru: «Dosen» означает преподавателя университета или профессора; для школьных
-        учителей используйте слово «guru».
     sentences:
       - id: module-1-0230-s1
         text: Dosen saya sangat baik dan sabar.
@@ -5326,9 +4710,6 @@ cards:
       en: "'Fakultas' refers to a faculty or school within a university (e.g., Faculty
         of Law); often abbreviated as 'fak.' in informal writing; related word:
         'universitas' (university)."
-      ru: "'Fakultas' означает факультет в университете (например, юридический
-        факультет); в неформальном письме часто сокращается до 'fak.'; связанное
-        слово: 'universitas' (университет)."
     sentences:
       - id: module-1-0231-s1
         text: Dia belajar di fakultas hukum.
@@ -5350,9 +4731,6 @@ cards:
       en: "'Ilmu' means knowledge or science in everyday use, but can also refer to
         mystical or esoteric knowledge; related words: 'ilmuwan' (scientist),
         'ilmu pengetahuan' (knowledge/science)."
-      ru: "'Ilmu' означает знание или науку в повседневной речи, но также может
-        относиться к мистическим знаниям; родственные слова: 'ilmuwan' (учёный),
-        'ilmu pengetahuan' (знание/наука)."
     sentences:
       - id: module-1-0232-s1
         text: Dia belajar ilmu di sekolah setiap hari.
@@ -5374,9 +4752,6 @@ cards:
       en: "'Ilmu bumi' is a formal/academic term for geography; everyday speakers may
         also say 'geografi'; related words include 'peta' (map) and 'bumi'
         (earth)."
-      ru: "'Ilmu bumi' — формальный/академический термин для географии; в разговорной
-        речи также используют 'geografi'; связанные слова: 'peta' (карта) и
-        'bumi' (земля)."
     sentences:
       - id: module-1-0233-s1
         text: Saya suka pelajaran ilmu bumi di sekolah.
@@ -5398,9 +4773,6 @@ cards:
       en: "'Ilmu ekonomi' is the formal/academic term for economics; in casual speech
         Indonesians often shorten it to just 'ekonomi'; related words include
         'ilmu' (knowledge/science) and 'ekonom' (economist)."
-      ru: "'Ilmu ekonomi' — формальный/академический термин для слова «экономика»; в
-        разговорной речи индонезийцы часто сокращают его до 'ekonomi'; связанные
-        слова: 'ilmu' (знание/наука) и 'ekonom' (экономист)."
     sentences:
       - id: module-1-0234-s1
         text: Dia belajar ilmu ekonomi di universitas.
@@ -5421,8 +4793,6 @@ cards:
     note:
       en: "'Ilmu kimia' literally means 'science of chemistry'; often shortened to
         'kimia' in casual speech and school contexts."
-      ru: "'Ilmu kimia' буквально означает 'наука химии'; в разговорной речи и в школе
-        часто сокращается до 'kimia'."
     sentences:
       - id: module-1-0235-s1
         text: Saya suka pelajaran ilmu kimia di sekolah.
@@ -5444,9 +4814,6 @@ cards:
       en: "\"Ilmu politik\" is a formal academic term meaning 'political science';
         often used in university contexts; related: \"ilmu\"
         (knowledge/science), \"politik\" (politics/political)."
-      ru: "«Ilmu politik» — формальный академический термин, означающий «политология»;
-        часто используется в университетском контексте; связанные слова: «ilmu»
-        (знание/наука), «politik» (политика/политический)."
     sentences:
       - id: module-1-0236-s1
         text: Dia belajar ilmu politik di universitas.
@@ -5467,9 +4834,6 @@ cards:
     note:
       en: '"Informasi" is a neutral, everyday loanword from English/Dutch; used in
         both formal and informal speech; related: "info" (casual short form).'
-      ru: "«Informasi» — нейтральное повседневное заимствование из
-        английского/нидерландского; используется как в формальной, так и в
-        неформальной речи; связанное слово: «info» (разговорное сокращение)."
     sentences:
       - id: module-1-0237-s1
         text: Saya butuh informasi tentang hotel ini.
@@ -5490,8 +4854,6 @@ cards:
     note:
       en: "'Kedua' means 'the second' (ordinal); don't confuse with 'dua' (the number
         two); also means 'both' in some contexts."
-      ru: "'Kedua' означает 'второй' (порядковое числительное); не путайте с 'dua'
-        (число два); также может означать 'оба' в некоторых контекстах."
     sentences:
       - id: module-1-0238-s1
         text: Kamar kedua di kiri.
@@ -5512,8 +4874,6 @@ cards:
     note:
       en: "'Kuliah' means a university lecture or to attend university; don't confuse
         with 'kelas' (a school class) or 'pelajaran' (a lesson)."
-      ru: "'Kuliah' означает университетскую лекцию или учёбу в университете; не
-        путайте с 'kelas' (школьный класс) или 'pelajaran' (урок)."
     sentences:
       - id: module-1-0239-s1
         text: Saya pergi ke kuliah setiap pagi.
@@ -5534,8 +4894,6 @@ cards:
     note:
       en: "'Mahasiswa' refers specifically to a university/college student; use
         'siswa' or 'murid' for school students below university level."
-      ru: "'Mahasiswa' означает студента университета или колледжа; для школьников
-        используйте 'siswa' или 'murid'."
     sentences:
       - id: module-1-0240-s1
         text: Dia adalah mahasiswa di Universitas Udayana.
@@ -5557,9 +4915,6 @@ cards:
       en: "Neutral, everyday word for the school subject mathematics; often shortened
         to 'matik' in casual speech; related: 'pelajaran' (lesson), 'berhitung'
         (arithmetic)."
-      ru: "Нейтральное повседневное слово для обозначения школьного предмета
-        математика; в разговорной речи часто сокращается до 'matik'; связанные
-        слова: 'pelajaran' (урок), 'berhitung' (арифметика)."
     sentences:
       - id: module-1-0241-s1
         text: Saya suka pelajaran matematika di sekolah.
@@ -5581,9 +4936,6 @@ cards:
       en: "'Pertama' means 'first' and is used for order/rank; related words: 'kedua'
         (second), 'ketiga' (third); neutral register, very common in everyday
         speech."
-      ru: "'Pertama' означает 'первый' и используется для обозначения порядка;
-        связанные слова: 'kedua' (второй), 'ketiga' (третий); нейтральный стиль,
-        очень распространено в повседневной речи."
     sentences:
       - id: module-1-0242-s1
         text: Ini adalah kali pertama saya ke Bali.
@@ -5605,9 +4957,6 @@ cards:
       en: "Formal title for the head of a university; often used with 'Pak' or 'Bu' as
         a respectful address; related words: 'dekan' (dean), 'dosen'
         (lecturer)."
-      ru: "Официальный титул для главы университета; часто используется с 'Pak' или
-        'Bu' как уважительное обращение; похожие слова: 'dekan' (декан), 'dosen'
-        (преподаватель)."
     sentences:
       - id: module-1-0243-s1
         text: Rektor universitas itu sangat terkenal.
@@ -5629,9 +4978,6 @@ cards:
       en: "'Sastra' means literature or literary arts; used in formal/academic
         contexts; related words: 'sastrawan' (author/literary figure), 'karya
         sastra' (literary work)."
-      ru: "'Sastra' означает литература или литературное искусство; используется в
-        формальном/академическом контексте; связанные слова: 'sastrawan'
-        (писатель), 'karya sastra' (литературное произведение)."
     sentences:
       - id: module-1-0244-s1
         text: Saya suka membaca sastra Indonesia.
@@ -5653,9 +4999,6 @@ cards:
       en: "'Studi' is a formal/academic loanword; in casual speech 'belajar' is more
         common for studying, while 'studi' often refers to a field of study or
         academic program."
-      ru: "'Studi' — это формальное/академическое заимствование; в разговорной речи
-        чаще используют 'belajar', тогда как 'studi' обычно обозначает область
-        знаний или учебную программу."
     sentences:
       - id: module-1-0245-s1
         text: Dia melanjutkan studi di Universitas Udayana.
@@ -5676,8 +5019,6 @@ cards:
     note:
       en: "'Terus' means to continue or keep doing something; also used informally to
         mean 'then/and then' in sequences; very common in spoken Indonesian."
-      ru: "'Terus' означает продолжать что-либо делать; также используется разговорно
-        в значении 'потом/затем'; очень распространено в устной речи."
     sentences:
       - id: module-1-0246-s1
         text: Dia terus belajar setiap hari.
@@ -5699,9 +5040,6 @@ cards:
       en: "'Toko buku' is neutral everyday Indonesian for 'bookshop'; 'toko' alone
         means 'shop/store' and combines freely with other words (toko roti =
         bakery, toko buah = fruit stall)."
-      ru: "'Toko buku' — нейтральное повседневное слово для обозначения книжного
-        магазина; 'toko' само по себе означает 'магазин' и свободно сочетается с
-        другими словами (toko roti = булочная, toko buah = фруктовый ларёк)."
     sentences:
       - id: module-1-0247-s1
         text: Saya pergi ke toko buku hari ini.
@@ -5722,8 +5060,6 @@ cards:
     note:
       en: "'Toko roti' literally means 'bread shop'; used for any bakery; related:
         'roti' (bread), 'toko' (shop/store)."
-      ru: "'Toko roti' буквально означает 'хлебный магазин'; используется для любой
-        пекарни; связанные слова: 'roti' (хлеб), 'toko' (магазин)."
     sentences:
       - id: module-1-0248-s1
         text: Saya membeli roti di toko roti.
@@ -5744,9 +5080,6 @@ cards:
     note:
       en: "'Banyak' is used before nouns or alone; it works for countable and
         uncountable things, unlike English 'many/much'."
-      ru: "'Banyak' ставится перед существительными или используется самостоятельно;
-        подходит и для исчисляемых, и для неисчисляемых существительных, в
-        отличие от английского 'many/much'."
     sentences:
       - id: module-1-0249-s1
         text: Di pasar ada banyak buah segar.
@@ -5767,9 +5100,6 @@ cards:
     note:
       en: Neutral everyday register; often used before nouns to mean 'various kinds
         of'; related to 'macam-macam' (same meaning, slightly more casual).
-      ru: Нейтральный повседневный стиль; часто стоит перед существительным и означает
-        «разные виды»; близко к 'macam-macam' (то же значение, чуть
-        разговорнее).
     sentences:
       - id: module-1-0250-s1
         text: Di pasar ada bermacam-macam buah segar.
@@ -5790,9 +5120,6 @@ cards:
     note:
       en: "'Eropa' is a proper noun referring to the continent Europe; commonly heard
         in tourism contexts in Bali when describing foreign visitors."
-      ru: "'Eropa' — имя собственное, обозначающее континент Европа; часто
-        используется в туристическом контексте на Бали при описании иностранных
-        гостей."
     sentences:
       - id: module-1-0251-s1
         text: Banyak turis dari Eropa datang ke Bali.
@@ -5814,9 +5141,6 @@ cards:
       en: "'Kamar' means a room inside a building (bedroom, hotel room); don't confuse
         with 'ruangan' (open/general space) or 'kamar mandi' (bathroom, lit.
         'bathing room')."
-      ru: "'Kamar' означает комнату внутри здания (спальня, номер в отеле); не путайте
-        с 'ruangan' (открытое/общее пространство) или 'kamar mandi' (ванная
-        комната, букв. 'комната для купания')."
     sentences:
       - id: module-1-0252-s1
         text: Kamar saya ada di lantai dua.
@@ -5838,8 +5162,6 @@ cards:
       en: "'Lain' means 'other/another/different'; often confused with 'lagi'
         (more/again); related: 'yang lain' (the other one), 'berbeda'
         (different)."
-      ru: "'Lain' означает 'другой/иной'; часто путают с 'lagi' (ещё/снова); связанные
-        слова: 'yang lain' (другой), 'berbeda' (отличающийся)."
     sentences:
       - id: module-1-0253-s1
         text: Saya mau pesan makanan yang lain.
@@ -5860,9 +5182,6 @@ cards:
     note:
       en: "\"Lama\" means both 'long (time)' and 'old/former' (e.g. teman lama = old
         friend); don't confuse with \"tua\" which means old in age for people."
-      ru: «Lama» означает и «долго/долгий», и «старый/прежний» (например, teman lama =
-        старый друг); не путайте с «tua», которое означает старый по возрасту (о
-        людях).
     sentences:
       - id: module-1-0254-s1
         text: Kamu sudah lama tinggal di Bali?
@@ -5883,9 +5202,6 @@ cards:
     note:
       en: "'Laut' means 'sea' or 'ocean'; commonly used in everyday speech; related
         words: 'pantai' (beach), 'air laut' (seawater), 'ikan laut' (sea fish)."
-      ru: "'Laut' означает 'море' или 'океан'; часто используется в повседневной речи;
-        связанные слова: 'pantai' (пляж), 'air laut' (морская вода), 'ikan laut'
-        (морская рыба)."
     sentences:
       - id: module-1-0255-s1
         text: Saya suka berenang di laut.
@@ -5907,9 +5223,6 @@ cards:
       en: "'Tempat' means both a physical place/location and available space/room; it
         also combines with other words (e.g. 'tempat tidur' = bed, 'tempat
         duduk' = seat)."
-      ru: "'Tempat' означает и физическое место/локацию, и свободное пространство;
-        также входит в составные слова (например, 'tempat tidur' = кровать,
-        'tempat duduk' = сиденье)."
     sentences:
       - id: module-1-0256-s1
         text: Apakah ada tempat untuk tas saya?

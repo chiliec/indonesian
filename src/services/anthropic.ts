@@ -44,10 +44,10 @@ export class AnthropicService {
     return block.text.trim();
   }
 
-  async correctTurn(userText: string, characterReply: string, userIsEn: boolean): Promise<string> {
+  async correctTurn(userText: string, characterReply: string): Promise<string> {
     const sys = `You are an Indonesian-language tutor. The user is practicing Bahasa Indonesia in a role-play.
 Given the user's last message in Indonesian, identify 1–3 small fixes (grammar, word choice, naturalness).
-For each fix, show:  "❌ wrong → ✅ right" with a one-line explanation in ${userIsEn ? 'English' : 'Russian'}.
+For each fix, show:  "❌ wrong → ✅ right" with a one-line explanation in English.
 If the user's message was already natural, say so in one short line.
 Keep total response under 6 lines. Never quote the character's reply.`;
     const res = await this.client.messages.create({
@@ -66,13 +66,12 @@ Keep total response under 6 lines. Never quote the character's reply.`;
   async correctVoiceTurn(
     userText: string,
     characterReply: string,
-    userIsEn: boolean,
   ): Promise<string> {
     const sys = `You are an Indonesian-language tutor. The user spoke (we have their Deepgram transcript).
 Identify 1–3 fixes for grammar/word choice AND one pronunciation tip likely to help the learner
 (based on common Indonesian-as-second-language pitfalls — final-syllable stress, "ng" sound, the
 schwa "e", soft "c" as "ch"). Format: "❌ wrong → ✅ right" then "🔊 Pronunciation tip: …" in
-${userIsEn ? 'English' : 'Russian'}. Total under 6 lines.`;
+English. Total under 6 lines.`;
     const res = await this.client.messages.create({
       model: MODEL_HAIKU,
       max_tokens: 400,

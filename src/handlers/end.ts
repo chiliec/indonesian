@@ -4,14 +4,10 @@ export async function endCommand(ctx: BotCtx): Promise<void> {
   if (!ctx.from) return;
   const session = await ctx.deps.conversation.deps.sessions.findActive(ctx.from.id);
   if (!session) {
-    await ctx.reply(ctx.userIsEn ? 'No active scenario.' : 'Нет активного сценария.');
+    await ctx.reply('No active scenario.');
     return;
   }
   await ctx.deps.conversation.deps.sessions.endSession(session._id, 'user');
   const turnCount = session.turns.length;
-  await ctx.reply(
-    ctx.userIsEn
-      ? `Scenario ended after ${turnCount} turns. /scenarios to start another.`
-      : `Сценарий завершён, ходов: ${turnCount}. /scenarios — выбрать новый.`,
-  );
+  await ctx.reply(`Scenario ended after ${turnCount} turns. /scenarios to start another.`);
 }

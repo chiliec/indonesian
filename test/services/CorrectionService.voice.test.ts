@@ -13,11 +13,11 @@ import type { AnthropicService } from '../../src/services/anthropic.js';
 class FakeAnthropic {
   public textCalls = 0;
   public voiceCalls = 0;
-  async correctTurn(_u: string, _r: string, _en: boolean): Promise<string> {
+  async correctTurn(_u: string, _r: string): Promise<string> {
     this.textCalls += 1;
     return 'text-only fix';
   }
-  async correctVoiceTurn(_u: string, _r: string, _en: boolean): Promise<string> {
+  async correctVoiceTurn(_u: string, _r: string): Promise<string> {
     this.voiceCalls += 1;
     return 'voice fix with pronunciation hint';
   }
@@ -35,7 +35,6 @@ test('correctLastTurn dispatches to correctVoiceTurn when audioFileId set', asyn
     sessionId: new Types.ObjectId(),
     userText: 'mau ke changgu',
     characterReply: 'oke',
-    userIsEn: true,
     audioFileId: 'voice123',
   });
   assert.match(recap, /pronunciation/);
@@ -51,7 +50,6 @@ test('correctLastTurn falls back to correctTurn when audioFileId absent', async 
     sessionId: new Types.ObjectId(),
     userText: 'halo',
     characterReply: 'hai',
-    userIsEn: true,
   });
   assert.equal(recap, 'text-only fix');
   assert.equal(fake.textCalls, 1);

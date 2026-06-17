@@ -1,4 +1,3 @@
-import { t } from '../../util/i18n.js';
 import type { CardView, Exercise } from './types.js';
 import { escapeHtml } from './html.js';
 export { escapeHtml } from './html.js';
@@ -16,24 +15,23 @@ export interface QuestionView {
   flash?: { correct: boolean; xp: number; corrected?: string };
 }
 
-function header(v: QuestionView, en: boolean): string {
+function header(v: QuestionView): string {
   const filled = Math.round((v.index / v.total) * 10);
   const bar = '▰'.repeat(filled) + '▱'.repeat(10 - filled);
-  const title = en ? '🎯 <b>Practice</b>' : '🎯 <b>Практика</b>';
-  return `${title} · ${bar} ${v.index + 1}/${v.total}\n⭐ ${v.xpTotal} XP`;
+  return `🎯 <b>Practice</b> · ${bar} ${v.index + 1}/${v.total}\n⭐ ${v.xpTotal} XP`;
 }
 
-function flashLine(v: QuestionView, en: boolean): string {
+function flashLine(v: QuestionView): string {
   if (!v.flash) return '';
   if (!v.flash.correct) return '';
   const base = v.flash.corrected
-    ? `${t('session.almost', en)} <i>${escapeHtml(v.flash.corrected)}</i>`
-    : t('session.correct', en);
+    ? `✅ Almost — correct spelling: <i>${escapeHtml(v.flash.corrected)}</i>`
+    : '✅ Benar!';
   return `\n${base} +${v.flash.xp} XP`;
 }
 
-export function renderQuestion(v: QuestionView, ex: Exercise, en: boolean): CardView {
-  const parts = [header(v, en), flashLine(v, en), '', ex.prompt];
+export function renderQuestion(v: QuestionView, ex: Exercise): CardView {
+  const parts = [header(v), flashLine(v), '', ex.prompt];
   const buttons: CardView['buttons'] = [];
 
   if ((ex.kind === 'choice' || ex.kind === 'cloze') && ex.options) {
@@ -46,7 +44,7 @@ export function renderQuestion(v: QuestionView, ex: Exercise, en: boolean): Card
 
   if (ex.kind === 'builder' && ex.tiles) {
     const picked = v.builderPicked.map((i) => ex.tiles![i]).join(' ');
-    parts.push('', `${t('session.soFar', en)} <b>${escapeHtml(picked || '—')}</b>`);
+    parts.push('', `So far: <b>${escapeHtml(picked || '—')}</b>`);
     const unpicked = ex.tiles
       .map((w, i) => ({ w, i }))
       .filter(({ i }) => !v.builderPicked.includes(i));
@@ -54,7 +52,7 @@ export function renderQuestion(v: QuestionView, ex: Exercise, en: boolean): Card
       buttons.push(unpicked.slice(r, r + 3).map(({ w, i }) => ({ text: w, data: `s:${v.sessionId}:t:${i}` })));
     }
     if (v.builderPicked.length > 0) {
-      buttons.push([{ text: t('session.undo', en), data: `s:${v.sessionId}:u` }]);
+      buttons.push([{ text: '↩️ Undo', data: `s:${v.sessionId}:u` }]);
     }
   }
 
@@ -67,15 +65,15 @@ export function renderQuestion(v: QuestionView, ex: Exercise, en: boolean): Card
   return view;
 }
 
-export function renderFeedback(v: QuestionView, ex: Exercise, en: boolean): CardView {
-  const parts = [header(v, en), '', `${t('session.wrong', en)} <b>${escapeHtml(ex.answer)}</b>`];
+export function renderFeedback(v: QuestionView, ex: Exercise): CardView {
+  const parts = [header(v), '', `❌ Not quite. Correct answer: <b>${escapeHtml(ex.answer)}</b>`];
   if (ex.feedback.sentence) {
     parts.push(`📖 <i>${escapeHtml(ex.feedback.sentence)}</i> — ${escapeHtml(ex.feedback.sentenceEn ?? '')}`);
   }
   if (ex.feedback.note) parts.push(`💡 ${escapeHtml(ex.feedback.note)}`);
   return {
     text: parts.join('\n'),
-    buttons: [[{ text: t('session.next', en), data: `s:${v.sessionId}:n` }]],
+    buttons: [[{ text: '▶️ Next', data: `s:${v.sessionId}:n` }]],
     finished: false,
   };
 }
@@ -88,17 +86,17 @@ export interface FinishView {
   missedWords: string[];
 }
 
-export function renderFinish(f: FinishView, en: boolean): CardView {
+export function renderFinish(f: FinishView): CardView {
   const parts = [
-    t('session.done', en),
+    '🏁 Session done!',
     `✅ ${f.correctCount}/${f.total} · ⭐ +${f.xpEarned} XP`,
   ];
   if (f.missedWords.length) {
-    parts.push('', t('session.review', en), ...f.missedWords.map((w) => `• ${escapeHtml(w)}`));
+    parts.push('', 'Words to review:', ...f.missedWords.map((w) => `• ${escapeHtml(w)}`));
   }
   return {
     text: parts.join('\n'),
-    buttons: [[{ text: t('session.again', en), data: 'p:again' }]],
+    buttons: [[{ text: '▶️ Practice again', data: 'p:again' }]],
     finished: true,
   };
 }

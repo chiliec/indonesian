@@ -9,7 +9,7 @@ after(stopMemoryMongo);
 beforeEach(async () => {
   await clearMemoryMongo();
   repo = new UsersRepo();
-  await repo.touchUser(1, { defaultLocale: 'en' });
+  await repo.touchUser(1);
 });
 
 test('speakOptIn defaults false and toggles', async () => {

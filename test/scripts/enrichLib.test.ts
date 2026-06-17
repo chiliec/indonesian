@@ -6,7 +6,7 @@ import type { QuizCard } from '../../src/services/quiz/types.js';
 const card: QuizCard = { id: 'm1-0009', indonesian: 'makan', english: 'to eat' };
 
 const gen = {
-  note: { en: 'Also "to have a meal".', ru: 'Также «принимать пищу».' },
+  note: { en: 'Also "to have a meal".' },
   sentences: [
     { text: 'Saya mau makan nasi goreng', blank: 'makan', en: 'I want to eat fried rice' },
     { text: 'Kami makan di rumah', blank: 'makan', en: 'We eat at home' },

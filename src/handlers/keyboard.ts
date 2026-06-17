@@ -2,33 +2,31 @@ import { Keyboard } from 'grammy';
 
 export type KeyboardAction = 'practice' | 'scenarios' | 'progress' | 'settings';
 
-/** Single source of truth for the reply-keyboard labels, per locale. */
-const LABELS: Record<KeyboardAction, { en: string; ru: string }> = {
-  practice: { en: '▶️ Practice', ru: '▶️ Практика' },
-  scenarios: { en: '🎭 Scenarios', ru: '🎭 Сценарии' },
-  progress: { en: '📊 Progress', ru: '📊 Прогресс' },
-  settings: { en: '⚙️ Settings', ru: '⚙️ Настройки' },
+/** Single source of truth for the reply-keyboard labels. */
+const LABELS: Record<KeyboardAction, string> = {
+  practice: '▶️ Practice',
+  scenarios: '🎭 Scenarios',
+  progress: '📊 Progress',
+  settings: '⚙️ Settings',
 };
 
-/** Reverse lookup built from LABELS — matches a tapped label in either locale. */
+/** Reverse lookup built from LABELS — matches a tapped label to its action. */
 const ACTION_BY_LABEL: Map<string, KeyboardAction> = new Map();
-for (const [action, l] of Object.entries(LABELS) as [KeyboardAction, { en: string; ru: string }][]) {
-  ACTION_BY_LABEL.set(l.en, action);
-  ACTION_BY_LABEL.set(l.ru, action);
+for (const [action, label] of Object.entries(LABELS) as [KeyboardAction, string][]) {
+  ACTION_BY_LABEL.set(label, action);
 }
 
 /** The persistent reply keyboard shown beneath the chat. */
-export function mainKeyboard(en: boolean): Keyboard {
-  const k = (a: KeyboardAction) => (en ? LABELS[a].en : LABELS[a].ru);
+export function mainKeyboard(): Keyboard {
   return new Keyboard()
-    .text(k('practice')).text(k('scenarios'))
+    .text(LABELS.practice).text(LABELS.scenarios)
     .row()
-    .text(k('progress')).text(k('settings'))
+    .text(LABELS.progress).text(LABELS.settings)
     .resized()
     .persistent();
 }
 
-/** Map a tapped button label (either locale) to its action, or null. */
+/** Map a tapped button label to its action, or null. */
 export function matchAction(text: string): KeyboardAction | null {
   return ACTION_BY_LABEL.get(text) ?? null;
 }

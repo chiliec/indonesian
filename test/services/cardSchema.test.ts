@@ -4,7 +4,7 @@ import { ModuleSchema } from '../../src/services/quiz/cardSchema.js';
 
 const base = {
   id: 'module-1',
-  title: { en: 'M1', ru: 'М1' },
+  title: { en: 'M1' },
   cards: [{ id: 'm1-0001', indonesian: 'makan', english: 'to eat' }],
 };
 
@@ -17,7 +17,7 @@ test('accepts enriched cards', () => {
     ...base,
     cards: [{
       id: 'm1-0001', indonesian: 'makan', english: 'to eat', audio: 'abc.ogg',
-      note: { en: 'Also "to have a meal".', ru: 'Также «принимать пищу».' },
+      note: { en: 'Also "to have a meal".' },
       sentences: [{ id: 'm1-0001-s1', text: 'Saya mau makan nasi goreng', blank: 'makan', en: 'I want to eat fried rice', audio: 'def.ogg' }],
     }],
   };

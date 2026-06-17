@@ -13,7 +13,7 @@ export const SentenceSchema = z
     { message: 'blank must appear as a whole word in text' },
   );
 
-export const NoteSchema = z.object({ en: z.string().min(1), ru: z.string().min(1) });
+export const NoteSchema = z.object({ en: z.string().min(1) });
 
 export const CardSchema = z.object({
   id: z.string().min(1),
@@ -26,6 +26,6 @@ export const CardSchema = z.object({
 
 export const ModuleSchema = z.object({
   id: z.string().min(1),
-  title: z.object({ en: z.string().min(1), ru: z.string().min(1) }),
+  title: z.object({ en: z.string().min(1) }),
   cards: z.array(CardSchema).min(1),
 });

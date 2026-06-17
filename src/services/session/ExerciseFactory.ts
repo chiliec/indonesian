@@ -76,7 +76,6 @@ function escapeRegExp(s: string): string {
 }
 
 export interface BuildExOpts {
-  en: boolean;
   rng?: () => number;
 }
 
@@ -106,14 +105,14 @@ function buildOptions(
   return { options, correctIndex };
 }
 
-function feedbackOf(card: QuizCard, en: boolean): Exercise['feedback'] {
+function feedbackOf(card: QuizCard): Exercise['feedback'] {
   const s = card.sentences?.[0];
   const fb: Exercise['feedback'] = {};
   if (s) {
     fb.sentence = s.text;
     fb.sentenceEn = s.en;
   }
-  if (card.note) fb.note = en ? card.note.en : card.note.ru;
+  if (card.note) fb.note = card.note.en;
   return fb;
 }
 
@@ -124,15 +123,15 @@ export function buildExercise(
   opts: BuildExOpts,
 ): Exercise {
   const rng = opts.rng ?? Math.random;
-  const feedback = feedbackOf(card, opts.en);
+  const feedback = feedbackOf(card);
   const base = { cardId: card.id, kind, feedback };
 
   switch (kind) {
     case 'choice': {
       const { options, correctIndex } = buildOptions(card.english, card.id, pool, 'english', rng);
       const prompt = card.audio
-        ? (opts.en ? '🔊 What does this mean?' : '🔊 Что это значит?')
-        : (opts.en ? `What does "${escapeHtml(card.indonesian)}" mean?` : `Что значит «${escapeHtml(card.indonesian)}»?`);
+        ? '🔊 What does this mean?'
+        : `What does "${escapeHtml(card.indonesian)}" mean?`;
       const ex: Exercise = { ...base, prompt, options, correctIndex, answer: card.english };
       if (card.audio) ex.audioFile = card.audio;
       return ex;
@@ -146,10 +145,9 @@ export function buildExercise(
       );
       // note: distractors may coincide with words still visible in the blanked sentence — accepted trade-off
       const { options, correctIndex } = buildOptions(s.blank, card.id, pool, 'indonesian', rng);
-      const head = opts.en ? '🧩 Fill the blank:' : '🧩 Вставь слово:';
       return {
         ...base,
-        prompt: `${head}\n<i>${escapeHtml(blanked)}</i>\n(${escapeHtml(s.en)})`,
+        prompt: `🧩 Fill the blank:\n<i>${escapeHtml(blanked)}</i>\n(${escapeHtml(s.en)})`,
         options,
         correctIndex,
         answer: s.blank,
@@ -159,23 +157,22 @@ export function buildExercise(
       const s = usableSentences(card, 'builder')[0];
       if (!s) throw new Error(`card ${card.id} has no short sentences for builder`);
       const words = s.text.split(/\s+/);
-      const head = opts.en ? '🧱 Build the sentence:' : '🧱 Собери предложение:';
       return {
         ...base,
-        prompt: `${head}\n"${escapeHtml(s.en)}"`,
+        prompt: `🧱 Build the sentence:\n"${escapeHtml(s.en)}"`,
         tiles: shuffle(words, rng),
         answer: s.text,
       };
     }
     case 'type': {
-      const head = opts.en ? '✍️ Type it in Indonesian:' : '✍️ Напиши по-индонезийски:';
-      return { ...base, prompt: `${head} "${escapeHtml(card.english)}"`, answer: card.indonesian };
+      return { ...base, prompt: `✍️ Type it in Indonesian: "${escapeHtml(card.english)}"`, answer: card.indonesian };
     }
     case 'speak': {
-      const head = opts.en
-        ? '🎤 Say it in Indonesian (send a voice message):'
-        : '🎤 Скажи по-индонезийски (голосовым):';
-      return { ...base, prompt: `${head} "${escapeHtml(card.english)}"`, answer: card.indonesian };
+      return {
+        ...base,
+        prompt: `🎤 Say it in Indonesian (send a voice message): "${escapeHtml(card.english)}"`,
+        answer: card.indonesian,
+      };
     }
   }
 }

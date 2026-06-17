@@ -16,7 +16,7 @@ const GenSentence = z
   );
 
 export const GeneratedSchema = z.object({
-  note: z.object({ en: z.string().min(1), ru: z.string().min(1) }),
+  note: z.object({ en: z.string().min(1) }),
   sentences: z.array(GenSentence).min(2).max(3),
 });
 
@@ -29,8 +29,7 @@ Target word/phrase: "${card.indonesian}" (English: "${card.english}")
 
 Produce STRICT JSON (no markdown fence, no commentary) with this exact shape:
 {
-  "note": { "en": "<one-line usage note in English: register, common confusion, related words>",
-            "ru": "<the same note in Russian>" },
+  "note": { "en": "<one-line usage note in English: register, common confusion, related words>" },
   "sentences": [
     { "text": "<natural beginner-level Indonesian sentence of at most 8 words using the target word>",
       "blank": "<the exact target word as it appears in the sentence>",

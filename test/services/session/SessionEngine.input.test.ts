@@ -42,7 +42,7 @@ beforeEach(async () => {
   stats = new UserStatsRepo();
   judge = null;
   eng = makeEngine(await QuizEngine.load(fixtures));
-  await new UsersRepo().touchUser(1, { defaultLocale: 'en' });
+  await new UsersRepo().touchUser(1);
 });
 
 const builderEx: Exercise = {
@@ -52,21 +52,21 @@ const builderEx: Exercise = {
 
 test('builder: tapping all tiles in the right order completes correctly', async () => {
   const sid = await seed(builderEx);
-  await eng.tapTile(1, sid, 1, true);  // Saya
-  await eng.tapTile(1, sid, 2, true);  // mau
-  const out = await eng.tapTile(1, sid, 0, true); // makan → complete
+  await eng.tapTile(1, sid, 1);  // Saya
+  await eng.tapTile(1, sid, 2);  // mau
+  const out = await eng.tapTile(1, sid, 0); // makan → complete
   assert.ok(out!.view.finished); // single-exercise session → finish screen
   assert.equal((await stats.get(1))!.xp, 15 + 25); // builder xp + bonus
 });
 
 test('builder: wrong order ends in feedback, undo works before completion', async () => {
   const sid = await seed(builderEx);
-  await eng.tapTile(1, sid, 0, true);            // makan (wrong start)
-  const undone = await eng.undoTile(1, sid, true);
+  await eng.tapTile(1, sid, 0);            // makan (wrong start)
+  const undone = await eng.undoTile(1, sid);
   assert.ok(!undone!.view.text.includes('makan ')); // tile back on the keyboard
-  await eng.tapTile(1, sid, 0, true);
-  await eng.tapTile(1, sid, 1, true);
-  const out = await eng.tapTile(1, sid, 2, true);
+  await eng.tapTile(1, sid, 0);
+  await eng.tapTile(1, sid, 1);
+  const out = await eng.tapTile(1, sid, 2);
   assert.ok(out!.view.text.includes('❌'));
 });
 
@@ -74,7 +74,7 @@ test('typed answer: close match counts correct with corrected flash', async () =
   await seed({
     cardId: 'm1-0001', kind: 'type', prompt: '✍️ "to eat"', answer: 'makan', feedback: {},
   });
-  const out = await eng.submitTyped(1, 'makam', true);
+  const out = await eng.submitTyped(1, 'makam');
   assert.ok(out);
   assert.ok(out.view.finished);
   assert.equal((await stats.get(1))!.xp, 17 + 25);
@@ -82,14 +82,14 @@ test('typed answer: close match counts correct with corrected flash', async () =
 
 test('typed input returns null when current exercise is not type/speak', async () => {
   await seed(builderEx);
-  assert.equal(await eng.submitTyped(1, 'whatever', true), null);
+  assert.equal(await eng.submitTyped(1, 'whatever'), null);
 });
 
 test('typed input also accepted for speak exercises (Deepgram-failure fallback)', async () => {
   await seed({
     cardId: 'm1-0001', kind: 'speak', prompt: '🎤 "to eat"', answer: 'makan', feedback: {},
   });
-  const out = await eng.submitTyped(1, 'makan', true);
+  const out = await eng.submitTyped(1, 'makan');
   assert.ok(out!.view.finished);
   assert.equal((await stats.get(1))!.xp, 20 + 25); // xp still scored as speak
 });
@@ -100,7 +100,7 @@ test('spoken: judge rescues a non-matching transcript', async () => {
   await seed({
     cardId: 'm1-0001', kind: 'speak', prompt: '🎤 "to eat"', answer: 'makan', feedback: {},
   });
-  const out = await eng.submitSpoken(1, 'saya mau makan sekarang', true);
+  const out = await eng.submitSpoken(1, 'saya mau makan sekarang');
   assert.ok(out!.view.finished);
   assert.equal((await stats.get(1))!.xp, 20 + 25);
 });
@@ -111,7 +111,7 @@ test('spoken: judge failure falls back to strict (wrong) with note', async () =>
   await seed({
     cardId: 'm1-0001', kind: 'speak', prompt: '🎤 "to eat"', answer: 'makan', feedback: {},
   });
-  const out = await eng.submitSpoken(1, 'selamat pagi', true);
+  const out = await eng.submitSpoken(1, 'selamat pagi');
   assert.ok(out!.view.text.includes('❌'));
 });
 

@@ -7,7 +7,6 @@ export interface CorrectionInput {
   sessionId: Types.ObjectId;
   userText: string;
   characterReply: string;
-  userIsEn: boolean;
   audioFileId?: string;
 }
 
@@ -23,12 +22,10 @@ export class CorrectionService {
       ? await this.deps.anthropic.correctVoiceTurn(
           input.userText,
           input.characterReply,
-          input.userIsEn,
         )
       : await this.deps.anthropic.correctTurn(
           input.userText,
           input.characterReply,
-          input.userIsEn,
         );
     await CorrectionModel.create({
       telegramId: input.telegramId,

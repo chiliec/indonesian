@@ -8,10 +8,8 @@ import type { DeepgramService } from './services/DeepgramService.js';
 import type { TtsService } from './services/TtsService.js';
 import type { ScenarioEngine } from './services/scenarios/ScenarioEngine.js';
 import type { Entitlement } from './services/Entitlement.js';
-import { t, isEn } from './util/i18n.js';
 import { settingsCommand, settingsHelpCallback, settingsSpeakCallback, settingsLengthCallback, settingsDailyCallback } from './handlers/settings.js';
 import { mainKeyboard } from './handlers/keyboard.js';
-import { langCommand, langCallback } from './handlers/lang.js';
 import { scenariosCommand, startCallback } from './handlers/scenarios.js';
 import { textHandler } from './handlers/text.js';
 import { voiceHandler } from './handlers/voice.js';
@@ -49,7 +47,6 @@ export interface BotDeps {
 
 export interface BotCtx extends Context {
   deps: BotDeps;
-  userIsEn: boolean;
 }
 
 export function createBot(deps: BotDeps): Bot<BotCtx> {
@@ -57,21 +54,15 @@ export function createBot(deps: BotDeps): Bot<BotCtx> {
 
   bot.use(async (ctx, next) => {
     ctx.deps = deps;
-    const tgUser = ctx.from;
-    if (tgUser) {
-      const defaultLocale = tgUser.language_code === 'ru' ? 'ru' : 'en';
-      const user = await deps.usersRepo.touchUser(tgUser.id, { defaultLocale });
-      ctx.userIsEn = isEn(user.locale);
-    } else {
-      ctx.userIsEn = true;
-    }
+    if (ctx.from) await deps.usersRepo.touchUser(ctx.from.id);
     await next();
   });
 
   bot.command('start', async (ctx) => {
-    await ctx.reply(t('start.welcome', ctx.userIsEn), {
-      reply_markup: mainKeyboard(ctx.userIsEn),
-    });
+    await ctx.reply(
+      'Welcome! I help you learn Indonesian. Tap ▶️ Practice to begin, or 🎭 Scenarios to chat.',
+      { reply_markup: mainKeyboard() },
+    );
   });
 
   bot.command('menu', settingsCommand); // silent alias
@@ -80,9 +71,6 @@ export function createBot(deps: BotDeps): Bot<BotCtx> {
   bot.callbackQuery('settings:speak', settingsSpeakCallback);
   bot.callbackQuery('settings:length', settingsLengthCallback);
   bot.callbackQuery('settings:modules', modulePicker);
-  bot.command('lang', langCommand);
-  bot.callbackQuery(/^lang:(en|ru)$/, langCallback);
-  bot.callbackQuery('menu:lang', langCommand);
 
   bot.command('scenarios', scenariosCommand);
   bot.callbackQuery('menu:scenarios', scenariosCommand);
@@ -120,9 +108,7 @@ export function createBot(deps: BotDeps): Bot<BotCtx> {
       usersRepo: deps.usersRepo,
     });
     if (promoted) {
-      await ctx.reply(ctx.userIsEn
-        ? '✅ Subscription active for 30 days. Enjoy unlimited practice!'
-        : '✅ Подписка активна на 30 дней. Безлимит — твой.');
+      await ctx.reply('✅ Subscription active for 30 days. Enjoy unlimited practice!');
     }
   });
 
@@ -153,13 +139,12 @@ export function createBot(deps: BotDeps): Bot<BotCtx> {
         sessionId: session._id,
         userText: userTurn.text,
         characterReply: assistantTurn.text,
-        userIsEn: ctx.userIsEn,
         ...(userTurn.audioFileId ? { audioFileId: userTurn.audioFileId } : {}),
       });
       await ctx.reply(recap);
     } catch (err) {
       deps.logger.error({ err }, 'correctLastTurn failed');
-      await ctx.reply(t('error.generic', ctx.userIsEn));
+      await ctx.reply('⚠️ Something went wrong. Try again in a moment.');
     }
   });
 

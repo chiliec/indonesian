@@ -12,8 +12,7 @@ export interface QuizDeps {
 
 export interface ModuleMastery {
   id: string;
-  titleEn: string;
-  titleRu: string;
+  title: string;
   pct: number;
 }
 
@@ -31,15 +30,14 @@ export class QuizService {
     const out: ModuleMastery[] = [];
     for (const m of this.deps.engine.list()) {
       const prog = await this.deps.progress.forCards(telegramId, m.cards.map((c) => c.id));
-      out.push({ id: m.id, titleEn: m.title.en, titleRu: m.title.ru, pct: masteredPct(m.cards, prog) });
+      out.push({ id: m.id, title: m.title.en, pct: masteredPct(m.cards, prog) });
     }
 
     const all = this.deps.engine.allCards();
     const allProg = await this.deps.progress.forCards(telegramId, all.map((c) => c.id));
     out.unshift({
       id: MIXED_MODULE_ID,
-      titleEn: '🎲 Mixed (all words)',
-      titleRu: '🎲 Микс (все слова)',
+      title: '🎲 Mixed (all words)',
       pct: masteredPct(all, allProg),
     });
     return out;

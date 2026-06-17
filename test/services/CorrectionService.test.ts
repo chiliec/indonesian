@@ -11,9 +11,9 @@ import { CorrectionService } from '../../src/services/CorrectionService.js';
 import type { AnthropicService } from '../../src/services/anthropic.js';
 
 class FakeAnthropic {
-  public lastCall: { user: string; reply: string; en: boolean } | null = null;
-  async correctTurn(user: string, reply: string, en: boolean): Promise<string> {
-    this.lastCall = { user, reply, en };
+  public lastCall: { user: string; reply: string } | null = null;
+  async correctTurn(user: string, reply: string): Promise<string> {
+    this.lastCall = { user, reply };
     return `fixed: ${user}`;
   }
 }
@@ -31,7 +31,6 @@ test('correctLastTurn persists and returns recap', async () => {
     sessionId,
     userText: 'Mau ke channgu',
     characterReply: 'Berapa orang?',
-    userIsEn: true,
   });
   assert.match(recap, /fixed/);
   const saved = await CorrectionModel.findOne({ telegramId: 1 }).lean();
@@ -42,7 +41,7 @@ test('correctLastTurn persists and returns recap', async () => {
   assert.equal(saved!.sessionId.toString(), sessionId.toString());
 });
 
-test('correctLastTurn forwards userIsEn to anthropic', async () => {
+test('correctLastTurn forwards text and reply to anthropic', async () => {
   const fake = new FakeAnthropic();
   const svc = new CorrectionService({ anthropic: fake as unknown as AnthropicService });
   await svc.correctLastTurn({
@@ -50,10 +49,8 @@ test('correctLastTurn forwards userIsEn to anthropic', async () => {
     sessionId: new Types.ObjectId(),
     userText: 'halo',
     characterReply: 'hai',
-    userIsEn: false,
   });
   assert.ok(fake.lastCall);
-  assert.equal(fake.lastCall!.en, false);
   assert.equal(fake.lastCall!.user, 'halo');
   assert.equal(fake.lastCall!.reply, 'hai');
 });
