@@ -1,7 +1,7 @@
-import { InlineKeyboard } from 'grammy';
-import { t } from '../util/i18n.js';
+import { InlineKeyboard, type Api } from 'grammy';
+import { t, isEn } from '../util/i18n.js';
 import type { DailySentenceEntry } from '../services/DailySentenceService.js';
-import type { BotCtx } from '../bot.js';
+import type { BotCtx, BotDeps } from '../bot.js';
 import { editCardSafe } from './practice.js';
 
 function escapeHtml(s: string): string {
@@ -51,4 +51,59 @@ export async function dailyAnotherCallback(ctx: BotCtx): Promise<void> {
   if (!entry) return;
   const { text, keyboard } = renderDailySentence(entry, ctx.userIsEn);
   await editCardSafe(ctx.api, ctx.chat.id, msg.message_id, text, keyboard);
+}
+
+/**
+ * Send the daily sentence to every eligible user whose target time (the hh:mm of
+ * their last activity, UTC) has arrived today. Sequential to respect Telegram
+ * rate limits. Returns the number of messages sent.
+ */
+export async function sweepDailySentences(
+  api: Api,
+  deps: BotDeps,
+  opts: { now: Date; activeWindowMs: number },
+): Promise<number> {
+  const { now } = opts;
+  const dayStart = new Date(
+    Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate()),
+  );
+  const activeSince = new Date(now.getTime() - opts.activeWindowMs);
+  const candidates = await deps.usersRepo.findDailySentenceCandidates({ activeSince, dayStart });
+
+  let sent = 0;
+  for (const user of candidates) {
+    const ls = user.lastSeenAt;
+    const target = new Date(
+      Date.UTC(
+        now.getUTCFullYear(),
+        now.getUTCMonth(),
+        now.getUTCDate(),
+        ls.getUTCHours(),
+        ls.getUTCMinutes(),
+      ),
+    );
+    if (now < target) continue; // not yet their hour today
+
+    const picked = deps.dailySentence.pick(user.seenSentenceIds ?? []);
+    if (!picked) continue; // empty pool
+
+    const { text, keyboard } = renderDailySentence(picked.entry, isEn(user.locale));
+    try {
+      await api.sendMessage(user.telegramId, text, {
+        parse_mode: 'HTML',
+        reply_markup: keyboard,
+      });
+      await deps.usersRepo.recordDailySentenceSent(user.telegramId, now, picked.nextSeenIds);
+      sent++;
+    } catch (err) {
+      const code = (err as { error_code?: number }).error_code;
+      if (code === 403) {
+        await deps.usersRepo.setDailySentenceOptOut(user.telegramId, true);
+        deps.logger.info({ telegramId: user.telegramId }, 'daily sentence: blocked, opted out');
+      } else {
+        deps.logger.warn({ err, telegramId: user.telegramId }, 'daily sentence send failed');
+      }
+    }
+  }
+  return sent;
 }

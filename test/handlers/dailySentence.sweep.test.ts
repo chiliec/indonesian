@@ -4,7 +4,8 @@ import { startMemoryMongo, stopMemoryMongo, clearMemoryMongo } from '../helpers/
 import { UsersRepo } from '../../src/db/users.js';
 import { DailySentenceService } from '../../src/services/DailySentenceService.js';
 import type { QuizEngine } from '../../src/services/quiz/QuizEngine.js';
-import { sentenceCommand, dailyAnotherCallback } from '../../src/handlers/dailySentence.js';
+import { sentenceCommand, dailyAnotherCallback, sweepDailySentences } from '../../src/handlers/dailySentence.js';
+import { UserModel } from '../../src/db/users.js';
 
 function fakeEngine(): QuizEngine {
   return {
@@ -61,4 +62,41 @@ test('dailyAnotherCallback edits the message in place', async () => {
   assert.equal(edits.length, 1);
   assert.equal(edits[0]!.id, 99);
   assert.match(edits[0]!.text, /Saya makan\./);
+});
+
+test('sweepDailySentences sends to due users, gates on target time, opts out on 403', async () => {
+  await clearMemoryMongo();
+  // user 1: lastSeen 08:00 → due at 12:00; eligible
+  await UserModel.create({ telegramId: 1, locale: 'en', lastSeenAt: new Date('2026-06-17T08:00:00Z') });
+  // user 2: lastSeen 20:00 → target 20:00 > now 12:00; NOT yet due
+  await UserModel.create({ telegramId: 2, locale: 'en', lastSeenAt: new Date('2026-06-16T20:00:00Z') });
+  // user 3: due, but send throws 403 → should be opted out
+  await UserModel.create({ telegramId: 3, locale: 'en', lastSeenAt: new Date('2026-06-17T07:00:00Z') });
+
+  const sentTo: number[] = [];
+  const api = {
+    sendMessage: async (chatId: number) => {
+      if (chatId === 3) {
+        const e = new Error('Forbidden: bot was blocked by the user') as Error & { error_code?: number };
+        e.error_code = 403;
+        throw e;
+      }
+      sentTo.push(chatId);
+      return { message_id: 1 };
+    },
+  };
+  const deps = {
+    usersRepo: repo,
+    dailySentence: svc,
+    logger: { info() {}, warn() {}, debug() {}, error() {} },
+  };
+  const now = new Date('2026-06-17T12:00:00Z');
+  const sent = await sweepDailySentences(api as never, deps as never, { now, activeWindowMs: 14 * 24 * 60 * 60 * 1000 });
+
+  assert.equal(sent, 1);
+  assert.deepEqual(sentTo, [1]);
+  // user 2 not due → no record
+  assert.equal((await repo.getByTelegramId(2))!.lastDailySentenceAt ?? null, null);
+  // user 3 blocked → opted out
+  assert.equal((await repo.getByTelegramId(3))!.dailySentenceOptOut, true);
 });
