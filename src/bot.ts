@@ -22,6 +22,7 @@ import { practiceHandler, practiceStartCallback, modulePicker, sessionCallback }
 import type { QuizService } from './services/QuizService.js';
 import type { AudioCacheRepo } from './db/audioCache.js';
 import type { SessionEngine } from './services/session/SessionEngine.js';
+import type { DailySentenceService } from './services/DailySentenceService.js';
 
 /** The only commands advertised in Telegram's command menu. */
 export const ADVERTISED_COMMANDS = [
@@ -40,6 +41,7 @@ export interface BotDeps {
   quiz: QuizService;
   audioCache: AudioCacheRepo;
   study: SessionEngine;
+  dailySentence: DailySentenceService;
   adminIds: string;
   logger: Logger;
 }
