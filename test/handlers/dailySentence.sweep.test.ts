@@ -43,8 +43,9 @@ test('sentenceCommand replies with a sentence and persists seen IDs', async () =
   assert.deepEqual((await repo.getByTelegramId(1))!.seenSentenceIds, ['s1']);
 });
 
-test('dailyAnotherCallback edits the message in place', async () => {
-  const edits: { id: number; text: string }[] = [];
+test('dailyAnotherCallback sends a new message and drops the old button', async () => {
+  const sends: { id: number; text: string }[] = [];
+  const markupEdits: number[] = [];
   const ctx = {
     from: { id: 1 },
     chat: { id: 1 },
@@ -52,14 +53,104 @@ test('dailyAnotherCallback edits the message in place', async () => {
     callbackQuery: { message: { message_id: 99 } },
     answerCallbackQuery: async () => {},
     api: {
-      editMessageText: async (_chat: number, id: number, text: string) => { edits.push({ id, text }); },
-      sendMessage: async () => ({ message_id: 1 }),
+      editMessageReplyMarkup: async (_chat: number, id: number) => { markupEdits.push(id); },
+      sendMessage: async (id: number, text: string) => { sends.push({ id, text }); return { message_id: 1 }; },
     },
   } as never;
   await dailyAnotherCallback(ctx);
-  assert.equal(edits.length, 1);
-  assert.equal(edits[0]!.id, 99);
-  assert.match(edits[0]!.text, /Saya makan\./);
+  // old message's button removed
+  assert.deepEqual(markupEdits, [99]);
+  // a fresh message is sent (not an in-place edit)
+  assert.equal(sends.length, 1);
+  assert.equal(sends[0]!.id, 1);
+  assert.match(sends[0]!.text, /Saya makan\./);
+});
+
+test('dailyAnotherCallback sends even when dropping the old button fails', async () => {
+  const sends: string[] = [];
+  const ctx = {
+    from: { id: 1 },
+    chat: { id: 1 },
+    deps: { usersRepo: repo, dailySentence: svc },
+    callbackQuery: { message: { message_id: 99 } },
+    answerCallbackQuery: async () => {},
+    api: {
+      // Telegram rejects (e.g. message too old to edit) — must not block the new send.
+      editMessageReplyMarkup: async () => { throw new Error('message is not modified'); },
+      sendMessage: async (_id: number, text: string) => { sends.push(text); return { message_id: 1 }; },
+    },
+  } as never;
+  await dailyAnotherCallback(ctx);
+  assert.equal(sends.length, 1);
+  assert.match(sends[0]!, /Saya makan\./);
+});
+
+test('dailyAnotherCallback persists seen IDs and advances to a fresh sentence', async () => {
+  const sends: string[] = [];
+  const api = {
+    editMessageReplyMarkup: async () => {},
+    sendMessage: async (_id: number, text: string) => { sends.push(text); return { message_id: 1 }; },
+  };
+  const ctx = {
+    from: { id: 1 },
+    chat: { id: 1 },
+    deps: { usersRepo: repo, dailySentence: svc },
+    callbackQuery: { message: { message_id: 99 } },
+    answerCallbackQuery: async () => {},
+    api,
+  } as never;
+
+  await dailyAnotherCallback(ctx);
+  assert.deepEqual((await repo.getByTelegramId(1))!.seenSentenceIds, ['s1']);
+  assert.match(sends[0]!, /Saya makan\./);
+
+  await dailyAnotherCallback(ctx);
+  // second pick advances past the already-seen sentence (seen list is capped to recent IDs)
+  assert.deepEqual((await repo.getByTelegramId(1))!.seenSentenceIds, ['s2']);
+  assert.match(sends[1]!, /Dia makan\./);
+});
+
+test('dailyAnotherCallback does nothing when the sentence pool is empty', async () => {
+  // Engine with no sentences → pick() returns null (rotation can't reset an empty pool).
+  const emptySvc = new DailySentenceService(
+    { allCards: () => [{ id: 'c1', indonesian: 'makan', english: 'eat', sentences: [] }] } as unknown as QuizEngine,
+    () => 0,
+  );
+  let sent = false;
+  let markupEdited = false;
+  const ctx = {
+    from: { id: 1 },
+    chat: { id: 1 },
+    deps: { usersRepo: repo, dailySentence: emptySvc },
+    callbackQuery: { message: { message_id: 99 } },
+    answerCallbackQuery: async () => {},
+    api: {
+      editMessageReplyMarkup: async () => { markupEdited = true; },
+      sendMessage: async () => { sent = true; return { message_id: 1 }; },
+    },
+  } as never;
+  await dailyAnotherCallback(ctx);
+  assert.equal(sent, false);
+  assert.equal(markupEdited, false);
+});
+
+test('dailyAnotherCallback returns early without a callback message', async () => {
+  let answered = false;
+  let sent = false;
+  const ctx = {
+    from: { id: 1 },
+    chat: { id: 1 },
+    deps: { usersRepo: repo, dailySentence: svc },
+    callbackQuery: {}, // no .message
+    answerCallbackQuery: async () => { answered = true; },
+    api: {
+      editMessageReplyMarkup: async () => {},
+      sendMessage: async () => { sent = true; return { message_id: 1 }; },
+    },
+  } as never;
+  await dailyAnotherCallback(ctx);
+  assert.equal(answered, true); // callback is still acknowledged
+  assert.equal(sent, false);
 });
 
 test('sweepDailySentences sends to due users, gates on target time, opts out on 403', async () => {

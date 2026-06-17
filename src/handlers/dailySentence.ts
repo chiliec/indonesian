@@ -1,7 +1,6 @@
 import { InlineKeyboard, type Api } from 'grammy';
 import type { DailySentenceEntry } from '../services/DailySentenceService.js';
 import type { BotCtx, BotDeps } from '../bot.js';
-import { editCardSafe } from './practice.js';
 
 function escapeHtml(s: string): string {
   return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
@@ -40,15 +39,19 @@ export async function sentenceCommand(ctx: BotCtx): Promise<void> {
   await ctx.reply(text, { parse_mode: 'HTML', reply_markup: keyboard });
 }
 
-/** ds:another — replace the current message with a new sentence in place. */
+/** ds:another — send a fresh sentence as a new message so history stays readable. */
 export async function dailyAnotherCallback(ctx: BotCtx): Promise<void> {
   await ctx.answerCallbackQuery();
   const msg = ctx.callbackQuery?.message;
   if (!ctx.from || !ctx.chat || !msg) return;
   const entry = await nextForUser(ctx, ctx.from.id);
   if (!entry) return;
+  // Drop the button on the previous message so only the newest one is actionable.
+  await ctx.api
+    .editMessageReplyMarkup(ctx.chat.id, msg.message_id, { reply_markup: undefined })
+    .catch(() => undefined);
   const { text, keyboard } = renderDailySentence(entry);
-  await editCardSafe(ctx.api, ctx.chat.id, msg.message_id, text, keyboard);
+  await ctx.api.sendMessage(ctx.chat.id, text, { parse_mode: 'HTML', reply_markup: keyboard });
 }
 
 /**
