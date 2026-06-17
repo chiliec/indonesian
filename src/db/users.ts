@@ -41,6 +41,18 @@ export class UserDoc {
   /** questions per practice session (5 | 10 | 20); unset = 10 */
   @prop({ type: Number })
   public sessionLength?: number;
+
+  /** daily sentence push disabled when true; unset/false = enabled */
+  @prop({ type: Boolean })
+  public dailySentenceOptOut?: boolean;
+
+  /** timestamp of the last daily-sentence push (once-per-UTC-day guard) */
+  @prop({ type: Date })
+  public lastDailySentenceAt?: Date;
+
+  /** recently-shown sentence IDs, to avoid repeats until the pool is exhausted */
+  @prop({ type: [String], default: undefined })
+  public seenSentenceIds?: string[];
 }
 
 export const UserModel = getModelForClass(UserDoc);
@@ -118,5 +130,34 @@ export class UsersRepo {
 
   async setSessionLength(telegramId: number, n: number): Promise<void> {
     await UserModel.updateOne({ telegramId }, { $set: { sessionLength: n } });
+  }
+
+  async setDailySentenceOptOut(telegramId: number, on: boolean): Promise<void> {
+    await UserModel.updateOne({ telegramId }, { $set: { dailySentenceOptOut: on } });
+  }
+
+  async recordDailySentenceSent(
+    telegramId: number,
+    sentAt: Date,
+    seenIds: string[],
+  ): Promise<void> {
+    await UserModel.updateOne(
+      { telegramId },
+      { $set: { lastDailySentenceAt: sentAt, seenSentenceIds: seenIds } },
+    );
+  }
+
+  async findDailySentenceCandidates(opts: {
+    activeSince: Date;
+    dayStart: Date;
+  }): Promise<UserDoc[]> {
+    return UserModel.find({
+      dailySentenceOptOut: { $ne: true },
+      lastSeenAt: { $gte: opts.activeSince },
+      $or: [
+        { lastDailySentenceAt: { $exists: false } },
+        { lastDailySentenceAt: { $lt: opts.dayStart } },
+      ],
+    }).lean<UserDoc[]>();
   }
 }
