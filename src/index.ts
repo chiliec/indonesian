@@ -20,9 +20,11 @@ import { AudioCacheRepo } from './db/audioCache.js';
 import { StudySessionsRepo } from './db/studySessions.js';
 import { UserStatsRepo } from './db/userStats.js';
 import { SessionEngine } from './services/session/SessionEngine.js';
+import { DailySentenceService } from './services/DailySentenceService.js';
 import { sweepStaleSessions } from './services/SessionSweeper.js';
 import { expireDueSubscriptions } from './services/SubscriptionWatcher.js';
 import { sweepStudySessions } from './handlers/practice.js';
+import { sweepDailySentences } from './handlers/dailySentence.js';
 import { createBot, ADVERTISED_COMMANDS } from './bot.js';
 
 async function main() {
@@ -44,6 +46,7 @@ async function main() {
   const entitlement = new Entitlement({ users: usersRepo, quota });
   const studySessions = new StudySessionsRepo();
   const userStats = new UserStatsRepo();
+  const dailySentence = new DailySentenceService(quizEngine);
   const study = new SessionEngine({
     engine: quizEngine,
     sessions: studySessions,
@@ -65,6 +68,7 @@ async function main() {
     quiz,
     audioCache,
     study,
+    dailySentence,
     adminIds: env.ADMIN_TELEGRAM_IDS,
     logger,
   };
@@ -97,11 +101,24 @@ async function main() {
     }
   }, 15 * 60 * 1000);
 
+  const dailySentenceInterval = setInterval(async () => {
+    try {
+      const n = await sweepDailySentences(bot.api, botDeps, {
+        now: new Date(),
+        activeWindowMs: 14 * 24 * 60 * 60 * 1000,
+      });
+      if (n > 0) logger.info({ count: n }, 'sent daily sentences');
+    } catch (err) {
+      logger.error({ err }, 'daily sentence sweep failed');
+    }
+  }, 15 * 60 * 1000);
+
   const shutdown = async () => {
     logger.info('shutting down');
     clearInterval(sweepInterval);
     clearInterval(expireInterval);
     clearInterval(studySweepInterval);
+    clearInterval(dailySentenceInterval);
     await bot.stop();
     await disconnectMongo();
     process.exit(0);

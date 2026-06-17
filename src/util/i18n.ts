@@ -59,6 +59,14 @@ const strings = {
   'settings.speakOn': { en: '🎤 Speaking: ON', ru: '🎤 Голос: ВКЛ' },
   'settings.speakOff': { en: '🎤 Speaking: OFF', ru: '🎤 Голос: ВЫКЛ' },
   'settings.length': { en: '🔢 Session length: ', ru: '🔢 Длина сессии: ' },
+  'daily.header': { en: '🌅 Sentence of the day', ru: '🌅 Фраза дня' },
+  'daily.another': { en: '🔄 Another sentence', ru: '🔄 Ещё фраза' },
+  'daily.none': {
+    en: 'No sentence available yet — check back soon!',
+    ru: 'Фраз пока нет — загляни позже!',
+  },
+  'settings.dailyOn': { en: '🌅 Daily sentence: ON', ru: '🌅 Фраза дня: ВКЛ' },
+  'settings.dailyOff': { en: '🌅 Daily sentence: OFF', ru: '🌅 Фраза дня: ВЫКЛ' },
 } as const;
 
 export type StringKey = keyof typeof strings;

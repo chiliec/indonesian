@@ -9,7 +9,7 @@ import type { TtsService } from './services/TtsService.js';
 import type { ScenarioEngine } from './services/scenarios/ScenarioEngine.js';
 import type { Entitlement } from './services/Entitlement.js';
 import { t, isEn } from './util/i18n.js';
-import { settingsCommand, settingsHelpCallback, settingsSpeakCallback, settingsLengthCallback } from './handlers/settings.js';
+import { settingsCommand, settingsHelpCallback, settingsSpeakCallback, settingsLengthCallback, settingsDailyCallback } from './handlers/settings.js';
 import { mainKeyboard } from './handlers/keyboard.js';
 import { langCommand, langCallback } from './handlers/lang.js';
 import { scenariosCommand, startCallback } from './handlers/scenarios.js';
@@ -22,6 +22,8 @@ import { practiceHandler, practiceStartCallback, modulePicker, sessionCallback }
 import type { QuizService } from './services/QuizService.js';
 import type { AudioCacheRepo } from './db/audioCache.js';
 import type { SessionEngine } from './services/session/SessionEngine.js';
+import type { DailySentenceService } from './services/DailySentenceService.js';
+import { sentenceCommand, dailyAnotherCallback } from './handlers/dailySentence.js';
 
 /** The only commands advertised in Telegram's command menu. */
 export const ADVERTISED_COMMANDS = [
@@ -40,6 +42,7 @@ export interface BotDeps {
   quiz: QuizService;
   audioCache: AudioCacheRepo;
   study: SessionEngine;
+  dailySentence: DailySentenceService;
   adminIds: string;
   logger: Logger;
 }
@@ -90,6 +93,10 @@ export function createBot(deps: BotDeps): Bot<BotCtx> {
   bot.callbackQuery(/^practice:start:.+$/, practiceStartCallback);
   bot.callbackQuery('p:again', practiceHandler);
   bot.callbackQuery(/^s:[0-9a-f]{24}:.+$/, sessionCallback);
+
+  bot.command('sentence', sentenceCommand);
+  bot.callbackQuery('ds:another', dailyAnotherCallback);
+  bot.callbackQuery('settings:daily', settingsDailyCallback);
 
   bot.command('end', endCommand);
 

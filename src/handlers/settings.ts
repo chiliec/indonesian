@@ -10,6 +10,7 @@ export async function settingsCommand(ctx: BotCtx): Promise<void> {
   const user = ctx.from ? await ctx.deps.usersRepo.getByTelegramId(ctx.from.id) : null;
   const speak = user?.speakOptIn ?? false;
   const len = user?.sessionLength ?? 10;
+  const dailyOn = !(user?.dailySentenceOptOut ?? false);
   const kb = new InlineKeyboard()
     .text(t('settings.lang', en), 'menu:lang')
     .text(t('settings.subscribe', en), 'menu:subscribe')
@@ -18,7 +19,9 @@ export async function settingsCommand(ctx: BotCtx): Promise<void> {
     .text(t('settings.help', en), 'settings:help')
     .row()
     .text(t(speak ? 'settings.speakOn' : 'settings.speakOff', en), 'settings:speak')
-    .text(`${t('settings.length', en)}${len}`, 'settings:length');
+    .text(`${t('settings.length', en)}${len}`, 'settings:length')
+    .row()
+    .text(t(dailyOn ? 'settings.dailyOn' : 'settings.dailyOff', en), 'settings:daily');
   await ctx.reply(t('settings.title', en), { reply_markup: kb, parse_mode: 'Markdown' });
 }
 
@@ -45,5 +48,16 @@ export async function settingsLengthCallback(ctx: BotCtx): Promise<void> {
   const cur = user?.sessionLength ?? 10;
   const next = LENGTH_CYCLE[(LENGTH_CYCLE.indexOf(cur) + 1) % LENGTH_CYCLE.length]!;
   await ctx.deps.usersRepo.setSessionLength(ctx.from.id, next);
+  await settingsCommand(ctx);
+}
+
+/** settings:daily — toggle the daily-sentence push and re-render the menu. */
+export async function settingsDailyCallback(ctx: BotCtx): Promise<void> {
+  if (!ctx.from) return;
+  await ctx.answerCallbackQuery();
+  const user = await ctx.deps.usersRepo.getByTelegramId(ctx.from.id);
+  const currentlyOn = !(user?.dailySentenceOptOut ?? false);
+  // turning off => opt-out true; turning on => opt-out false
+  await ctx.deps.usersRepo.setDailySentenceOptOut(ctx.from.id, currentlyOn);
   await settingsCommand(ctx);
 }
