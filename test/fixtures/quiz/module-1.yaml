@@ -1,5 +1,5 @@
 id: module-1
-title: { en: "Module 1 — Greetings", ru: "Модуль 1 — Приветствия" }
+title: { en: "Module 1 — Greetings" }
 cards:
   - { id: m1-0001, indonesian: "pasar", english: "market", audio: "aaa111.ogg" }
   - { id: m1-0002, indonesian: "rumah", english: "house", audio: "bbb222.ogg" }

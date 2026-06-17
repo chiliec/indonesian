@@ -9,7 +9,6 @@ export interface QuizSentence {
 
 export interface CardNote {
   en: string;
-  ru: string;
 }
 
 export interface QuizCard {
@@ -23,7 +22,7 @@ export interface QuizCard {
 
 export interface QuizModule {
   id: string;
-  title: { en: string; ru: string };
+  title: { en: string };
   cards: QuizCard[];
 }
 

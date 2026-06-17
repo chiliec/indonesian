@@ -1,5 +1,4 @@
 import { InlineKeyboard, type Api } from 'grammy';
-import { t, isEn } from '../util/i18n.js';
 import type { DailySentenceEntry } from '../services/DailySentenceService.js';
 import type { BotCtx, BotDeps } from '../bot.js';
 import { editCardSafe } from './practice.js';
@@ -11,13 +10,12 @@ function escapeHtml(s: string): string {
 /** Build the daily-sentence message (HTML) and its 🔄 Another button. */
 export function renderDailySentence(
   entry: DailySentenceEntry,
-  en: boolean,
 ): { text: string; keyboard: InlineKeyboard } {
   const text =
-    `${t('daily.header', en)}\n\n` +
+    '🌅 Sentence of the day\n\n' +
     `<b>${escapeHtml(entry.text)}</b>\n` +
     `${escapeHtml(entry.en)}`;
-  const keyboard = new InlineKeyboard().text(t('daily.another', en), 'ds:another');
+  const keyboard = new InlineKeyboard().text('🔄 Another sentence', 'ds:another');
   return { text, keyboard };
 }
 
@@ -35,10 +33,10 @@ export async function sentenceCommand(ctx: BotCtx): Promise<void> {
   if (!ctx.from) return;
   const entry = await nextForUser(ctx, ctx.from.id);
   if (!entry) {
-    await ctx.reply(t('daily.none', ctx.userIsEn));
+    await ctx.reply('No sentence available yet — check back soon!');
     return;
   }
-  const { text, keyboard } = renderDailySentence(entry, ctx.userIsEn);
+  const { text, keyboard } = renderDailySentence(entry);
   await ctx.reply(text, { parse_mode: 'HTML', reply_markup: keyboard });
 }
 
@@ -49,7 +47,7 @@ export async function dailyAnotherCallback(ctx: BotCtx): Promise<void> {
   if (!ctx.from || !ctx.chat || !msg) return;
   const entry = await nextForUser(ctx, ctx.from.id);
   if (!entry) return;
-  const { text, keyboard } = renderDailySentence(entry, ctx.userIsEn);
+  const { text, keyboard } = renderDailySentence(entry);
   await editCardSafe(ctx.api, ctx.chat.id, msg.message_id, text, keyboard);
 }
 
@@ -87,7 +85,7 @@ export async function sweepDailySentences(
     const picked = deps.dailySentence.pick(user.seenSentenceIds ?? []);
     if (!picked) continue; // empty pool
 
-    const { text, keyboard } = renderDailySentence(picked.entry, isEn(user.locale));
+    const { text, keyboard } = renderDailySentence(picked.entry);
     try {
       await api.sendMessage(user.telegramId, text, {
         parse_mode: 'HTML',

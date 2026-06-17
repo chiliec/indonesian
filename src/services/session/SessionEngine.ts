@@ -12,7 +12,6 @@ import { renderQuestion, renderFeedback, renderFinish, type QuestionView } from 
 import { matchAnswer } from './normalize.js';
 import { xpFor, COMPLETION_BONUS } from './xp.js';
 import type { CardView, Exercise } from './types.js';
-import { t, isEn } from '../../util/i18n.js';
 
 const DEFAULT_SESSION_LENGTH = 10;
 
@@ -50,7 +49,6 @@ export class SessionEngine {
     telegramId: number,
     chatId: number,
     moduleId: string,
-    en: boolean,
     rng: () => number = Math.random,
   ): Promise<TurnResult | null> {
     const cards = this.pool(moduleId);
@@ -65,11 +63,11 @@ export class SessionEngine {
     const chosen = orderByMastery(cards, prog, rng).slice(0, Math.min(length, cards.length));
     const exercises = chosen.map((card) => {
       const kind = pickKind(card, masteryOf(prog.get(card.id)), { speakOptIn, rng });
-      return buildExercise(card, cards, kind, { en, rng });
+      return buildExercise(card, cards, kind, { rng });
     });
 
     const session = await this.deps.sessions.create(telegramId, chatId, moduleId, exercises);
-    const view = renderQuestion(await this.viewOf(session), session.exercises[0]!, en);
+    const view = renderQuestion(await this.viewOf(session), session.exercises[0]!);
     return { session, view };
   }
 
@@ -103,17 +101,16 @@ export class SessionEngine {
     telegramId: number,
     sid: string,
     optionIndex: number,
-    en: boolean,
   ): Promise<TurnResult | null> {
     const s = await this.activeById(telegramId, sid);
     if (!s || s.phase !== 'question') return null;
     const ex = s.exercises[s.current];
     if (!ex || (ex.kind !== 'choice' && ex.kind !== 'cloze')) return null;
-    return this.evaluate(s, ex, optionIndex === ex.correctIndex, en);
+    return this.evaluate(s, ex, optionIndex === ex.correctIndex);
   }
 
   /** next from the feedback view. */
-  async next(telegramId: number, sid: string, en: boolean): Promise<TurnResult | null> {
+  async next(telegramId: number, sid: string): Promise<TurnResult | null> {
     const s = await this.activeById(telegramId, sid);
     if (!s || s.phase !== 'feedback') return null;
     const applied = await this.deps.sessions.advance(s._id, {
@@ -122,7 +119,7 @@ export class SessionEngine {
       expectedCurrent: s.current,
     });
     if (!applied) return null;
-    return this.renderCurrent(s._id, telegramId, en);
+    return this.renderCurrent(s._id, telegramId);
   }
 
   /** Shared outcome path for every exercise kind. Guarded writes first;
@@ -131,7 +128,6 @@ export class SessionEngine {
     s: StudySession,
     ex: Exercise,
     correct: boolean,
-    en: boolean,
     corrected?: string,
   ): Promise<TurnResult | null> {
     if (!correct) {
@@ -139,7 +135,7 @@ export class SessionEngine {
       if (!s.requeued.includes(ex.cardId)) {
         const card = this.deps.engine.card(ex.cardId);
         const pool = this.pool(s.moduleId);
-        if (card && pool.length >= 2) requeue = buildExercise(card, pool, 'choice', { en });
+        if (card && pool.length >= 2) requeue = buildExercise(card, pool, 'choice', {});
       }
       const applied = await this.deps.sessions.markWrong(s._id, ex.cardId, requeue);
       if (!applied) return null;
@@ -147,7 +143,7 @@ export class SessionEngine {
       const fresh = await this.deps.sessions.findById(s._id);
       if (!fresh) return null;
       const exForFeedback: Exercise = { ...ex, feedback: ex.feedback ?? {} };
-      return { session: fresh, view: renderFeedback(await this.viewOf(fresh), exForFeedback, en) };
+      return { session: fresh, view: renderFeedback(await this.viewOf(fresh), exForFeedback) };
     }
 
     const xp = xpFor(ex.kind);
@@ -162,21 +158,20 @@ export class SessionEngine {
     const flash: QuestionView['flash'] = corrected
       ? { correct: true, xp, corrected }
       : { correct: true, xp };
-    return this.renderCurrent(s._id, s.telegramId, en, flash);
+    return this.renderCurrent(s._id, s.telegramId, flash);
   }
 
   /** Render the current question, or the finish screen when past the end. */
   private async renderCurrent(
     sessionId: Types.ObjectId,
     telegramId: number,
-    en: boolean,
     flash?: QuestionView['flash'],
   ): Promise<TurnResult | null> {
     const s = await this.deps.sessions.findById(sessionId);
     if (!s) return null;
     const ex = s.exercises[s.current];
     if (ex) {
-      return { session: s, view: renderQuestion(await this.viewOf(s, flash), ex, en) };
+      return { session: s, view: renderQuestion(await this.viewOf(s, flash), ex) };
     }
     // done
     await this.deps.stats.addXp(telegramId, COMPLETION_BONUS);
@@ -192,12 +187,11 @@ export class SessionEngine {
         xpEarned: s.xpEarned + COMPLETION_BONUS,
         missedWords,
       },
-      en,
     );
     return { session: s, view };
   }
 
-  async tapTile(telegramId: number, sid: string, tileIndex: number, en: boolean): Promise<TurnResult | null> {
+  async tapTile(telegramId: number, sid: string, tileIndex: number): Promise<TurnResult | null> {
     const s = await this.activeById(telegramId, sid);
     if (!s || s.phase !== 'question') return null;
     const ex = s.exercises[s.current];
@@ -209,15 +203,15 @@ export class SessionEngine {
       await this.deps.sessions.pushTile(s._id, tileIndex);
       const fresh = await this.deps.sessions.findById(s._id);
       if (!fresh) return null;
-      return { session: fresh, view: renderQuestion(await this.viewOf(fresh), fresh.exercises[fresh.current]!, en) };
+      return { session: fresh, view: renderQuestion(await this.viewOf(fresh), fresh.exercises[fresh.current]!) };
     }
     // last tile placed → evaluate the full sentence
     const built = picked.map((i) => ex.tiles![i]).join(' ');
     const correct = matchAnswer(built, ex.answer) !== 'wrong';
-    return this.evaluate(s, ex, correct, en);
+    return this.evaluate(s, ex, correct);
   }
 
-  async undoTile(telegramId: number, sid: string, en: boolean): Promise<TurnResult | null> {
+  async undoTile(telegramId: number, sid: string): Promise<TurnResult | null> {
     const s = await this.activeById(telegramId, sid);
     if (!s || s.phase !== 'question') return null;
     const ex = s.exercises[s.current];
@@ -225,22 +219,22 @@ export class SessionEngine {
     await this.deps.sessions.popTile(s._id);
     const fresh = await this.deps.sessions.findById(s._id);
     if (!fresh) return null;
-    return { session: fresh, view: renderQuestion(await this.viewOf(fresh), fresh.exercises[fresh.current]!, en) };
+    return { session: fresh, view: renderQuestion(await this.viewOf(fresh), fresh.exercises[fresh.current]!) };
   }
 
   /** typed text from chat; null = not ours, let conversation logic handle it.
    *  Also accepts typed input for speak exercises (Deepgram-failure fallback). */
-  async submitTyped(telegramId: number, text: string, en: boolean): Promise<TurnResult | null> {
+  async submitTyped(telegramId: number, text: string): Promise<TurnResult | null> {
     const s = await this.deps.sessions.findActive(telegramId);
     if (!s || s.phase !== 'question') return null;
     const ex = s.exercises[s.current];
     if (!ex || (ex.kind !== 'type' && ex.kind !== 'speak')) return null;
     const m = matchAnswer(text, ex.answer);
-    return this.evaluate(s, ex, m !== 'wrong', en, m === 'close' ? ex.answer : undefined);
+    return this.evaluate(s, ex, m !== 'wrong', m === 'close' ? ex.answer : undefined);
   }
 
   /** voice transcript; null = not ours. */
-  async submitSpoken(telegramId: number, transcript: string, en: boolean): Promise<TurnResult | null> {
+  async submitSpoken(telegramId: number, transcript: string): Promise<TurnResult | null> {
     const s = await this.deps.sessions.findActive(telegramId);
     if (!s || s.phase !== 'question') return null;
     const ex = s.exercises[s.current];
@@ -254,19 +248,19 @@ export class SessionEngine {
         this.deps.logger.warn({ err }, 'speak judge failed; falling back to strict match');
       }
     }
-    return this.evaluate(s, ex, m !== 'wrong', en, m === 'close' ? ex.answer : undefined);
+    return this.evaluate(s, ex, m !== 'wrong', m === 'close' ? ex.answer : undefined);
   }
 
   /** Re-render the current question/feedback after the card message was re-sent. */
-  async refocus(telegramId: number, en: boolean): Promise<TurnResult | null> {
+  async refocus(telegramId: number): Promise<TurnResult | null> {
     const s = await this.deps.sessions.findActive(telegramId);
     if (!s) return null;
     const ex = s.exercises[s.current];
     if (!ex) return null;
     const view =
       s.phase === 'feedback'
-        ? renderFeedback(await this.viewOf(s), { ...ex, feedback: ex.feedback ?? {} }, en)
-        : renderQuestion(await this.viewOf(s), ex, en);
+        ? renderFeedback(await this.viewOf(s), { ...ex, feedback: ex.feedback ?? {} })
+        : renderQuestion(await this.viewOf(s), ex);
     return { session: s, view };
   }
 
@@ -275,12 +269,10 @@ export class SessionEngine {
     const stale = await this.deps.sessions.findStale(new Date(Date.now() - maxAgeMs));
     const out: TurnResult[] = [];
     for (const s of stale) {
-      const user = await this.deps.users.getByTelegramId(s.telegramId);
-      const en = isEn(user?.locale);
       await this.deps.sessions.complete(s._id, 'expired');
       const view: CardView = {
-        text: `${t('session.expired', en)}\n✅ ${s.correctCount}/${s.exercises.length} · ⭐ +${s.xpEarned} XP`,
-        buttons: [[{ text: t('session.again', en), data: 'p:again' }]],
+        text: `⌛ Session expired.\n✅ ${s.correctCount}/${s.exercises.length} · ⭐ +${s.xpEarned} XP`,
+        buttons: [[{ text: '▶️ Practice again', data: 'p:again' }]],
         finished: true,
       };
       out.push({ session: s, view });

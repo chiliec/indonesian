@@ -1,6 +1,5 @@
 import { InlineKeyboard, InputFile } from 'grammy';
 import type { BotCtx } from '../bot.js';
-import { t } from '../util/i18n.js';
 import { tryStudyVoice } from './practice.js';
 
 export async function voiceHandler(ctx: BotCtx): Promise<void> {
@@ -11,7 +10,7 @@ export async function voiceHandler(ctx: BotCtx): Promise<void> {
     const buf = Buffer.from(await (await fetch(url)).arrayBuffer());
     const transcript = await ctx.deps.deepgram.transcribe(buf, 'audio/ogg');
     if (!transcript) {
-      await ctx.reply(ctx.userIsEn ? "Couldn't hear you — try again?" : 'Не разобрал — повтори?');
+      await ctx.reply("Couldn't hear you — try again?");
       return;
     }
     await ctx.reply(`🗣 _${transcript}_`, { parse_mode: 'Markdown' });
@@ -20,7 +19,7 @@ export async function voiceHandler(ctx: BotCtx): Promise<void> {
 
     const session = await ctx.deps.conversation.deps.sessions.findActive(ctx.from.id);
     if (!session) {
-      await ctx.reply(ctx.userIsEn ? 'No active scenario. /scenarios' : 'Нет активного сценария. /scenarios');
+      await ctx.reply('No active scenario. /scenarios');
       return;
     }
     const result = await ctx.deps.conversation.handleUserTurn(
@@ -28,10 +27,7 @@ export async function voiceHandler(ctx: BotCtx): Promise<void> {
       transcript,
       ctx.message.voice.file_id,
     );
-    const kb = new InlineKeyboard().text(
-      ctx.userIsEn ? '💡 Correct me' : '💡 Исправь',
-      `correct:${session._id.toString()}`,
-    );
+    const kb = new InlineKeyboard().text('💡 Correct me', `correct:${session._id.toString()}`);
     const audio = await ctx.deps.tts.synthesize(result.characterReply);
     await ctx.replyWithVoice(new InputFile(audio, 'reply.ogg'), {
       caption: result.characterReply,
@@ -39,6 +35,6 @@ export async function voiceHandler(ctx: BotCtx): Promise<void> {
     });
   } catch (err) {
     ctx.deps.logger.error({ err }, 'voice failed');
-    await ctx.reply(t('error.generic', ctx.userIsEn));
+    await ctx.reply('⚠️ Something went wrong. Try again in a moment.');
   }
 }

@@ -9,7 +9,7 @@ import type { QuizCard } from '../../../src/services/quiz/types.js';
 const SENT = { id: 's1', text: 'Saya mau makan nasi goreng', blank: 'makan', en: 'I want to eat fried rice' };
 const card = (over: Partial<QuizCard> = {}): QuizCard => ({
   id: 'c1', indonesian: 'makan', english: 'to eat', audio: 'a.ogg',
-  note: { en: 'note-en', ru: 'note-ru' }, sentences: [SENT], ...over,
+  note: { en: 'note-en' }, sentences: [SENT], ...over,
 });
 const pool: QuizCard[] = [
   card(),
@@ -47,7 +47,7 @@ test('pickKind is deterministic with a fixed rng and favors harder kinds', () =>
 });
 
 test('buildExercise choice: 4 options, correct english present, audio carried', () => {
-  const ex = buildExercise(card(), pool, 'choice', { en: true, rng: () => 0.5 });
+  const ex = buildExercise(card(), pool, 'choice', { rng: () => 0.5 });
   assert.equal(ex.kind, 'choice');
   assert.equal(ex.options!.length, 4);
   assert.equal(ex.options![ex.correctIndex!], 'to eat');
@@ -57,7 +57,7 @@ test('buildExercise choice: 4 options, correct english present, audio carried', 
 });
 
 test('buildExercise cloze: blanks the word, options contain it', () => {
-  const ex = buildExercise(card(), pool, 'cloze', { en: true, rng: () => 0.5 });
+  const ex = buildExercise(card(), pool, 'cloze', { rng: () => 0.5 });
   assert.ok(ex.prompt.includes('___'));
   assert.ok(!ex.prompt.includes('makan'));
   assert.equal(ex.options![ex.correctIndex!], 'makan');
@@ -66,22 +66,22 @@ test('buildExercise cloze: blanks the word, options contain it', () => {
 
 test('buildExercise cloze: blanks a punctuated occurrence (no answer leak)', () => {
   const c = card({ sentences: [{ id: 's2', text: 'Dia makan.', blank: 'makan', en: 'He eats.' }] });
-  const ex = buildExercise(c, pool, 'cloze', { en: true, rng: () => 0.5 });
+  const ex = buildExercise(c, pool, 'cloze', { rng: () => 0.5 });
   assert.ok(ex.prompt.includes('___'));
   assert.ok(!ex.prompt.toLowerCase().includes('makan'));
 });
 
 test('buildExercise builder: tiles are a permutation of the sentence words', () => {
-  const ex = buildExercise(card(), pool, 'builder', { en: true, rng: () => 0.5 });
+  const ex = buildExercise(card(), pool, 'builder', { rng: () => 0.5 });
   assert.deepEqual([...ex.tiles!].sort(), ['Saya', 'goreng', 'makan', 'mau', 'nasi'].sort());
   assert.equal(ex.answer, 'Saya mau makan nasi goreng');
 });
 
 test('buildExercise type/speak: EN→ID recall', () => {
-  const ty = buildExercise(card(), pool, 'type', { en: true, rng: () => 0.5 });
+  const ty = buildExercise(card(), pool, 'type', { rng: () => 0.5 });
   assert.equal(ty.answer, 'makan');
   assert.ok(ty.prompt.includes('to eat'));
-  const sp = buildExercise(card(), pool, 'speak', { en: true, rng: () => 0.5 });
+  const sp = buildExercise(card(), pool, 'speak', { rng: () => 0.5 });
   assert.equal(sp.answer, 'makan');
 });
 
@@ -97,14 +97,14 @@ test('orderByMastery: unseen first, then wrong, then mastered', () => {
 
 test('buildExercise choice: small pool yields fewer options but stays valid', () => {
   const tiny: QuizCard[] = [card(), { id: 'c2', indonesian: 'minum', english: 'to drink' }];
-  const ex = buildExercise(card(), tiny, 'choice', { en: true, rng: () => 0.5 });
+  const ex = buildExercise(card(), tiny, 'choice', { rng: () => 0.5 });
   assert.equal(ex.options!.length, 2);
   assert.equal(ex.options![ex.correctIndex!], 'to eat');
 });
 
 test('buildExercise escapes HTML-significant chars in prompts', () => {
   const c: QuizCard = { id: 'c1', indonesian: 'makan', english: 'a < b & c' };
-  const ty = buildExercise(c, pool, 'type', { en: true, rng: () => 0.5 });
+  const ty = buildExercise(c, pool, 'type', { rng: () => 0.5 });
   assert.ok(ty.prompt.includes('a &lt; b &amp; c'));
   assert.ok(!ty.prompt.includes('a < b'));
 });

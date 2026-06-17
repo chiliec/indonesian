@@ -9,13 +9,11 @@ export async function subscribeCommand(ctx: BotCtx): Promise<void> {
   if (!ctx.chat) return;
   await ctx.api.sendInvoice(
     ctx.chat.id,
-    ctx.userIsEn ? 'Indonesian Bot — Monthly' : 'Indonesian Bot — Месяц',
-    ctx.userIsEn
-      ? 'Unlimited scenarios for 30 days. Cancel any time from Telegram → My Stars.'
-      : 'Безлимит сценариев на 30 дней. Отменить — Telegram → Мои звёзды.',
+    'Indonesian Bot — Monthly',
+    'Unlimited scenarios for 30 days. Cancel any time from Telegram → My Stars.',
     PAYLOAD,
     'XTR',
-    [{ label: ctx.userIsEn ? 'Monthly' : 'Месяц', amount: STARS_AMOUNT }],
+    [{ label: 'Monthly', amount: STARS_AMOUNT }],
   );
 }
 

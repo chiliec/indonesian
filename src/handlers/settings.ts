@@ -1,34 +1,34 @@
 import { InlineKeyboard } from 'grammy';
 import type { BotCtx } from '../bot.js';
-import { t } from '../util/i18n.js';
 
 const LENGTH_CYCLE = [5, 10, 20];
 
+const HELP_TEXT =
+  'Tap ▶️ Practice for vocabulary drills, 🎭 Scenarios to roleplay in Indonesian. ' +
+  "📊 Progress shows your mastery. That's it — no commands to remember!";
+
 /** ⚙️ Settings button / /menu alias — inline menu for the rare actions. */
 export async function settingsCommand(ctx: BotCtx): Promise<void> {
-  const en = ctx.userIsEn;
   const user = ctx.from ? await ctx.deps.usersRepo.getByTelegramId(ctx.from.id) : null;
   const speak = user?.speakOptIn ?? false;
   const len = user?.sessionLength ?? 10;
   const dailyOn = !(user?.dailySentenceOptOut ?? false);
   const kb = new InlineKeyboard()
-    .text(t('settings.lang', en), 'menu:lang')
-    .text(t('settings.subscribe', en), 'menu:subscribe')
+    .text('⭐ Subscribe', 'menu:subscribe')
+    .text('🎯 Pick a module', 'settings:modules')
     .row()
-    .text(t('settings.modules', en), 'settings:modules')
-    .text(t('settings.help', en), 'settings:help')
+    .text('❓ Help', 'settings:help')
+    .text(speak ? '🎤 Speaking: ON' : '🎤 Speaking: OFF', 'settings:speak')
     .row()
-    .text(t(speak ? 'settings.speakOn' : 'settings.speakOff', en), 'settings:speak')
-    .text(`${t('settings.length', en)}${len}`, 'settings:length')
-    .row()
-    .text(t(dailyOn ? 'settings.dailyOn' : 'settings.dailyOff', en), 'settings:daily');
-  await ctx.reply(t('settings.title', en), { reply_markup: kb, parse_mode: 'Markdown' });
+    .text(`🔢 Session length: ${len}`, 'settings:length')
+    .text(dailyOn ? '🌅 Daily sentence: ON' : '🌅 Daily sentence: OFF', 'settings:daily');
+  await ctx.reply('⚙️ *Settings*', { reply_markup: kb, parse_mode: 'Markdown' });
 }
 
 /** settings:help — show the one-screen help text. */
 export async function settingsHelpCallback(ctx: BotCtx): Promise<void> {
   await ctx.answerCallbackQuery();
-  await ctx.reply(t('settings.helpText', ctx.userIsEn), { parse_mode: 'Markdown' });
+  await ctx.reply(HELP_TEXT, { parse_mode: 'Markdown' });
 }
 
 /** settings:speak — toggle speaking exercises and re-render the menu. */

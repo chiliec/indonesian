@@ -10,13 +10,12 @@ after(stopMemoryMongo);
 beforeEach(async () => {
   await clearMemoryMongo();
   repo = new UsersRepo();
-  await repo.touchUser(1, { defaultLocale: 'en' });
+  await repo.touchUser(1);
 });
 
 test('settingsDailyCallback toggles opt-out from on → off → on', async () => {
   const ctx = {
     from: { id: 1 },
-    userIsEn: true,
     deps: { usersRepo: repo },
     answerCallbackQuery: async () => {},
     reply: async () => {},

@@ -12,14 +12,14 @@ beforeEach(async () => {
 });
 
 test('dailySentenceOptOut defaults unset (enabled) and toggles', async () => {
-  await repo.touchUser(1, { defaultLocale: 'en' });
+  await repo.touchUser(1);
   assert.equal((await repo.getByTelegramId(1))!.dailySentenceOptOut ?? false, false);
   await repo.setDailySentenceOptOut(1, true);
   assert.equal((await repo.getByTelegramId(1))!.dailySentenceOptOut, true);
 });
 
 test('recordDailySentenceSent persists sentAt and seen IDs', async () => {
-  await repo.touchUser(1, { defaultLocale: 'en' });
+  await repo.touchUser(1);
   const at = new Date('2026-06-17T08:00:00Z');
   await repo.recordDailySentenceSent(1, at, ['s1', 's2']);
   const u = (await repo.getByTelegramId(1))!;

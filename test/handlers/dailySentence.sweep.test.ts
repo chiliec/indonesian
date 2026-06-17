@@ -26,7 +26,7 @@ beforeEach(async () => {
   await clearMemoryMongo();
   repo = new UsersRepo();
   svc = new DailySentenceService(fakeEngine(), () => 0);
-  await repo.touchUser(1, { defaultLocale: 'en' });
+  await repo.touchUser(1);
 });
 
 test('sentenceCommand replies with a sentence and persists seen IDs', async () => {
@@ -34,7 +34,6 @@ test('sentenceCommand replies with a sentence and persists seen IDs', async () =
   const ctx = {
     from: { id: 1 },
     chat: { id: 1 },
-    userIsEn: true,
     deps: { usersRepo: repo, dailySentence: svc },
     reply: async (text: string) => { replies.push(text); },
   } as never;
@@ -49,7 +48,6 @@ test('dailyAnotherCallback edits the message in place', async () => {
   const ctx = {
     from: { id: 1 },
     chat: { id: 1 },
-    userIsEn: true,
     deps: { usersRepo: repo, dailySentence: svc },
     callbackQuery: { message: { message_id: 99 } },
     answerCallbackQuery: async () => {},
