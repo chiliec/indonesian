@@ -15,3 +15,10 @@ test('t() falls back to english when key missing in ru', () => {
   const result = t('start.welcome', false);
   assert.ok(typeof result === 'string' && result.length > 0);
 });
+
+test('t() resolves daily-sentence strings in both locales', () => {
+  assert.equal(t('daily.header', true), '🌅 Sentence of the day');
+  assert.equal(t('daily.header', false), '🌅 Фраза дня');
+  assert.equal(t('daily.another', true), '🔄 Another sentence');
+  assert.ok(t('settings.dailyOn', false).length > 0);
+});
