@@ -6,944 +6,4792 @@ cards:
     indonesian: berganti
     english: to have one thing replaced with another, to change
     audio: 44aa1bd77f64.ogg
+    note:
+      en: "'Berganti' means something changes or is replaced (e.g. clothes, seasons,
+        shifts); related to 'ganti' (replace/change), often used in everyday
+        contexts like changing clothes or shifts."
+    sentences:
+      - id: module-5-0001-s1
+        text: Dia berganti baju sebelum pergi ke sekolah.
+        blank: berganti
+        en: She changes her clothes before going to school.
+      - id: module-5-0001-s2
+        text: Musim hujan berganti menjadi musim panas.
+        blank: berganti
+        en: The rainy season changes into the dry season.
+      - id: module-5-0001-s3
+        text: Ayah berganti sepatu di depan rumah.
+        blank: berganti
+        en: Dad changes his shoes in front of the house.
   - id: module-5-0002
     indonesian: berubah
     english: to change, to evolve, to be different from before
     audio: a61dde0a1087.ogg
+    note:
+      en: '"Berubah" is a common everyday verb meaning something has changed state;
+        often confused with "mengubah" (to actively change something); related
+        words: "perubahan" (change/noun), "berubah-ubah" (keeps changing).'
+    sentences:
+      - id: module-5-0002-s1
+        text: Cuaca di Bali sering berubah.
+        blank: berubah
+        en: The weather in Bali often changes.
+      - id: module-5-0002-s2
+        text: Harga makanan itu sudah berubah.
+        blank: berubah
+        en: The price of that food has already changed.
+      - id: module-5-0002-s3
+        text: Dia berubah setelah tinggal di sini.
+        blank: berubah
+        en: She changed after living here.
   - id: module-5-0003
     indonesian: kata kerja
     english: a verb
     audio: f904beba4310.ogg
+    note:
+      en: "'Kata kerja' literally means 'action word' and is the standard term for
+        verb in Indonesian grammar; beginners often confuse it with 'kata benda'
+        (noun) or 'kata sifat' (adjective)."
+    sentences:
+      - id: module-5-0003-s1
+        text: "'Makan' adalah kata kerja dalam bahasa Indonesia."
+        blank: kata kerja
+        en: "'Makan' (eat) is a verb in the Indonesian language."
+      - id: module-5-0003-s2
+        text: Guru menjelaskan apa itu kata kerja.
+        blank: kata kerja
+        en: The teacher explains what a verb is.
+      - id: module-5-0003-s3
+        text: Saya belajar kata kerja baru hari ini.
+        blank: kata kerja
+        en: I learned a new verb today.
   - id: module-5-0004
     indonesian: memukul (pukul)
     english: to hit someone/something, to strike
     audio: 0790f1271bd4.ogg
+    note:
+      en: Informal/neutral verb; 'pukul' is the root, 'memukul' is the active form;
+        also note 'pukul' separately means 'o'clock' (e.g., pukul tiga = 3
+        o'clock).
+    sentences:
+      - id: module-5-0004-s1
+        text: Anak itu memukul bola dengan keras.
+        blank: memukul
+        en: That child hits the ball hard.
+      - id: module-5-0004-s2
+        text: Jangan memukul temanmu di sekolah.
+        blank: memukul
+        en: Don't hit your friend at school.
+      - id: module-5-0004-s3
+        text: Dia memukul meja karena marah.
+        blank: memukul
+        en: He hit the table because he was angry.
   - id: module-5-0005
     indonesian: menerima (terima)
     english: to receive something, to accept something
     audio: 2164451e94e9.ogg
+    note:
+      en: '"Menerima" is the formal/active form; "terima" appears in common phrases
+        like "terima kasih" (thank you); often confused with "mendapat" (to
+        get/receive by chance).'
+    sentences:
+      - id: module-5-0005-s1
+        text: Saya menerima hadiah dari teman saya.
+        blank: menerima
+        en: I receive a gift from my friend.
+      - id: module-5-0005-s2
+        text: Dia menerima telepon di kamar.
+        blank: menerima
+        en: She accepts a phone call in the room.
+      - id: module-5-0005-s3
+        text: Kami menerima tamu di rumah.
+        blank: menerima
+        en: We receive guests at home.
   - id: module-5-0006
     indonesian: mengantar (antar)
     english: to take/accompany someone somewhere, to deliver something or someone to
       a certain place
     audio: 77629bfc1133.ogg
+    note:
+      en: '"Mengantar" is the formal/written form; in casual speech Indonesians often
+        drop the prefix and say "antar" — it means to take or accompany someone
+        to a place, not just to go yourself.'
+    sentences:
+      - id: module-5-0006-s1
+        text: Ayah mengantar saya ke sekolah setiap pagi.
+        blank: mengantar
+        en: Dad takes me to school every morning.
+      - id: module-5-0006-s2
+        text: Saya mengantar teman ke bandara kemarin.
+        blank: mengantar
+        en: I took my friend to the airport yesterday.
+      - id: module-5-0006-s3
+        text: Bisakah kamu antar saya ke pasar?
+        blank: antar
+        en: Can you take me to the market?
   - id: module-5-0007
     indonesian: mengatur (atur)
     english: to arrange something, to regulate something
     audio: 291bf8f3eab5.ogg
+    note:
+      en: "'Mengatur' is the formal/written form; 'atur' is the root used in casual
+        speech; related words include 'peraturan' (rule/regulation) and
+        'teratur' (orderly)."
+    sentences:
+      - id: module-5-0007-s1
+        text: Ibu mengatur meja makan setiap hari.
+        blank: mengatur
+        en: Mom arranges the dining table every day.
+      - id: module-5-0007-s2
+        text: Pak guru mengatur jadwal kelas kami.
+        blank: mengatur
+        en: The teacher regulates our class schedule.
+      - id: module-5-0007-s3
+        text: Dia mengatur barang-barang di kamar.
+        blank: mengatur
+        en: She arranges the items in the room.
   - id: module-5-0008
     indonesian: menggoreng (goreng)
     english: to fry something
     audio: c7c59554d1b3.ogg
+    note:
+      en: "'Menggoreng' is the formal/active form; everyday speech often shortens to
+        'goreng' (e.g., 'goreng telur'); commonly confused with 'memasak' (to
+        cook in general)."
+    sentences:
+      - id: module-5-0008-s1
+        text: Ibu menggoreng ayam di dapur.
+        blank: menggoreng
+        en: Mom is frying chicken in the kitchen.
+      - id: module-5-0008-s2
+        text: Saya suka goreng tempe setiap pagi.
+        blank: goreng
+        en: I like to fry tempeh every morning.
+      - id: module-5-0008-s3
+        text: Dia menggoreng telur untuk sarapan.
+        blank: menggoreng
+        en: He is frying an egg for breakfast.
   - id: module-5-0009
     indonesian: menghitung (hitung)
     english: to count something
     audio: b22343381b68.ogg
+    note:
+      en: '"Menghitung" is the formal/full form; "hitung" is the root used in commands
+        or compounds (e.g., "hitung dulu" = count first); do not confuse with
+        "menghitung" (to calculate) vs. "membayar" (to pay).'
+    sentences:
+      - id: module-5-0009-s1
+        text: Ayo hitung jumlah mangga di keranjang.
+        blank: hitung
+        en: Let's count the number of mangoes in the basket.
+      - id: module-5-0009-s2
+        text: Ibu menghitung uang di dompetnya.
+        blank: menghitung
+        en: Mom is counting the money in her wallet.
+      - id: module-5-0009-s3
+        text: Tolong hitung murid di kelas ini.
+        blank: hitung
+        en: Please count the students in this class.
   - id: module-5-0010
     indonesian: mengirim (kirim)
     english: to send something
     audio: 57f051d6908e.ogg
+    note:
+      en: "'Mengirim' is the formal/full form; 'kirim' is the informal root often used
+        in casual speech; commonly used for sending messages, packages, or
+        money."
+    sentences:
+      - id: module-5-0010-s1
+        text: Saya mengirim pesan kepada teman saya.
+        blank: mengirim
+        en: I send a message to my friend.
+      - id: module-5-0010-s2
+        text: Ibu kirim uang ke adik setiap bulan.
+        blank: kirim
+        en: Mom sends money to my younger sibling every month.
+      - id: module-5-0010-s3
+        text: Kami mengirim paket ke Bali hari ini.
+        blank: mengirim
+        en: We send a package to Bali today.
   - id: module-5-0011
     indonesian: mengisi (isi)
     english: to fill something,
     audio: 2b14d6e1e6d0.ogg
+    note:
+      en: "\"Mengisi\" is the active verb form; \"isi\" is the root meaning
+        'content/fill'; commonly used for filling forms, bottles, or fuel."
+    sentences:
+      - id: module-5-0011-s1
+        text: Tolong mengisi botol ini dengan air.
+        blank: mengisi
+        en: Please fill this bottle with water.
+      - id: module-5-0011-s2
+        text: Saya harus mengisi formulir itu sekarang.
+        blank: mengisi
+        en: I have to fill out that form now.
+      - id: module-5-0011-s3
+        text: Dia mengisi bensin di pom bensin.
+        blank: mengisi
+        en: He fills up fuel at the gas station.
   - id: module-5-0012
     indonesian: menikah (nikah)
     english: to get married
     audio: ac8f5202cdcb.ogg
+    note:
+      en: "'Nikah' is the base form (formal/Islamic context); 'menikah' is the active
+        verb meaning 'to get married'; related: 'pernikahan' (wedding/marriage),
+        'suami' (husband), 'istri' (wife)."
+    sentences:
+      - id: module-5-0012-s1
+        text: Kakak saya akan menikah bulan depan.
+        blank: menikah
+        en: My older sibling will get married next month.
+      - id: module-5-0012-s2
+        text: Mereka menikah di Bali tahun lalu.
+        blank: menikah
+        en: They got married in Bali last year.
+      - id: module-5-0012-s3
+        text: Kapan kamu mau nikah?
+        blank: nikah
+        en: When do you want to get married?
   - id: module-5-0013
     indonesian: menutup (tutup)
     english: to shut something, to close something
     audio: 402582cf6255.ogg
+    note:
+      en: "\"Tutup\" is the root; \"menutup\" is the active verb form (me- prefix);
+        also means 'closed' as an adjective (e.g. toko tutup = the shop is
+        closed); don't confuse with \"menutup\" (to cover) vs \"mengunci\" (to
+        lock)."
+    sentences:
+      - id: module-5-0013-s1
+        text: Tolong tutup pintu itu sekarang.
+        blank: tutup
+        en: Please close that door now.
+      - id: module-5-0013-s2
+        text: Dia menutup jendela karena hujan.
+        blank: menutup
+        en: She closes the window because of rain.
+      - id: module-5-0013-s3
+        text: Anak itu menutup bukunya dengan cepat.
+        blank: menutup
+        en: The child closes his book quickly.
   - id: module-5-0014
     indonesian: menyimpan (simpan)
     english: to store something away, to save/deposit money
     audio: 86bd980cb508.ogg
+    note:
+      en: "\"Menyimpan\" is the active verb form; use \"simpan\" for commands (e.g.,
+        'Simpan ini!'); often confused with \"menabung\" which specifically
+        means saving money in a bank."
+    sentences:
+      - id: module-5-0014-s1
+        text: Saya menyimpan uang di bank setiap minggu.
+        blank: menyimpan
+        en: I save money at the bank every week.
+      - id: module-5-0014-s2
+        text: Ibu menyimpan baju bersih di lemari.
+        blank: menyimpan
+        en: Mom stores the clean clothes in the wardrobe.
+      - id: module-5-0014-s3
+        text: Tolong simpan makanan ini di kulkas.
+        blank: simpan
+        en: Please store this food in the fridge.
   - id: module-5-0015
     indonesian: merasa (rasa)
     english: to feel (an emotion), to feel that...
     audio: 37adb782c5cb.ogg
+    note:
+      en: '"Merasa" means to feel an emotion or sense something; often confused with
+        "merasakan" (to experience/taste); "rasa" alone can mean feeling or
+        taste.'
+    sentences:
+      - id: module-5-0015-s1
+        text: Saya merasa senang hari ini.
+        blank: merasa
+        en: I feel happy today.
+      - id: module-5-0015-s2
+        text: Dia merasa lelah setelah bekerja.
+        blank: merasa
+        en: She feels tired after working.
+      - id: module-5-0015-s3
+        text: Kami merasa lapar sekarang.
+        blank: merasa
+        en: We feel hungry now.
   - id: module-5-0016
     indonesian: mohon
     english: to ask someone for something (respectfully)
     audio: dd62158a8c3e.ogg
+    note:
+      en: "'Mohon' is a formal/polite way to request something, stronger than 'minta';
+        often seen in signs, announcements, and respectful speech."
+    sentences:
+      - id: module-5-0016-s1
+        text: Mohon tunggu sebentar, ya.
+        blank: Mohon
+        en: Please wait a moment, okay.
+      - id: module-5-0016-s2
+        text: Saya mohon bantuan dari kamu.
+        blank: mohon
+        en: I respectfully ask for your help.
+      - id: module-5-0016-s3
+        text: Mohon maaf, saya terlambat hari ini.
+        blank: Mohon
+        en: I sincerely apologize, I am late today.
   - id: module-5-0017
     indonesian: pena
     english: a pen
     audio: 1668496c724e.ogg
+    note:
+      en: "'Pena' means pen (writing instrument); not to be confused with 'pensil'
+        (pencil); commonly used in school and office contexts."
+    sentences:
+      - id: module-5-0017-s1
+        text: Saya butuh pena untuk menulis surat.
+        blank: pena
+        en: I need a pen to write a letter.
+      - id: module-5-0017-s2
+        text: Boleh saya pinjam pena kamu?
+        blank: pena
+        en: May I borrow your pen?
+      - id: module-5-0017-s3
+        text: Pena saya ada di dalam tas.
+        blank: pena
+        en: My pen is inside the bag.
   - id: module-5-0018
     indonesian: pensil
     english: a pencil
     audio: dfae739a2c02.ogg
+    note:
+      en: "'Pensil' is an everyday neutral word for pencil; borrowed from Dutch
+        'penseel'; often paired with 'buku' (book) or 'kertas' (paper) in school
+        contexts."
+    sentences:
+      - id: module-5-0018-s1
+        text: Saya punya satu pensil di tas.
+        blank: pensil
+        en: I have one pencil in my bag.
+      - id: module-5-0018-s2
+        text: Tolong berikan pensil itu kepada saya.
+        blank: pensil
+        en: Please give that pencil to me.
+      - id: module-5-0018-s3
+        text: Pensil saya hilang di sekolah.
+        blank: pensil
+        en: My pencil got lost at school.
   - id: module-5-0019
     indonesian: rasa
     english: a feeling, a sense, a sensation of something
     audio: a91f521f252d.ogg
+    note:
+      en: "\"Rasa\" means feeling, taste, or sensation; also used in \"rasanya\" (it
+        feels like); don't confuse with \"merasa\" (to feel as a verb)."
+    sentences:
+      - id: module-5-0019-s1
+        text: Saya punya rasa senang hari ini.
+        blank: rasa
+        en: I have a feeling of happiness today.
+      - id: module-5-0019-s2
+        text: Ada rasa dingin di pantai ini.
+        blank: rasa
+        en: There is a cold sensation at this beach.
+      - id: module-5-0019-s3
+        text: Rasa makanan ini sangat enak.
+        blank: Rasa
+        en: The taste of this food is very delicious.
   - id: module-5-0020
     indonesian: sedih
     english: sad, to feel sadness
     audio: 42572cfe4a31.ogg
+    note:
+      en: "'Sedih' is a common, neutral word for sadness; related words include
+        'kesedihan' (sadness/noun) and 'menyedihkan' (sad/pitiful as
+        adjective)."
+    sentences:
+      - id: module-5-0020-s1
+        text: Dia sedih karena kehilangan kucing kesayangannya.
+        blank: sedih
+        en: She is sad because she lost her beloved cat.
+      - id: module-5-0020-s2
+        text: Saya merasa sedih hari ini.
+        blank: sedih
+        en: I feel sad today.
+      - id: module-5-0020-s3
+        text: Anak itu menangis karena sangat sedih.
+        blank: sedih
+        en: The child is crying because they are very sad.
   - id: module-5-0021
     indonesian: kamus
     english: a dictionary
     audio: 70418598fd6f.ogg
+    note:
+      en: "'Kamus' means dictionary; it is a noun used the same for singular and
+        plural; commonly paired with 'kamus bahasa Inggris' (English
+        dictionary)."
+    sentences:
+      - id: module-5-0021-s1
+        text: Saya punya kamus bahasa Inggris di rumah.
+        blank: kamus
+        en: I have an English dictionary at home.
+      - id: module-5-0021-s2
+        text: Tolong bawa kamus ke kelas besok.
+        blank: kamus
+        en: Please bring a dictionary to class tomorrow.
+      - id: module-5-0021-s3
+        text: Dia mencari kata di kamus itu.
+        blank: kamus
+        en: He is looking up a word in that dictionary.
   - id: module-5-0022
     indonesian: memotong (potong)
     english: to cut something, to cut something off
     audio: ba43b6e9a06d.ogg
+    note:
+      en: "Use 'memotong' in formal/written contexts and 'potong' in everyday speech;
+        also means 'to cut' hair, paper, or food; related: 'gunting'
+        (scissors)."
+    sentences:
+      - id: module-5-0022-s1
+        text: Ibu memotong sayuran di dapur.
+        blank: memotong
+        en: Mom is cutting vegetables in the kitchen.
+      - id: module-5-0022-s2
+        text: Ayah potong rambut saya hari ini.
+        blank: potong
+        en: Dad cuts my hair today.
+      - id: module-5-0022-s3
+        text: Tolong potong kue itu untuk kami.
+        blank: potong
+        en: Please cut that cake for us.
   - id: module-5-0023
     indonesian: menanam (tanam)
     english: to plant something, to grow something e.g. a crop
     audio: 16fdde923a1a.ogg
+    note:
+      en: '"Menanam" is the active verb form (me- prefix on root "tanam"); used for
+        planting crops, seeds, or trees; beginners sometimes confuse it with
+        "tumbuh" (to grow/sprout, intransitive).'
+    sentences:
+      - id: module-5-0023-s1
+        text: Ibu menanam sayuran di kebun.
+        blank: menanam
+        en: Mother plants vegetables in the garden.
+      - id: module-5-0023-s2
+        text: Kami menanam padi setiap tahun.
+        blank: menanam
+        en: We grow rice every year.
+      - id: module-5-0023-s3
+        text: Ayah menanam pohon di depan rumah.
+        blank: menanam
+        en: Father plants a tree in front of the house.
   - id: module-5-0024
     indonesian: mengubah (ubah)
     english: to change, to alter
     audio: a5336257cd02.ogg
+    note:
+      en: "'Mengubah' is the formal/active form; 'ubah' is the root — use 'mengubah'
+        in everyday sentences; not to be confused with 'mengganti' (to
+        replace/swap)."
+    sentences:
+      - id: module-5-0024-s1
+        text: Dia ingin mengubah warna rambutnya.
+        blank: mengubah
+        en: She wants to change her hair color.
+      - id: module-5-0024-s2
+        text: Tolong ubah jadwal kita besok.
+        blank: ubah
+        en: Please change our schedule for tomorrow.
+      - id: module-5-0024-s3
+        text: Saya mengubah resep masakan ini.
+        blank: mengubah
+        en: I am changing this cooking recipe.
   - id: module-5-0025
     indonesian: padi
     english: rice (as it grows in a paddy field or dry field), a rice plant
     audio: 6613af1ef2bc.ogg
+    note:
+      en: "'Padi' refers to the rice plant or unhusked rice in the field; 'beras' is
+        uncooked milled rice and 'nasi' is cooked rice — a common source of
+        confusion for beginners."
+    sentences:
+      - id: module-5-0025-s1
+        text: Petani menanam padi di sawah.
+        blank: padi
+        en: The farmer plants rice in the paddy field.
+      - id: module-5-0025-s2
+        text: Padi itu sudah tumbuh tinggi.
+        blank: padi
+        en: The rice plant has already grown tall.
+      - id: module-5-0025-s3
+        text: Kami melihat padi di ladang.
+        blank: padi
+        en: We see rice plants in the field.
   - id: module-5-0026
     indonesian: akuntan
     english: an accountant
     audio: 69b7e383ba24.ogg
+    note:
+      en: '"Akuntan" is a formal/neutral noun for accountant; related words include
+        "akuntansi" (accounting) and "keuangan" (finance).'
+    sentences:
+      - id: module-5-0026-s1
+        text: Ayah saya bekerja sebagai akuntan.
+        blank: akuntan
+        en: My father works as an accountant.
+      - id: module-5-0026-s2
+        text: Dia adalah akuntan di kantor besar.
+        blank: akuntan
+        en: She is an accountant at a big office.
+      - id: module-5-0026-s3
+        text: Saya ingin menjadi akuntan profesional.
+        blank: akuntan
+        en: I want to become a professional accountant.
   - id: module-5-0027
     indonesian: dokter gigi
     english: a dentist
     audio: 51fc0951b62b.ogg
+    note:
+      en: '"Dokter gigi" literally means "tooth doctor"; use it with "ke" (to go to)
+        or "adalah" (is); related: "dokter" (doctor), "gigi" (tooth/teeth).'
+    sentences:
+      - id: module-5-0027-s1
+        text: Saya pergi ke dokter gigi hari ini.
+        blank: dokter gigi
+        en: I am going to the dentist today.
+      - id: module-5-0027-s2
+        text: Dokter gigi itu sangat baik.
+        blank: dokter gigi
+        en: That dentist is very kind.
+      - id: module-5-0027-s3
+        text: Ibu membawa adik ke dokter gigi.
+        blank: dokter gigi
+        en: Mom takes my younger sibling to the dentist.
   - id: module-5-0028
     indonesian: efisien
     english: efficient
     audio: d20b82a2dc86.ogg
+    note:
+      en: "'Efisien' is a neutral/formal loanword from English; often paired with
+        'kerja' (work) or 'cara' (method); synonym 'hemat' focuses more on
+        saving resources."
+    sentences:
+      - id: module-5-0028-s1
+        text: Cara ini sangat efisien untuk memasak nasi.
+        blank: efisien
+        en: This way is very efficient for cooking rice.
+      - id: module-5-0028-s2
+        text: Pak Made bekerja dengan cara yang efisien.
+        blank: efisien
+        en: Mr. Made works in an efficient way.
+      - id: module-5-0028-s3
+        text: Motor lebih efisien daripada mobil di Bali.
+        blank: efisien
+        en: Motorcycles are more efficient than cars in Bali.
   - id: module-5-0029
     indonesian: gagal
     english: to not succeed, to fail
     audio: 8a94ce0374b0.ogg
+    note:
+      en: "'Gagal' means to fail or not succeed; often used with 'ujian' (exam) or
+        plans; related: 'berhasil' (to succeed) is its opposite."
+    sentences:
+      - id: module-5-0029-s1
+        text: Dia gagal ujian matematika kemarin.
+        blank: gagal
+        en: He failed the math exam yesterday.
+      - id: module-5-0029-s2
+        text: Saya tidak mau gagal lagi.
+        blank: gagal
+        en: I don't want to fail again.
+      - id: module-5-0029-s3
+        text: Rencana kami gagal karena hujan.
+        blank: gagal
+        en: Our plan failed because of rain.
   - id: module-5-0030
     indonesian: ibu rumah tangga
     english: a housewife
     audio: 1571ad402a6d.ogg
+    note:
+      en: "'Ibu rumah tangga' is a neutral, everyday term for housewife; often
+        shortened to 'IRT' in writing; related: 'ibu' (mother/woman), 'rumah
+        tangga' (household)."
+    sentences:
+      - id: module-5-0030-s1
+        text: Ibu saya adalah seorang ibu rumah tangga.
+        blank: ibu rumah tangga
+        en: My mother is a housewife.
+      - id: module-5-0030-s2
+        text: Dia bekerja sebagai ibu rumah tangga di rumah.
+        blank: ibu rumah tangga
+        en: She works as a housewife at home.
   - id: module-5-0031
     indonesian: insinyur
     english: an engineer
     audio: e27b1b6992ad.ogg
+    note:
+      en: "'Insinyur' is a formal/common noun for engineer, often abbreviated as 'Ir.'
+        before a name; used in everyday speech without articles."
+    sentences:
+      - id: module-5-0031-s1
+        text: Ayah saya adalah seorang insinyur.
+        blank: insinyur
+        en: My father is an engineer.
+      - id: module-5-0031-s2
+        text: Dia bekerja sebagai insinyur di Bali.
+        blank: insinyur
+        en: He works as an engineer in Bali.
+      - id: module-5-0031-s3
+        text: Saya ingin menjadi insinyur.
+        blank: insinyur
+        en: I want to become an engineer.
   - id: module-5-0032
     indonesian: jenis
     english: a type, a category, a class of something, a species of something
     audio: dc75897ea787.ogg
+    note:
+      en: '"Jenis" is neutral and everyday; often used like "type" or "kind", e.g.
+        "jenis makanan" (type of food); related: "macam" (kind/sort), "tipe"
+        (type, borrowed).'
+    sentences:
+      - id: module-5-0032-s1
+        text: Ada banyak jenis buah di pasar.
+        blank: jenis
+        en: There are many types of fruit at the market.
+      - id: module-5-0032-s2
+        text: Apa jenis musik yang kamu suka?
+        blank: jenis
+        en: What type of music do you like?
+      - id: module-5-0032-s3
+        text: Ini jenis anjing yang sangat lucu.
+        blank: jenis
+        en: This is a type of dog that is very cute.
   - id: module-5-0033
     indonesian: marah
     english: angry
     audio: 4469f8dafbd2.ogg
+    note:
+      en: "'Marah' means angry; say 'marah-marah' to mean scolding/ranting; related:
+        'kesal' (annoyed), 'jengkel' (irritated); used in everyday informal
+        speech."
+    sentences:
+      - id: module-5-0033-s1
+        text: Ibu marah karena saya pulang terlambat.
+        blank: marah
+        en: Mom is angry because I came home late.
+      - id: module-5-0033-s2
+        text: Jangan marah, ini hanya kesalahan kecil.
+        blank: marah
+        en: Don't be angry, this is just a small mistake.
+      - id: module-5-0033-s3
+        text: Dia marah kepada temannya hari ini.
+        blank: marah
+        en: He is angry at his friend today.
   - id: module-5-0034
     indonesian: mengetik (ketik)
     english: to type
     audio: ad2848df3858.ogg
+    note:
+      en: '"Mengetik" is the formal verb form; "ketik" is the root used in casual
+        speech and commands (e.g., "ketik di sini" = "type here"); often used
+        for typing on phones or computers.'
+    sentences:
+      - id: module-5-0034-s1
+        text: Saya mengetik pesan untuk teman saya.
+        blank: mengetik
+        en: I am typing a message for my friend.
+      - id: module-5-0034-s2
+        text: Dia mengetik dengan cepat di komputer.
+        blank: mengetik
+        en: She types quickly on the computer.
+      - id: module-5-0034-s3
+        text: Tolong ketik nama kamu di sini.
+        blank: ketik
+        en: Please type your name here.
   - id: module-5-0035
     indonesian: montir
     english: a mechanic
     audio: 2a7ff3223f75.ogg
+    note:
+      en: '"Montir" is an informal/colloquial word for mechanic, commonly used in
+        everyday speech; the more formal term is "mekanik".'
+    sentences:
+      - id: module-5-0035-s1
+        text: Montir itu sedang memperbaiki motor saya.
+        blank: Montir
+        en: The mechanic is fixing my motorbike.
+      - id: module-5-0035-s2
+        text: Ayah saya bekerja sebagai montir.
+        blank: montir
+        en: My father works as a mechanic.
+      - id: module-5-0035-s3
+        text: Saya perlu mencari montir yang bagus.
+        blank: montir
+        en: I need to find a good mechanic.
   - id: module-5-0036
     indonesian: pegawai negeri
     english: a civil servant
     audio: e63b2e666da3.ogg
+    note:
+      en: "'Pegawai negeri' means a government/civil servant; also called 'PNS'
+        (Pegawai Negeri Sipil) in everyday speech; not to be confused with
+        'karyawan' (private employee)."
+    sentences:
+      - id: module-5-0036-s1
+        text: Ayah saya adalah pegawai negeri di kantor.
+        blank: pegawai negeri
+        en: My father is a civil servant at the office.
+      - id: module-5-0036-s2
+        text: Ibu ingin menjadi pegawai negeri.
+        blank: pegawai negeri
+        en: Mom wants to become a civil servant.
+      - id: module-5-0036-s3
+        text: Pegawai negeri bekerja untuk pemerintah.
+        blank: pegawai negeri
+        en: A civil servant works for the government.
   - id: module-5-0037
     indonesian: pelayan (layan)
     english: a waiter / waitress
     audio: 5bdd2fd251bb.ogg
+    note:
+      en: "'Pelayan' means waiter/waitress in a restaurant; root word 'layan' relates
+        to serving, and 'melayani' means 'to serve'."
+    sentences:
+      - id: module-5-0037-s1
+        text: Pelayan itu membawa makanan ke meja kami.
+        blank: Pelayan
+        en: The waiter brought food to our table.
+      - id: module-5-0037-s2
+        text: Saya memanggil pelayan untuk memesan minuman.
+        blank: pelayan
+        en: I called the waitress to order a drink.
+      - id: module-5-0037-s3
+        text: Pelayan di restoran ini sangat ramah.
+        blank: Pelayan
+        en: The waiter at this restaurant is very friendly.
   - id: module-5-0038
     indonesian: pemain (main)
     english: a player
     audio: 9de96557fadf.ogg
+    note:
+      en: "'Pemain' means player or actor; it comes from the root word 'main' (to
+        play); also used in sports and games contexts."
+    sentences:
+      - id: module-5-0038-s1
+        text: Dia adalah pemain sepak bola yang bagus.
+        blank: pemain
+        en: He is a good soccer player.
+      - id: module-5-0038-s2
+        text: Pemain itu bermain di lapangan besar.
+        blank: Pemain
+        en: The player plays on a big field.
   - id: module-5-0039
     indonesian: pengusaha (usaha)
     english: a businessman, a businesswoman, an entrepreneur
     audio: e07db2cd362c.ogg
+    note:
+      en: "'Pengusaha' means entrepreneur/businessperson; the root 'usaha' means
+        effort or business, and 'berusaha' means to try hard."
+    sentences:
+      - id: module-5-0039-s1
+        text: Ayah saya adalah seorang pengusaha sukses.
+        blank: pengusaha
+        en: My father is a successful businessman.
+      - id: module-5-0039-s2
+        text: Dia pengusaha muda di Bali.
+        blank: pengusaha
+        en: She is a young entrepreneur in Bali.
+      - id: module-5-0039-s3
+        text: Banyak pengusaha buka toko di sini.
+        blank: pengusaha
+        en: Many businesspeople open shops here.
   - id: module-5-0040
     indonesian: rajin
     english: conscientious, industrious, hard-working, disciplined, diligent
     audio: a25408bc1755.ogg
+    note:
+      en: "'Rajin' describes someone who works hard or studies diligently; often used
+        in school or work contexts; opposite is 'malas' (lazy)."
+    sentences:
+      - id: module-5-0040-s1
+        text: Dia rajin belajar setiap hari.
+        blank: rajin
+        en: She studies diligently every day.
+      - id: module-5-0040-s2
+        text: Anak itu rajin membantu orang tua.
+        blank: rajin
+        en: That child diligently helps his parents.
+      - id: module-5-0040-s3
+        text: Saya ingin lebih rajin di sekolah.
+        blank: rajin
+        en: I want to be more hardworking at school.
   - id: module-5-0041
     indonesian: sebetulnya
     english: actually, to be honest, as a matter of fact
     audio: a1a436e7b756.ogg
+    note:
+      en: "'Sebetulnya' is a common conversational word meaning 'actually' or 'to be
+        honest'; it is interchangeable with 'sebenarnya' and used to correct or
+        clarify something."
+    sentences:
+      - id: module-5-0041-s1
+        text: Sebetulnya saya tidak suka kopi.
+        blank: Sebetulnya
+        en: Actually, I don't like coffee.
+      - id: module-5-0041-s2
+        text: Ini sebetulnya tempat yang sangat indah.
+        blank: sebetulnya
+        en: This is actually a very beautiful place.
+      - id: module-5-0041-s3
+        text: Sebetulnya saya sudah makan tadi.
+        blank: Sebetulnya
+        en: To be honest, I already ate earlier.
   - id: module-5-0042
     indonesian: sepatu
     english: shoes
     audio: 1b16e31792e9.ogg
+    note:
+      en: "'Sepatu' means shoes (closed-toe); use 'sandal' for sandals/flip-flops — a
+        common mix-up for beginners."
+    sentences:
+      - id: module-5-0042-s1
+        text: Saya memakai sepatu baru ke sekolah.
+        blank: sepatu
+        en: I wear new shoes to school.
+      - id: module-5-0042-s2
+        text: Di mana sepatu saya?
+        blank: sepatu
+        en: Where are my shoes?
+      - id: module-5-0042-s3
+        text: Sepatu ini sangat nyaman dan bagus.
+        blank: Sepatu
+        en: These shoes are very comfortable and nice.
   - id: module-5-0043
     indonesian: sekretaris
     english: a secretary
     audio: 22c62ada5ef0.ogg
+    note:
+      en: "'Sekretaris' means secretary or administrative assistant; used in formal
+        and office contexts; related word: 'sekretariat' (secretariat/office)."
+    sentences:
+      - id: module-5-0043-s1
+        text: Dia bekerja sebagai sekretaris di kantor.
+        blank: sekretaris
+        en: She works as a secretary at the office.
+      - id: module-5-0043-s2
+        text: Sekretaris itu menulis surat setiap hari.
+        blank: Sekretaris
+        en: The secretary writes letters every day.
+      - id: module-5-0043-s3
+        text: Bu Sari adalah sekretaris yang baik.
+        blank: sekretaris
+        en: Mrs. Sari is a good secretary.
   - id: module-5-0044
     indonesian: sopir
     english: a driver
     audio: f468a211380f.ogg
+    note:
+      en: "'Sopir' is the everyday informal word for driver (of a car, bus, or taxi);
+        related word: 'pengemudi' is the more formal equivalent."
+    sentences:
+      - id: module-5-0044-s1
+        text: Sopir itu membawa saya ke bandara.
+        blank: Sopir
+        en: The driver took me to the airport.
+      - id: module-5-0044-s2
+        text: Ayah saya bekerja sebagai sopir bus.
+        blank: sopir
+        en: My father works as a bus driver.
+      - id: module-5-0044-s3
+        text: Sopir taksi itu sangat ramah.
+        blank: Sopir
+        en: That taxi driver is very friendly.
   - id: module-5-0045
     indonesian: tentara
     english: a soldier, the army, the armed forces
     audio: c2e8ad0e8f7a.ogg
+    note:
+      en: "'Tentara' means soldier or the army; use 'tentara' for military personnel,
+        not police ('polisi'); related: 'angkatan darat' (army), 'militer'
+        (military)."
+    sentences:
+      - id: module-5-0045-s1
+        text: Ayah saya adalah seorang tentara.
+        blank: tentara
+        en: My father is a soldier.
+      - id: module-5-0045-s2
+        text: Tentara itu berdiri di depan kantor.
+        blank: tentara
+        en: The soldier is standing in front of the office.
+      - id: module-5-0045-s3
+        text: Banyak tentara berlatih di lapangan.
+        blank: tentara
+        en: Many soldiers are training on the field.
   - id: module-5-0046
     indonesian: terima telepon
     english: to answer the phone, to take a phone call
     audio: 036e871756f4.ogg
+    note:
+      en: '"Terima telepon" means to receive/answer a phone call; informally people
+        also say "angkat telepon" (pick up the phone); used in everyday and
+        semi-formal contexts.'
+    sentences:
+      - id: module-5-0046-s1
+        text: Ibu sedang terima telepon di dapur.
+        blank: terima telepon
+        en: Mom is answering the phone in the kitchen.
+      - id: module-5-0046-s2
+        text: Maaf, saya tidak bisa terima telepon sekarang.
+        blank: terima telepon
+        en: Sorry, I cannot take a phone call right now.
+      - id: module-5-0046-s3
+        text: Dia terima telepon dari temannya tadi.
+        blank: terima telepon
+        en: She answered a phone call from her friend just now.
   - id: module-5-0047
     indonesian: tugas
     english: the things you have to do (as part of a job), a task, duties, obligations
     audio: 90a86cb6053f.ogg
+    note:
+      en: '"Tugas" covers schoolwork assignments, job duties, and official tasks;
+        often confused with "pekerjaan" (general work/job), but "tugas" stresses
+        a specific obligation or mission.'
+    sentences:
+      - id: module-5-0047-s1
+        text: Saya punya tugas dari guru hari ini.
+        blank: tugas
+        en: I have an assignment from the teacher today.
+      - id: module-5-0047-s2
+        text: Tugas polisi adalah menjaga keamanan.
+        blank: Tugas
+        en: The duty of the police is to keep safety.
+      - id: module-5-0047-s3
+        text: Dia belum selesai mengerjakan tugas sekolah.
+        blank: tugas
+        en: He has not finished doing his school assignment.
   - id: module-5-0048
     indonesian: tukang kayu
     english: a carpenter
     audio: db89aaea9ebe.ogg
+    note:
+      en: "'Tukang kayu' literally means 'wood worker'; 'tukang' is a prefix for
+        skilled tradespeople (e.g. tukang listrik = electrician), distinct from
+        'pengrajin' which implies artisan craft."
+    sentences:
+      - id: module-5-0048-s1
+        text: Ayah saya adalah seorang tukang kayu.
+        blank: tukang kayu
+        en: My father is a carpenter.
+      - id: module-5-0048-s2
+        text: Tukang kayu itu membuat meja baru.
+        blank: tukang kayu
+        en: That carpenter is making a new table.
+      - id: module-5-0048-s3
+        text: Kami memanggil tukang kayu ke rumah.
+        blank: tukang kayu
+        en: We called a carpenter to the house.
   - id: module-5-0049
     indonesian: tukang listrik
     english: an electrician
     audio: d2be3c8a10fe.ogg
+    note:
+      en: "'Tukang listrik' literally means 'electricity worker'; 'tukang' is a common
+        prefix for tradespeople (e.g. tukang kayu = carpenter), used in everyday
+        informal speech."
+    sentences:
+      - id: module-5-0049-s1
+        text: Saya memanggil tukang listrik ke rumah.
+        blank: tukang listrik
+        en: I called an electrician to the house.
+      - id: module-5-0049-s2
+        text: Tukang listrik itu memperbaiki lampu saya.
+        blank: tukang listrik
+        en: The electrician fixed my light.
+      - id: module-5-0049-s3
+        text: Kami butuh tukang listrik sekarang.
+        blank: tukang listrik
+        en: We need an electrician now.
   - id: module-5-0050
     indonesian: wartawan
     english: a journalist, a reporter
     audio: 9432c8c8c69e.ogg
+    note:
+      en: '"Wartawan" is a neutral, everyday word for journalist/reporter; related
+        words include "berita" (news) and "majalah" (magazine).'
+    sentences:
+      - id: module-5-0050-s1
+        text: Ayah saya adalah seorang wartawan terkenal.
+        blank: wartawan
+        en: My father is a famous journalist.
+      - id: module-5-0050-s2
+        text: Wartawan itu menulis berita setiap hari.
+        blank: wartawan
+        en: That reporter writes news every day.
+      - id: module-5-0050-s3
+        text: Saya ingin menjadi wartawan.
+        blank: wartawan
+        en: I want to become a journalist.
   - id: module-5-0051
     indonesian: bengkel
     english: workshop, repairshop
     audio: 03d8bdd67a8d.ogg
+    note:
+      en: '"Bengkel" refers to a repair shop, most commonly for vehicles; related
+        words include "mekanik" (mechanic) and "servis" (service/repair).'
+    sentences:
+      - id: module-5-0051-s1
+        text: Saya membawa motor ke bengkel.
+        blank: bengkel
+        en: I take my motorbike to the repair shop.
+      - id: module-5-0051-s2
+        text: Bengkel itu dekat pasar.
+        blank: bengkel
+        en: That repair shop is near the market.
+      - id: module-5-0051-s3
+        text: Mobil saya ada di bengkel.
+        blank: bengkel
+        en: My car is at the repair shop.
   - id: module-5-0052
     indonesian: ekor
     english: animal's tail, counter-word for animals
     audio: dbd31f2036b3.ogg
+    note:
+      en: "'Ekor' means an animal's tail, but is also used as a counter/classifier for
+        animals (like 'tiga ekor kucing' = three cats); don't use it to count
+        people or objects."
+    sentences:
+      - id: module-5-0052-s1
+        text: Anjing itu menggoyangkan ekor dengan gembira.
+        blank: ekor
+        en: That dog wags its tail happily.
+      - id: module-5-0052-s2
+        text: Di sawah ada dua ekor bebek.
+        blank: ekor
+        en: In the rice field there are two ducks.
+      - id: module-5-0052-s3
+        text: Kucing saya punya ekor panjang.
+        blank: ekor
+        en: My cat has a long tail.
   - id: module-5-0053
     indonesian: hadiah
     english: a gift, a present
     audio: f3f8696420c5.ogg
+    note:
+      en: "'Hadiah' is a neutral everyday word for gift or present; commonly used for
+        birthdays and holidays; related word: 'kado' (informal gift)."
+    sentences:
+      - id: module-5-0053-s1
+        text: Ini hadiah untuk ulang tahun kamu.
+        blank: hadiah
+        en: This is a gift for your birthday.
+      - id: module-5-0053-s2
+        text: Dia memberi hadiah kepada adiknya.
+        blank: hadiah
+        en: She gives a gift to her younger sibling.
+      - id: module-5-0053-s3
+        text: Saya suka hadiah dari ibu saya.
+        blank: hadiah
+        en: I like the gift from my mother.
   - id: module-5-0054
     indonesian: ibu
     english: mother, a lady, you (in addressing an elder female)
     audio: b4009314fc6b.ogg
+    note:
+      en: "\"Ibu\" (often shortened to \"Bu\") means mother, but is also used as a
+        polite title for any adult woman, similar to \"Ma'am\"; do not confuse
+        with \"Nyonya\" (Mrs.) used in formal/written contexts."
+    sentences:
+      - id: module-5-0054-s1
+        text: Ibu memasak nasi goreng di dapur.
+        blank: Ibu
+        en: Mother is cooking fried rice in the kitchen.
+      - id: module-5-0054-s2
+        text: Selamat pagi, Ibu! Apa kabar?
+        blank: Ibu
+        en: Good morning, Ma'am! How are you?
+      - id: module-5-0054-s3
+        text: Ibu guru mengajar di kelas.
+        blank: Ibu
+        en: The (female) teacher is teaching in the classroom.
   - id: module-5-0055
     indonesian: kepala sekolah
     english: school principal
     audio: e8e51d616382.ogg
+    note:
+      en: "'Kepala sekolah' literally means 'head of school'; 'kepala' also means
+        'head' (body part), so context matters."
+    sentences:
+      - id: module-5-0055-s1
+        text: Kepala sekolah berbicara di depan murid.
+        blank: kepala sekolah
+        en: The school principal speaks in front of the students.
+      - id: module-5-0055-s2
+        text: Ibu guru menemui kepala sekolah hari ini.
+        blank: kepala sekolah
+        en: The teacher meets the school principal today.
+      - id: module-5-0055-s3
+        text: Kepala sekolah sangat baik dan ramah.
+        blank: kepala sekolah
+        en: The school principal is very kind and friendly.
   - id: module-5-0056
     indonesian: melukis (lukis)
     english: to paint
     audio: 0df9e43aaefd.ogg
+    note:
+      en: "'Melukis' is the active verb form (to paint/do painting); 'lukis' is the
+        root — related words include 'lukisan' (painting/artwork) and 'pelukis'
+        (painter/artist)."
+    sentences:
+      - id: module-5-0056-s1
+        text: Saya suka melukis pemandangan di Bali.
+        blank: melukis
+        en: I like to paint scenery in Bali.
+      - id: module-5-0056-s2
+        text: Anak itu melukis bunga dengan cat merah.
+        blank: melukis
+        en: That child paints flowers with red paint.
+      - id: module-5-0056-s3
+        text: Dia belajar melukis setiap hari Minggu.
+        blank: melukis
+        en: She learns to paint every Sunday.
   - id: module-5-0057
     indonesian: sapi
     english: cattle, cow, farm ox
     audio: 39e00101cbd1.ogg
+    note:
+      en: "'Sapi' means cow/cattle; distinguish from 'kambing' (goat) and 'kerbau'
+        (buffalo), all common farm animals in Indonesia."
+    sentences:
+      - id: module-5-0057-s1
+        text: Petani itu punya dua ekor sapi.
+        blank: sapi
+        en: That farmer has two cows.
+      - id: module-5-0057-s2
+        text: Sapi makan rumput di ladang.
+        blank: Sapi
+        en: The cow eats grass in the field.
+      - id: module-5-0057-s3
+        text: Ibu membeli daging sapi di pasar.
+        blank: sapi
+        en: Mother buys beef at the market.
   - id: module-5-0058
     indonesian: seniman
     english: an artist
     audio: 0e9286be3ed2.ogg
+    note:
+      en: "'Seniman' means 'an artist/artist' (noun); related words: 'seni' (art),
+        'lukisan' (painting); used for any creative artist, not just painters."
+    sentences:
+      - id: module-5-0058-s1
+        text: Dia adalah seniman yang sangat berbakat.
+        blank: seniman
+        en: He is a very talented artist.
+      - id: module-5-0058-s2
+        text: Seniman itu melukis di pantai Bali.
+        blank: Seniman
+        en: The artist paints on the beach in Bali.
+      - id: module-5-0058-s3
+        text: Kakak saya ingin menjadi seniman terkenal.
+        blank: seniman
+        en: My older sibling wants to become a famous artist.
   - id: module-5-0059
     indonesian: tukang masak
     english: cook
     audio: d0c1699dbc04.ogg
+    note:
+      en: "'Tukang masak' is an informal term for cook/chef; more formal is 'juru
+        masak', and 'koki' (borrowed from Dutch) is also common."
+    sentences:
+      - id: module-5-0059-s1
+        text: Tukang masak di restoran itu sangat pintar.
+        blank: tukang masak
+        en: The cook at that restaurant is very skilled.
+      - id: module-5-0059-s2
+        text: Ibu saya adalah tukang masak yang hebat.
+        blank: tukang masak
+        en: My mother is a great cook.
+      - id: module-5-0059-s3
+        text: Tukang masak itu membuat nasi goreng enak.
+        blank: tukang masak
+        en: That cook makes delicious fried rice.
   - id: module-5-0060
     indonesian: baru (2)
     english: it is only then that...
     audio: f0426c8e15be.ogg
+    note:
+      en: "'baru' as 'it is only then that...' follows a condition and shows the
+        result comes after; often paired with 'kalau' or 'sudah', distinct from
+        'baru' meaning 'new'."
+    sentences:
+      - id: module-5-0060-s1
+        text: Sudah makan baru boleh main.
+        blank: baru
+        en: Only after eating can you play.
+      - id: module-5-0060-s2
+        text: Kalau selesai kerja baru kita pergi.
+        blank: baru
+        en: Only when the work is done will we go.
+      - id: module-5-0060-s3
+        text: Bayar dulu baru masuk.
+        blank: baru
+        en: Pay first, only then you may enter.
   - id: module-5-0061
     indonesian: habis
     english: used up, all gone
     audio: 0fab9801eea0.ogg
+    note:
+      en: "'Habis' means something is used up or all gone; also informally means
+        'after/then' (e.g. habis makan), and is related to 'kehabisan' (run out
+        of)."
+    sentences:
+      - id: module-5-0061-s1
+        text: Airnya sudah habis, tolong beli lagi.
+        blank: habis
+        en: The water is all gone, please buy more.
+      - id: module-5-0061-s2
+        text: Nasinya habis karena tamu banyak.
+        blank: habis
+        en: The rice is all gone because there were many guests.
+      - id: module-5-0061-s3
+        text: Uang saya habis di pasar tadi.
+        blank: habis
+        en: My money ran out at the market just now.
   - id: module-5-0062
     indonesian: jarang
     english: rarely, seldom
     audio: d8a01d3ce3f8.ogg
+    note:
+      en: "'Jarang' means rarely/seldom; opposite is 'sering' (often); used before
+        verbs just like in English."
+    sentences:
+      - id: module-5-0062-s1
+        text: Saya jarang makan di restoran mahal.
+        blank: jarang
+        en: I rarely eat at expensive restaurants.
+      - id: module-5-0062-s2
+        text: Dia jarang pergi ke pantai.
+        blank: jarang
+        en: She rarely goes to the beach.
+      - id: module-5-0062-s3
+        text: Kami jarang minum kopi pagi ini.
+        blank: jarang
+        en: We rarely drink coffee in the morning.
   - id: module-5-0063
     indonesian: kue kering
     english: biscuits, cookies
     audio: a540ff8b8399.ogg
+    note:
+      en: "'Kue kering' literally means 'dry cake' and refers to cookies or biscuits;
+        contrast with 'kue basah' (moist/wet snacks like sticky rice cakes)."
+    sentences:
+      - id: module-5-0063-s1
+        text: Ibu membuat kue kering untuk Lebaran.
+        blank: kue kering
+        en: Mom makes cookies for Eid.
+      - id: module-5-0063-s2
+        text: Saya suka makan kue kering cokelat.
+        blank: kue kering
+        en: I like eating chocolate cookies.
+      - id: module-5-0063-s3
+        text: Toko itu menjual kue kering yang enak.
+        blank: kue kering
+        en: That shop sells delicious biscuits.
   - id: module-5-0064
     indonesian: makanan kecil
     english: snackfood
     audio: 44fbaf695808.ogg
+    note:
+      en: '"Makanan kecil" literally means "small food" and is a common informal term
+        for snacks; similar to "camilan" which is also widely used in everyday
+        speech.'
+    sentences:
+      - id: module-5-0064-s1
+        text: Saya suka makan makanan kecil sore hari.
+        blank: makanan kecil
+        en: I like to eat snacks in the afternoon.
+      - id: module-5-0064-s2
+        text: Ibu membeli makanan kecil di pasar.
+        blank: makanan kecil
+        en: Mother bought snacks at the market.
+      - id: module-5-0064-s3
+        text: Anak-anak senang makan makanan kecil ini.
+        blank: makanan kecil
+        en: The children enjoy eating these snacks.
   - id: module-5-0065
     indonesian: mengurus (urus)
     english: to take care of something
     audio: 2a3c84036202.ogg
+    note:
+      en: "'Mengurus' is the formal/active form of 'urus'; commonly used for handling
+        paperwork, caring for family, or managing tasks — not to be confused
+        with 'merawat' which implies nurturing/physical care."
+    sentences:
+      - id: module-5-0065-s1
+        text: Ibu mengurus semua keperluan di rumah.
+        blank: mengurus
+        en: Mom takes care of all the needs at home.
+      - id: module-5-0065-s2
+        text: Dia mengurus dokumen di kantor hari ini.
+        blank: mengurus
+        en: He takes care of the documents at the office today.
+      - id: module-5-0065-s3
+        text: Saya harus mengurus adik saya besok.
+        blank: mengurus
+        en: I have to take care of my younger sibling tomorrow.
   - id: module-5-0066
     indonesian: organisasi
     english: organisation
     audio: f46b79985994.ogg
+    note:
+      en: "'Organisasi' is a formal loanword from Dutch/English, used for clubs, NGOs,
+        or structured groups; beginners may also hear 'kelompok' for smaller
+        informal groups."
+    sentences:
+      - id: module-5-0066-s1
+        text: Dia bergabung dengan organisasi sosial di desa.
+        blank: organisasi
+        en: She joined a social organisation in the village.
+      - id: module-5-0066-s2
+        text: Organisasi itu membantu anak-anak miskin.
+        blank: Organisasi
+        en: The organisation helps poor children.
+      - id: module-5-0066-s3
+        text: Saya ingin masuk organisasi pemuda ini.
+        blank: organisasi
+        en: I want to join this youth organisation.
   - id: module-5-0067
     indonesian: pembangunan (bangun)
     english: development
     audio: af45866de079.ogg
+    note:
+      en: "'Pembangunan' means development/construction; root word 'bangun' also means
+        'to wake up' or 'to build'; commonly used for infrastructure or national
+        development projects."
+    sentences:
+      - id: module-5-0067-s1
+        text: Pembangunan jalan baru sudah selesai.
+        blank: Pembangunan
+        en: The construction of the new road is finished.
+      - id: module-5-0067-s2
+        text: Kami melihat pembangunan gedung besar itu.
+        blank: pembangunan
+        en: We saw the construction of that big building.
+      - id: module-5-0067-s3
+        text: Pembangunan desa ini sangat bagus.
+        blank: Pembangunan
+        en: The development of this village is very good.
   - id: module-5-0068
     indonesian: program
     english: plan/program of action
     audio: 1bd04e14b5ec.ogg
+    note:
+      en: "'Program' is borrowed directly from English and is widely used in
+        Indonesian for plans, schedules, or organized activities; also seen as
+        'acara' for events."
+    sentences:
+      - id: module-5-0068-s1
+        text: Program liburan kami sangat menyenangkan.
+        blank: program
+        en: Our holiday plan is very fun.
+      - id: module-5-0068-s2
+        text: Apa program kamu hari ini?
+        blank: program
+        en: What is your plan for today?
+      - id: module-5-0068-s3
+        text: Program desa ini sangat bagus.
+        blank: program
+        en: This village program is very good.
   - id: module-5-0069
     indonesian: rapat
     english: meeting
     audio: c3d28075c148.ogg
+    note:
+      en: '"Rapat" means a formal or informal meeting/gathering; also means
+        "tight/close together" — context clarifies which meaning is intended.'
+    sentences:
+      - id: module-5-0069-s1
+        text: Saya ada rapat di kantor hari ini.
+        blank: rapat
+        en: I have a meeting at the office today.
+      - id: module-5-0069-s2
+        text: Rapat itu mulai jam sembilan pagi.
+        blank: rapat
+        en: The meeting starts at nine in the morning.
+      - id: module-5-0069-s3
+        text: Ibu guru ikut rapat bersama kepala sekolah.
+        blank: rapat
+        en: The teacher joined a meeting with the principal.
   - id: module-5-0070
     indonesian: sambal
     english: chili-based side dish, chili paste
     audio: 7a51a24c6cd8.ogg
+    note:
+      en: "'Sambal' is a common spicy condiment/paste served with most Indonesian
+        meals; often confused with general 'chili' (cabai), but sambal is always
+        a prepared dish."
+    sentences:
+      - id: module-5-0070-s1
+        text: Saya suka makan nasi dengan sambal.
+        blank: sambal
+        en: I like eating rice with chili paste.
+      - id: module-5-0070-s2
+        text: Sambal ini sangat pedas sekali.
+        blank: sambal
+        en: This chili paste is very spicy.
+      - id: module-5-0070-s3
+        text: Ibu membuat sambal di dapur.
+        blank: sambal
+        en: Mom is making chili paste in the kitchen.
   - id: module-5-0071
     indonesian: sedikit
     english: a little, a few
     audio: 32a48487feb7.ogg
+    note:
+      en: '"Sedikit" means a small amount or few of something; often confused with
+        "sedikit-sedikit" (little by little); related: "banyak" (a lot) is its
+        opposite.'
+    sentences:
+      - id: module-5-0071-s1
+        text: Saya mau sedikit nasi, terima kasih.
+        blank: sedikit
+        en: I want a little rice, thank you.
+      - id: module-5-0071-s2
+        text: Dia bisa berbicara sedikit bahasa Indonesia.
+        blank: sedikit
+        en: She can speak a little Indonesian.
+      - id: module-5-0071-s3
+        text: Ada sedikit air di botol itu.
+        blank: sedikit
+        en: There is a little water in that bottle.
   - id: module-5-0072
     indonesian: urusan
     english: matters requiring attention, affairs
     audio: d09e9e9a32af.ogg
+    note:
+      en: "'Urusan' refers to personal or business matters/affairs; slightly formal
+        but very common; related: 'masalah' (problem), 'keperluan' (needs)"
+    sentences:
+      - id: module-5-0072-s1
+        text: Saya punya urusan penting di kantor.
+        blank: urusan
+        en: I have important matters at the office.
+      - id: module-5-0072-s2
+        text: Dia sibuk dengan urusan keluarganya.
+        blank: urusan
+        en: She is busy with her family affairs.
+      - id: module-5-0072-s3
+        text: Itu bukan urusan kamu.
+        blank: urusan
+        en: That is not your business.
   - id: module-5-0073
     indonesian: berwawancara
     english: to conduct an interview
     audio: a018e960849d.ogg
+    note:
+      en: "'Berwawancara' is a formal verb meaning to conduct or give an interview;
+        commonly used in job or journalism contexts; related to 'wawancara'
+        (interview/noun)."
+    sentences:
+      - id: module-5-0073-s1
+        text: Dia berwawancara dengan manajer hotel hari ini.
+        blank: berwawancara
+        en: He is conducting an interview with the hotel manager today.
+      - id: module-5-0073-s2
+        text: Saya berwawancara untuk pekerjaan baru kemarin.
+        blank: berwawancara
+        en: I had an interview for a new job yesterday.
+      - id: module-5-0073-s3
+        text: Wartawan itu berwawancara dengan kepala desa.
+        blank: berwawancara
+        en: The journalist is conducting an interview with the village head.
   - id: module-5-0074
     indonesian: masalah
     english: problem
     audio: ced491845ce1.ogg
+    note:
+      en: "'Masalah' means 'problem' or 'issue'; common in both formal and informal
+        speech; related words: 'bermasalah' (problematic), 'tidak masalah' (no
+        problem/it's okay)."
+    sentences:
+      - id: module-5-0074-s1
+        text: Saya punya masalah dengan motor saya.
+        blank: masalah
+        en: I have a problem with my motorbike.
+      - id: module-5-0074-s2
+        text: Tidak ada masalah di sini.
+        blank: masalah
+        en: There is no problem here.
+      - id: module-5-0074-s3
+        text: Apa masalah kamu hari ini?
+        blank: masalah
+        en: What is your problem today?
   - id: module-5-0075
     indonesian: membangun (bangun)
     english: to build/construct something
     audio: 40d72dba6017.ogg
+    note:
+      en: "'Membangun' is the active transitive form (me- prefix on 'bangun');
+        'bangun' alone also means 'to wake up/rise', so context matters."
+    sentences:
+      - id: module-5-0075-s1
+        text: Mereka membangun rumah baru di sini.
+        blank: membangun
+        en: They are building a new house here.
+      - id: module-5-0075-s2
+        text: Ayah ingin membangun toko kecil.
+        blank: membangun
+        en: Dad wants to build a small shop.
   - id: module-5-0076
     indonesian: mencari jalan
     english: to try to find a way
     audio: 5743b59cc8bb.ogg
+    note:
+      en: "'Mencari jalan' literally means 'to search for a road/way'; used
+        figuratively for finding a solution, common in everyday problem-solving
+        contexts; related: 'jalan keluar' (way out/solution)"
+    sentences:
+      - id: module-5-0076-s1
+        text: Kami mencari jalan ke pantai itu.
+        blank: mencari jalan
+        en: We are trying to find a way to that beach.
+      - id: module-5-0076-s2
+        text: Dia mencari jalan untuk pulang ke rumah.
+        blank: mencari jalan
+        en: He is trying to find a way to go home.
+      - id: module-5-0076-s3
+        text: Mereka mencari jalan keluar dari masalah.
+        blank: mencari jalan
+        en: They are trying to find a way out of the problem.
   - id: module-5-0077
     indonesian: orang desa
     english: a villager
     audio: 254860371852.ogg
+    note:
+      en: "'Orang desa' literally means 'village person'; used neutrally, not
+        offensive; related: 'orang kota' (city person), 'desa' (village)"
+    sentences:
+      - id: module-5-0077-s1
+        text: Dia adalah orang desa yang ramah.
+        blank: orang desa
+        en: He is a friendly villager.
+      - id: module-5-0077-s2
+        text: Orang desa itu menjual sayuran segar.
+        blank: orang desa
+        en: That villager sells fresh vegetables.
+      - id: module-5-0077-s3
+        text: Saya bertemu orang desa di pasar.
+        blank: orang desa
+        en: I met a villager at the market.
   - id: module-5-0078
     indonesian: setelah
     english: after (a more formal variant of sesudah)
     audio: 6d284894f2ab.ogg
+    note:
+      en: "'Setelah' means 'after' and is slightly more formal than 'sesudah'; both
+        are common in written and spoken Indonesian."
+    sentences:
+      - id: module-5-0078-s1
+        text: Saya mandi setelah pulang dari pantai.
+        blank: setelah
+        en: I shower after coming home from the beach.
+      - id: module-5-0078-s2
+        text: Setelah makan, kami minum kopi.
+        blank: Setelah
+        en: After eating, we drink coffee.
   - id: module-5-0079
     indonesian: abjad
     english: alphabet
     audio: f0bcc15c6587.ogg
+    note:
+      en: "'Abjad' means alphabet or set of letters; used in formal and school
+        contexts; sometimes confused with 'huruf' (a single letter)."
+    sentences:
+      - id: module-5-0079-s1
+        text: Anak-anak belajar abjad di sekolah.
+        blank: abjad
+        en: Children learn the alphabet at school.
+      - id: module-5-0079-s2
+        text: Ada dua puluh enam abjad dalam bahasa Inggris.
+        blank: abjad
+        en: There are twenty-six letters in the English alphabet.
+      - id: module-5-0079-s3
+        text: Ibu mengajar abjad kepada adik.
+        blank: abjad
+        en: Mom teaches the alphabet to my younger sibling.
   - id: module-5-0080
     indonesian: ejaan
     english: spelling
     audio: ee111e8d61b1.ogg
+    note:
+      en: "'Ejaan' means spelling/orthography; often heard in school contexts;
+        related: 'mengeja' (to spell out), 'huruf' (letter)"
+    sentences:
+      - id: module-5-0080-s1
+        text: Ejaan kata ini salah di bukumu.
+        blank: Ejaan
+        en: The spelling of this word is wrong in your book.
+      - id: module-5-0080-s2
+        text: Ibu guru mengecek ejaan tulisan saya.
+        blank: ejaan
+        en: The teacher checks the spelling of my writing.
+      - id: module-5-0080-s3
+        text: Saya belajar ejaan bahasa Indonesia hari ini.
+        blank: ejaan
+        en: I am learning Indonesian spelling today.
   - id: module-5-0081
     indonesian: huruf
     english: letter
     audio: e713d024f541.ogg
+    note:
+      en: "'Huruf' means a letter of the alphabet; not to be confused with 'surat' (a
+        written letter/mail); related: 'huruf besar' (capital letter), 'huruf
+        kecil' (lowercase letter)."
+    sentences:
+      - id: module-5-0081-s1
+        text: Saya belajar huruf A sampai Z.
+        blank: huruf
+        en: I am learning the letters A to Z.
+      - id: module-5-0081-s2
+        text: Huruf pertama nama saya adalah D.
+        blank: Huruf
+        en: The first letter of my name is D.
+      - id: module-5-0081-s3
+        text: Tulis huruf ini di buku kamu.
+        blank: huruf
+        en: Write this letter in your book.
   - id: module-5-0082
     indonesian: khusus
     english: special, specific (adjective)
     audio: d70169c562fe.ogg
+    note:
+      en: "'Khusus' means 'special' or 'specific'; often used before nouns like
+        'khusus untuk' (especially for); don't confuse with 'spesial' which is
+        also used but more informal/borrowed."
+    sentences:
+      - id: module-5-0082-s1
+        text: Ini tempat parkir khusus untuk motor.
+        blank: khusus
+        en: This is a parking spot specifically for motorcycles.
+      - id: module-5-0082-s2
+        text: Ada menu khusus untuk anak-anak.
+        blank: khusus
+        en: There is a special menu for children.
+      - id: module-5-0082-s3
+        text: Kamar ini khusus untuk tamu VIP.
+        blank: khusus
+        en: This room is specifically for VIP guests.
   - id: module-5-0083
     indonesian: peneliti (teliti)
     english: researcher
     audio: 6281975905ac.ogg
+    note:
+      en: "'Peneliti' means researcher/scientist; comes from root 'teliti'
+        (careful/thorough); related: 'meneliti' (to research), 'penelitian'
+        (research)."
+    sentences:
+      - id: module-5-0083-s1
+        text: Ibu saya adalah seorang peneliti di sini.
+        blank: peneliti
+        en: My mother is a researcher here.
+      - id: module-5-0083-s2
+        text: Peneliti itu bekerja di laboratorium setiap hari.
+        blank: Peneliti
+        en: That researcher works in the laboratory every day.
+      - id: module-5-0083-s3
+        text: Dia ingin menjadi peneliti terkenal.
+        blank: peneliti
+        en: She wants to become a famous researcher.
   - id: module-5-0084
     indonesian: sekali lagi
     english: once more, once again
     audio: 14811ce46d08.ogg
+    note:
+      en: "\"Sekali lagi\" means \"once more/again\" and is used in everyday speech;
+        don't confuse with \"lagi\" alone (which can mean \"again\" or \"more\"
+        informally) or \"sekali\" alone (which means \"once\" or \"very\")."
+    sentences:
+      - id: module-5-0084-s1
+        text: Tolong ucapkan sekali lagi, pak.
+        blank: sekali lagi
+        en: Please say it once more, sir.
+      - id: module-5-0084-s2
+        text: Saya mau mencoba sekali lagi.
+        blank: sekali lagi
+        en: I want to try once more.
+      - id: module-5-0084-s3
+        text: Boleh saya lihat sekali lagi?
+        blank: sekali lagi
+        en: May I see it once more?
   - id: module-5-0085
     indonesian: terima kasih kembali
     english: you're welcome
     audio: 3d3a55381607.ogg
+    note:
+      en: "'Terima kasih kembali' is a polite, slightly formal reply to 'thank you';
+        the shorter 'sama-sama' is more common in casual speech."
+    sentences:
+      - id: module-5-0085-s1
+        text: Terima kasih kembali atas bantuannya, Pak.
+        blank: terima kasih kembali
+        en: You're welcome for your help, Sir.
+      - id: module-5-0085-s2
+        text: Oh, terima kasih kembali, Bu Made.
+        blank: terima kasih kembali
+        en: Oh, you're welcome, Mrs. Made.
+      - id: module-5-0085-s3
+        text: Terima kasih kembali, semoga harimu menyenangkan.
+        blank: terima kasih kembali
+        en: You're welcome, I hope your day is pleasant.
   - id: module-5-0086
     indonesian: tulisan
     english: writing, piece of writing
     audio: ed742d5797e7.ogg
+    note:
+      en: "'Tulisan' means writing or a piece of writing; related to 'tulis' (to
+        write); not to be confused with 'tulisan tangan' (handwriting)
+        specifically."
+    sentences:
+      - id: module-5-0086-s1
+        text: Tulisan kamu sangat bagus dan rapi.
+        blank: Tulisan
+        en: Your writing is very good and neat.
+      - id: module-5-0086-s2
+        text: Saya tidak bisa membaca tulisan ini.
+        blank: tulisan
+        en: I cannot read this writing.
+      - id: module-5-0086-s3
+        text: Tulisan di papan itu besar sekali.
+        blank: Tulisan
+        en: The writing on that board is very big.
   - id: module-5-0087
     indonesian: ucapan
     english: pronunciation
     audio: feabb86a9906.ogg
+    note:
+      en: "'Ucapan' can mean both 'pronunciation' and 'utterance/expression' (e.g.,
+        ucapan selamat = congratulatory greeting); beginners should note context
+        determines the meaning."
+    sentences:
+      - id: module-5-0087-s1
+        text: Ucapan kamu dalam bahasa Bali sangat bagus.
+        blank: Ucapan
+        en: Your pronunciation in Balinese is very good.
+      - id: module-5-0087-s2
+        text: Tolong perbaiki ucapan kata ini.
+        blank: ucapan
+        en: Please correct the pronunciation of this word.
+      - id: module-5-0087-s3
+        text: Ucapan yang benar sangat penting.
+        blank: Ucapan
+        en: Correct pronunciation is very important.
   - id: module-5-0088
     indonesian: atas (1)
     english: above
     audio: 9a358d7faa64.ogg
+    note:
+      en: "'Atas' means 'above' or 'on top of'; often confused with 'di atas' (on top
+        of/above) when used as a preposition — beginners should note it commonly
+        pairs with 'di'."
+    sentences:
+      - id: module-5-0088-s1
+        text: Buku itu ada di atas meja.
+        blank: atas
+        en: The book is on top of the table.
+      - id: module-5-0088-s2
+        text: Kucing duduk di atas kursi.
+        blank: atas
+        en: The cat sits on top of the chair.
+      - id: module-5-0088-s3
+        text: Pesawat terbang di atas awan.
+        blank: atas
+        en: The airplane flies above the clouds.
   - id: module-5-0089
     indonesian: bawah
     english: below
     audio: 5a21e8cb6c20.ogg
+    note:
+      en: "'Bawah' means 'below/under'; common phrase 'di bawah' means 'underneath';
+        opposite is 'atas' (above/top)."
+    sentences:
+      - id: module-5-0089-s1
+        text: Kucing itu tidur di bawah meja.
+        blank: bawah
+        en: The cat sleeps under the table.
+      - id: module-5-0089-s2
+        text: Sandal saya ada di bawah kursi.
+        blank: bawah
+        en: My sandals are under the chair.
+      - id: module-5-0089-s3
+        text: Tolong lihat di bawah tempat tidur.
+        blank: bawah
+        en: Please look under the bed.
   - id: module-5-0090
     indonesian: berbeda
     english: different
     audio: 1c54294ed988.ogg
+    note:
+      en: "'Berbeda' means 'different'; use it with 'dari' (from) to compare, e.g.
+        'berbeda dari'; related: 'beda' (informal short form), 'perbedaan'
+        (difference)"
+    sentences:
+      - id: module-5-0090-s1
+        text: Warna baju kita berbeda sekali.
+        blank: berbeda
+        en: The color of our clothes is very different.
+      - id: module-5-0090-s2
+        text: Rasa makanan ini berbeda dari kemarin.
+        blank: berbeda
+        en: The taste of this food is different from yesterday.
+      - id: module-5-0090-s3
+        text: Pendapat kami berbeda, tapi tidak apa-apa.
+        blank: berbeda
+        en: Our opinions are different, but that is okay.
   - id: module-5-0091
     indonesian: dasar
     english: basic, foundation
     audio: 7c2e0537bdb9.ogg
+    note:
+      en: "'Dasar' means 'basic' or 'foundation'; also used informally as a mild
+        exclamation (e.g. 'dasar!' = 'typical!'); related: 'dasarnya'
+        (basically), 'mendasar' (fundamental)."
+    sentences:
+      - id: module-5-0091-s1
+        text: Ini adalah kelas bahasa Indonesia dasar.
+        blank: dasar
+        en: This is a basic Indonesian language class.
+      - id: module-5-0091-s2
+        text: Dasar resep ini adalah santan kelapa.
+        blank: Dasar
+        en: The foundation of this recipe is coconut milk.
+      - id: module-5-0091-s3
+        text: Saya belajar kata-kata dasar dulu.
+        blank: dasar
+        en: I study basic words first.
   - id: module-5-0092
     indonesian: dunia
     english: world
     audio: f4be7c75dec7.ogg
+    note:
+      en: "'Dunia' means 'world' and is used in everyday speech; common in phrases
+        like 'seluruh dunia' (the whole world); related words: 'dunia nyata'
+        (real world)."
+    sentences:
+      - id: module-5-0092-s1
+        text: Bali terkenal di seluruh dunia.
+        blank: dunia
+        en: Bali is famous throughout the whole world.
+      - id: module-5-0092-s2
+        text: Saya ingin keliling dunia suatu hari.
+        blank: dunia
+        en: I want to travel around the world someday.
+      - id: module-5-0092-s3
+        text: Dunia ini sangat indah dan luas.
+        blank: Dunia
+        en: This world is very beautiful and vast.
   - id: module-5-0093
     indonesian: hal
     english: matter
     audio: 25b2198c895c.ogg
+    note:
+      en: "'Hal' means 'matter/thing/topic'; often used in 'hal ini' (this matter) or
+        'banyak hal' (many things); similar to but more formal than 'sesuatu'."
+    sentences:
+      - id: module-5-0093-s1
+        text: Ini adalah hal yang penting.
+        blank: hal
+        en: This is an important matter.
+      - id: module-5-0093-s2
+        text: Ada banyak hal di pasar.
+        blank: hal
+        en: There are many things at the market.
+      - id: module-5-0093-s3
+        text: Hal ini mudah untuk dipelajari.
+        blank: hal
+        en: This matter is easy to learn.
   - id: module-5-0094
     indonesian: ilmu pengetahuan
     english: science
     audio: 6ca2aa92eb15.ogg
+    note:
+      en: "'Ilmu pengetahuan' means science or knowledge; often shortened to 'ilmu' in
+        casual speech; not to be confused with 'sains' which is used for
+        natural/school science subjects."
+    sentences:
+      - id: module-5-0094-s1
+        text: Dia suka belajar ilmu pengetahuan di sekolah.
+        blank: ilmu pengetahuan
+        en: She likes studying science at school.
+      - id: module-5-0094-s2
+        text: Ilmu pengetahuan sangat penting untuk kehidupan.
+        blank: ilmu pengetahuan
+        en: Science is very important for life.
+      - id: module-5-0094-s3
+        text: Buku ilmu pengetahuan ada di perpustakaan.
+        blank: ilmu pengetahuan
+        en: The science book is in the library.
   - id: module-5-0095
     indonesian: kejuruan
     english: vocational
     audio: 90c1073c13ce.ogg
+    note:
+      en: "'Kejuruan' means vocational/trade-based; commonly seen in 'SMK' (Sekolah
+        Menengah Kejuruan), Indonesia's vocational high school; do not confuse
+        with 'akademik' (academic)."
+    sentences:
+      - id: module-5-0095-s1
+        text: Dia belajar di sekolah kejuruan.
+        blank: kejuruan
+        en: He studies at a vocational school.
+      - id: module-5-0095-s2
+        text: Sekolah kejuruan mengajarkan banyak keterampilan.
+        blank: kejuruan
+        en: Vocational school teaches many skills.
+      - id: module-5-0095-s3
+        text: Adik saya masuk sekolah kejuruan.
+        blank: kejuruan
+        en: My younger sibling enrolled in a vocational school.
   - id: module-5-0096
     indonesian: kurang banyak
     english: too few, not enough
     audio: 829cd66f0159.ogg
+    note:
+      en: "'Kurang banyak' means 'too few' or 'not enough in quantity'; often confused
+        with 'kurang' alone (just 'not enough'); related: 'terlalu sedikit' (too
+        little)."
+    sentences:
+      - id: module-5-0096-s1
+        text: Kursinya kurang banyak untuk semua tamu.
+        blank: kurang banyak
+        en: The chairs are too few for all the guests.
+      - id: module-5-0096-s2
+        text: Airnya kurang banyak di botol ini.
+        blank: kurang banyak
+        en: The water is not enough in this bottle.
+      - id: module-5-0096-s3
+        text: Makanan di piring itu kurang banyak.
+        blank: kurang banyak
+        en: The food on that plate is too little.
   - id: module-5-0097
     indonesian: kurikulum
     english: curriculum
     audio: 83123a041717.ogg
+    note:
+      en: "\"Kurikulum\" is a formal/academic loanword from Dutch/English; used in
+        school and education contexts, related words: 'pelajaran'
+        (subject/lesson), 'sekolah' (school)."
+    sentences:
+      - id: module-5-0097-s1
+        text: Sekolah kami menggunakan kurikulum baru tahun ini.
+        blank: kurikulum
+        en: Our school uses a new curriculum this year.
+      - id: module-5-0097-s2
+        text: Kurikulum di sekolah itu sangat bagus.
+        blank: kurikulum
+        en: The curriculum at that school is very good.
+      - id: module-5-0097-s3
+        text: Guru menjelaskan kurikulum kepada orang tua.
+        blank: kurikulum
+        en: The teacher explained the curriculum to the parents.
   - id: module-5-0098
     indonesian: lebih dulu
     english: first, earlier
     audio: 7bc503720396.ogg
+    note:
+      en: '"Lebih dulu" means doing something before others or before another action;
+        often confused with "pertama" (first in order/sequence) — use "lebih
+        dulu" when comparing who does something earlier.'
+    sentences:
+      - id: module-5-0098-s1
+        text: Saya makan lebih dulu sebelum pergi.
+        blank: lebih dulu
+        en: I eat first before going.
+      - id: module-5-0098-s2
+        text: Dia datang lebih dulu dari saya.
+        blank: lebih dulu
+        en: She arrived earlier than me.
+      - id: module-5-0098-s3
+        text: Ayo tidur lebih dulu, sudah malam.
+        blank: lebih dulu
+        en: Let's sleep first, it's already night.
   - id: module-5-0099
     indonesian: mata pelajaran
     english: subject
     audio: 1351ef551167.ogg
+    note:
+      en: "'Mata pelajaran' means school subject; 'mata' alone means 'eye', so always
+        use the full phrase for subject context."
+    sentences:
+      - id: module-5-0099-s1
+        text: Mata pelajaran favorit saya adalah matematika.
+        blank: mata pelajaran
+        en: My favorite subject is mathematics.
+      - id: module-5-0099-s2
+        text: Ada berapa mata pelajaran hari ini?
+        blank: mata pelajaran
+        en: How many subjects are there today?
+      - id: module-5-0099-s3
+        text: Saya suka mata pelajaran bahasa Inggris.
+        blank: mata pelajaran
+        en: I like the subject English.
   - id: module-5-0100
     indonesian: milik
     english: belonging of, owned by
     audio: f54599b2b9d4.ogg
+    note:
+      en: "'Milik' means 'belonging of' or 'owned by'; often used in phrases like
+        'milik saya' (mine) or 'milik negara' (state-owned); do not confuse with
+        'punya' which is a verb meaning 'to have/own'."
+    sentences:
+      - id: module-5-0100-s1
+        text: Buku ini milik saya.
+        blank: milik
+        en: This book belongs to me.
+      - id: module-5-0100-s2
+        text: Tas itu milik siapa?
+        blank: milik
+        en: Whose bag is that?
+      - id: module-5-0100-s3
+        text: Rumah besar itu milik pak Budi.
+        blank: milik
+        en: That big house belongs to Mr. Budi.
   - id: module-5-0101
     indonesian: muatan lokal
     english: local content
     audio: 2de0709751eb.ogg
+    note:
+      en: '"Muatan lokal" refers to locally-adapted school subjects (e.g., Balinese
+        culture, batik); commonly used in Indonesian education contexts;
+        related: "pelajaran" (lesson), "kurikulum" (curriculum).'
+    sentences:
+      - id: module-5-0101-s1
+        text: Sekolah kami ada pelajaran muatan lokal.
+        blank: muatan lokal
+        en: Our school has a local content subject.
+      - id: module-5-0101-s2
+        text: Muatan lokal di Bali adalah bahasa Bali.
+        blank: muatan lokal
+        en: The local content in Bali is Balinese language.
+      - id: module-5-0101-s3
+        text: Saya suka kelas muatan lokal hari ini.
+        blank: muatan lokal
+        en: I like the local content class today.
   - id: module-5-0102
     indonesian: negeri
     english: (adjective) state, government (owned)
     audio: 92d2670b43ff.ogg
+    note:
+      en: '"Negeri" means state-owned or government-run; commonly used in "sekolah
+        negeri" (public school) vs "sekolah swasta" (private school); not to be
+        confused with "negara" (nation/country).'
+    sentences:
+      - id: module-5-0102-s1
+        text: Adik saya belajar di sekolah negeri.
+        blank: negeri
+        en: My younger sibling studies at a public school.
+      - id: module-5-0102-s2
+        text: Rumah sakit negeri itu dekat pasar.
+        blank: negeri
+        en: That government hospital is near the market.
+      - id: module-5-0102-s3
+        text: Dia kerja di kantor negeri.
+        blank: negeri
+        en: She works at a government office.
   - id: module-5-0103
     indonesian: pendidikan (didik)
     english: education
     audio: 99e2ec790505.ogg
+    note:
+      en: "'Pendidikan' means education as a concept or system; 'didik' is the root
+        verb meaning to educate/raise; commonly seen in school and formal
+        contexts."
+    sentences:
+      - id: module-5-0103-s1
+        text: Pendidikan sangat penting untuk masa depan.
+        blank: Pendidikan
+        en: Education is very important for the future.
+      - id: module-5-0103-s2
+        text: Anak itu mendapat pendidikan yang baik.
+        blank: pendidikan
+        en: That child receives a good education.
+      - id: module-5-0103-s3
+        text: Di Bali, pendidikan gratis untuk semua.
+        blank: pendidikan
+        en: In Bali, education is free for everyone.
   - id: module-5-0104
     indonesian: sebagian besar
     english: most
     audio: 3b75e6df1e47.ogg
+    note:
+      en: "'Sebagian besar' means 'most' or 'the majority of'; more formal than
+        'kebanyakan' but both are common; used before nouns."
+    sentences:
+      - id: module-5-0104-s1
+        text: Sebagian besar teman saya suka nasi goreng.
+        blank: Sebagian besar
+        en: Most of my friends like fried rice.
+      - id: module-5-0104-s2
+        text: Sebagian besar turis pergi ke pantai.
+        blank: Sebagian besar
+        en: Most tourists go to the beach.
+      - id: module-5-0104-s3
+        text: Sebagian besar anak minum air putih.
+        blank: Sebagian besar
+        en: Most children drink plain water.
   - id: module-5-0105
     indonesian: sistem
     english: system
     audio: 71467391e694.ogg
+    note:
+      en: "'Sistem' is a neutral loanword from English/Dutch, used in formal and
+        everyday speech; no common confusion, related: 'sistematis'
+        (systematic)."
+    sentences:
+      - id: module-5-0105-s1
+        text: Sistem internet di sini sangat lambat.
+        blank: Sistem
+        en: The internet system here is very slow.
+      - id: module-5-0105-s2
+        text: Kami belajar sistem baru di sekolah.
+        blank: sistem
+        en: We are learning a new system at school.
+      - id: module-5-0105-s3
+        text: Sistem pembayaran ini mudah digunakan.
+        blank: sistem
+        en: This payment system is easy to use.
   - id: module-5-0106
     indonesian: tanaman
     english: plant
     audio: 3a902f2ee3e1.ogg
+    note:
+      en: "'Tanaman' means plant (noun); related words: 'menanam' (to plant), 'tanah'
+        (soil); commonly used for garden or potted plants in everyday speech."
+    sentences:
+      - id: module-5-0106-s1
+        text: Saya suka merawat tanaman di rumah.
+        blank: tanaman
+        en: I like taking care of plants at home.
+      - id: module-5-0106-s2
+        text: Tanaman ini butuh banyak air.
+        blank: Tanaman
+        en: This plant needs a lot of water.
+      - id: module-5-0106-s3
+        text: Ibu membeli tanaman baru kemarin.
+        blank: tanaman
+        en: Mom bought a new plant yesterday.
   - id: module-5-0107
     indonesian: termasuk
     english: included in, including
     audio: f551b840a087.ogg
+    note:
+      en: "'Termasuk' means 'included in' or 'including'; commonly used in shopping
+        and menus; do not confuse with 'termasuk' (to include) vs 'mencakup' (to
+        cover/encompass)"
+    sentences:
+      - id: module-5-0107-s1
+        text: Harga ini termasuk sarapan pagi.
+        blank: termasuk
+        en: This price includes breakfast.
+      - id: module-5-0107-s2
+        text: Apakah minuman termasuk dalam paket ini?
+        blank: termasuk
+        en: Are drinks included in this package?
+      - id: module-5-0107-s3
+        text: Semua orang termasuk anak-anak boleh masuk.
+        blank: termasuk
+        en: Everyone including children may enter.
   - id: module-5-0108
     indonesian: tingkat
     english: level
     audio: d5d02dc9793d.ogg
+    note:
+      en: "'Tingkat' means 'level' or 'floor/storey'; commonly used for difficulty
+        levels, school grades, and building floors."
+    sentences:
+      - id: module-5-0108-s1
+        text: Bahasa Indonesia tingkat satu mudah dipelajari.
+        blank: tingkat
+        en: Level one Indonesian is easy to learn.
+      - id: module-5-0108-s2
+        text: Hotel ini punya tiga tingkat.
+        blank: tingkat
+        en: This hotel has three floors.
+      - id: module-5-0108-s3
+        text: Saya belajar di tingkat dua.
+        blank: tingkat
+        en: I study on the second floor.
   - id: module-5-0109
     indonesian: umum
     english: public, general
     audio: 56b3ad8d0bdc.ogg
+    note:
+      en: '"Umum" means public or general; used in phrases like "toilet umum" (public
+        toilet) or "pengetahuan umum" (general knowledge); not to be confused
+        with "publik" which is a loanword used in formal contexts.'
+    sentences:
+      - id: module-5-0109-s1
+        text: Di mana toilet umum di sini?
+        blank: umum
+        en: Where is the public toilet here?
+      - id: module-5-0109-s2
+        text: Bus umum itu murah sekali.
+        blank: umum
+        en: The public bus is very cheap.
+      - id: module-5-0109-s3
+        text: Ini informasi umum untuk semua orang.
+        blank: umum
+        en: This is general information for everyone.
   - id: module-5-0110
     indonesian: berguna
     english: useful
     audio: 0c3a11201ba6.ogg
+    note:
+      en: "'Berguna' means 'useful/beneficial'; related to 'guna' (use/benefit);
+        common in everyday speech, slightly more formal than 'bermanfaat'."
+    sentences:
+      - id: module-5-0110-s1
+        text: Kamus ini sangat berguna untuk belajar bahasa.
+        blank: berguna
+        en: This dictionary is very useful for learning language.
+      - id: module-5-0110-s2
+        text: Sepeda berguna untuk pergi ke pasar.
+        blank: berguna
+        en: A bicycle is useful for going to the market.
+      - id: module-5-0110-s3
+        text: Aplikasi ini berguna setiap hari.
+        blank: berguna
+        en: This app is useful every day.
   - id: module-5-0111
     indonesian: berkebun
     english: to garden
     audio: 81c99db55705.ogg
+    note:
+      en: "'Berkebun' means 'to garden/do gardening'; it uses the 'ber-' prefix to
+        show an activity, similar to 'berenang' (to swim) or 'berlari' (to
+        run)."
+    sentences:
+      - id: module-5-0111-s1
+        text: Ibu suka berkebun di halaman rumah.
+        blank: berkebun
+        en: Mom likes to garden in the yard.
+      - id: module-5-0111-s2
+        text: Saya berkebun setiap pagi bersama ayah.
+        blank: berkebun
+        en: I garden every morning with my father.
+      - id: module-5-0111-s3
+        text: Mereka berkebun untuk menanam sayuran segar.
+        blank: berkebun
+        en: They garden to grow fresh vegetables.
   - id: module-5-0112
     indonesian: bersifat
     english: in nature, in character
     audio: 0f95d6d599ce.ogg
+    note:
+      en: "\"Bersifat\" means 'to be (of a certain nature/character)'; often used
+        before adjectives to describe inherent qualities; related to \"sifat\"
+        (nature, trait)."
+    sentences:
+      - id: module-5-0112-s1
+        text: Air laut bersifat asin dan segar.
+        blank: bersifat
+        en: Sea water is salty and fresh in nature.
+      - id: module-5-0112-s2
+        text: Kegiatan ini bersifat bebas untuk semua.
+        blank: bersifat
+        en: This activity is free in nature for everyone.
+      - id: module-5-0112-s3
+        text: Anjing itu bersifat ramah dan lucu.
+        blank: bersifat
+        en: That dog is friendly and cute in character.
   - id: module-5-0113
     indonesian: cara
     english: way
     audio: 47e85cce97ea.ogg
+    note:
+      en: '"Cara" means "way" or "method"; often used in phrases like "cara ini" (this
+        way) or "cara memasak" (way of cooking); not to be confused with "jalan"
+        which means road/path.'
+    sentences:
+      - id: module-5-0113-s1
+        text: Apa cara terbaik untuk belajar bahasa?
+        blank: cara
+        en: What is the best way to learn a language?
+      - id: module-5-0113-s2
+        text: Saya suka cara kamu memasak nasi.
+        blank: cara
+        en: I like the way you cook rice.
+      - id: module-5-0113-s3
+        text: Ini cara mudah membuat kopi.
+        blank: cara
+        en: This is an easy way to make coffee.
   - id: module-5-0114
     indonesian: fisika
     english: physics
     audio: db0c839a2be9.ogg
+    note:
+      en: "'Fisika' means physics (the science subject); used in school contexts,
+        related words: 'kimia' (chemistry), 'biologi' (biology), 'pelajaran'
+        (lesson/subject)."
+    sentences:
+      - id: module-5-0114-s1
+        text: Saya suka pelajaran fisika di sekolah.
+        blank: fisika
+        en: I like physics class at school.
+      - id: module-5-0114-s2
+        text: Fisika itu susah tapi menarik.
+        blank: fisika
+        en: Physics is difficult but interesting.
+      - id: module-5-0114-s3
+        text: Guru fisika saya sangat baik.
+        blank: fisika
+        en: My physics teacher is very kind.
   - id: module-5-0115
     indonesian: hasil
     english: result, yield
     audio: 6ffc907a2ef3.ogg
+    note:
+      en: "'Hasil' means result or yield; common in school (exam results) and farming
+        (harvest yield); related: 'hasilkan' (to produce)."
+    sentences:
+      - id: module-5-0115-s1
+        text: Hasil ujiannya sangat bagus hari ini.
+        blank: Hasil
+        en: The exam result is very good today.
+      - id: module-5-0115-s2
+        text: Petani itu senang dengan hasil panennya.
+        blank: hasil
+        en: The farmer is happy with his harvest yield.
+      - id: module-5-0115-s3
+        text: Apa hasil kerja kamu kemarin?
+        blank: hasil
+        en: What was the result of your work yesterday?
   - id: module-5-0116
     indonesian: kambing
     english: goat
     audio: 4b86787d1dbc.ogg
+    note:
+      en: "'Kambing' means goat; commonly seen on menus as 'sate kambing' (goat
+        satay); not to be confused with 'domba' (sheep)."
+    sentences:
+      - id: module-5-0116-s1
+        text: Saya melihat kambing di ladang itu.
+        blank: kambing
+        en: I see a goat in that field.
+      - id: module-5-0116-s2
+        text: Ibu membeli daging kambing di pasar.
+        blank: kambing
+        en: Mother buys goat meat at the market.
+      - id: module-5-0116-s3
+        text: Kambing itu makan rumput setiap hari.
+        blank: Kambing
+        en: The goat eats grass every day.
   - id: module-5-0117
     indonesian: kerbau
     english: water buffalo
     audio: 4cb15840686c.ogg
+    note:
+      en: "'Kerbau' means water buffalo, a common farm animal in rural Indonesia; not
+        to be confused with 'sapi' (cow) or 'kambing' (goat)."
+    sentences:
+      - id: module-5-0117-s1
+        text: Kerbau itu makan rumput di sawah.
+        blank: Kerbau
+        en: The water buffalo eats grass in the rice field.
+      - id: module-5-0117-s2
+        text: Pak tani punya satu kerbau besar.
+        blank: kerbau
+        en: The farmer has one big water buffalo.
+      - id: module-5-0117-s3
+        text: Anak-anak melihat kerbau di ladang.
+        blank: kerbau
+        en: The children see a water buffalo in the field.
   - id: module-5-0118
     indonesian: keterampilan
     english: skill
     audio: 102031657f3a.ogg
+    note:
+      en: "'Keterampilan' is a formal/neutral noun for 'skill' or 'ability'; related
+        to 'terampil' (skillful); more specific than 'kemampuan' (general
+        ability)."
+    sentences:
+      - id: module-5-0118-s1
+        text: Dia punya keterampilan memasak yang bagus.
+        blank: keterampilan
+        en: She has good cooking skills.
+      - id: module-5-0118-s2
+        text: Keterampilan berenang sangat penting untuk anak.
+        blank: keterampilan
+        en: Swimming skills are very important for children.
+      - id: module-5-0118-s3
+        text: Saya ingin belajar keterampilan baru hari ini.
+        blank: keterampilan
+        en: I want to learn a new skill today.
   - id: module-5-0119
     indonesian: menengah (tengah)
     english: middle-level
     audio: 4afe1d745099.ogg
+    note:
+      en: "'Menengah' means middle-level (e.g. school, income); 'tengah' alone means
+        'middle/center' as a position — both share the same root."
+    sentences:
+      - id: module-5-0119-s1
+        text: Dia belajar di sekolah menengah sekarang.
+        blank: menengah
+        en: He/She studies at a middle school now.
+      - id: module-5-0119-s2
+        text: Rumah saya ada di tengah jalan.
+        blank: tengah
+        en: My house is in the middle of the road.
+      - id: module-5-0119-s3
+        text: Warung itu ada di tengah pasar.
+        blank: tengah
+        en: That food stall is in the middle of the market.
   - id: module-5-0120
     indonesian: mesin cuci
     english: washing machine
     audio: d31af41e6f4d.ogg
+    note:
+      en: "'Mesin cuci' literally means 'wash machine'; commonly used in everyday
+        Indonesian for washing machine, distinct from 'mesin' (machine) alone."
+    sentences:
+      - id: module-5-0120-s1
+        text: Saya mencuci baju dengan mesin cuci.
+        blank: mesin cuci
+        en: I wash clothes with the washing machine.
+      - id: module-5-0120-s2
+        text: Mesin cuci ada di kamar mandi.
+        blank: mesin cuci
+        en: The washing machine is in the bathroom.
+      - id: module-5-0120-s3
+        text: Ibu membeli mesin cuci baru kemarin.
+        blank: mesin cuci
+        en: Mom bought a new washing machine yesterday.
   - id: module-5-0121
     indonesian: mesin
     english: engine, machine
     audio: 3657b715b73a.ogg
+    note:
+      en: "'Mesin' means both 'engine' and 'machine'; commonly used in everyday
+        contexts like motorbikes, washing machines, and ATMs."
+    sentences:
+      - id: module-5-0121-s1
+        text: Mesin motor saya rusak kemarin.
+        blank: Mesin
+        en: My motorbike engine broke down yesterday.
+      - id: module-5-0121-s2
+        text: Ibu mencuci baju dengan mesin cuci.
+        blank: mesin
+        en: Mom washes clothes with a washing machine.
+      - id: module-5-0121-s3
+        text: Mesin ATM ada di depan minimarket.
+        blank: Mesin
+        en: The ATM machine is in front of the minimarket.
   - id: module-5-0122
     indonesian: para
     english: plural marker for human beings
     audio: b7a69156c696.ogg
+    note:
+      en: '"Para" is placed before a noun to indicate a group of people; never used
+        for animals or objects, and differs from "semua" (all/every).'
+    sentences:
+      - id: module-5-0122-s1
+        text: Para siswa belajar di kelas hari ini.
+        blank: Para
+        en: The students are studying in class today.
+      - id: module-5-0122-s2
+        text: Para turis mengunjungi Pura Besakih kemarin.
+        blank: Para
+        en: The tourists visited Besakih Temple yesterday.
+      - id: module-5-0122-s3
+        text: Para ibu memasak makanan di dapur.
+        blank: Para
+        en: The mothers are cooking food in the kitchen.
   - id: module-5-0123
     indonesian: pertanian
     english: agriculture
     audio: cc3419b4cb6d.ogg
+    note:
+      en: "'Pertanian' means agriculture or farming; related words include 'petani'
+        (farmer) and 'bertani' (to farm); common in rural Indonesian contexts."
+    sentences:
+      - id: module-5-0123-s1
+        text: Bali terkenal dengan pertanian sawah yang indah.
+        blank: pertanian
+        en: Bali is famous for its beautiful rice field agriculture.
+      - id: module-5-0123-s2
+        text: Ayah saya bekerja di bidang pertanian.
+        blank: pertanian
+        en: My father works in the field of agriculture.
+      - id: module-5-0123-s3
+        text: Pertanian padi sangat penting di Indonesia.
+        blank: Pertanian
+        en: Rice agriculture is very important in Indonesia.
   - id: module-5-0124
     indonesian: siswa
     english: school student
     audio: 4825be16b93f.ogg
+    note:
+      en: "'Siswa' refers to a school student (elementary to high school); 'mahasiswa'
+        is used for university students — don't mix them up."
+    sentences:
+      - id: module-5-0124-s1
+        text: Siswa itu pergi ke sekolah setiap hari.
+        blank: Siswa
+        en: That student goes to school every day.
+      - id: module-5-0124-s2
+        text: Ibu guru memanggil nama siswa baru.
+        blank: siswa
+        en: The teacher calls the new student's name.
+      - id: module-5-0124-s3
+        text: Ada dua puluh siswa di kelas ini.
+        blank: siswa
+        en: There are twenty students in this class.
   - id: module-5-0125
     indonesian: usaha tani
     english: agricultural enterprise
     audio: 842955e4f4d4.ogg
+    note:
+      en: "'Usaha tani' means a farming or agricultural enterprise/business; common in
+        rural Indonesia, sometimes written as one word 'usahatani'; related to
+        'petani' (farmer) and 'pertanian' (agriculture)."
+    sentences:
+      - id: module-5-0125-s1
+        text: Pak Wayan memiliki usaha tani yang sukses.
+        blank: usaha tani
+        en: Pak Wayan has a successful agricultural enterprise.
+      - id: module-5-0125-s2
+        text: Usaha tani kami menghasilkan banyak beras.
+        blank: usaha tani
+        en: Our agricultural enterprise produces a lot of rice.
+      - id: module-5-0125-s3
+        text: Dia belajar tentang usaha tani di sekolah.
+        blank: usaha tani
+        en: He learns about agricultural enterprise at school.
   - id: module-5-0126
     indonesian: berbagai
     english: various
     audio: a788a3cf56e6.ogg
+    note:
+      en: "'Berbagai' means 'various/many kinds of' and is used before nouns; similar
+        to 'bermacam-macam' but shorter and more common in everyday speech."
+    sentences:
+      - id: module-5-0126-s1
+        text: Pasar ini menjual berbagai buah segar.
+        blank: berbagai
+        en: This market sells various fresh fruits.
+      - id: module-5-0126-s2
+        text: Ada berbagai makanan enak di sini.
+        blank: berbagai
+        en: There are various delicious foods here.
+      - id: module-5-0126-s3
+        text: Bali punya berbagai pantai yang indah.
+        blank: berbagai
+        en: Bali has various beautiful beaches.
   - id: module-5-0127
     indonesian: bersama-sama
     english: together
     audio: 10a5290e41aa.ogg
+    note:
+      en: "'Bersama-sama' means 'together' and is slightly more emphatic than
+        'bersama'; both are common, but 'bersama-sama' often implies doing
+        something as a group."
+    sentences:
+      - id: module-5-0127-s1
+        text: Kita makan bersama-sama di rumah.
+        blank: bersama-sama
+        en: We eat together at home.
+      - id: module-5-0127-s2
+        text: Anak-anak bermain bersama-sama di pantai.
+        blank: bersama-sama
+        en: The children play together at the beach.
   - id: module-5-0128
     indonesian: ilmu pengetahuan alam
     english: natural science
     audio: f09ed4714d9e.ogg
+    note:
+      en: "Formal term for 'natural science' (often abbreviated 'IPA' in schools);
+        used in academic contexts; related: 'ilmu sosial' (social science),
+        'pelajaran' (lesson/subject)."
+    sentences:
+      - id: module-5-0128-s1
+        text: Saya suka pelajaran ilmu pengetahuan alam.
+        blank: ilmu pengetahuan alam
+        en: I like the natural science subject.
+      - id: module-5-0128-s2
+        text: Ilmu pengetahuan alam sangat menarik bagi saya.
+        blank: ilmu pengetahuan alam
+        en: Natural science is very interesting to me.
+      - id: module-5-0128-s3
+        text: Buku ilmu pengetahuan alam ada di meja.
+        blank: ilmu pengetahuan alam
+        en: The natural science book is on the table.
   - id: module-5-0129
     indonesian: ilmu pengetahuan sosial
     english: social science
     audio: ac28ef1e4753.ogg
+    note:
+      en: "Formal term for 'social studies/science'; often abbreviated as 'IPS' in
+        Indonesian schools; related: 'ilmu pengetahuan alam' (IPA) for natural
+        science."
+    sentences:
+      - id: module-5-0129-s1
+        text: Saya suka pelajaran ilmu pengetahuan sosial di sekolah.
+        blank: ilmu pengetahuan sosial
+        en: I like social science class at school.
+      - id: module-5-0129-s2
+        text: Buku ilmu pengetahuan sosial ada di meja.
+        blank: ilmu pengetahuan sosial
+        en: The social science book is on the table.
   - id: module-5-0130
     indonesian: pada waktu itu
     english: at that time
     audio: 8e47a76887f1.ogg
+    note:
+      en: "'Pada waktu itu' means 'at that time'; slightly formal, often used in
+        storytelling; related: 'saat itu' (same meaning, more casual)"
+    sentences:
+      - id: module-5-0130-s1
+        text: Pada waktu itu, saya tinggal di Bali.
+        blank: pada waktu itu
+        en: At that time, I lived in Bali.
+      - id: module-5-0130-s2
+        text: Pada waktu itu, toko sudah tutup.
+        blank: pada waktu itu
+        en: At that time, the shop was already closed.
+      - id: module-5-0130-s3
+        text: Dia masih anak-anak pada waktu itu.
+        blank: pada waktu itu
+        en: He was still a child at that time.
   - id: module-5-0131
     indonesian: Sekolah Menengah Atas (SMA)
     english: high school
     audio: d68b1496bc1b.ogg
+    note:
+      en: SMA is the standard abbreviation for Indonesian high school (grades 10–12);
+        often used alone as 'SMA' in everyday speech; related terms include SD
+        (elementary) and SMP (middle school).
+    sentences:
+      - id: module-5-0131-s1
+        text: Adik saya belajar di Sekolah Menengah Atas.
+        blank: Sekolah Menengah Atas
+        en: My younger sibling studies at high school.
+      - id: module-5-0131-s2
+        text: Dia ingin masuk Sekolah Menengah Atas negeri.
+        blank: Sekolah Menengah Atas
+        en: He wants to enter a public high school.
   - id: module-5-0132
     indonesian: ahli
     english: expert
     audio: 03d153bafac4.ogg
+    note:
+      en: "'Ahli' means expert or specialist; commonly used before a noun (e.g., ahli
+        masak = cooking expert); not to be confused with 'pandai'
+        (smart/clever)."
+    sentences:
+      - id: module-5-0132-s1
+        text: Dia adalah ahli memasak yang terkenal.
+        blank: ahli
+        en: He is a famous cooking expert.
+      - id: module-5-0132-s2
+        text: Ayah saya seorang ahli dokter gigi.
+        blank: ahli
+        en: My father is a dental specialist.
+      - id: module-5-0132-s3
+        text: Kami butuh ahli untuk pekerjaan ini.
+        blank: ahli
+        en: We need an expert for this job.
   - id: module-5-0133
     indonesian: bibi
     english: aunt
     audio: 218090ab6414.ogg
+    note:
+      en: "'Bibi' means aunt (parent's sister); 'tante' is also common, especially in
+        urban/formal contexts."
+    sentences:
+      - id: module-5-0133-s1
+        text: Bibi saya tinggal di Bali.
+        blank: Bibi
+        en: My aunt lives in Bali.
+      - id: module-5-0133-s2
+        text: Saya makan siang dengan bibi.
+        blank: bibi
+        en: I have lunch with my aunt.
+      - id: module-5-0133-s3
+        text: Bibi membeli buah di pasar.
+        blank: Bibi
+        en: My aunt buys fruit at the market.
   - id: module-5-0134
     indonesian: ekonomi pertanian
     english: agricultural economic
     audio: 88071b9334b4.ogg
+    note:
+      en: "Used in academic and news contexts; 'pertanian' means farming/agriculture,
+        often confused with 'perkebunan' (plantation); related: 'petani'
+        (farmer), 'hasil pertanian' (farm produce)."
+    sentences:
+      - id: module-5-0134-s1
+        text: Dia belajar ekonomi pertanian di universitas.
+        blank: ekonomi pertanian
+        en: He studies agricultural economics at university.
+      - id: module-5-0134-s2
+        text: Ekonomi pertanian Bali sangat penting.
+        blank: ekonomi pertanian
+        en: Bali's agricultural economy is very important.
+      - id: module-5-0134-s3
+        text: Pak Wayan memahami ekonomi pertanian dengan baik.
+        blank: ekonomi pertanian
+        en: Mr. Wayan understands agricultural economics well.
   - id: module-5-0135
     indonesian: gelar
     english: degree, professional title, title of respect
     audio: 04401f01711f.ogg
+    note:
+      en: "'Gelar' means academic degree (S1, S2) or honorary/professional title; not
+        to be confused with 'judul' (title of a book/film)."
+    sentences:
+      - id: module-5-0135-s1
+        text: Dia sudah mendapat gelar dokter tahun ini.
+        blank: gelar
+        en: He already received his doctor's degree this year.
+      - id: module-5-0135-s2
+        text: Apa gelar kamu setelah lulus kuliah?
+        blank: gelar
+        en: What is your degree after you graduate from university?
+      - id: module-5-0135-s3
+        text: Pak Budi punya gelar sarjana ekonomi.
+        blank: gelar
+        en: Mr. Budi has a bachelor's degree in economics.
   - id: module-5-0136
     indonesian: Katolik
     english: Catholic
     audio: 48e2727d06ac.ogg
+    note:
+      en: "'Katolik' refers to the Catholic religion; related words include 'gereja
+        Katolik' (Catholic church) and 'Kristen' (Christian, often used for
+        Protestant)."
+    sentences:
+      - id: module-5-0136-s1
+        text: Dia pergi ke gereja Katolik setiap Minggu.
+        blank: Katolik
+        en: She goes to the Catholic church every Sunday.
+      - id: module-5-0136-s2
+        text: Teman saya beragama Katolik.
+        blank: Katolik
+        en: My friend is Catholic.
   - id: module-5-0137
     indonesian: yang ke-
     english: the ____th (of number)
     audio: 800492451f35.ogg
+    note:
+      en: "\"yang ke-\" marks ordinal numbers (1st, 2nd, etc.); attach a number
+        directly after the hyphen, e.g. \"yang ke-3\"; often confused with
+        cardinal numbers — don't drop \"yang ke-\" when ranking order."
+    sentences:
+      - id: module-5-0137-s1
+        text: Ini adalah lomba yang ke-3 saya.
+        blank: yang ke-3
+        en: This is my 3rd competition.
+      - id: module-5-0137-s2
+        text: Dia tiba yang ke-2 di garis finish.
+        blank: yang ke-2
+        en: He arrived 2nd at the finish line.
+      - id: module-5-0137-s3
+        text: Hari ini adalah hari yang ke-7.
+        blank: yang ke-7
+        en: Today is the 7th day.
   - id: module-5-0138
     indonesian: laboratorium
     english: laboratory
     audio: 7c537f7aa245.ogg
+    note:
+      en: "'Laboratorium' is a formal/neutral word used in schools and hospitals;
+        often shortened to 'lab' in casual speech."
+    sentences:
+      - id: module-5-0138-s1
+        text: Kami belajar sains di laboratorium sekolah.
+        blank: laboratorium
+        en: We study science in the school laboratory.
+      - id: module-5-0138-s2
+        text: Laboratorium ini bersih dan besar.
+        blank: laboratorium
+        en: This laboratory is clean and big.
+      - id: module-5-0138-s3
+        text: Dokter bekerja di laboratorium rumah sakit.
+        blank: laboratorium
+        en: The doctor works in the hospital laboratory.
   - id: module-5-0139
     indonesian: mengatakan (katakan)
     english: to say something
     audio: cd1ae8f4c477.ogg
+    note:
+      en: "'Mengatakan' is formal/written; in everyday speech Indonesians often use
+        'bilang' instead; 'katakan' is the imperative or base form."
+    sentences:
+      - id: module-5-0139-s1
+        text: Dia mengatakan bahwa dia lapar.
+        blank: mengatakan
+        en: He/She says that he/she is hungry.
+      - id: module-5-0139-s2
+        text: Ibu mengatakan selamat pagi kepada saya.
+        blank: mengatakan
+        en: Mom says good morning to me.
+      - id: module-5-0139-s3
+        text: Tolong katakan namamu kepada guru.
+        blank: katakan
+        en: Please say your name to the teacher.
   - id: module-5-0140
     indonesian: paman
     english: uncle
     audio: bbb8f05ca6cd.ogg
+    note:
+      en: "'Paman' means uncle (parent's brother); informal alternative is 'om', often
+        used for older male family friends too."
+    sentences:
+      - id: module-5-0140-s1
+        text: Paman saya tinggal di Bali.
+        blank: Paman
+        en: My uncle lives in Bali.
+      - id: module-5-0140-s2
+        text: Saya pergi ke pasar dengan paman.
+        blank: paman
+        en: I go to the market with my uncle.
+      - id: module-5-0140-s3
+        text: Paman membeli nasi goreng untuk saya.
+        blank: Paman
+        en: My uncle buys fried rice for me.
   - id: module-5-0141
     indonesian: sarjana
     english: university graduate
     audio: 610df6b34875.ogg
+    note:
+      en: "'Sarjana' means a university graduate (bachelor's degree holder); often
+        used in job ads; related: 'gelar sarjana' (bachelor's degree), not to be
+        confused with 'pelajar' (student)."
+    sentences:
+      - id: module-5-0141-s1
+        text: Kakak saya sudah menjadi sarjana tahun ini.
+        blank: sarjana
+        en: My older sibling became a university graduate this year.
+      - id: module-5-0141-s2
+        text: Dia mencari kerja sebagai sarjana baru.
+        blank: sarjana
+        en: He is looking for work as a new graduate.
+      - id: module-5-0141-s3
+        text: Orang tua saya bangga karena saya sarjana.
+        blank: sarjana
+        en: My parents are proud because I am a university graduate.
   - id: module-5-0142
     indonesian: sosiologi
     english: sociology
     audio: 3e2d029f1f01.ogg
+    note:
+      en: "'Sosiologi' is a formal academic word used in school/university contexts;
+        related to 'sosial' (social) and 'masyarakat' (society)."
+    sentences:
+      - id: module-5-0142-s1
+        text: Saya belajar sosiologi di universitas.
+        blank: sosiologi
+        en: I study sociology at university.
+      - id: module-5-0142-s2
+        text: Buku sosiologi ini sangat menarik.
+        blank: sosiologi
+        en: This sociology book is very interesting.
+      - id: module-5-0142-s3
+        text: Guru sosiologi kami sangat baik.
+        blank: sosiologi
+        en: Our sociology teacher is very kind.
   - id: module-5-0143
     indonesian: teknik mesin
     english: mechanical engineering
     audio: 4f0f9e0ffa36.ogg
+    note:
+      en: "\"Teknik mesin\" is the standard Indonesian term for the university major
+        'mechanical engineering'; often shortened to 'tekmesin' in casual
+        speech."
+    sentences:
+      - id: module-5-0143-s1
+        text: Saya ingin kuliah teknik mesin di Bali.
+        blank: teknik mesin
+        en: I want to study mechanical engineering in Bali.
+      - id: module-5-0143-s2
+        text: Kakak saya lulus dari teknik mesin.
+        blank: teknik mesin
+        en: My older sibling graduated from mechanical engineering.
+      - id: module-5-0143-s3
+        text: Teknik mesin adalah jurusan yang susah.
+        blank: teknik mesin
+        en: Mechanical engineering is a difficult major.
   - id: module-5-0144
     indonesian: teknik pertanian
     english: agricultural engineering
     audio: 6d8f309d925a.ogg
+    note:
+      en: "'Teknik pertanian' refers to agricultural engineering or farming
+        techniques; used in academic and rural contexts; related words:
+        'pertanian' (farming), 'petani' (farmer)."
+    sentences:
+      - id: module-5-0144-s1
+        text: Dia belajar teknik pertanian di sekolah.
+        blank: teknik pertanian
+        en: He studies agricultural engineering at school.
+      - id: module-5-0144-s2
+        text: Teknik pertanian membantu petani bekerja lebih mudah.
+        blank: teknik pertanian
+        en: Agricultural engineering helps farmers work more easily.
+      - id: module-5-0144-s3
+        text: Ayah saya menggunakan teknik pertanian yang baru.
+        blank: teknik pertanian
+        en: My father uses new agricultural engineering methods.
   - id: module-5-0145
     indonesian: buat
     english: (informal) for
     audio: 86655b52a454.ogg
+    note:
+      en: "'Buat' is the informal spoken equivalent of 'untuk' (for); very common in
+        casual speech but avoid in formal writing."
+    sentences:
+      - id: module-5-0145-s1
+        text: Ini kopi buat kamu.
+        blank: buat
+        en: This coffee is for you.
+      - id: module-5-0145-s2
+        text: Saya beli oleh-oleh buat ibu.
+        blank: buat
+        en: I bought a souvenir for mom.
+      - id: module-5-0145-s3
+        text: Nasi ini buat siapa?
+        blank: buat
+        en: Who is this rice for?
   - id: module-5-0146
     indonesian: bermasalah
     english: to have a problem
     audio: 5593d86c43da.ogg
+    note:
+      en: "'Bermasalah' means 'to have a problem' or 'problematic'; it is an
+        adjective/verb formed with the prefix 'ber-' added to 'masalah'
+        (problem); commonly used to describe people, things, or situations that
+        are troublesome."
+    sentences:
+      - id: module-5-0146-s1
+        text: Motor saya bermasalah hari ini.
+        blank: bermasalah
+        en: My motorbike has a problem today.
+      - id: module-5-0146-s2
+        text: Wifi di sini sering bermasalah.
+        blank: bermasalah
+        en: The wifi here often has problems.
+      - id: module-5-0146-s3
+        text: Anak itu tidak bermasalah di sekolah.
+        blank: bermasalah
+        en: That child does not have problems at school.
   - id: module-5-0147
     indonesian: gampang
     english: easy
     audio: 5a4974494fd4.ogg
+    note:
+      en: "'Gampang' means 'easy' in informal/colloquial Indonesian; 'mudah' is the
+        more formal equivalent — both are widely used."
+    sentences:
+      - id: module-5-0147-s1
+        text: Soal ini gampang sekali untuk saya.
+        blank: gampang
+        en: This question is very easy for me.
+      - id: module-5-0147-s2
+        text: Masak nasi goreng itu gampang banget.
+        blank: gampang
+        en: Cooking fried rice is really easy.
+      - id: module-5-0147-s3
+        text: Bahasa Indonesia gampang dipelajari setiap hari.
+        blank: gampang
+        en: Indonesian is easy to learn every day.
   - id: module-5-0148
     indonesian: kasus
     english: case
     audio: d70bef44f9f3.ogg
+    note:
+      en: "'Kasus' is a neutral formal/informal word for 'case' (legal, medical, or
+        general); commonly heard in news and everyday talk; related: 'masalah'
+        (problem), 'perkara' (matter/case)."
+    sentences:
+      - id: module-5-0148-s1
+        text: Kasus itu sudah selesai kemarin.
+        blank: Kasus
+        en: That case was already resolved yesterday.
+      - id: module-5-0148-s2
+        text: Ada kasus baru di rumah sakit.
+        blank: kasus
+        en: There is a new case at the hospital.
+      - id: module-5-0148-s3
+        text: Polisi sedang menyelidiki kasus ini.
+        blank: kasus
+        en: The police are investigating this case.
   - id: module-5-0149
     indonesian: mikir (pikir)
     english: (informal) to think
     audio: a48624b782b8.ogg
+    note:
+      en: '"Mikir" is the informal/colloquial form of "pikir" (to think); use "pikir"
+        in formal writing, but "mikir" is very common in everyday spoken
+        Indonesian.'
+    sentences:
+      - id: module-5-0149-s1
+        text: Aku mikir mau makan apa hari ini.
+        blank: mikir
+        en: I'm thinking about what to eat today.
+      - id: module-5-0149-s2
+        text: Dia mikir sebentar sebelum menjawab.
+        blank: mikir
+        en: He thought for a moment before answering.
+      - id: module-5-0149-s3
+        text: Jangan mikir terlalu banyak, santai saja.
+        blank: mikir
+        en: Don't think too much, just relax.
   - id: module-5-0150
     indonesian: milih (pilih)
     english: (informal) to choose
     audio: 4ea59f464c0f.ogg
+    note:
+      en: "'Milih' is the informal/colloquial form of 'pilih' (to choose); use 'pilih'
+        in formal writing or speech."
+    sentences:
+      - id: module-5-0150-s1
+        text: Kamu mau milih makanan apa hari ini?
+        blank: milih
+        en: What food do you want to choose today?
+      - id: module-5-0150-s2
+        text: Dia milih baju biru di toko itu.
+        blank: milih
+        en: She chose a blue shirt at that store.
+      - id: module-5-0150-s3
+        text: Ayo milih satu oleh-oleh untuk ibu.
+        blank: milih
+        en: Come on, choose one souvenir for mom.
   - id: module-5-0151
     indonesian: ngobrol
     english: to chat, to talk about something (informal)
     audio: df92de783aae.ogg
+    note:
+      en: Informal verb for casual conversation; more relaxed than 'berbicara'; often
+        used with 'sama' (with) or 'tentang' (about).
+    sentences:
+      - id: module-5-0151-s1
+        text: Kami ngobrol di warung tadi pagi.
+        blank: ngobrol
+        en: We were chatting at the food stall this morning.
+      - id: module-5-0151-s2
+        text: Dia suka ngobrol sama teman-temannya.
+        blank: ngobrol
+        en: She likes to chat with her friends.
+      - id: module-5-0151-s3
+        text: Ayo ngobrol sebentar di sini.
+        blank: ngobrol
+        en: Let's chat for a moment here.
   - id: module-5-0152
     indonesian: nolong (tolong)
     english: (informal) to help
     audio: 7b9a597579d9.ogg
+    note:
+      en: "'Nolong' is the informal/colloquial form of 'tolong'; 'tolong' also means
+        'please' when asking for help."
+    sentences:
+      - id: module-5-0152-s1
+        text: Bisa nolong saya bawa tas ini?
+        blank: nolong
+        en: Can you help me carry this bag?
+      - id: module-5-0152-s2
+        text: Dia nolong ibu di dapur tadi.
+        blank: nolong
+        en: She helped mom in the kitchen earlier.
+      - id: module-5-0152-s3
+        text: Tolong nolong teman kamu ya!
+        blank: nolong
+        en: Please help your friend, okay!
   - id: module-5-0153
     indonesian: pengacara (acara)
     english: lawyer
     audio: 9ed0ea3ecc94.ogg
+    note:
+      en: "'Pengacara' means lawyer; note that 'acara' alone means 'event/program', so
+        context matters."
+    sentences:
+      - id: module-5-0153-s1
+        text: Ayah saya adalah seorang pengacara terkenal.
+        blank: pengacara
+        en: My father is a famous lawyer.
+      - id: module-5-0153-s2
+        text: Dia butuh pengacara untuk masalah itu.
+        blank: pengacara
+        en: He needs a lawyer for that problem.
   - id: module-5-0154
     indonesian: soal
     english: about (informal)
     audio: 3828197b40be.ogg
+    note:
+      en: "'Soal' informally means 'about/regarding'; often used in casual speech
+        instead of 'tentang', common in everyday conversation."
+    sentences:
+      - id: module-5-0154-s1
+        text: Dia bertanya soal harga kamar itu.
+        blank: soal
+        en: He asked about the price of that room.
+      - id: module-5-0154-s2
+        text: Kita bicara soal rencana besok ya.
+        blank: soal
+        en: Let's talk about tomorrow's plan.
+      - id: module-5-0154-s3
+        text: Ibu tahu soal masalah itu.
+        blank: soal
+        en: Mom knows about that problem.
   - id: module-5-0155
     indonesian: soalnya
     english: (informal) the thing is, because
     audio: 60a19934437e.ogg
+    note:
+      en: "'Soalnya' is casual/informal, used to explain a reason; similar to 'karena'
+        but more conversational, common in spoken Indonesian."
+    sentences:
+      - id: module-5-0155-s1
+        text: Aku tidak mau makan, soalnya kenyang.
+        blank: soalnya
+        en: I don't want to eat, because I'm full.
+      - id: module-5-0155-s2
+        text: Dia tidak datang, soalnya hujan deras.
+        blank: soalnya
+        en: She didn't come, the thing is it was raining heavily.
+      - id: module-5-0155-s3
+        text: Kami pulang cepat, soalnya sudah malam.
+        blank: soalnya
+        en: We went home early, because it was already night.
   - id: module-5-0156
     indonesian: studi pembangunan
     english: development studies
     audio: ecbe2907e405.ogg
+    note:
+      en: '"Studi pembangunan" is an academic/formal term for the university major or
+        field of development studies; often seen in university contexts.'
+    sentences:
+      - id: module-5-0156-s1
+        text: Dia kuliah jurusan studi pembangunan di universitas.
+        blank: studi pembangunan
+        en: She studies development studies at university.
+      - id: module-5-0156-s2
+        text: Studi pembangunan adalah jurusan yang menarik.
+        blank: studi pembangunan
+        en: Development studies is an interesting major.
+      - id: module-5-0156-s3
+        text: Kakak saya memilih studi pembangunan tahun ini.
+        blank: studi pembangunan
+        en: My older sibling chose development studies this year.
   - id: module-5-0157
     indonesian: teknik elektro
     english: electrical engineering
     audio: a82947d820d6.ogg
+    note:
+      en: '"Teknik elektro" is the standard academic term for the electrical
+        engineering field/major; often shortened to "teknik" in casual speech,
+        not to be confused with "elektronik" (electronics as a consumer
+        category).'
+    sentences:
+      - id: module-5-0157-s1
+        text: Kakak saya kuliah di teknik elektro.
+        blank: teknik elektro
+        en: My older sibling studies electrical engineering.
+      - id: module-5-0157-s2
+        text: Teknik elektro adalah jurusan yang populer.
+        blank: teknik elektro
+        en: Electrical engineering is a popular major.
+      - id: module-5-0157-s3
+        text: Dia ingin masuk teknik elektro tahun ini.
+        blank: teknik elektro
+        en: He wants to enter electrical engineering this year.
   - id: module-5-0158
     indonesian: terus (2)
     english: and then (informal)
     audio: e7b1eef4d0f4.ogg
+    note:
+      en: "\"Terus\" as a discourse connector means \"and then\" in informal speech;
+        don't confuse with terus meaning \"continue\" or \"straight ahead\"."
+    sentences:
+      - id: module-5-0158-s1
+        text: Saya makan, terus pergi ke pasar.
+        blank: terus
+        en: I ate, and then went to the market.
+      - id: module-5-0158-s2
+        text: Dia mandi, terus tidur siang.
+        blank: terus
+        en: She showered, and then took a nap.
+      - id: module-5-0158-s3
+        text: Kami main, terus pulang ke rumah.
+        blank: terus
+        en: We played, and then went home.
   - id: module-5-0159
     indonesian: bangsawan
     english: a noble
     audio: 80febe97485e.ogg
+    note:
+      en: "'Bangsawan' means a noble or aristocrat; used in formal or historical
+        contexts; related words: 'kebangsawanan' (nobility), not to be confused
+        with 'bangsa' (nation/ethnic group)."
+    sentences:
+      - id: module-5-0159-s1
+        text: Dia adalah seorang bangsawan dari Bali.
+        blank: bangsawan
+        en: He is a noble from Bali.
+      - id: module-5-0159-s2
+        text: Keluarga bangsawan itu sangat terkenal.
+        blank: bangsawan
+        en: That noble family is very famous.
+      - id: module-5-0159-s3
+        text: Istana itu milik seorang bangsawan tua.
+        blank: bangsawan
+        en: That palace belongs to an old noble.
   - id: module-5-0160
     indonesian: belum pernah
     english: has/have never
     audio: ed2636cb4fe6.ogg
+    note:
+      en: '"Belum pernah" means "have never (done something yet)"; "belum" alone means
+        "not yet", while "pernah" alone means "ever"; together they express that
+        something has not happened up to now.'
+    sentences:
+      - id: module-5-0160-s1
+        text: Saya belum pernah makan nasi goreng.
+        blank: belum pernah
+        en: I have never eaten fried rice.
+      - id: module-5-0160-s2
+        text: Dia belum pernah pergi ke Bali.
+        blank: belum pernah
+        en: She has never gone to Bali.
+      - id: module-5-0160-s3
+        text: Kami belum pernah naik motor bersama.
+        blank: belum pernah
+        en: We have never ridden a motorbike together.
   - id: module-5-0161
     indonesian: bintang
     english: star
     audio: fdfcb27a3849.ogg
+    note:
+      en: "'Bintang' means 'star' (in the sky); it also refers to the popular
+        Indonesian beer brand and is used for celebrity/famous person ('artis
+        bintang')."
+    sentences:
+      - id: module-5-0161-s1
+        text: Langit malam penuh dengan bintang yang indah.
+        blank: bintang
+        en: The night sky is full of beautiful stars.
+      - id: module-5-0161-s2
+        text: Saya suka melihat bintang di pantai.
+        blank: bintang
+        en: I like watching stars at the beach.
   - id: module-5-0162
     indonesian: penari (tari)
     english: dancer
     audio: 65b14fac4411.ogg
+    note:
+      en: "'Penari' means dancer; formed from 'tari' (dance) + prefix 'pe-'; related:
+        'menari' (to dance), 'tarian' (a dance style)."
+    sentences:
+      - id: module-5-0162-s1
+        text: Dia adalah penari Bali yang terkenal.
+        blank: penari
+        en: She is a famous Balinese dancer.
+      - id: module-5-0162-s2
+        text: Para penari itu memakai baju merah.
+        blank: penari
+        en: The dancers are wearing red clothes.
+      - id: module-5-0162-s3
+        text: Adik saya ingin jadi penari.
+        blank: penari
+        en: My younger sibling wants to become a dancer.
   - id: module-5-0163
     indonesian: perdana menteri
     english: prime minister
     audio: 99ecfe4c8a23.ogg
+    note:
+      en: '"Perdana menteri" means prime minister; Indonesia has a president
+        ("presiden"), not a prime minister, so this term is used when discussing
+        other countries.'
+    sentences:
+      - id: module-5-0163-s1
+        text: Perdana menteri Inggris berbicara di televisi.
+        blank: perdana menteri
+        en: The prime minister of England is speaking on television.
+      - id: module-5-0163-s2
+        text: Siapa perdana menteri Jepang sekarang?
+        blank: perdana menteri
+        en: Who is the prime minister of Japan now?
+      - id: module-5-0163-s3
+        text: Saya baca berita tentang perdana menteri.
+        blank: perdana menteri
+        en: I read news about the prime minister.
   - id: module-5-0164
     indonesian: sampai sekarang
     english: so far
     audio: 5ac93159497f.ogg
+    note:
+      en: "'Sampai sekarang' means 'until now / so far'; used in everyday speech to
+        describe something continuing up to the present moment."
+    sentences:
+      - id: module-5-0164-s1
+        text: Sampai sekarang saya belum makan nasi.
+        blank: sampai sekarang
+        en: So far I haven't eaten rice yet.
+      - id: module-5-0164-s2
+        text: Dia sampai sekarang masih belajar bahasa Indonesia.
+        blank: sampai sekarang
+        en: She is still learning Indonesian so far.
+      - id: module-5-0164-s3
+        text: Sampai sekarang cuaca di Bali panas.
+        blank: sampai sekarang
+        en: So far the weather in Bali is hot.
   - id: module-5-0165
     indonesian: sudah pernah
     english: has/have ever
     audio: 0d67e92c7b5e.ogg
+    note:
+      en: "'Sudah pernah' means 'have/has ever (done something)'; 'sudah' adds a sense
+        of completion to 'pernah' (ever/once); often confused with 'pernah'
+        alone, which is slightly less emphatic."
+    sentences:
+      - id: module-5-0165-s1
+        text: Saya sudah pernah makan nasi goreng.
+        blank: sudah pernah
+        en: I have eaten nasi goreng before.
+      - id: module-5-0165-s2
+        text: Dia sudah pernah pergi ke Bali.
+        blank: sudah pernah
+        en: She has been to Bali before.
+      - id: module-5-0165-s3
+        text: Kamu sudah pernah naik motor?
+        blank: sudah pernah
+        en: Have you ever ridden a motorbike?
   - id: module-5-0166
     indonesian: belum biasa
     english: not yet used to
     audio: ada6c62ef7a5.ogg
+    note:
+      en: "\"Belum biasa\" means 'not yet accustomed to'; \"belum\" (not yet) differs
+        from \"tidak\" (not), and \"biasa\" alone means 'usual/accustomed'."
+    sentences:
+      - id: module-5-0166-s1
+        text: Saya belum biasa makan nasi setiap hari.
+        blank: belum biasa
+        en: I am not yet used to eating rice every day.
+      - id: module-5-0166-s2
+        text: Dia belum biasa naik motor di Bali.
+        blank: belum biasa
+        en: He is not yet used to riding a motorbike in Bali.
+      - id: module-5-0166-s3
+        text: Kami belum biasa dengan cuaca panas ini.
+        blank: belum biasa
+        en: We are not yet used to this hot weather.
   - id: module-5-0167
     indonesian: berani
     english: dare to do something
     audio: 4c755e30ab60.ogg
+    note:
+      en: '"Berani" means brave/daring; often confused with "mau" (want to); related:
+        "keberanian" (courage), "penakut" (coward)'
+    sentences:
+      - id: module-5-0167-s1
+        text: Dia berani naik ke atas pohon.
+        blank: berani
+        en: He dares to climb up the tree.
+      - id: module-5-0167-s2
+        text: Aku tidak berani makan durian.
+        blank: berani
+        en: I don't dare to eat durian.
+      - id: module-5-0167-s3
+        text: Adik berani pergi ke sekolah sendiri.
+        blank: berani
+        en: My little sibling dares to go to school alone.
   - id: module-5-0168
     indonesian: berhasil
     english: to be successful, to have success, to succeed
     audio: 037f5d820fec.ogg
+    note:
+      en: "'Berhasil' is a common everyday verb meaning to succeed or manage to do
+        something; often confused with 'sukses' which is more
+        formal/career-focused; related word: 'keberhasilan'
+        (success/achievement)."
+    sentences:
+      - id: module-5-0168-s1
+        text: Dia berhasil lulus ujian kemarin.
+        blank: berhasil
+        en: She succeeded in passing the exam yesterday.
+      - id: module-5-0168-s2
+        text: Saya berhasil membuat nasi goreng hari ini.
+        blank: berhasil
+        en: I succeeded in making fried rice today.
+      - id: module-5-0168-s3
+        text: Anak itu berhasil naik sepeda sendiri.
+        blank: berhasil
+        en: That child managed to ride a bicycle by himself.
   - id: module-5-0169
     indonesian: berbahasa
     english: to be a speaker of a language
     audio: 7012e6b452ba.ogg
+    note:
+      en: "'Berbahasa' means to speak/use a language; often confused with 'bicara' (to
+        talk); related: 'bahasa' (language), 'berbicara' (to speak)"
+    sentences:
+      - id: module-5-0169-s1
+        text: Dia berbahasa Inggris dengan sangat baik.
+        blank: berbahasa
+        en: She speaks English very well.
+      - id: module-5-0169-s2
+        text: Saya ingin berbahasa Indonesia setiap hari.
+        blank: berbahasa
+        en: I want to speak Indonesian every day.
+      - id: module-5-0169-s3
+        text: Orang Bali berbahasa Bali di rumah.
+        blank: berbahasa
+        en: Balinese people speak Balinese at home.
   - id: module-5-0170
     indonesian: kayu jati
     english: teak
     audio: 4caeb2cf280e.ogg
+    note:
+      en: "'Kayu jati' means teak wood, a prestigious hardwood in Indonesia; often
+        used in furniture contexts; 'kayu' alone means wood/timber, so 'kayu
+        jati' literally means 'teak wood'."
+    sentences:
+      - id: module-5-0170-s1
+        text: Meja ini dibuat dari kayu jati.
+        blank: kayu jati
+        en: This table is made from teak wood.
+      - id: module-5-0170-s2
+        text: Kayu jati sangat kuat dan mahal.
+        blank: kayu jati
+        en: Teak wood is very strong and expensive.
+      - id: module-5-0170-s3
+        text: Ayah membeli kursi kayu jati baru.
+        blank: kayu jati
+        en: Dad bought a new teak wood chair.
   - id: module-5-0171
     indonesian: minuman keras
     english: alcoholic drinks
     audio: 2122abee0be3.ogg
+    note:
+      en: "'Minuman keras' literally means 'hard drink'; often shortened to 'miras' in
+        casual speech; the opposite is 'minuman ringan' (soft drink)."
+    sentences:
+      - id: module-5-0171-s1
+        text: Toko itu tidak menjual minuman keras.
+        blank: minuman keras
+        en: That shop does not sell alcoholic drinks.
+      - id: module-5-0171-s2
+        text: Dia tidak suka minuman keras sama sekali.
+        blank: minuman keras
+        en: He does not like alcoholic drinks at all.
   - id: module-5-0172
     indonesian: pedagang
     english: a dealer/merchant
     audio: 12a9696b5c69.ogg
+    note:
+      en: "'Pedagang' means a seller/merchant/dealer; commonly used in markets;
+        related words: 'berdagang' (to trade), 'perdagangan' (trade/commerce)."
+    sentences:
+      - id: module-5-0172-s1
+        text: Pedagang itu menjual buah di pasar.
+        blank: Pedagang
+        en: That merchant sells fruit at the market.
+      - id: module-5-0172-s2
+        text: Ibu membeli sayur dari pedagang sayuran.
+        blank: pedagang
+        en: Mother buys vegetables from the vegetable seller.
+      - id: module-5-0172-s3
+        text: Pedagang kaki lima ada di sini.
+        blank: Pedagang
+        en: There is a street vendor here.
   - id: module-5-0173
     indonesian: pekerja
     english: a worker
     audio: 330107af8435.ogg
+    note:
+      en: "'Pekerja' means 'a worker/employee'; related words are 'kerja' (work) and
+        'bekerja' (to work); used in both formal and informal contexts."
+    sentences:
+      - id: module-5-0173-s1
+        text: Dia adalah pekerja di hotel itu.
+        blank: pekerja
+        en: He/She is a worker at that hotel.
+      - id: module-5-0173-s2
+        text: Pekerja itu datang pagi setiap hari.
+        blank: pekerja
+        en: That worker comes early every day.
+      - id: module-5-0173-s3
+        text: Bapak saya seorang pekerja keras.
+        blank: pekerja
+        en: My father is a hard worker.
   - id: module-5-0174
     indonesian: pelatih
     english: a coach
     audio: 5b1f398b967a.ogg
+    note:
+      en: "'Pelatih' means coach or trainer; related words: 'melatih' (to train),
+        'latihan' (practice/exercise); not to be confused with 'guru' (teacher
+        in a school)."
+    sentences:
+      - id: module-5-0174-s1
+        text: Pelatih saya sangat baik dan sabar.
+        blank: Pelatih
+        en: My coach is very good and patient.
+      - id: module-5-0174-s2
+        text: Dia adalah pelatih sepak bola terkenal.
+        blank: pelatih
+        en: He is a famous football coach.
+      - id: module-5-0174-s3
+        text: Pelatih kami berlatih setiap hari.
+        blank: Pelatih
+        en: Our coach trains every day.
   - id: module-5-0175
     indonesian: pemimpin (pimpin)
     english: a leader
     audio: 458f5dd4047b.ogg
+    note:
+      en: "'Pemimpin' (noun) means 'a leader/leader'; from root 'pimpin' (to lead);
+        often confused with 'ketua' (chairperson/head of group)."
+    sentences:
+      - id: module-5-0175-s1
+        text: Dia adalah pemimpin yang baik di sekolah.
+        blank: pemimpin
+        en: He is a good leader at school.
+      - id: module-5-0175-s2
+        text: Pemimpin desa itu sangat bijaksana.
+        blank: Pemimpin
+        en: The village leader is very wise.
   - id: module-5-0176
     indonesian: pengajar (ajar)
     english: a teacher
     audio: 4d94c8ae73ff.ogg
+    note:
+      en: "'Pengajar' means teacher/instructor (from root 'ajar' = to teach); more
+        formal than 'guru', often used for instructors outside schools."
+    sentences:
+      - id: module-5-0176-s1
+        text: Pengajar saya sangat sabar dan baik.
+        blank: Pengajar
+        en: My teacher is very patient and kind.
+      - id: module-5-0176-s2
+        text: Dia adalah pengajar bahasa Inggris.
+        blank: pengajar
+        en: He is an English teacher.
+      - id: module-5-0176-s3
+        text: Pengajar itu mengajar di kelas besar.
+        blank: Pengajar
+        en: That teacher teaches in a big classroom.
   - id: module-5-0177
     indonesian: pengalaman
     english: experience
     audio: b6a53bc6206d.ogg
+    note:
+      en: "'Pengalaman' means experience (knowledge/skill gained over time); related:
+        'berpengalaman' (experienced/adjective), not to be confused with
+        'kejadian' (an event/incident)."
+    sentences:
+      - id: module-5-0177-s1
+        text: Dia punya banyak pengalaman di dapur.
+        blank: pengalaman
+        en: She has a lot of experience in the kitchen.
+      - id: module-5-0177-s2
+        text: Ini pengalaman pertama saya naik motor.
+        blank: pengalaman
+        en: This is my first experience riding a motorbike.
+      - id: module-5-0177-s3
+        text: Pengalaman itu sangat menyenangkan bagi saya.
+        blank: pengalaman
+        en: That experience was very enjoyable for me.
   - id: module-5-0178
     indonesian: pengelola (kelola)
     english: a manager
     audio: bbacb1fa6f5d.ogg
+    note:
+      en: "'Pengelola' means manager or operator (of a place/business); from root
+        'kelola' (to manage); similar to 'manajer' but more formal/local."
+    sentences:
+      - id: module-5-0178-s1
+        text: Pengelola hotel itu sangat ramah.
+        blank: Pengelola
+        en: The hotel manager is very friendly.
+      - id: module-5-0178-s2
+        text: Saya berbicara dengan pengelola restoran ini.
+        blank: pengelola
+        en: I spoke with the manager of this restaurant.
+      - id: module-5-0178-s3
+        text: Pengelola vila membantu tamu setiap hari.
+        blank: Pengelola
+        en: The villa manager helps guests every day.
   - id: module-5-0179
     indonesian: penjual (jual)
     english: a seller
     audio: cd4c054d9b57.ogg
+    note:
+      en: "'Penjual' means 'seller/vendor'; the root verb 'jual' means 'to sell';
+        related: 'pembeli' (buyer), 'menjual' (to sell)."
+    sentences:
+      - id: module-5-0179-s1
+        text: Penjual itu menjual buah di pasar.
+        blank: Penjual
+        en: That seller sells fruit at the market.
+      - id: module-5-0179-s2
+        text: Saya membeli nasi dari penjual ini.
+        blank: penjual
+        en: I buy rice from this seller.
+      - id: module-5-0179-s3
+        text: Penjual itu ramah dan murah.
+        blank: Penjual
+        en: That seller is friendly and cheap.
   - id: module-5-0180
     indonesian: penulis (tulis)
     english: a writer, an author
     audio: 954a3f4df355.ogg
+    note:
+      en: "'Penulis' means writer/author; root verb is 'tulis' (to write); related:
+        'tulisan' (writing/text), 'menulis' (to write)."
+    sentences:
+      - id: module-5-0180-s1
+        text: Dia adalah penulis buku terkenal.
+        blank: penulis
+        en: She is a famous book author.
+      - id: module-5-0180-s2
+        text: Ayah saya seorang penulis.
+        blank: penulis
+        en: My father is a writer.
+      - id: module-5-0180-s3
+        text: Penulis itu tinggal di Bali.
+        blank: penulis
+        en: That writer lives in Bali.
   - id: module-5-0181
     indonesian: penyanyi
     english: a singer
     audio: 7b626de9323c.ogg
+    note:
+      en: "'Penyanyi' means 'singer'; formed from 'nyanyi' (to sing) + prefix 'pe-';
+        use 'penyanyi terkenal' for 'famous singer'."
+    sentences:
+      - id: module-5-0181-s1
+        text: Dia adalah penyanyi yang sangat terkenal.
+        blank: penyanyi
+        en: She is a very famous singer.
+      - id: module-5-0181-s2
+        text: Saya ingin menjadi penyanyi profesional.
+        blank: penyanyi
+        en: I want to become a professional singer.
+      - id: module-5-0181-s3
+        text: Penyanyi itu tampil di panggung besar.
+        blank: Penyanyi
+        en: The singer performed on a big stage.
   - id: module-5-0182
     indonesian: petugas
     english: a staffer
     audio: 92fe5f67a892.ogg
+    note:
+      en: "'Petugas' means an official worker or staffer (e.g. security guard,
+        officer); more formal than 'karyawan' (employee)."
+    sentences:
+      - id: module-5-0182-s1
+        text: Petugas itu membantu saya di bandara.
+        blank: Petugas
+        en: The staffer helped me at the airport.
+      - id: module-5-0182-s2
+        text: Ada petugas di depan hotel.
+        blank: petugas
+        en: There is a staffer in front of the hotel.
+      - id: module-5-0182-s3
+        text: Saya bertanya kepada petugas keamanan.
+        blank: petugas
+        en: I asked the security staffer.
   - id: module-5-0183
     indonesian: rokok
     english: a cigarette
     audio: 4f1dd27efa70.ogg
+    note:
+      en: "'Rokok' means cigarette; very common word in Indonesia, also seen in
+        'merokok' (to smoke); informal everyday register."
+    sentences:
+      - id: module-5-0183-s1
+        text: Dia membeli rokok di warung dekat rumah.
+        blank: rokok
+        en: He buys a cigarette at the small shop near home.
+      - id: module-5-0183-s2
+        text: Dilarang merokok di sini.
+        blank: merokok
+        en: Smoking is not allowed here.
+      - id: module-5-0183-s3
+        text: Ayah tidak mau merokok lagi sekarang.
+        blank: merokok
+        en: Dad does not want to smoke anymore now.
   - id: module-5-0184
     indonesian: sudah biasa
     english: to be used to
     audio: 87993497949e.ogg
+    note:
+      en: "\"Sudah biasa\" means 'already used to / accustomed to'; more casual than
+        \"terbiasa\", very common in everyday speech."
+    sentences:
+      - id: module-5-0184-s1
+        text: Saya sudah biasa makan nasi setiap hari.
+        blank: sudah biasa
+        en: I am used to eating rice every day.
+      - id: module-5-0184-s2
+        text: Dia sudah biasa bangun pagi.
+        blank: sudah biasa
+        en: She is used to waking up early.
+      - id: module-5-0184-s3
+        text: Kami sudah biasa dengan cuaca panas.
+        blank: sudah biasa
+        en: We are used to the hot weather.
   - id: module-5-0185
     indonesian: traktor
     english: tractor
     audio: 4f0224367962.ogg
+    note:
+      en: "'Traktor' is a direct loanword from Dutch/English; used in farming
+        contexts, often seen in rural Bali and Java."
+    sentences:
+      - id: module-5-0185-s1
+        text: Petani itu menggunakan traktor di sawah.
+        blank: traktor
+        en: That farmer uses a tractor in the rice field.
+      - id: module-5-0185-s2
+        text: Traktor besar itu milik pak Wayan.
+        blank: Traktor
+        en: That big tractor belongs to Mr. Wayan.
+      - id: module-5-0185-s3
+        text: Ayah membeli traktor baru kemarin.
+        blank: traktor
+        en: Father bought a new tractor yesterday.
   - id: module-5-0186
     indonesian: angka
     english: a figure, digits
     audio: bf0bd151d44c.ogg
+    note:
+      en: "'Angka' means number/digit/figure; don't confuse with 'nomor' (a specific
+        assigned number, e.g. phone number or address); related: 'angka satu'
+        (number one), 'angka besar' (large number)."
+    sentences:
+      - id: module-5-0186-s1
+        text: Angka tujuh adalah angka kesukaanku.
+        blank: Angka
+        en: Seven is my favorite number.
+      - id: module-5-0186-s2
+        text: Tulis angka satu sampai sepuluh.
+        blank: angka
+        en: Write the numbers one to ten.
+      - id: module-5-0186-s3
+        text: Angka di harga itu sangat besar.
+        blank: Angka
+        en: The figure on that price is very large.
   - id: module-5-0187
     indonesian: bercerita
     english: to tell
     audio: 630b5400cd7a.ogg
+    note:
+      en: "'Bercerita' means to tell a story or narrate; related to 'cerita' (story),
+        more expressive than 'bilang' (to say/tell)."
+    sentences:
+      - id: module-5-0187-s1
+        text: Ibu bercerita tentang masa kecilnya.
+        blank: bercerita
+        en: Mom tells a story about her childhood.
+      - id: module-5-0187-s2
+        text: Andi bercerita kepada teman-temannya.
+        blank: bercerita
+        en: Andi tells a story to his friends.
+      - id: module-5-0187-s3
+        text: Saya suka bercerita sebelum tidur.
+        blank: bercerita
+        en: I like to tell stories before sleeping.
   - id: module-5-0188
     indonesian: berpengalaman
     english: experienced
     audio: d7e79753af6b.ogg
+    note:
+      en: "'Berpengalaman' means experienced/skilled; formed by prefix 'ber-' +
+        'pengalaman' (experience); commonly used in job contexts; related:
+        'pengalaman' (experience), 'ahli' (expert)."
+    sentences:
+      - id: module-5-0188-s1
+        text: Dokter itu sangat berpengalaman dan baik.
+        blank: berpengalaman
+        en: That doctor is very experienced and kind.
+      - id: module-5-0188-s2
+        text: Saya mencari guru yang berpengalaman.
+        blank: berpengalaman
+        en: I am looking for an experienced teacher.
+      - id: module-5-0188-s3
+        text: Sopir ini berpengalaman di Bali.
+        blank: berpengalaman
+        en: This driver is experienced in Bali.
   - id: module-5-0189
     indonesian: bersedia
     english: to be willing
     audio: 900bed9577f9.ogg
+    note:
+      en: "'Bersedia' means 'to be willing/ready'; more formal than 'mau'; often used
+        in polite requests or offers."
+    sentences:
+      - id: module-5-0189-s1
+        text: Apakah kamu bersedia membantu saya?
+        blank: bersedia
+        en: Are you willing to help me?
+      - id: module-5-0189-s2
+        text: Saya bersedia belajar bahasa Indonesia.
+        blank: bersedia
+        en: I am willing to learn Indonesian.
+      - id: module-5-0189-s3
+        text: Dia bersedia pergi ke pasar.
+        blank: bersedia
+        en: She is willing to go to the market.
   - id: module-5-0190
     indonesian: cewek
     english: a chick, a young woman
     audio: f646770caacb.ogg
+    note:
+      en: "'Cewek' is informal/colloquial for a girl or young woman; use 'perempuan'
+        or 'wanita' in formal contexts."
+    sentences:
+      - id: module-5-0190-s1
+        text: Cewek itu sangat cantik dan ramah.
+        blank: Cewek
+        en: That girl is very pretty and friendly.
+      - id: module-5-0190-s2
+        text: Siapa nama cewek di sana?
+        blank: cewek
+        en: What is the name of that girl over there?
+      - id: module-5-0190-s3
+        text: Dia cewek yang suka surfing.
+        blank: cewek
+        en: She is a girl who likes surfing.
   - id: module-5-0191
     indonesian: dua kali
     english: twice
     audio: b70fd8799e87.ogg
+    note:
+      en: '"Dua kali" means "twice" or "two times"; use it before a verb or noun to
+        show frequency, similar to "sekali" (once) and "tiga kali" (three
+        times).'
+    sentences:
+      - id: module-5-0191-s1
+        text: Saya makan dua kali sehari.
+        blank: dua kali
+        en: I eat twice a day.
+      - id: module-5-0191-s2
+        text: Dia sudah pergi dua kali ke Bali.
+        blank: dua kali
+        en: She has gone to Bali twice.
+      - id: module-5-0191-s3
+        text: Kami latihan dua kali seminggu.
+        blank: dua kali
+        en: We practice twice a week.
   - id: module-5-0192
     indonesian: ganti
     english: to replace, to change
     audio: 3b9ad14dcce4.ogg
+    note:
+      en: "'Ganti' means to replace or change something; commonly used for changing
+        clothes ('ganti baju') or replacing items; related words: 'mengganti'
+        (formal), 'pertukaran' (exchange)."
+    sentences:
+      - id: module-5-0192-s1
+        text: Saya perlu ganti baju sekarang.
+        blank: ganti
+        en: I need to change clothes now.
+      - id: module-5-0192-s2
+        text: Tolong ganti air minum ini.
+        blank: ganti
+        en: Please replace this drinking water.
+      - id: module-5-0192-s3
+        text: Dia ganti sepatu di rumah.
+        blank: ganti
+        en: She changes shoes at home.
   - id: module-5-0193
     indonesian: kartu
     english: a card
     audio: 2d5f1017321a.ogg
+    note:
+      en: "'Kartu' is a neutral everyday word for any card (ID card, playing card,
+        credit card); common phrases include 'kartu identitas' (ID card) and
+        'kartu kredit' (credit card)."
+    sentences:
+      - id: module-5-0193-s1
+        text: Saya punya kartu identitas baru.
+        blank: kartu
+        en: I have a new identity card.
+      - id: module-5-0193-s2
+        text: Dia membayar dengan kartu kredit.
+        blank: kartu
+        en: She pays with a credit card.
+      - id: module-5-0193-s3
+        text: Tolong tunjukkan kartu Anda kepada saya.
+        blank: kartu
+        en: Please show me your card.
   - id: module-5-0194
     indonesian: komponen
     english: a component
     audio: d899e4215dad.ogg
+    note:
+      en: "'Komponen' is a neutral, everyday loanword used in technical and general
+        contexts; often heard in electronics, cooking, and education."
+    sentences:
+      - id: module-5-0194-s1
+        text: Komponen mesin ini sudah rusak.
+        blank: Komponen
+        en: This machine's component is already broken.
+      - id: module-5-0194-s2
+        text: Ada satu komponen yang hilang.
+        blank: komponen
+        en: There is one component that is missing.
+      - id: module-5-0194-s3
+        text: Kita perlu membeli komponen baru.
+        blank: komponen
+        en: We need to buy a new component.
   - id: module-5-0195
     indonesian: surat lamaran
     english: an application
     audio: 466701bb273a.ogg
+    note:
+      en: "'Surat lamaran' specifically means a written job application letter; often
+        confused with 'lamaran' alone which can also mean a marriage proposal."
+    sentences:
+      - id: module-5-0195-s1
+        text: Dia menulis surat lamaran untuk pekerjaan baru.
+        blank: surat lamaran
+        en: He writes an application letter for a new job.
+      - id: module-5-0195-s2
+        text: Saya sudah kirim surat lamaran ke kantor.
+        blank: surat lamaran
+        en: I have already sent an application letter to the office.
+      - id: module-5-0195-s3
+        text: Surat lamaran itu sangat bagus.
+        blank: surat lamaran
+        en: That application letter is very good.
   - id: module-5-0196
     indonesian: memasang (pasang)
     english: to fit, instal, set/put something in a place
     audio: af3499c4429f.ogg
+    note:
+      en: '"Memasang" is the active verb form of "pasang"; used for installing,
+        fitting, or placing things like lights, tires, or signs — often confused
+        with "meletakkan" (to place/put down gently).'
+    sentences:
+      - id: module-5-0196-s1
+        text: Ayah memasang lampu baru di kamar.
+        blank: memasang
+        en: Dad is installing a new light in the room.
+      - id: module-5-0196-s2
+        text: Dia memasang ban sepeda dengan cepat.
+        blank: memasang
+        en: He fits the bicycle tire quickly.
+      - id: module-5-0196-s3
+        text: Ibu memasang foto di dinding rumah.
+        blank: memasang
+        en: Mom puts a photo on the house wall.
   - id: module-5-0197
     indonesian: ngomong
     english: to say talk, chat
     audio: 8f43bd9e6179.ogg
+    note:
+      en: "'Ngomong' is informal/colloquial for 'to talk or say'; use 'berbicara' or
+        'berkata' in formal writing; commonly heard in everyday conversation
+        across Indonesia."
+    sentences:
+      - id: module-5-0197-s1
+        text: Dia ngomong pelan sekali di kelas.
+        blank: ngomong
+        en: She speaks very softly in class.
+      - id: module-5-0197-s2
+        text: Kamu ngomong apa tadi?
+        blank: ngomong
+        en: What did you say just now?
+      - id: module-5-0197-s3
+        text: Kami ngomong tentang liburan ke Bali.
+        blank: ngomong
+        en: We talked about a holiday to Bali.
   - id: module-5-0198
     indonesian: nyanyi
     english: to sing
     audio: 7c498dc4374a.ogg
+    note:
+      en: "'Nyanyi' is the informal/colloquial form of 'bernyanyi' (to sing); commonly
+        used in everyday speech; related words: 'lagu' (song), 'penyanyi'
+        (singer)."
+    sentences:
+      - id: module-5-0198-s1
+        text: Dia suka nyanyi di kamar mandi.
+        blank: nyanyi
+        en: She likes to sing in the bathroom.
+      - id: module-5-0198-s2
+        text: Kami nyanyi lagu bersama di pantai.
+        blank: nyanyi
+        en: We sing songs together at the beach.
+      - id: module-5-0198-s3
+        text: Adik nyanyi dengan suara yang merdu.
+        blank: nyanyi
+        en: My younger sibling sings with a beautiful voice.
   - id: module-5-0199
     indonesian: paling tidak
     english: at least
     audio: 2b9f70ee5aad.ogg
+    note:
+      en: "'Paling tidak' means 'at least' and is common in everyday speech; similar
+        to 'setidaknya', it sets a minimum expectation."
+    sentences:
+      - id: module-5-0199-s1
+        text: Minum paling tidak dua gelas air sehari.
+        blank: paling tidak
+        en: Drink at least two glasses of water a day.
+      - id: module-5-0199-s2
+        text: Dia belajar paling tidak satu jam.
+        blank: paling tidak
+        en: He studies for at least one hour.
+      - id: module-5-0199-s3
+        text: Kita perlu paling tidak lima orang.
+        blank: paling tidak
+        en: We need at least five people.
   - id: module-5-0200
     indonesian: resepsionis
     english: a receptionist
     audio: abeb8c4ff208.ogg
+    note:
+      en: "'Resepsionis' is a loanword from English, used in hotels and offices;
+        neutral register, also related to 'resepsi' (reception event)."
+    sentences:
+      - id: module-5-0200-s1
+        text: Resepsionis itu sangat ramah dan sopan.
+        blank: Resepsionis
+        en: The receptionist is very friendly and polite.
+      - id: module-5-0200-s2
+        text: Saya bertanya kepada resepsionis di hotel.
+        blank: resepsionis
+        en: I asked the receptionist at the hotel.
+      - id: module-5-0200-s3
+        text: Resepsionis memberikan kunci kamar kepada saya.
+        blank: Resepsionis
+        en: The receptionist gave me the room key.
   - id: module-5-0201
     indonesian: riwayat hidup
     english: a biography
     audio: 790772190c17.ogg
+    note:
+      en: "'Riwayat hidup' means biography or life history; often used in formal/job
+        contexts; also called 'biografi' for a written biography book."
+    sentences:
+      - id: module-5-0201-s1
+        text: Saya menulis riwayat hidup saya sendiri.
+        blank: riwayat hidup
+        en: I write my own biography.
+      - id: module-5-0201-s2
+        text: Dia membaca riwayat hidup pahlawan itu.
+        blank: riwayat hidup
+        en: He reads the biography of that hero.
+      - id: module-5-0201-s3
+        text: Riwayat hidup Pak Budi sangat menarik.
+        blank: riwayat hidup
+        en: Mr. Budi's biography is very interesting.
   - id: module-5-0202
     indonesian: asal
     english: on condition that
     audio: 084ba936106d.ogg
+    note:
+      en: "'Asal' meaning 'on condition that/as long as' can be confused with 'asal'
+        meaning 'origin'; in conditional use it connects a condition to a
+        result."
+    sentences:
+      - id: module-5-0202-s1
+        text: Kamu boleh pergi asal sudah makan.
+        blank: asal
+        en: You may go on condition that you have eaten.
+      - id: module-5-0202-s2
+        text: Dia mau membantu asal ada waktu.
+        blank: asal
+        en: She is willing to help as long as she has time.
+      - id: module-5-0202-s3
+        text: Anak itu boleh main asal rajin belajar.
+        blank: asal
+        en: That child may play on condition that he studies hard.
   - id: module-5-0203
     indonesian: hormat
     english: respect
     audio: cb7103ecaa88.ogg
+    note:
+      en: "'Hormat' means respect or honor; used in greetings like 'hormat saya' (my
+        regards) and the verb 'menghormati' (to respect someone)."
+    sentences:
+      - id: module-5-0203-s1
+        text: Kita harus hormat kepada orang tua.
+        blank: hormat
+        en: We must respect our parents.
+      - id: module-5-0203-s2
+        text: Dia memberi hormat kepada gurunya.
+        blank: hormat
+        en: He shows respect to his teacher.
+      - id: module-5-0203-s3
+        text: Hormat adalah nilai yang sangat penting.
+        blank: Hormat
+        en: Respect is a very important value.
   - id: module-5-0204
     indonesian: iklan
     english: an advertisement
     audio: 0ef305dcc077.ogg
+    note:
+      en: "'Iklan' means advertisement or commercial; used for TV ads, online ads, and
+        posters; related word 'mengiklankan' means to advertise something."
+    sentences:
+      - id: module-5-0204-s1
+        text: Saya melihat iklan di televisi tadi.
+        blank: iklan
+        en: I saw an advertisement on television just now.
+      - id: module-5-0204-s2
+        text: Iklan ini sangat menarik dan lucu.
+        blank: iklan
+        en: This advertisement is very interesting and funny.
+      - id: module-5-0204-s3
+        text: Dia memasang iklan di internet kemarin.
+        blank: iklan
+        en: She posted an advertisement on the internet yesterday.
   - id: module-5-0205
     indonesian: kepala kantor
     english: office head
     audio: 5100baf78ffd.ogg
+    note:
+      en: '"Kepala kantor" literally means "head of office" and is a formal title;
+        similar terms include "kepala sekolah" (school principal) and "kepala
+        desa" (village head).'
+    sentences:
+      - id: module-5-0205-s1
+        text: Kepala kantor itu sangat baik dan ramah.
+        blank: kepala kantor
+        en: The office head is very kind and friendly.
+      - id: module-5-0205-s2
+        text: Saya ingin bertemu dengan kepala kantor.
+        blank: kepala kantor
+        en: I want to meet the office head.
+      - id: module-5-0205-s3
+        text: Kepala kantor sedang rapat sekarang.
+        blank: kepala kantor
+        en: The office head is in a meeting now.
   - id: module-5-0206
     indonesian: lupa
     english: to forget
     audio: 6eccd0b26207.ogg
+    note:
+      en: "'Lupa' means 'to forget'; used for both 'I forget' and 'I forgot'; related
+        word: 'melupakan' (to forget something intentionally or over time)."
+    sentences:
+      - id: module-5-0206-s1
+        text: Saya lupa membawa dompet hari ini.
+        blank: lupa
+        en: I forgot to bring my wallet today.
+      - id: module-5-0206-s2
+        text: Dia lupa nama teman barunya.
+        blank: lupa
+        en: She forgot her new friend's name.
+      - id: module-5-0206-s3
+        text: Jangan lupa minum air setiap hari.
+        blank: lupa
+        en: Don't forget to drink water every day.
   - id: module-5-0207
     indonesian: melalui
     english: by, through
     audio: 6996503a08b3.ogg
+    note:
+      en: "'Melalui' means 'through' or 'by way of'; used for routes or methods; more
+        formal than 'lewat' but both are common"
+    sentences:
+      - id: module-5-0207-s1
+        text: Kami pergi melalui jalan kecil itu.
+        blank: melalui
+        en: We go through that small road.
+      - id: module-5-0207-s2
+        text: Dia belajar bahasa Inggris melalui internet.
+        blank: melalui
+        en: She learns English through the internet.
+      - id: module-5-0207-s3
+        text: Pesan dikirim melalui email kemarin.
+        blank: melalui
+        en: The message was sent by email yesterday.
   - id: module-5-0208
     indonesian: melamar
     english: to apply for (a job), to formally ask for a woman's hand in marriage
     audio: 1611c4305bc6.ogg
+    note:
+      en: '"Melamar" means both applying for a job and formally proposing marriage;
+        context makes the meaning clear; related words: lamaran
+        (application/proposal), pelamar (applicant).'
+    sentences:
+      - id: module-5-0208-s1
+        text: Dia melamar kerja di restoran itu.
+        blank: melamar
+        en: He applied for a job at that restaurant.
+      - id: module-5-0208-s2
+        text: Budi melamar kekasihnya minggu lalu.
+        blank: melamar
+        en: Budi proposed to his girlfriend last week.
   - id: module-5-0209
     indonesian: mengendarai (kendarai)
     english: to drive
     audio: 381595cd808d.ogg
+    note:
+      en: "'Mengendarai' is the formal/written form; in casual speech Indonesians
+        often say 'naik' (ride/take) for motorbikes, but 'mengendarai' covers
+        both cars and motorbikes."
+    sentences:
+      - id: module-5-0209-s1
+        text: Saya mengendarai motor ke pasar.
+        blank: mengendarai
+        en: I ride a motorbike to the market.
+      - id: module-5-0209-s2
+        text: Ayah mengendarai mobil ke kantor.
+        blank: mengendarai
+        en: Father drives a car to the office.
+      - id: module-5-0209-s3
+        text: Dia belajar mengendarai sepeda hari ini.
+        blank: mengendarai
+        en: She is learning to ride a bicycle today.
   - id: module-5-0210
     indonesian: perhatian
     english: attention
     audio: b280de7bb393.ogg
+    note:
+      en: "'Perhatian' means attention or notice; used in announcements ('perhatian!')
+        and to mean care/concern; related: 'memperhatikan' (to pay attention
+        to)."
+    sentences:
+      - id: module-5-0210-s1
+        text: Perhatian! Bus akan segera berangkat.
+        blank: Perhatian
+        en: Attention! The bus will depart soon.
+      - id: module-5-0210-s2
+        text: Guru meminta perhatian dari semua siswa.
+        blank: perhatian
+        en: The teacher asked for attention from all students.
+      - id: module-5-0210-s3
+        text: Tolong beri perhatian kepada adikmu.
+        blank: perhatian
+        en: Please give attention to your younger sibling.
   - id: module-5-0211
     indonesian: terserah
     english: it's up to you
     audio: dd62bed40da6.ogg
+    note:
+      en: "'Terserah' means 'up to you / whatever you like'; very common in casual
+        speech; can sound dismissive if said with a flat tone; related: 'bebas'
+        (free choice), 'pilih saja' (just choose)."
+    sentences:
+      - id: module-5-0211-s1
+        text: Mau makan apa? Terserah kamu saja.
+        blank: Terserah
+        en: What do you want to eat? It's up to you.
+      - id: module-5-0211-s2
+        text: Terserah, kita bisa pergi ke pantai.
+        blank: Terserah
+        en: Up to you, we can go to the beach.
+      - id: module-5-0211-s3
+        text: Pilih bajunya terserah kamu ya.
+        blank: terserah
+        en: Choose the clothes, it's up to you.
   - id: module-5-0212
     indonesian: wawancara
     english: interview
     audio: d3f309625bc4.ogg
+    note:
+      en: "'Wawancara' means interview (job or media); formal register, not used for
+        casual chats; related: 'pewawancara' (interviewer), 'diwawancarai' (to
+        be interviewed)."
+    sentences:
+      - id: module-5-0212-s1
+        text: Besok saya ada wawancara kerja pagi.
+        blank: wawancara
+        en: Tomorrow I have a job interview in the morning.
+      - id: module-5-0212-s2
+        text: Dia gugup sebelum wawancara itu.
+        blank: wawancara
+        en: She was nervous before the interview.
+      - id: module-5-0212-s3
+        text: Wawancara saya berlangsung satu jam.
+        blank: Wawancara
+        en: My interview lasted one hour.
   - id: module-5-0213
     indonesian: bidan
     english: a midwife
     audio: 9548abda05bb.ogg
+    note:
+      en: "'Bidan' means midwife; commonly confused with 'dokter' (doctor) — a bidan
+        specialises in pregnancy and childbirth, not general medicine."
+    sentences:
+      - id: module-5-0213-s1
+        text: Ibu pergi ke bidan setiap bulan.
+        blank: bidan
+        en: Mother goes to the midwife every month.
+      - id: module-5-0213-s2
+        text: Bidan itu sangat baik dan sabar.
+        blank: Bidan
+        en: The midwife is very kind and patient.
+      - id: module-5-0213-s3
+        text: Adik lahir dibantu oleh bidan.
+        blank: bidan
+        en: My younger sibling was born with help from a midwife.
   - id: module-5-0214
     indonesian: cucu
     english: a grandson/a granddaughter
     audio: b2de5a049deb.ogg
+    note:
+      en: "'Cucu' means grandchild (grandson or granddaughter); it is gender-neutral,
+        related words include 'kakek' (grandfather) and 'nenek' (grandmother)."
+    sentences:
+      - id: module-5-0214-s1
+        text: Nenek sangat menyayangi cucu perempuannya.
+        blank: cucu
+        en: Grandma loves her granddaughter very much.
+      - id: module-5-0214-s2
+        text: Cucu kakek bermain di taman.
+        blank: cucu
+        en: Grandfather's grandchild plays in the park.
+      - id: module-5-0214-s3
+        text: Saya punya satu cucu laki-laki.
+        blank: cucu
+        en: I have one grandson.
   - id: module-5-0215
     indonesian: dibandingkan
     english: to be compared
     audio: aa3fc3846599.ogg
+    note:
+      en: '"Dibandingkan" means "compared to" and is often used to contrast two
+        things; commonly confused with "membandingkan" (to compare actively);
+        related: "sama" (same), "lebih" (more).'
+    sentences:
+      - id: module-5-0215-s1
+        text: Apel ini lebih manis dibandingkan jeruk itu.
+        blank: dibandingkan
+        en: This apple is sweeter compared to that orange.
+      - id: module-5-0215-s2
+        text: Bali lebih panas dibandingkan Jakarta.
+        blank: dibandingkan
+        en: Bali is hotter compared to Jakarta.
+      - id: module-5-0215-s3
+        text: Motor ini lebih murah dibandingkan mobil.
+        blank: dibandingkan
+        en: This motorbike is cheaper compared to a car.
   - id: module-5-0216
     indonesian: dokter hewan
     english: a vetinary doctor, a vet
     audio: da81e24ed091.ogg
+    note:
+      en: "\"Dokter hewan\" literally means 'animal doctor'; use it for vets treating
+        pets or farm animals — do not shorten to just \"dokter\" as that refers
+        to a human doctor."
+    sentences:
+      - id: module-5-0216-s1
+        text: Anjing saya sakit, perlu ke dokter hewan.
+        blank: dokter hewan
+        en: My dog is sick, needs to go to the vet.
+      - id: module-5-0216-s2
+        text: Dokter hewan itu baik sekali.
+        blank: dokter hewan
+        en: That vet is very kind.
+      - id: module-5-0216-s3
+        text: Ibu membawa kucing ke dokter hewan.
+        blank: dokter hewan
+        en: Mom is taking the cat to the vet.
   - id: module-5-0217
     indonesian: film horor
     english: a horror movie/film
     audio: 3eb69496a3ca.ogg
+    note:
+      en: "'Film horor' is casual everyday Indonesian for a horror movie; 'film' can
+        also mean 'movie' generally, and 'horor' is borrowed from English."
+    sentences:
+      - id: module-5-0217-s1
+        text: Saya tidak suka nonton film horor.
+        blank: film horor
+        en: I don't like watching a horror movie.
+      - id: module-5-0217-s2
+        text: Adik saya takut film horor.
+        blank: film horor
+        en: My younger sibling is scared of horror movies.
+      - id: module-5-0217-s3
+        text: Malam ini kita nonton film horor.
+        blank: film horor
+        en: Tonight we are watching a horror movie.
   - id: module-5-0218
     indonesian: hobi
     english: hobby
     audio: b6460dcedc32.ogg
+    note:
+      en: '"Hobi" is an informal loanword from English; used in casual speech and
+        writing, interchangeable with "kegemaran" in formal contexts.'
+    sentences:
+      - id: module-5-0218-s1
+        text: Hobi saya adalah memasak dan membaca.
+        blank: Hobi
+        en: My hobby is cooking and reading.
+      - id: module-5-0218-s2
+        text: Apa hobi kamu sehari-hari?
+        blank: hobi
+        en: What is your everyday hobby?
+      - id: module-5-0218-s3
+        text: Dia punya hobi bermain gitar.
+        blank: hobi
+        en: He has a hobby of playing guitar.
   - id: module-5-0219
     indonesian: ijazah
     english: a diploma
     audio: 04b970170bf5.ogg
+    note:
+      en: '"Ijazah" is a formal/neutral word for a school or university diploma; often
+        needed for job applications; related: "gelar" (degree title),
+        "sertifikat" (certificate).'
+    sentences:
+      - id: module-5-0219-s1
+        text: Saya sudah mendapat ijazah dari universitas.
+        blank: ijazah
+        en: I have already received a diploma from the university.
+      - id: module-5-0219-s2
+        text: Ijazah saya ada di rumah.
+        blank: Ijazah
+        en: My diploma is at home.
+      - id: module-5-0219-s3
+        text: Dia butuh ijazah untuk melamar kerja.
+        blank: ijazah
+        en: She needs a diploma to apply for a job.
   - id: module-5-0220
     indonesian: kaca mata
     english: glasses
     audio: b9a31acf4363.ogg
+    note:
+      en: '"Kaca mata" (also spelled "kacamata") means eyeglasses; not to be confused
+        with "kaca" (glass/mirror) alone; related: "kaca mata hitam"
+        (sunglasses).'
+    sentences:
+      - id: module-5-0220-s1
+        text: Saya pakai kaca mata setiap hari.
+        blank: kaca mata
+        en: I wear glasses every day.
+      - id: module-5-0220-s2
+        text: Di mana kaca mata saya?
+        blank: kaca mata
+        en: Where are my glasses?
+      - id: module-5-0220-s3
+        text: Ibu membeli kaca mata baru kemarin.
+        blank: kaca mata
+        en: Mom bought new glasses yesterday.
   - id: module-5-0221
     indonesian: kekurangan
     english: to be short of
     audio: 9aaff2e827ed.ogg
+    note:
+      en: "'Kekurangan' means 'to lack' or 'to be short of'; it combines 'kurang' (not
+        enough) with the prefix/suffix ke-an; often confused with 'tidak ada'
+        (there is none at all)."
+    sentences:
+      - id: module-5-0221-s1
+        text: Kami kekurangan beras di dapur.
+        blank: kekurangan
+        en: We are short of rice in the kitchen.
+      - id: module-5-0221-s2
+        text: Toko itu kekurangan air minum.
+        blank: kekurangan
+        en: That shop is short of drinking water.
+      - id: module-5-0221-s3
+        text: Saya kekurangan uang untuk makan.
+        blank: kekurangan
+        en: I am short of money to eat.
   - id: module-5-0222
     indonesian: kuda
     english: a horse
     audio: a895311c03ff.ogg
+    note:
+      en: "'Kuda' means horse; related words include 'kuda-kuda' (a stance/tripod) and
+        'berkuda' (to ride a horse); neutral everyday register."
+    sentences:
+      - id: module-5-0222-s1
+        text: Anak itu melihat kuda di ladang.
+        blank: kuda
+        en: That child sees a horse in the field.
+      - id: module-5-0222-s2
+        text: Kuda itu berlari sangat cepat.
+        blank: Kuda
+        en: The horse runs very fast.
+      - id: module-5-0222-s3
+        text: Saya ingin naik kuda besok.
+        blank: kuda
+        en: I want to ride a horse tomorrow.
   - id: module-5-0223
     indonesian: mata
     english: an eye
     audio: 05da3689f40d.ogg
+    note:
+      en: "'Mata' means 'eye'; also appears in compounds like 'kacamata' (glasses) and
+        'mata uang' (currency); register is neutral/everyday."
+    sentences:
+      - id: module-5-0223-s1
+        text: Mata saya sakit hari ini.
+        blank: Mata
+        en: My eye hurts today.
+      - id: module-5-0223-s2
+        text: Dia menutup mata karena lelah.
+        blank: mata
+        en: She closes her eyes because she is tired.
+      - id: module-5-0223-s3
+        text: Anak itu punya mata biru.
+        blank: mata
+        en: That child has blue eyes.
   - id: module-5-0224
     indonesian: melayani
     english: to serve someone, to attend to (customers)
     audio: 188f58238945.ogg
+    note:
+      en: "'Melayani' means to serve or attend to someone, commonly used in shops,
+        restaurants, and hotels; related to 'layanan' (service) and 'pelayan'
+        (waiter/server)."
+    sentences:
+      - id: module-5-0224-s1
+        text: Dia melayani tamu di hotel itu.
+        blank: melayani
+        en: She serves the guests at that hotel.
+      - id: module-5-0224-s2
+        text: Ibu melayani pembeli di toko kecil.
+        blank: melayani
+        en: Mom attends to customers at the small shop.
+      - id: module-5-0224-s3
+        text: Pelayan itu melayani kami dengan ramah.
+        blank: melayani
+        en: That waiter served us in a friendly way.
   - id: module-5-0225
     indonesian: panitia
     english: a committee
     audio: d15c34570896.ogg
+    note:
+      en: "'Panitia' means a committee or organizing team; commonly used for events
+        and school activities; related: 'ketua panitia' (committee head)."
+    sentences:
+      - id: module-5-0225-s1
+        text: Panitia acara itu bekerja dengan keras.
+        blank: Panitia
+        en: The event committee works very hard.
+      - id: module-5-0225-s2
+        text: Saya bergabung dengan panitia sekolah.
+        blank: panitia
+        en: I joined the school committee.
+      - id: module-5-0225-s3
+        text: Panitia sudah menyiapkan semua makanan.
+        blank: Panitia
+        en: The committee has prepared all the food.
   - id: module-5-0226
     indonesian: penyakit
     english: a disease
     audio: 696c11a1e67a.ogg
+    note:
+      en: "'Penyakit' means 'disease' or 'illness'; related words include 'sakit'
+        (sick/pain) and 'obat' (medicine); used in both formal and everyday
+        speech."
+    sentences:
+      - id: module-5-0226-s1
+        text: Dokter bilang dia punya penyakit serius.
+        blank: penyakit
+        en: The doctor said he has a serious disease.
+      - id: module-5-0226-s2
+        text: Penyakit flu sangat mudah menular.
+        blank: penyakit
+        en: The flu disease spreads very easily.
+      - id: module-5-0226-s3
+        text: Cuci tangan bisa mencegah penyakit.
+        blank: penyakit
+        en: Washing hands can prevent disease.
   - id: module-5-0227
     indonesian: praktis
     english: practical
     audio: 6335b6217a29.ogg
+    note:
+      en: "'Praktis' means practical or convenient; often used to describe handy tools
+        or easy solutions; related to 'praktik' (practice/clinic)."
+    sentences:
+      - id: module-5-0227-s1
+        text: Tas ini sangat praktis untuk dibawa.
+        blank: praktis
+        en: This bag is very practical to carry.
+      - id: module-5-0227-s2
+        text: Cara ini lebih praktis dan mudah.
+        blank: praktis
+        en: This way is more practical and easy.
+      - id: module-5-0227-s3
+        text: Sepatu itu praktis untuk sehari-hari.
+        blank: praktis
+        en: Those shoes are practical for everyday use.
   - id: module-5-0228
     indonesian: Puskesmas
     english: a community health centre
     audio: 6a86f98c54cf.ogg
+    note:
+      en: "'Puskesmas' is an acronym for 'Pusat Kesehatan Masyarakat'; it refers to a
+        government-run community health clinic found in every district across
+        Indonesia, often the first point of care for locals."
+    sentences:
+      - id: module-5-0228-s1
+        text: Saya pergi ke Puskesmas hari ini.
+        blank: Puskesmas
+        en: I am going to the community health centre today.
+      - id: module-5-0228-s2
+        text: Puskesmas ini dekat dengan rumah saya.
+        blank: Puskesmas
+        en: This community health centre is close to my house.
+      - id: module-5-0228-s3
+        text: Dokter di Puskesmas sangat ramah.
+        blank: Puskesmas
+        en: The doctor at the community health centre is very friendly.
   - id: module-5-0229
     indonesian: sakit jantung
     english: to have a heart disease
     audio: da9d57435a97.ogg
+    note:
+      en: '"Sakit jantung" literally means "heart sickness"; use "punya sakit jantung"
+        (to have heart disease) or simply say someone "kena sakit jantung"; not
+        to be confused with "serangan jantung" (heart attack).'
+    sentences:
+      - id: module-5-0229-s1
+        text: Kakek saya punya sakit jantung sejak lama.
+        blank: sakit jantung
+        en: My grandfather has had heart disease for a long time.
+      - id: module-5-0229-s2
+        text: Dokter bilang dia kena sakit jantung.
+        blank: sakit jantung
+        en: The doctor said he has heart disease.
+      - id: module-5-0229-s3
+        text: Ibu tidak makan lemak karena sakit jantung.
+        blank: sakit jantung
+        en: Mom does not eat fat because of heart disease.
   - id: module-5-0230
     indonesian: salon kecantikan
     english: a beauty salon
     audio: 46807f96b467.ogg
+    note:
+      en: '"Salon kecantikan" means beauty salon; "kecantikan" comes from "cantik"
+        (beautiful/pretty); commonly shortened to just "salon" in everyday
+        speech.'
+    sentences:
+      - id: module-5-0230-s1
+        text: Ibu pergi ke salon kecantikan hari ini.
+        blank: salon kecantikan
+        en: Mom goes to the beauty salon today.
+      - id: module-5-0230-s2
+        text: Ada salon kecantikan dekat pasar.
+        blank: salon kecantikan
+        en: There is a beauty salon near the market.
+      - id: module-5-0230-s3
+        text: Saya potong rambut di salon kecantikan.
+        blank: salon kecantikan
+        en: I cut my hair at the beauty salon.
   - id: module-5-0231
     indonesian: sarjana muda
     english: Bachelor of Arts
     audio: 92c96d4a9a60.ogg
+    note:
+      en: "\"Sarjana muda\" is a formal/academic term for a bachelor's degree holder;
+        in everyday speech Indonesians often just say \"S1\" or \"sarjana\"."
+    sentences:
+      - id: module-5-0231-s1
+        text: Kakak saya sudah lulus sarjana muda.
+        blank: sarjana muda
+        en: My older sibling has already graduated with a bachelor's degree.
+      - id: module-5-0231-s2
+        text: Dia ingin mendapat gelar sarjana muda.
+        blank: sarjana muda
+        en: He wants to get a bachelor's degree.
   - id: module-5-0232
     indonesian: seksi
     english: a section
     audio: 948b7c237ab8.ogg
+    note:
+      en: "\"Seksi\" means 'section' or 'department' in formal/organizational
+        contexts; beginners may confuse it with the English loanword 'sexy' —
+        they are spelled the same but context makes the meaning clear."
+    sentences:
+      - id: module-5-0232-s1
+        text: Saya bekerja di seksi keuangan.
+        blank: seksi
+        en: I work in the finance section.
+      - id: module-5-0232-s2
+        text: Seksi makanan ada di lantai dua.
+        blank: seksi
+        en: The food section is on the second floor.
+      - id: module-5-0232-s3
+        text: Tolong pergi ke seksi informasi.
+        blank: seksi
+        en: Please go to the information section.
   - id: module-5-0233
     indonesian: skripsi
     english: a thesis
     audio: edbd3147f454.ogg
+    note:
+      en: "'Skripsi' refers specifically to an undergraduate thesis in Indonesia;
+        commonly discussed by university students; related words: 'tesis'
+        (graduate thesis), 'sidang' (thesis defense)."
+    sentences:
+      - id: module-5-0233-s1
+        text: Dia sedang menulis skripsi di perpustakaan.
+        blank: skripsi
+        en: She is writing a thesis in the library.
+      - id: module-5-0233-s2
+        text: Skripsi saya tentang budaya Bali.
+        blank: skripsi
+        en: My thesis is about Balinese culture.
+      - id: module-5-0233-s3
+        text: Kapan kamu selesai skripsi?
+        blank: skripsi
+        en: When will you finish your thesis?
   - id: module-5-0234
     indonesian: tebal
     english: thick
     audio: 881ba0a8cc78.ogg
+    note:
+      en: "'Tebal' means thick (for objects like books, walls, or fabric); opposite is
+        'tipis' (thin); do not confuse with 'gemuk' (fat, for people)."
+    sentences:
+      - id: module-5-0234-s1
+        text: Buku ini sangat tebal dan berat.
+        blank: tebal
+        en: This book is very thick and heavy.
+      - id: module-5-0234-s2
+        text: Dinding rumah itu tebal sekali.
+        blank: tebal
+        en: That house's wall is very thick.
+      - id: module-5-0234-s3
+        text: Saya pakai baju tebal karena dingin.
+        blank: tebal
+        en: I wear a thick shirt because it is cold.
   - id: module-5-0235
     indonesian: tergantung pada
     english: to depend on
     audio: 15b9365c9ebe.ogg
+    note:
+      en: "'Tergantung pada' means 'to depend on'; often shortened to just
+        'tergantung' in casual speech; do not confuse with 'menggantung' (to
+        hang something)."
+    sentences:
+      - id: module-5-0235-s1
+        text: Harga tiket tergantung pada musim liburan.
+        blank: tergantung pada
+        en: The ticket price depends on the holiday season.
+      - id: module-5-0235-s2
+        text: Rencana kami tergantung pada cuaca hari ini.
+        blank: tergantung pada
+        en: Our plan depends on today's weather.
+      - id: module-5-0235-s3
+        text: Pilihan makanan tergantung pada selera kamu.
+        blank: tergantung pada
+        en: The food choice depends on your taste.
   - id: module-5-0236
     indonesian: tergantung
     english: to hang, be suspended
     audio: 18b9e76c77f9.ogg
+    note:
+      en: '"Tergantung" means physically hanging/suspended, but is also very commonly
+        used to mean "it depends" in everyday speech.'
+    sentences:
+      - id: module-5-0236-s1
+        text: Tas itu tergantung di balik pintu.
+        blank: tergantung
+        en: That bag is hanging behind the door.
+      - id: module-5-0236-s2
+        text: Handuk saya tergantung di kamar mandi.
+        blank: tergantung
+        en: My towel is hanging in the bathroom.

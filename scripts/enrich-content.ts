@@ -22,6 +22,7 @@ const onlyModule = args.find((a) => a.startsWith('--module='))?.split('=')[1];
 const force = args.includes('--force');
 const dryRun = args.includes('--dry-run');
 const noAudio = args.includes('--no-audio');
+const concurrency = Math.max(1, Number(args.find((a) => a.startsWith('--concurrency='))?.split('=')[1] ?? 8));
 
 const anthropic = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
 const tts = new TtsService();
@@ -57,12 +58,12 @@ async function main() {
     if (onlyModule && mod.id !== onlyModule) continue;
     let changed = false;
 
-    for (let i = 0; i < mod.cards.length; i++) {
-      const card = mod.cards[i]!;
-      if (card.sentences?.length && !force) {
-        skipped++;
-        continue;
-      }
+    const todo = mod.cards
+      .map((card, i) => ({ card, i }))
+      .filter(({ card }) => force || !card.sentences?.length);
+    skipped += mod.cards.length - todo.length;
+
+    const enrichOne = async ({ card, i }: { card: QuizCard; i: number }) => {
       try {
         const gen = await generate(card);
         const audio: (string | null)[] = [];
@@ -77,7 +78,17 @@ async function main() {
         failed++;
         console.error(`✗ ${card.id}: ${(err as Error).message}`);
       }
-    }
+    };
+
+    // bounded-concurrency worker pool over this module's pending cards
+    let next = 0;
+    await Promise.all(
+      Array.from({ length: Math.min(concurrency, todo.length) }, async () => {
+        while (next < todo.length) {
+          await enrichOne(todo[next++]!);
+        }
+      }),
+    );
 
     if (changed && !dryRun) {
       await fs.writeFile(path.join(CONTENT_DIR, f), YAML.stringify(mod), 'utf8');
