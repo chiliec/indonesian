@@ -8,3 +8,4 @@ secrets/
 .cache/
 
 .superpowers/
+.claude/settings.local.json
