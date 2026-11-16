@@ -4,6 +4,8 @@ export { escapeHtml } from './html.js';
 
 export interface QuestionView {
   sessionId: string;
+  /** session.current — the widget echoes it so a retried tap never hits the next card */
+  cursor: number;
   /** 0-based index of the current exercise */
   index: number;
   total: number;

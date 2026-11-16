@@ -13,6 +13,7 @@ export async function settingsCommand(ctx: BotCtx): Promise<void> {
   const speak = user?.speakOptIn ?? false;
   const len = user?.sessionLength ?? 10;
   const dailyOn = !(user?.dailySentenceOptOut ?? false);
+  const rich = user?.richCards ?? false;
   const kb = new InlineKeyboard()
     .text('⭐ Subscribe', 'menu:subscribe')
     .text('🎯 Pick a module', 'settings:modules')
@@ -21,7 +22,9 @@ export async function settingsCommand(ctx: BotCtx): Promise<void> {
     .text(speak ? '🎤 Speaking: ON' : '🎤 Speaking: OFF', 'settings:speak')
     .row()
     .text(`🔢 Session length: ${len}`, 'settings:length')
-    .text(dailyOn ? '🌅 Daily sentence: ON' : '🌅 Daily sentence: OFF', 'settings:daily');
+    .text(dailyOn ? '🌅 Daily sentence: ON' : '🌅 Daily sentence: OFF', 'settings:daily')
+    .row()
+    .text(rich ? '✨ Rich cards: ON' : '✨ Rich cards: OFF', 'settings:rich');
   await ctx.reply('⚙️ *Settings*', { reply_markup: kb, parse_mode: 'Markdown' });
 }
 
@@ -59,5 +62,14 @@ export async function settingsDailyCallback(ctx: BotCtx): Promise<void> {
   const currentlyOn = !(user?.dailySentenceOptOut ?? false);
   // turning off => opt-out true; turning on => opt-out false
   await ctx.deps.usersRepo.setDailySentenceOptOut(ctx.from.id, currentlyOn);
+  await settingsCommand(ctx);
+}
+
+/** settings:rich — toggle the widget practice card and re-render the menu. */
+export async function settingsRichCallback(ctx: BotCtx): Promise<void> {
+  if (!ctx.from) return;
+  await ctx.answerCallbackQuery();
+  const user = await ctx.deps.usersRepo.getByTelegramId(ctx.from.id);
+  await ctx.deps.usersRepo.setRichCards(ctx.from.id, !(user?.richCards ?? false));
   await settingsCommand(ctx);
 }

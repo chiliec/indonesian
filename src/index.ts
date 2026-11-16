@@ -25,7 +25,7 @@ import { sweepStaleSessions } from './services/SessionSweeper.js';
 import { expireDueSubscriptions } from './services/SubscriptionWatcher.js';
 import { sweepStudySessions } from './handlers/practice.js';
 import { sweepDailySentences } from './handlers/dailySentence.js';
-import { createBot, ADVERTISED_COMMANDS } from './bot.js';
+import { createBot, ADVERTISED_COMMANDS, ALLOWED_UPDATES } from './bot.js';
 
 async function main() {
   const env = EnvSchema.parse(process.env);
@@ -134,7 +134,7 @@ async function main() {
   }
 
   logger.info('starting bot');
-  await bot.start();
+  await bot.start({ allowed_updates: ALLOWED_UPDATES as never });
 }
 
 main().catch((err) => {

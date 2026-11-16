@@ -42,6 +42,10 @@ export class UserDoc {
   @prop({ type: Boolean })
   public dailySentenceOptOut?: boolean;
 
+  /** practice card rendered as a Telegram widget when true; unset/false = text card */
+  @prop({ type: Boolean })
+  public richCards?: boolean;
+
   /** timestamp of the last daily-sentence push (once-per-UTC-day guard) */
   @prop({ type: Date })
   public lastDailySentenceAt?: Date;
@@ -120,6 +124,10 @@ export class UsersRepo {
 
   async setDailySentenceOptOut(telegramId: number, on: boolean): Promise<void> {
     await UserModel.updateOne({ telegramId }, { $set: { dailySentenceOptOut: on } });
+  }
+
+  async setRichCards(telegramId: number, on: boolean): Promise<void> {
+    await UserModel.updateOne({ telegramId }, { $set: { richCards: on } });
   }
 
   async recordDailySentenceSent(

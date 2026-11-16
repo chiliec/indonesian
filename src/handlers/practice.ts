@@ -5,6 +5,10 @@ import type { BotCtx, BotDeps } from '../bot.js';
 import type { TurnResult } from '../services/session/SessionEngine.js';
 import type { CardView } from '../services/session/types.js';
 import { MIXED_MODULE_ID } from '../services/QuizService.js';
+import {
+  sendWidgetCard, editWidgetData, answerWidgetQuery,
+  type RawApi, type WidgetQuery, type WidgetAnswer,
+} from '../services/session/widgetApi.js';
 import { mainKeyboard } from './keyboard.js';
 
 const QUIZ_AUDIO_DIR = path.resolve('content/quiz/audio');
@@ -33,7 +37,31 @@ export function parseSessionCallback(data: string): ParsedCallback | null {
 
 type EditApi = Pick<Api, 'editMessageText' | 'sendMessage'>;
 
-/** Edit the card; tolerate not-modified, resend if deleted, retry once on 429. */
+/** Run an edit; tolerate not-modified, resend if the message is gone, retry once on 429.
+ *  Returns the id of the message that now holds the card. */
+async function editSafe(
+  messageId: number,
+  edit: () => Promise<unknown>,
+  resend: () => Promise<number>,
+): Promise<number> {
+  try {
+    await edit();
+    return messageId;
+  } catch (err) {
+    const desc = (err as { description?: string }).description ?? String(err);
+    if (desc.includes('message is not modified')) return messageId;
+    if (desc.includes('message to edit not found')) return resend();
+    const retryAfter = (err as { parameters?: { retry_after?: number } }).parameters?.retry_after;
+    if (retryAfter) {
+      await new Promise((r) => setTimeout(r, retryAfter * 1000));
+      await edit();
+      return messageId;
+    }
+    throw err;
+  }
+}
+
+/** Edit the text card; tolerate not-modified, resend if deleted, retry once on 429. */
 export async function editCardSafe(
   api: EditApi,
   chatId: number,
@@ -42,24 +70,20 @@ export async function editCardSafe(
   kb: InlineKeyboard | undefined,
 ): Promise<number> {
   const opts = { parse_mode: 'HTML' as const, ...(kb ? { reply_markup: kb } : {}) };
-  try {
-    await api.editMessageText(chatId, messageId, text, opts);
-    return messageId;
-  } catch (err) {
-    const desc = (err as { description?: string }).description ?? String(err);
-    if (desc.includes('message is not modified')) return messageId;
-    if (desc.includes('message to edit not found')) {
-      const msg = await api.sendMessage(chatId, text, opts);
-      return msg.message_id;
-    }
-    const retryAfter = (err as { parameters?: { retry_after?: number } }).parameters?.retry_after;
-    if (retryAfter) {
-      await new Promise((r) => setTimeout(r, retryAfter * 1000));
-      await api.editMessageText(chatId, messageId, text, opts);
-      return messageId;
-    }
-    throw err;
-  }
+  return editSafe(
+    messageId,
+    () => api.editMessageText(chatId, messageId, text, opts),
+    async () => (await api.sendMessage(chatId, text, opts)).message_id,
+  );
+}
+
+/** Push new state into the widget card; same tolerance rules as the text card. */
+export async function editWidgetSafe(api: RawApi, chatId: number, messageId: number, chatData: string): Promise<number> {
+  return editSafe(
+    messageId,
+    () => editWidgetData(api, chatId, messageId, chatData),
+    () => sendWidgetCard(api, chatId, chatData),
+  );
 }
 
 /** Send the OGG clip as a voice message, reusing/caching its file_id. */
@@ -100,6 +124,13 @@ export async function applyTurn(api: Api, deps: BotDeps, r: TurnResult): Promise
     }
   }
 
+  if (session.cardKind === 'widget') await applyWidgetCard(api, deps, r);
+  else await applyTextCard(api, deps, r);
+}
+
+async function applyTextCard(api: Api, deps: BotDeps, r: TurnResult): Promise<void> {
+  const { session, view } = r;
+  const chatId = session.chatId;
   const kb = toKeyboard(view);
   if (session.cardMessageId) {
     const newId = await editCardSafe(api, chatId, session.cardMessageId, view.text, kb);
@@ -110,6 +141,24 @@ export async function applyTurn(api: Api, deps: BotDeps, r: TurnResult): Promise
     const opts = { parse_mode: 'HTML' as const, ...(kb ? { reply_markup: kb } : {}) };
     const msg = await api.sendMessage(chatId, view.text, opts);
     await deps.study.deps.sessions.setMessages(session._id, { cardMessageId: msg.message_id });
+  }
+}
+
+async function applyWidgetCard(api: Api, deps: BotDeps, r: TurnResult): Promise<void> {
+  const { session, widget } = r;
+  const sessions = deps.study.deps.sessions;
+  if (session.cardMessageId) {
+    const newId = await editWidgetSafe(api, session.chatId, session.cardMessageId, widget);
+    if (newId !== session.cardMessageId) await sessions.setMessages(session._id, { cardMessageId: newId });
+    return;
+  }
+  try {
+    const id = await sendWidgetCard(api, session.chatId, widget);
+    await sessions.setMessages(session._id, { cardMessageId: id });
+  } catch (err) {
+    deps.logger.warn({ err }, 'sendWidget failed; this session falls back to the text card');
+    await sessions.setCardKind(session._id, 'text');
+    await applyTextCard(api, deps, r);
   }
 }
 
@@ -220,7 +269,11 @@ export async function sweepStudySessions(api: Api, deps: BotDeps, maxAgeMs: numb
   for (const r of expired) {
     if (!r.session.cardMessageId) continue;
     try {
-      await editCardSafe(api, r.session.chatId, r.session.cardMessageId, r.view.text, toKeyboard(r.view));
+      if (r.session.cardKind === 'widget') {
+        await editWidgetSafe(api, r.session.chatId, r.session.cardMessageId, r.widget);
+      } else {
+        await editCardSafe(api, r.session.chatId, r.session.cardMessageId, r.view.text, toKeyboard(r.view));
+      }
     } catch (err) {
       deps.logger.warn({ err }, 'expired-card edit failed');
     }
@@ -234,4 +287,62 @@ export async function sweepStudySessions(api: Api, deps: BotDeps, maxAgeMs: numb
     }
   }
   return expired.length;
+}
+
+export type WidgetOp =
+  | { op: 'a'; q: number; arg: number }
+  | { op: 'b'; q: number; order: number[] }
+  | { op: 'n'; q: number }
+  | { op: 'again' };
+
+/** Widget request data: a:<cursor>:<option> | b:<cursor>:<i,j,k> | n:<cursor> | again */
+export function parseWidgetData(data: string): WidgetOp | null {
+  if (data === 'again') return { op: 'again' };
+  let m = data.match(/^a:(\d+):(\d+)$/);
+  if (m) return { op: 'a', q: Number(m[1]), arg: Number(m[2]) };
+  m = data.match(/^b:(\d+):(\d+(?:,\d+)*)$/);
+  if (m) return { op: 'b', q: Number(m[1]), order: m[2]!.split(',').map(Number) };
+  m = data.match(/^n:(\d+)$/);
+  if (m) return { op: 'n', q: Number(m[1]) };
+  return null;
+}
+
+/** A tap inside the widget card. Always answers the query, then pushes the new state. */
+export async function handleWidgetQuery(api: Api, deps: BotDeps, q: WidgetQuery): Promise<void> {
+  const eng = deps.study;
+  let reply: WidgetAnswer = 'error';
+  let turn: TurnResult | null = null;
+  try {
+    await deps.usersRepo.touchUser(q.from.id);
+    const p = parseWidgetData(q.data);
+    if (!p) {
+      deps.logger.warn({ data: q.data }, 'malformed widget query');
+    } else if (p.op === 'again') {
+      if (q.chat) turn = await eng.start(q.from.id, q.chat.id, MIXED_MODULE_ID);
+      reply = turn ? 'ok' : 'expired';
+    } else {
+      const s = await eng.deps.sessions.findActive(q.from.id);
+      if (s && s.cardMessageId === q.message_id) {
+        const sid = s._id.toString();
+        if (p.q === s.current) {
+          if (p.op === 'a') turn = await eng.submitChoice(q.from.id, sid, p.arg);
+          else if (p.op === 'b') turn = await eng.submitBuilder(q.from.id, sid, p.order);
+          else turn = await eng.next(q.from.id, sid);
+        }
+        // stale cursor or an already-recorded tap (a retry): just show the current card again
+        turn ??= await eng.refocus(q.from.id);
+      }
+      reply = turn ? 'ok' : 'expired';
+    }
+  } catch (err) {
+    deps.logger.error({ err, data: q.data }, 'widget query failed');
+    reply = 'error';
+    turn = null;
+  }
+  try {
+    await answerWidgetQuery(api, q.id, reply);
+  } catch (err) {
+    deps.logger.warn({ err }, 'answerWidgetQuery failed');
+  }
+  if (turn) await applyTurn(api, deps, turn);
 }

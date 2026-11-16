@@ -124,3 +124,35 @@ test('expireStale finalizes idle sessions', async () => {
   assert.ok(expired[0]!.view.text.includes('⌛'));
   assert.equal(await sessions.findActive(1), null);
 });
+
+test('submitBuilder: the right order completes correctly in one call', async () => {
+  const sid = await seed(builderEx);
+  const out = await eng.submitBuilder(1, sid, [1, 2, 0]); // Saya mau makan
+  assert.ok(out!.view.finished);
+  assert.equal(JSON.parse(out!.widget).k, 'finish');
+  assert.equal((await stats.get(1))!.xp, 15 + 25); // builder xp + bonus
+});
+
+test('submitBuilder: a wrong order ends in feedback', async () => {
+  const sid = await seed(builderEx);
+  const out = await eng.submitBuilder(1, sid, [0, 1, 2]);
+  assert.ok(out!.view.text.includes('❌'));
+  const st = JSON.parse(out!.widget);
+  assert.equal(st.k, 'feedback');
+  assert.equal(st.a, 'Saya mau makan');
+});
+
+test('submitBuilder: rejects anything that is not a permutation of the tiles', async () => {
+  const sid = await seed(builderEx);
+  for (const bad of [[0, 1], [0, 0, 1], [0, 1, 3], [0, 1, 2, 2], [0, 1, -1]]) {
+    assert.equal(await eng.submitBuilder(1, sid, bad), null);
+  }
+  assert.equal((await sessions.findActive(1))!.phase, 'question'); // nothing was recorded
+});
+
+test('submitBuilder: null on a non-builder exercise', async () => {
+  const sid = await seed({
+    cardId: 'm1-0001', kind: 'type', prompt: '✍️ "to eat"', answer: 'makan', feedback: {},
+  });
+  assert.equal(await eng.submitBuilder(1, sid, [0]), null);
+});
