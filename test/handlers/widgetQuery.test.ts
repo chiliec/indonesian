@@ -11,7 +11,7 @@ import { UserStatsRepo } from '../../src/db/userStats.js';
 import { UsersRepo } from '../../src/db/users.js';
 import { xpFor } from '../../src/services/session/xp.js';
 import { logger } from '../../src/util/logger.js';
-import { applyTurn, handleWidgetQuery, parseWidgetData } from '../../src/handlers/practice.js';
+import { applyTurn, handleWidgetQuery, parseWidgetData, practiceHandler } from '../../src/handlers/practice.js';
 
 const here = path.dirname(fileURLToPath(import.meta.url));
 const fixtures = path.join(here, '..', 'fixtures', 'quiz');
@@ -150,4 +150,15 @@ test('a throwing dependency still gets the query answered', async () => {
   await handleWidgetQuery(api, broken, query('n:0'));
   assert.deepEqual(answers(), ['error']);
   assert.deepEqual(pushed(), []);
+});
+
+test('Practice starts a fresh session when the Rich cards setting changed since the open one', async () => {
+  await users.setRichCards(1, false);
+  (api as unknown as Record<string, unknown>).sendMessage = async () => ({ message_id: 1 });
+  await applyTurn(api, deps, (await eng.start(1, 100, 'mixed', () => 0.5))!); // text session
+  await users.setRichCards(1, true);
+  const ctx = { from: { id: 1 }, chat: { id: 100 }, api, deps, reply: async () => {} } as never;
+  await practiceHandler(ctx);
+  assert.equal((await current()).cardKind, 'widget');
+  assert.equal(calls.filter((c) => c[0] === 'sendWidget').length, 1);
 });
