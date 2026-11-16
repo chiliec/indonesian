@@ -195,3 +195,34 @@ test('pickSessionCards: small pools give a shorter session; no fresh cards → n
   const allSeen = pickSessionCards(cards, new Map(cards.map((c) => [c.id, seenP(1, 5)])), 10, mid);
   assert.deepEqual(allSeen.map((s) => s.role), ['review', 'review', 'review']);
 });
+
+test('buildExercise intro: lesson body, audio, no options', () => {
+  const ex = buildExercise(card(), pool, 'intro', {});
+  assert.equal(ex.kind, 'intro');
+  assert.ok(ex.prompt.includes('New word'));
+  assert.ok(ex.prompt.includes('<b>makan</b> — to eat'));
+  assert.ok(ex.prompt.includes('Saya mau makan nasi goreng'));
+  assert.ok(ex.prompt.includes('I want to eat fried rice'));
+  assert.ok(ex.prompt.includes('💡 note-en'));
+  assert.equal(ex.answer, 'makan');
+  assert.equal(ex.audioFile, 'a.ogg');
+  assert.equal(ex.options, undefined);
+});
+
+test('buildExercise intro: bare card shows only word and meaning', () => {
+  const ex = buildExercise(pool[1]!, pool, 'intro', {});
+  assert.ok(ex.prompt.includes('<b>minum</b> — to drink'));
+  assert.ok(!ex.prompt.includes('📖'));
+  assert.ok(!ex.prompt.includes('💡'));
+  assert.equal(ex.audioFile, undefined);
+});
+
+test('every exercise carries the word pair; cloze/builder carry their own sentence', () => {
+  const choice = buildExercise(card(), pool, 'choice', {});
+  assert.equal(choice.feedback.word, 'makan');
+  assert.equal(choice.feedback.wordEn, 'to eat');
+  const long = { id: 's0', text: 'a b c d e f g h i j', blank: 'a', en: 'too long for tiles' };
+  const builder = buildExercise(card({ sentences: [long, SENT] }), pool, 'builder', {});
+  assert.equal(builder.feedback.sentence, SENT.text);
+  assert.equal(builder.feedback.sentenceEn, SENT.en);
+});

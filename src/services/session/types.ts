@@ -1,10 +1,15 @@
-export type ExerciseKind = 'choice' | 'cloze' | 'builder' | 'type' | 'speak';
+export type ExerciseKind = 'intro' | 'choice' | 'cloze' | 'builder' | 'type' | 'speak';
+/** kinds that ask something (everything but the intro lesson card) */
+export type QuizKind = Exclude<ExerciseKind, 'intro'>;
 
 export interface ExerciseFeedback {
-  /** example sentence in Indonesian (from card.sentences[0]) */
+  /** the card's word pair, shown in the flash and on the wrong-answer screen */
+  word?: string;
+  wordEn?: string;
+  /** example sentence in Indonesian (the one the exercise used, else card.sentences[0]) */
   sentence?: string;
   sentenceEn?: string;
-  /** locale-resolved usage note */
+  /** usage note */
   note?: string;
 }
 

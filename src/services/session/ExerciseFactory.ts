@@ -1,6 +1,6 @@
 import type { QuizCard, QuizSentence } from '../quiz/types.js';
 import type { QuizProgress } from '../../db/quizProgress.js';
-import type { Exercise, ExerciseKind } from './types.js';
+import type { Exercise, ExerciseKind, QuizKind } from './types.js';
 import { escapeHtml } from './html.js';
 
 /** 0 unseen · 1 last answer wrong · else lifetime correct count capped at 4. */
@@ -11,14 +11,14 @@ export function masteryOf(p?: Pick<QuizProgress, 'seen' | 'correct' | 'lastResul
 }
 
 /** mastery bands per spec; order doubles as difficulty order. */
-const BANDS: Record<ExerciseKind, [number, number]> = {
+const BANDS: Record<QuizKind, [number, number]> = {
   choice: [0, 1],
   cloze: [1, 2],
   builder: [2, 3],
   type: [2, 4],
   speak: [3, 4],
 };
-const DIFFICULTY: ExerciseKind[] = ['choice', 'cloze', 'builder', 'type', 'speak'];
+const DIFFICULTY: QuizKind[] = ['choice', 'cloze', 'builder', 'type', 'speak'];
 
 const MAX_BUILDER_TILES = 8;
 const MAX_DISTRACTORS = 3;
@@ -35,8 +35,8 @@ function usableSentences(card: QuizCard, kind: 'cloze' | 'builder'): QuizSentenc
 }
 
 /** in-band kinds the card can actually support; never empty (choice fallback). */
-export function eligibleKinds(card: QuizCard, mastery: number, opts: KindOpts): ExerciseKind[] {
-  const supported = (k: ExerciseKind): boolean => {
+export function eligibleKinds(card: QuizCard, mastery: number, opts: KindOpts): QuizKind[] {
+  const supported = (k: QuizKind): boolean => {
     if (k === 'cloze' || k === 'builder') return usableSentences(card, k).length > 0;
     if (k === 'speak') return opts.speakOptIn;
     return true;
@@ -48,7 +48,7 @@ export function eligibleKinds(card: QuizCard, mastery: number, opts: KindOpts): 
 }
 
 /** weighted pick favoring harder (later) kinds: weights 1,2,3,... */
-export function pickKind(card: QuizCard, mastery: number, opts: KindOpts): ExerciseKind {
+export function pickKind(card: QuizCard, mastery: number, opts: KindOpts): QuizKind {
   const rng = opts.rng ?? Math.random;
   const eligible = eligibleKinds(card, mastery, opts);
   const total = (eligible.length * (eligible.length + 1)) / 2;
@@ -185,7 +185,7 @@ function buildOptions(
 
 function feedbackOf(card: QuizCard): Exercise['feedback'] {
   const s = card.sentences?.[0];
-  const fb: Exercise['feedback'] = {};
+  const fb: Exercise['feedback'] = { word: card.indonesian, wordEn: card.english };
   if (s) {
     fb.sentence = s.text;
     fb.sentenceEn = s.en;
@@ -205,6 +205,16 @@ export function buildExercise(
   const base = { cardId: card.id, kind, feedback };
 
   switch (kind) {
+    case 'intro': {
+      const lines = ['🆕 <b>New word</b>', '', `<b>${escapeHtml(card.indonesian)}</b> — ${escapeHtml(card.english)}`];
+      const s = card.sentences?.[0];
+      if (s || card.note) lines.push('');
+      if (s) lines.push(`📖 <i>${escapeHtml(s.text)}</i> — ${escapeHtml(s.en)}`);
+      if (card.note) lines.push(`💡 ${escapeHtml(card.note.en)}`);
+      const ex: Exercise = { ...base, prompt: lines.join('\n'), answer: card.indonesian };
+      if (card.audio) ex.audioFile = card.audio;
+      return ex;
+    }
     case 'choice': {
       const { options, correctIndex } = buildOptions(card.english, card.id, pool, 'english', rng);
       const prompt = card.audio
@@ -225,6 +235,7 @@ export function buildExercise(
       const { options, correctIndex } = buildOptions(s.blank, card.id, pool, 'indonesian', rng);
       return {
         ...base,
+        feedback: { ...feedback, sentence: s.text, sentenceEn: s.en },
         prompt: `🧩 Fill the blank:\n<i>${escapeHtml(blanked)}</i>\n(${escapeHtml(s.en)})`,
         options,
         correctIndex,
@@ -237,6 +248,7 @@ export function buildExercise(
       const words = s.text.split(/\s+/);
       return {
         ...base,
+        feedback: { ...feedback, sentence: s.text, sentenceEn: s.en },
         prompt: `🧱 Build the sentence:\n"${escapeHtml(s.en)}"`,
         tiles: shuffle(words, rng),
         answer: s.text,
