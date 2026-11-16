@@ -100,10 +100,15 @@ export function renderFeedback(v: QuestionView, ex: Exercise): CardView {
 
 export interface FinishView {
   correctCount: number;
+  /** questions asked (intro cards excluded) */
   total: number;
   xpEarned: number;
   /** "indonesian — english" lines for missed cards */
   missedWords: string[];
+  /** Indonesian words introduced this session */
+  newWords: string[];
+  /** cards (all modules) due within 24h */
+  dueTomorrow: number;
 }
 
 export function renderFinish(f: FinishView): CardView {
@@ -111,8 +116,12 @@ export function renderFinish(f: FinishView): CardView {
     '🏁 Session done!',
     `✅ ${f.correctCount}/${f.total} · ⭐ +${f.xpEarned} XP`,
   ];
+  if (f.newWords.length) parts.push(`🆕 New: ${escapeHtml(f.newWords.join(', '))}`);
   if (f.missedWords.length) {
-    parts.push('', 'Words to review:', ...f.missedWords.map((w) => `• ${escapeHtml(w)}`));
+    parts.push('🔁 To review:', ...f.missedWords.map((w) => `• ${escapeHtml(w)}`));
+  }
+  if (f.dueTomorrow > 0) {
+    parts.push(`📅 ${f.dueTomorrow} word${f.dueTomorrow === 1 ? '' : 's'} due tomorrow`);
   }
   return {
     text: parts.join('\n'),

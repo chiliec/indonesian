@@ -66,15 +66,25 @@ test('renderFeedback: correct answer, sentence, note, next button', () => {
   assert.equal(v.buttons[0]![0]!.data, `s:${SID}:n`);
 });
 
-test('renderFinish: score, xp, review list, again button', () => {
-  const v = renderFinish(
-    { correctCount: 9, total: 12, xpEarned: 120, missedWords: ['makan — to eat'] },
-  );
+test('renderFinish: score, xp, new words, review list, due count, again button', () => {
+  const v = renderFinish({
+    correctCount: 9, total: 12, xpEarned: 120,
+    missedWords: ['makan — to eat'], newWords: ['minum', 'tidur'], dueTomorrow: 12,
+  });
   assert.ok(v.text.includes('9/12'));
   assert.ok(v.text.includes('+120 XP'));
-  assert.ok(v.text.includes('makan — to eat'));
+  assert.ok(v.text.includes('🆕 New: minum, tidur'));
+  assert.ok(v.text.includes('🔁 To review:\n• makan — to eat'));
+  assert.ok(v.text.includes('📅 12 words due tomorrow'));
   assert.equal(v.buttons[0]![0]!.data, 'p:again');
   assert.equal(v.finished, true);
+});
+
+test('renderFinish: optional lines are omitted; singular due count', () => {
+  const bare = renderFinish({ correctCount: 5, total: 5, xpEarned: 75, missedWords: [], newWords: [], dueTomorrow: 0 });
+  assert.equal(bare.text, '🏁 Session done!\n✅ 5/5 · ⭐ +75 XP');
+  const one = renderFinish({ correctCount: 5, total: 5, xpEarned: 75, missedWords: [], newWords: [], dueTomorrow: 1 });
+  assert.ok(one.text.includes('📅 1 word due tomorrow'));
 });
 
 const withWord: Exercise = { ...choiceEx, feedback: { ...choiceEx.feedback, word: 'makan', wordEn: 'to eat' } };

@@ -266,22 +266,3 @@ export function buildExercise(
     }
   }
 }
-
-/** unseen first, then previously-wrong, then mastered; random within each group.
- *  (moved from QuizService so the poll path can be deleted) */
-export function orderByMastery(
-  cards: QuizCard[],
-  prog: Map<string, QuizProgress>,
-  rng: () => number = Math.random,
-): QuizCard[] {
-  const priority = (c: QuizCard): number => {
-    const p = prog.get(c.id);
-    if (!p || p.seen === 0) return 0;
-    if (p.lastResult === 'wrong') return 1;
-    return 2;
-  };
-  return [...cards]
-    .map((c) => ({ c, key: priority(c), r: rng() }))
-    .sort((a, b) => a.key - b.key || a.r - b.r)
-    .map((x) => x.c);
-}

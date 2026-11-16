@@ -2,7 +2,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import {
-  masteryOf, eligibleKinds, pickKind, buildExercise, orderByMastery,
+  masteryOf, eligibleKinds, pickKind, buildExercise,
   dueAt, countDue, pickSessionCards, DAY_MS, type DueFields,
 } from '../../../src/services/session/ExerciseFactory.js';
 import type { QuizCard } from '../../../src/services/quiz/types.js';
@@ -84,16 +84,6 @@ test('buildExercise type/speak: EN→ID recall', () => {
   assert.ok(ty.prompt.includes('to eat'));
   const sp = buildExercise(card(), pool, 'speak', { rng: () => 0.5 });
   assert.equal(sp.answer, 'makan');
-});
-
-test('orderByMastery: unseen first, then wrong, then mastered', () => {
-  const prog = new Map<string, { seen: number; correct: number; lastResult?: 'correct' | 'wrong' }>([
-    ['c1', { seen: 2, correct: 2, lastResult: 'correct' }],
-    ['c2', { seen: 1, correct: 0, lastResult: 'wrong' }],
-  ]);
-  const ordered = orderByMastery(pool, prog as never, () => 0.5);
-  assert.equal(ordered[ordered.length - 1]!.id, 'c1'); // mastered last
-  assert.equal(ordered[ordered.length - 2]!.id, 'c2'); // wrong second-to-last
 });
 
 test('buildExercise choice: small pool yields fewer options but stays valid', () => {
