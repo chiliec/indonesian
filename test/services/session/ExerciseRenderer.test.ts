@@ -2,7 +2,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import {
-  renderQuestion, renderFeedback, renderFinish,
+  renderQuestion, renderFeedback, renderFinish, recapOf,
 } from '../../../src/services/session/ExerciseRenderer.js';
 import type { Exercise } from '../../../src/services/session/types.js';
 
@@ -66,13 +66,62 @@ test('renderFeedback: correct answer, sentence, note, next button', () => {
   assert.equal(v.buttons[0]![0]!.data, `s:${SID}:n`);
 });
 
-test('renderFinish: score, xp, review list, again button', () => {
-  const v = renderFinish(
-    { correctCount: 9, total: 12, xpEarned: 120, missedWords: ['makan — to eat'] },
-  );
+test('renderFinish: score, xp, new words, review list, due count, again button', () => {
+  const v = renderFinish({
+    correctCount: 9, total: 12, xpEarned: 120,
+    missedWords: ['makan — to eat'], newWords: ['minum', 'tidur'], dueTomorrow: 12,
+  });
   assert.ok(v.text.includes('9/12'));
   assert.ok(v.text.includes('+120 XP'));
-  assert.ok(v.text.includes('makan — to eat'));
+  assert.ok(v.text.includes('🆕 New: minum, tidur'));
+  assert.ok(v.text.includes('🔁 To review:\n• makan — to eat'));
+  assert.ok(v.text.includes('📅 12 words due tomorrow'));
   assert.equal(v.buttons[0]![0]!.data, 'p:again');
   assert.equal(v.finished, true);
+});
+
+test('renderFinish: optional lines are omitted; singular due count', () => {
+  const bare = renderFinish({ correctCount: 5, total: 5, xpEarned: 75, missedWords: [], newWords: [], dueTomorrow: 0 });
+  assert.equal(bare.text, '🏁 Session done!\n✅ 5/5 · ⭐ +75 XP');
+  const one = renderFinish({ correctCount: 5, total: 5, xpEarned: 75, missedWords: [], newWords: [], dueTomorrow: 1 });
+  assert.ok(one.text.includes('📅 1 word due tomorrow'));
+});
+
+const withWord: Exercise = { ...choiceEx, feedback: { ...choiceEx.feedback, word: 'makan', wordEn: 'to eat' } };
+
+test('renderQuestion intro: Got it button on the next callback, audio carried', () => {
+  const intro: Exercise = {
+    cardId: 'c1', kind: 'intro', prompt: '🆕 <b>New word</b>\n\n<b>makan</b> — to eat',
+    answer: 'makan', audioFile: 'a.ogg', feedback: {},
+  };
+  const v = renderQuestion(view, intro);
+  assert.ok(v.text.includes('3/10'));
+  assert.ok(v.text.includes('New word'));
+  assert.deepEqual(v.buttons, [[{ text: 'Got it ▶️', data: `s:${SID}:n` }]]);
+  assert.equal(v.audioFile, 'a.ogg');
+});
+
+test('recapOf: word pair by default, full sentence for cloze/builder, nothing for legacy', () => {
+  assert.equal(recapOf(withWord), 'makan — to eat');
+  assert.equal(recapOf({ ...withWord, kind: 'cloze' }), 'Saya mau makan — I want to eat');
+  assert.equal(recapOf({ ...withWord, kind: 'builder' }), 'Saya mau makan — I want to eat');
+  assert.equal(recapOf(choiceEx), undefined);
+});
+
+test('renderQuestion: flash names the word when a label is given', () => {
+  const v = renderQuestion({ ...view, flash: { correct: true, xp: 10, label: 'makan — to <eat>' } }, choiceEx);
+  assert.ok(v.text.includes('✅ makan — to &lt;eat&gt; +10 XP'));
+  assert.ok(!v.text.includes('Benar'));
+});
+
+test('renderQuestion: corrected-spelling flash wins over the label', () => {
+  const v = renderQuestion(
+    { ...view, flash: { correct: true, xp: 17, corrected: 'makan', label: 'makan — to eat' } }, choiceEx);
+  assert.ok(v.text.includes('✅ Almost — correct spelling: <i>makan</i> +17 XP'));
+});
+
+test('renderFeedback: shows the word pair under the correct answer', () => {
+  const v = renderFeedback(view, withWord);
+  assert.ok(v.text.includes('Correct answer: <b>to eat</b>\nmakan — to eat'));
+  assert.ok(!renderFeedback(view, choiceEx).text.includes('makan — to eat'));
 });

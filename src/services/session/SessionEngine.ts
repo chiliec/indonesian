@@ -7,13 +7,16 @@ import type { StudySessionsRepo, StudySession } from '../../db/studySessions.js'
 import type { QuizProgressRepo } from '../../db/quizProgress.js';
 import type { UserStatsRepo } from '../../db/userStats.js';
 import type { UsersRepo } from '../../db/users.js';
-import { masteryOf, pickKind, buildExercise, orderByMastery } from './ExerciseFactory.js';
-import { renderQuestion, renderFeedback, renderFinish, type QuestionView } from './ExerciseRenderer.js';
+import { masteryOf, pickKind, buildExercise, pickSessionCards, countDue, DAY_MS } from './ExerciseFactory.js';
+import { renderQuestion, renderFeedback, renderFinish, recapOf, type QuestionView } from './ExerciseRenderer.js';
 import { matchAnswer } from './normalize.js';
 import { xpFor, COMPLETION_BONUS } from './xp.js';
 import type { CardView, Exercise } from './types.js';
 
 const DEFAULT_SESSION_LENGTH = 10;
+
+/** intro cards are lessons, not questions: excluded from every counter */
+const isQuestion = (e: Exercise): boolean => e.kind !== 'intro';
 
 /** narrow interface so tests can pass null; AnthropicService satisfies it structurally */
 export interface SpeakJudge {
@@ -60,9 +63,9 @@ export class SessionEngine {
     const length = user?.sessionLength ?? DEFAULT_SESSION_LENGTH;
 
     const prog = await this.deps.progress.forCards(telegramId, cards.map((c) => c.id));
-    const chosen = orderByMastery(cards, prog, rng).slice(0, Math.min(length, cards.length));
-    const exercises = chosen.map((card) => {
-      const kind = pickKind(card, masteryOf(prog.get(card.id)), { speakOptIn, rng });
+    const slots = pickSessionCards(cards, prog, length, rng);
+    const exercises = slots.map(({ card, role }) => {
+      const kind = role === 'intro' ? 'intro' : pickKind(card, masteryOf(prog.get(card.id)), { speakOptIn, rng });
       return buildExercise(card, cards, kind, { rng });
     });
 
@@ -79,8 +82,8 @@ export class SessionEngine {
     const stats = await this.deps.stats.get(s.telegramId);
     const v: QuestionView = {
       sessionId: s._id.toString(),
-      index: s.current,
-      total: s.exercises.length,
+      index: s.exercises.slice(0, s.current).filter(isQuestion).length,
+      total: s.exercises.filter(isQuestion).length,
       xpTotal: stats?.xp ?? 0,
       correctCount: s.correctCount,
       builderPicked: s.builderPicked,
@@ -109,10 +112,11 @@ export class SessionEngine {
     return this.evaluate(s, ex, optionIndex === ex.correctIndex);
   }
 
-  /** next from the feedback view. */
+  /** next from the feedback view, or Got it on an intro card. */
   async next(telegramId: number, sid: string): Promise<TurnResult | null> {
     const s = await this.activeById(telegramId, sid);
-    if (!s || s.phase !== 'feedback') return null;
+    if (!s) return null;
+    if (s.phase !== 'feedback' && s.exercises[s.current]?.kind !== 'intro') return null;
     const applied = await this.deps.sessions.advance(s._id, {
       correct: false,
       xp: 0,
@@ -155,9 +159,13 @@ export class SessionEngine {
     if (!applied) return null;
     await this.deps.progress.record(s.telegramId, ex.cardId, true);
     await this.deps.stats.addXp(s.telegramId, xp);
-    const flash: QuestionView['flash'] = corrected
-      ? { correct: true, xp, corrected }
-      : { correct: true, xp };
+    const label = recapOf(ex);
+    const flash: QuestionView['flash'] = {
+      correct: true,
+      xp,
+      ...(corrected ? { corrected } : {}),
+      ...(label ? { label } : {}),
+    };
     return this.renderCurrent(s._id, s.telegramId, flash);
   }
 
@@ -180,14 +188,18 @@ export class SessionEngine {
       .map((id) => this.deps.engine.card(id))
       .filter((c): c is QuizCard => !!c)
       .map((c) => `${c.indonesian} — ${c.english}`);
-    const view = renderFinish(
-      {
-        correctCount: s.correctCount,
-        total: s.exercises.length,
-        xpEarned: s.xpEarned + COMPLETION_BONUS,
-        missedWords,
-      },
+    const allProg = await this.deps.progress.forCards(
+      telegramId,
+      this.deps.engine.allCards().map((c) => c.id),
     );
+    const view = renderFinish({
+      correctCount: s.correctCount,
+      total: s.exercises.filter(isQuestion).length,
+      xpEarned: s.xpEarned + COMPLETION_BONUS,
+      missedWords,
+      newWords: s.exercises.filter((e) => e.kind === 'intro').map((e) => e.answer),
+      dueTomorrow: countDue(allProg.values(), Date.now() + DAY_MS),
+    });
     return { session: s, view };
   }
 
@@ -271,7 +283,7 @@ export class SessionEngine {
     for (const s of stale) {
       await this.deps.sessions.complete(s._id, 'expired');
       const view: CardView = {
-        text: `⌛ Session expired.\n✅ ${s.correctCount}/${s.exercises.length} · ⭐ +${s.xpEarned} XP`,
+        text: `⌛ Session expired.\n✅ ${s.correctCount}/${s.exercises.filter(isQuestion).length} · ⭐ +${s.xpEarned} XP`,
         buttons: [[{ text: '▶️ Practice again', data: 'p:again' }]],
         finished: true,
       };

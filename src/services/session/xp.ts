@@ -4,6 +4,7 @@ export const BASE_XP = 10;
 export const COMPLETION_BONUS = 25;
 
 const MULT: Record<ExerciseKind, number> = {
+  intro: 0,
   choice: 1.0,
   cloze: 1.2,
   builder: 1.5,

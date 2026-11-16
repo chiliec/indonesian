@@ -12,7 +12,7 @@ export interface QuestionView {
   correctCount: number;
   builderPicked: number[];
   /** result of the previous answer, flashed above the question */
-  flash?: { correct: boolean; xp: number; corrected?: string };
+  flash?: { correct: boolean; xp: number; corrected?: string; label?: string };
 }
 
 function header(v: QuestionView): string {
@@ -21,12 +21,25 @@ function header(v: QuestionView): string {
   return `🎯 <b>Practice</b> · ${bar} ${v.index + 1}/${v.total}\n⭐ ${v.xpTotal} XP`;
 }
 
+/** What a correct answer just proved, for the next card's flash line.
+ *  undefined for exercises stored before word pairs existed. */
+export function recapOf(ex: Exercise): string | undefined {
+  const f = ex.feedback ?? {};
+  if ((ex.kind === 'cloze' || ex.kind === 'builder') && f.sentence && f.sentenceEn) {
+    return `${f.sentence} — ${f.sentenceEn}`;
+  }
+  if (f.word && f.wordEn) return `${f.word} — ${f.wordEn}`;
+  return undefined;
+}
+
 function flashLine(v: QuestionView): string {
   if (!v.flash) return '';
   if (!v.flash.correct) return '';
   const base = v.flash.corrected
     ? `✅ Almost — correct spelling: <i>${escapeHtml(v.flash.corrected)}</i>`
-    : '✅ Benar!';
+    : v.flash.label
+      ? `✅ ${escapeHtml(v.flash.label)}`
+      : '✅ Benar!';
   return `\n${base} +${v.flash.xp} XP`;
 }
 
@@ -56,6 +69,10 @@ export function renderQuestion(v: QuestionView, ex: Exercise): CardView {
     }
   }
 
+  if (ex.kind === 'intro') {
+    buttons.push([{ text: 'Got it ▶️', data: `s:${v.sessionId}:n` }]);
+  }
+
   const view: CardView = {
     text: parts.filter((p, i) => p !== '' || i > 0).join('\n').replace(/\n{3,}/g, '\n\n'),
     buttons,
@@ -67,6 +84,9 @@ export function renderQuestion(v: QuestionView, ex: Exercise): CardView {
 
 export function renderFeedback(v: QuestionView, ex: Exercise): CardView {
   const parts = [header(v), '', `❌ Not quite. Correct answer: <b>${escapeHtml(ex.answer)}</b>`];
+  if (ex.feedback.word && ex.feedback.wordEn) {
+    parts.push(`${escapeHtml(ex.feedback.word)} — ${escapeHtml(ex.feedback.wordEn)}`);
+  }
   if (ex.feedback.sentence) {
     parts.push(`📖 <i>${escapeHtml(ex.feedback.sentence)}</i> — ${escapeHtml(ex.feedback.sentenceEn ?? '')}`);
   }
@@ -80,10 +100,15 @@ export function renderFeedback(v: QuestionView, ex: Exercise): CardView {
 
 export interface FinishView {
   correctCount: number;
+  /** questions asked (intro cards excluded) */
   total: number;
   xpEarned: number;
   /** "indonesian — english" lines for missed cards */
   missedWords: string[];
+  /** Indonesian words introduced this session */
+  newWords: string[];
+  /** cards (all modules) due within 24h */
+  dueTomorrow: number;
 }
 
 export function renderFinish(f: FinishView): CardView {
@@ -91,8 +116,12 @@ export function renderFinish(f: FinishView): CardView {
     '🏁 Session done!',
     `✅ ${f.correctCount}/${f.total} · ⭐ +${f.xpEarned} XP`,
   ];
+  if (f.newWords.length) parts.push(`🆕 New: ${escapeHtml(f.newWords.join(', '))}`);
   if (f.missedWords.length) {
-    parts.push('', 'Words to review:', ...f.missedWords.map((w) => `• ${escapeHtml(w)}`));
+    parts.push('🔁 To review:', ...f.missedWords.map((w) => `• ${escapeHtml(w)}`));
+  }
+  if (f.dueTomorrow > 0) {
+    parts.push(`📅 ${f.dueTomorrow} word${f.dueTomorrow === 1 ? '' : 's'} due tomorrow`);
   }
   return {
     text: parts.join('\n'),
