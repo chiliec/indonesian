@@ -6,6 +6,7 @@
 
 service: indonesian-bot
 image: chiliec/indonesian-bot
+retain_containers: 1   # one rollback version (Kamal default 5)
 
 servers:
   web:
