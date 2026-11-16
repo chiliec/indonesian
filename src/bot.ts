@@ -8,7 +8,7 @@ import type { DeepgramService } from './services/DeepgramService.js';
 import type { TtsService } from './services/TtsService.js';
 import type { ScenarioEngine } from './services/scenarios/ScenarioEngine.js';
 import type { Entitlement } from './services/Entitlement.js';
-import { settingsCommand, settingsHelpCallback, settingsSpeakCallback, settingsLengthCallback, settingsDailyCallback } from './handlers/settings.js';
+import { settingsCommand, settingsHelpCallback, settingsSpeakCallback, settingsLengthCallback, settingsDailyCallback, settingsRichCallback } from './handlers/settings.js';
 import { mainKeyboard } from './handlers/keyboard.js';
 import { scenariosCommand, startCallback } from './handlers/scenarios.js';
 import { textHandler } from './handlers/text.js';
@@ -85,6 +85,7 @@ export function createBot(deps: BotDeps): Bot<BotCtx> {
   bot.command('sentence', sentenceCommand);
   bot.callbackQuery('ds:another', dailyAnotherCallback);
   bot.callbackQuery('settings:daily', settingsDailyCallback);
+  bot.callbackQuery('settings:rich', settingsRichCallback);
 
   bot.command('end', endCommand);
 

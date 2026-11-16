@@ -22,3 +22,9 @@ test('sessionLength set and read', async () => {
   await repo.setSessionLength(1, 20);
   assert.equal((await repo.getByTelegramId(1))!.sessionLength, 20);
 });
+
+test('richCards defaults false and toggles', async () => {
+  assert.equal((await repo.getByTelegramId(1))!.richCards ?? false, false);
+  await repo.setRichCards(1, true);
+  assert.equal((await repo.getByTelegramId(1))!.richCards, true);
+});
