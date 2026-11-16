@@ -169,7 +169,17 @@ export async function practiceHandler(ctx: BotCtx): Promise<void> {
 
   // one session per user: re-focus the existing card instead of starting another
   const existing = await ctx.deps.study.deps.sessions.findActive(ctx.from.id);
-  if (existing?.cardMessageId) {
+  // the card kind is fixed per session, so a changed ✨ Rich cards setting needs a new session
+  const wantKind = (await ctx.deps.usersRepo.getByTelegramId(ctx.from.id))?.richCards ? 'widget' : 'text';
+  const kindChanged = !!existing && (existing.cardKind ?? 'text') !== wantKind;
+  if (kindChanged && existing.cardMessageId) {
+    try {
+      await ctx.api.deleteMessage(existing.chatId, existing.cardMessageId);
+    } catch (err) {
+      ctx.deps.logger.debug({ err }, 'old card delete failed');
+    }
+  }
+  if (existing?.cardMessageId && !kindChanged) {
     try {
       await ctx.api.deleteMessage(existing.chatId, existing.cardMessageId);
     } catch (err) {
