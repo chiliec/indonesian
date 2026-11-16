@@ -71,6 +71,84 @@ function shuffle<T>(arr: readonly T[], rng: () => number): T[] {
   return a;
 }
 
+export const DAY_MS = 86_400_000;
+/** review gap in days after the 1st, 2nd, 3rd, 4th+ lifetime correct answer */
+const INTERVAL_DAYS = [1, 3, 7, 21] as const;
+
+export type DueFields = Pick<QuizProgress, 'seen' | 'correct' | 'lastResult' | 'lastSeenAt'>;
+
+/** Epoch ms when a card comes due; null = never seen. A lapse (or a seen card
+ *  with no correct answer or no timestamp) is 0, so it sorts ahead of any backlog.
+ *  ponytail: `correct` is a lifetime count, so a lapse costs one retry, not an
+ *  interval reset — store a per-card interval if that proves too generous. */
+export function dueAt(p?: DueFields): number | null {
+  if (!p || p.seen === 0) return null;
+  if (p.lastResult === 'wrong' || p.correct < 1 || !p.lastSeenAt) return 0;
+  return p.lastSeenAt.getTime() + INTERVAL_DAYS[Math.min(p.correct, 4) - 1]! * DAY_MS;
+}
+
+/** how many seen cards are due at or before `by` (epoch ms). */
+export function countDue(prog: Iterable<DueFields>, by: number): number {
+  let n = 0;
+  for (const p of prog) {
+    const d = dueAt(p);
+    if (d !== null && d <= by) n++;
+  }
+  return n;
+}
+
+export interface SessionSlot {
+  card: QuizCard;
+  /** intro = lesson card; new = quiz of a word introduced this session; review = seen before */
+  role: 'intro' | 'new' | 'review';
+}
+
+/** Ordered slots for one session of `length` questions (intros come on top).
+ *  Due reviews first, new words capped at 30%; a shortfall is filled with early
+ *  reviews, then with more new words (up to half the length), each quizzed twice. */
+export function pickSessionCards(
+  cards: readonly QuizCard[],
+  prog: ReadonlyMap<string, DueFields>,
+  length: number,
+  rng: () => number = Math.random,
+): SessionSlot[] {
+  const fresh: QuizCard[] = [];
+  const seen: { card: QuizCard; due: number }[] = [];
+  for (const card of cards) {
+    const due = dueAt(prog.get(card.id));
+    if (due === null) fresh.push(card);
+    else seen.push({ card, due });
+  }
+  // ascending due = most overdue first, then not-yet-due soonest first (early reviews)
+  seen.sort((a, b) => a.due - b.due);
+
+  let newCount = Math.min(Math.ceil(length * 0.3), fresh.length);
+  const reviewCards = seen.slice(0, length - newCount).map((s) => s.card);
+  let repeats = 0;
+  if (newCount + reviewCards.length < length) {
+    newCount = Math.min(Math.ceil(length / 2), fresh.length, length - reviewCards.length);
+    repeats = Math.min(newCount, length - newCount - reviewCards.length);
+  }
+  const news = fresh.slice(0, newCount); // content order, not shuffled
+  const reviews = shuffle(reviewCards, rng);
+
+  // each word's quiz trails its intro by one loop turn, so a review and/or the
+  // next word's intro sits between them
+  const out: SessionSlot[] = [];
+  let pending: QuizCard | undefined;
+  for (const card of news) {
+    out.push({ card, role: 'intro' });
+    const gap = reviews.shift();
+    if (gap) out.push({ card: gap, role: 'review' });
+    if (pending) out.push({ card: pending, role: 'new' });
+    pending = card;
+  }
+  if (pending) out.push({ card: pending, role: 'new' });
+  for (const card of reviews) out.push({ card, role: 'review' });
+  for (const card of news.slice(0, repeats)) out.push({ card, role: 'new' });
+  return out;
+}
+
 function escapeRegExp(s: string): string {
   return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 }
