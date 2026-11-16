@@ -5,7 +5,10 @@ import type { BotCtx, BotDeps } from '../bot.js';
 import type { TurnResult } from '../services/session/SessionEngine.js';
 import type { CardView } from '../services/session/types.js';
 import { MIXED_MODULE_ID } from '../services/QuizService.js';
-import { sendWidgetCard, editWidgetData, type RawApi } from '../services/session/widgetApi.js';
+import {
+  sendWidgetCard, editWidgetData, answerWidgetQuery,
+  type RawApi, type WidgetQuery, type WidgetAnswer,
+} from '../services/session/widgetApi.js';
 import { mainKeyboard } from './keyboard.js';
 
 const QUIZ_AUDIO_DIR = path.resolve('content/quiz/audio');
@@ -284,4 +287,62 @@ export async function sweepStudySessions(api: Api, deps: BotDeps, maxAgeMs: numb
     }
   }
   return expired.length;
+}
+
+export type WidgetOp =
+  | { op: 'a'; q: number; arg: number }
+  | { op: 'b'; q: number; order: number[] }
+  | { op: 'n'; q: number }
+  | { op: 'again' };
+
+/** Widget request data: a:<cursor>:<option> | b:<cursor>:<i,j,k> | n:<cursor> | again */
+export function parseWidgetData(data: string): WidgetOp | null {
+  if (data === 'again') return { op: 'again' };
+  let m = data.match(/^a:(\d+):(\d+)$/);
+  if (m) return { op: 'a', q: Number(m[1]), arg: Number(m[2]) };
+  m = data.match(/^b:(\d+):(\d+(?:,\d+)*)$/);
+  if (m) return { op: 'b', q: Number(m[1]), order: m[2]!.split(',').map(Number) };
+  m = data.match(/^n:(\d+)$/);
+  if (m) return { op: 'n', q: Number(m[1]) };
+  return null;
+}
+
+/** A tap inside the widget card. Always answers the query, then pushes the new state. */
+export async function handleWidgetQuery(api: Api, deps: BotDeps, q: WidgetQuery): Promise<void> {
+  const eng = deps.study;
+  let reply: WidgetAnswer = 'error';
+  let turn: TurnResult | null = null;
+  try {
+    await deps.usersRepo.touchUser(q.from.id);
+    const p = parseWidgetData(q.data);
+    if (!p) {
+      deps.logger.warn({ data: q.data }, 'malformed widget query');
+    } else if (p.op === 'again') {
+      if (q.chat) turn = await eng.start(q.from.id, q.chat.id, MIXED_MODULE_ID);
+      reply = turn ? 'ok' : 'expired';
+    } else {
+      const s = await eng.deps.sessions.findActive(q.from.id);
+      if (s && s.cardMessageId === q.message_id) {
+        const sid = s._id.toString();
+        if (p.q === s.current) {
+          if (p.op === 'a') turn = await eng.submitChoice(q.from.id, sid, p.arg);
+          else if (p.op === 'b') turn = await eng.submitBuilder(q.from.id, sid, p.order);
+          else turn = await eng.next(q.from.id, sid);
+        }
+        // stale cursor or an already-recorded tap (a retry): just show the current card again
+        turn ??= await eng.refocus(q.from.id);
+      }
+      reply = turn ? 'ok' : 'expired';
+    }
+  } catch (err) {
+    deps.logger.error({ err, data: q.data }, 'widget query failed');
+    reply = 'error';
+    turn = null;
+  }
+  try {
+    await answerWidgetQuery(api, q.id, reply);
+  } catch (err) {
+    deps.logger.warn({ err }, 'answerWidgetQuery failed');
+  }
+  if (turn) await applyTurn(api, deps, turn);
 }

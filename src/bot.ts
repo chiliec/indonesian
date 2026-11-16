@@ -16,7 +16,8 @@ import { voiceHandler } from './handlers/voice.js';
 import { endCommand } from './handlers/end.js';
 import { subscribeCommand, recordSuccessfulPayment } from './handlers/subscribe.js';
 import { statsCommand } from './handlers/stats.js';
-import { practiceHandler, practiceStartCallback, modulePicker, sessionCallback } from './handlers/practice.js';
+import { practiceHandler, practiceStartCallback, modulePicker, sessionCallback, handleWidgetQuery } from './handlers/practice.js';
+import type { WidgetQuery } from './services/session/widgetApi.js';
 import type { QuizService } from './services/QuizService.js';
 import type { AudioCacheRepo } from './db/audioCache.js';
 import type { SessionEngine } from './services/session/SessionEngine.js';
@@ -27,6 +28,9 @@ import { sentenceCommand, dailyAnotherCallback } from './handlers/dailySentence.
 export const ADVERTISED_COMMANDS = [
   { command: 'start', description: 'Open the bot / show the keyboard' },
 ] as const;
+
+/** Listed explicitly because Telegram delivers widget_query only when asked for it. */
+export const ALLOWED_UPDATES = ['message', 'callback_query', 'pre_checkout_query', 'widget_query'] as const;
 
 export interface BotDeps {
   token: string;
@@ -56,6 +60,14 @@ export function createBot(deps: BotDeps): Bot<BotCtx> {
     ctx.deps = deps;
     if (ctx.from) await deps.usersRepo.touchUser(ctx.from.id);
     await next();
+  });
+
+  // Bot API 10.4 widget taps. grammy has no filter for this update type yet,
+  // so it is read from the raw update (ctx.from is not set for it).
+  bot.use(async (ctx, next) => {
+    const q = (ctx.update as { widget_query?: WidgetQuery }).widget_query;
+    if (!q) return next();
+    await handleWidgetQuery(ctx.api, deps, q);
   });
 
   bot.command('start', async (ctx) => {
