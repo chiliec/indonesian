@@ -8,7 +8,7 @@ import type { Exercise } from '../../../src/services/session/types.js';
 
 const SID = 'a'.repeat(24);
 const view = {
-  sessionId: SID, index: 2, total: 10, xpTotal: 120,
+  sessionId: SID, cursor: 2, index: 2, total: 10, xpTotal: 120,
   correctCount: 2, builderPicked: [] as number[],
 };
 

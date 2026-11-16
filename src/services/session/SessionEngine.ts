@@ -82,6 +82,7 @@ export class SessionEngine {
     const stats = await this.deps.stats.get(s.telegramId);
     const v: QuestionView = {
       sessionId: s._id.toString(),
+      cursor: s.current,
       index: s.exercises.slice(0, s.current).filter(isQuestion).length,
       total: s.exercises.filter(isQuestion).length,
       xpTotal: stats?.xp ?? 0,
