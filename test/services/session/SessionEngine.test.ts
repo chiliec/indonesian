@@ -143,3 +143,16 @@ test('start abandons a prior active session', async () => {
   const all = await sessions.findActive(1);
   assert.notEqual(all!._id.toString(), a!.session._id.toString());
 });
+
+test('start: cardKind follows the richCards setting and every turn carries widget state', async () => {
+  const plain = await eng.start(1, 100, 'mixed', () => 0.5);
+  assert.equal(plain!.session.cardKind, 'text');
+  await users.setRichCards(1, true);
+  const rich = await eng.start(1, 100, 'mixed', () => 0.5);
+  assert.equal(rich!.session.cardKind, 'widget');
+  const st = JSON.parse(rich!.widget);
+  assert.equal(st.k, 'intro');
+  assert.equal(st.q, 0);
+  const next = await step();
+  assert.equal(JSON.parse(next!.widget).q, 1);
+});

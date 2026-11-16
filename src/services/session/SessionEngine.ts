@@ -8,7 +8,8 @@ import type { QuizProgressRepo } from '../../db/quizProgress.js';
 import type { UserStatsRepo } from '../../db/userStats.js';
 import type { UsersRepo } from '../../db/users.js';
 import { masteryOf, pickKind, buildExercise, pickSessionCards, countDue, DAY_MS } from './ExerciseFactory.js';
-import { renderQuestion, renderFeedback, renderFinish, recapOf, type QuestionView } from './ExerciseRenderer.js';
+import { renderQuestion, renderFeedback, renderFinish, recapOf, type QuestionView, type FinishView } from './ExerciseRenderer.js';
+import { renderWidgetQuestion, renderWidgetFeedback, renderWidgetFinish } from './WidgetRenderer.js';
 import { matchAnswer } from './normalize.js';
 import { xpFor, COMPLETION_BONUS } from './xp.js';
 import type { CardView, Exercise } from './types.js';
@@ -36,6 +37,8 @@ export interface SessionEngineDeps {
 export interface TurnResult {
   session: StudySession;
   view: CardView;
+  /** widget chat_data for the same screen as `view` (used when session.cardKind === 'widget') */
+  widget: string;
 }
 
 export class SessionEngine {
@@ -69,9 +72,24 @@ export class SessionEngine {
       return buildExercise(card, cards, kind, { rng });
     });
 
-    const session = await this.deps.sessions.create(telegramId, chatId, moduleId, exercises);
-    const view = renderQuestion(await this.viewOf(session), session.exercises[0]!);
-    return { session, view };
+    const session = await this.deps.sessions.create(
+      telegramId, chatId, moduleId, exercises, user?.richCards ? 'widget' : 'text',
+    );
+    return this.question(session);
+  }
+
+  /** The current question in both renderings. */
+  private async question(s: StudySession, flash?: QuestionView['flash']): Promise<TurnResult> {
+    const v = await this.viewOf(s, flash);
+    const ex = s.exercises[s.current]!;
+    return { session: s, view: renderQuestion(v, ex), widget: renderWidgetQuestion(v, ex) };
+  }
+
+  /** The wrong-answer screen in both renderings. */
+  private async feedback(s: StudySession, ex: Exercise): Promise<TurnResult> {
+    const v = await this.viewOf(s);
+    const e: Exercise = { ...ex, feedback: ex.feedback ?? {} };
+    return { session: s, view: renderFeedback(v, e), widget: renderWidgetFeedback(v, e) };
   }
 
   /** Build the renderer view-model from a session (+ optional flash). */
@@ -147,8 +165,7 @@ export class SessionEngine {
       await this.deps.progress.record(s.telegramId, ex.cardId, false);
       const fresh = await this.deps.sessions.findById(s._id);
       if (!fresh) return null;
-      const exForFeedback: Exercise = { ...ex, feedback: ex.feedback ?? {} };
-      return { session: fresh, view: renderFeedback(await this.viewOf(fresh), exForFeedback) };
+      return this.feedback(fresh, ex);
     }
 
     const xp = xpFor(ex.kind);
@@ -179,9 +196,7 @@ export class SessionEngine {
     const s = await this.deps.sessions.findById(sessionId);
     if (!s) return null;
     const ex = s.exercises[s.current];
-    if (ex) {
-      return { session: s, view: renderQuestion(await this.viewOf(s, flash), ex) };
-    }
+    if (ex) return this.question(s, flash);
     // done
     await this.deps.stats.addXp(telegramId, COMPLETION_BONUS);
     await this.deps.sessions.complete(s._id, 'completed');
@@ -193,15 +208,15 @@ export class SessionEngine {
       telegramId,
       this.deps.engine.allCards().map((c) => c.id),
     );
-    const view = renderFinish({
+    const f: FinishView = {
       correctCount: s.correctCount,
       total: s.exercises.filter(isQuestion).length,
       xpEarned: s.xpEarned + COMPLETION_BONUS,
       missedWords,
       newWords: s.exercises.filter((e) => e.kind === 'intro').map((e) => e.answer),
       dueTomorrow: countDue(allProg.values(), Date.now() + DAY_MS),
-    });
-    return { session: s, view };
+    };
+    return { session: s, view: renderFinish(f), widget: renderWidgetFinish(f) };
   }
 
   async tapTile(telegramId: number, sid: string, tileIndex: number): Promise<TurnResult | null> {
@@ -216,7 +231,7 @@ export class SessionEngine {
       await this.deps.sessions.pushTile(s._id, tileIndex);
       const fresh = await this.deps.sessions.findById(s._id);
       if (!fresh) return null;
-      return { session: fresh, view: renderQuestion(await this.viewOf(fresh), fresh.exercises[fresh.current]!) };
+      return this.question(fresh);
     }
     // last tile placed → evaluate the full sentence
     const built = picked.map((i) => ex.tiles![i]).join(' ');
@@ -232,7 +247,23 @@ export class SessionEngine {
     await this.deps.sessions.popTile(s._id);
     const fresh = await this.deps.sessions.findById(s._id);
     if (!fresh) return null;
-    return { session: fresh, view: renderQuestion(await this.viewOf(fresh), fresh.exercises[fresh.current]!) };
+    return this.question(fresh);
+  }
+
+  /** Widget card: tiles move locally in the widget, so the whole order arrives at once. */
+  async submitBuilder(telegramId: number, sid: string, order: number[]): Promise<TurnResult | null> {
+    const s = await this.activeById(telegramId, sid);
+    if (!s || s.phase !== 'question') return null;
+    const ex = s.exercises[s.current];
+    if (!ex || ex.kind !== 'builder' || !ex.tiles) return null;
+    const tiles = ex.tiles;
+    const isPermutation =
+      order.length === tiles.length &&
+      new Set(order).size === order.length &&
+      order.every((i) => Number.isInteger(i) && i >= 0 && i < tiles.length);
+    if (!isPermutation) return null;
+    const built = order.map((i) => tiles[i]).join(' ');
+    return this.evaluate(s, ex, matchAnswer(built, ex.answer) !== 'wrong');
   }
 
   /** typed text from chat; null = not ours, let conversation logic handle it.
@@ -270,11 +301,7 @@ export class SessionEngine {
     if (!s) return null;
     const ex = s.exercises[s.current];
     if (!ex) return null;
-    const view =
-      s.phase === 'feedback'
-        ? renderFeedback(await this.viewOf(s), { ...ex, feedback: ex.feedback ?? {} })
-        : renderQuestion(await this.viewOf(s), ex);
-    return { session: s, view };
+    return s.phase === 'feedback' ? this.feedback(s, ex) : this.question(s);
   }
 
   /** Sweep idle sessions: mark expired and return finish views for the handler to render. */
@@ -283,12 +310,17 @@ export class SessionEngine {
     const out: TurnResult[] = [];
     for (const s of stale) {
       await this.deps.sessions.complete(s._id, 'expired');
+      const total = s.exercises.filter(isQuestion).length;
       const view: CardView = {
-        text: `⌛ Session expired.\n✅ ${s.correctCount}/${s.exercises.filter(isQuestion).length} · ⭐ +${s.xpEarned} XP`,
+        text: `⌛ Session expired.\n✅ ${s.correctCount}/${total} · ⭐ +${s.xpEarned} XP`,
         buttons: [[{ text: '▶️ Practice again', data: 'p:again' }]],
         finished: true,
       };
-      out.push({ session: s, view });
+      const widget = renderWidgetFinish(
+        { correctCount: s.correctCount, total, xpEarned: s.xpEarned, missedWords: [], newWords: [], dueTomorrow: 0 },
+        true,
+      );
+      out.push({ session: s, view, widget });
     }
     return out;
   }

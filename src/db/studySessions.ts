@@ -17,6 +17,8 @@ class StoredExercise {
 
 export type StudyStatus = 'active' | 'completed' | 'expired' | 'abandoned';
 export type StudyPhase = 'question' | 'feedback';
+/** how the session card is shown: an edited text message or a Telegram widget */
+export type CardKind = 'text' | 'widget';
 
 @index({ telegramId: 1, status: 1 })
 @modelOptions({
@@ -43,13 +45,26 @@ export class StudySession {
   @prop({ type: () => [String], required: true, default: [] }) public missed!: string[];
   @prop({ type: Number }) public cardMessageId?: number;
   @prop({ type: Number }) public audioMessageId?: number;
+  /** fixed at start; absent on sessions created before widgets = 'text' */
+  @prop({ type: String, enum: ['text', 'widget'] }) public cardKind?: CardKind;
 }
 
 export const StudySessionModel = getModelForClass(StudySession);
 
 export class StudySessionsRepo {
-  async create(telegramId: number, chatId: number, moduleId: string, exercises: Exercise[]): Promise<StudySession> {
-    return (await StudySessionModel.create({ telegramId, chatId, moduleId, exercises })).toObject<StudySession>();
+  async create(
+    telegramId: number,
+    chatId: number,
+    moduleId: string,
+    exercises: Exercise[],
+    cardKind: CardKind = 'text',
+  ): Promise<StudySession> {
+    return (await StudySessionModel.create({ telegramId, chatId, moduleId, exercises, cardKind })).toObject<StudySession>();
+  }
+
+  /** sendWidget failed at start → the session falls back to the text card */
+  async setCardKind(id: Types.ObjectId, kind: CardKind): Promise<void> {
+    await StudySessionModel.updateOne({ _id: id }, { $set: { cardKind: kind } });
   }
 
   async findActive(telegramId: number): Promise<StudySession | null> {
