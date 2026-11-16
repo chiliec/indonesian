@@ -15,6 +15,14 @@ function fit(o: State): string {
   for (const key of ['mw', 'nw'] as const) {
     while (size(o) > MAX_STATE_BYTES && o[key]?.length) { o[key]!.pop(); o.more = (o.more ?? 0) + 1; }
   }
+  if (size(o) > MAX_STATE_BYTES && typeof o.p === 'string') {
+    // last resort: plain-text prompt, cut until it fits (tags would break if cut mid-way)
+    let t = o.p.replace(/<[^>]+>/g, '');
+    while (size(o) > MAX_STATE_BYTES && t.length > 1) {
+      t = t.slice(0, Math.max(1, t.length - 20));
+      o.p = t + '…';
+    }
+  }
   if (size(o) > MAX_STATE_BYTES) throw new Error(`widget state over ${MAX_STATE_BYTES} bytes: k=${String(o.k)}`);
   return JSON.stringify(o);
 }

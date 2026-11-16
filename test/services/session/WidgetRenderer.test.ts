@@ -123,3 +123,9 @@ test('budget: every card in the real deck fits in every kind it supports', async
   }
   assert.ok(checked > 10000);
 });
+
+test('budget: an oversized prompt is cut to plain text instead of throwing', () => {
+  const out = renderWidgetQuestion(view, { ...typeEx, prompt: '<b>' + 'y'.repeat(2000) + '</b>' });
+  assert.ok(bytes(out) <= MAX_STATE_BYTES);
+  assert.ok(!JSON.parse(out).p.includes('<'));
+});

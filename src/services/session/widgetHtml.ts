@@ -26,7 +26,7 @@ let st=null,last,done=0,picked=[];
 function el(tag,cls,text){const e=document.createElement(tag);if(cls)e.className=cls;if(text!=null)e.textContent=text;app.append(e);return e}
 function hap(ok){try{W.HapticFeedback.notificationOccurred(ok?'success':'error')}catch(e){}}
 function fail(data){const b=el('button','w','⚠️ Tap to retry');b.onclick=()=>{b.remove();send(data)}}
-function send(data){W.request(data).then(a=>{if(a.result==='expired'&&st.k!=='finish'){app.textContent='';el('div','p','⌛ Session expired — tap ▶️ Practice')}else if(a.result!=='ok')fail(data)},()=>fail(data))}
+function send(data){W.request(data).then(a=>{if(a.result==='expired'){app.textContent='';el('div','p','⌛ Session expired — tap ▶️ Practice')}else if(a.result!=='ok')fail(data);else setTimeout(()=>{if(W.chatData===last){last=null;render()}},3000)},()=>fail(data))}
 function btn(text,data){const b=el('button','w',text);b.onclick=()=>{if(done)return;done=1;send(data)}}
 function fb(){const f=st.fb||{};
 if(f.w)el('div','p',f.w+' — '+f.e);
@@ -69,6 +69,7 @@ el('div','p').innerHTML=st.p;
 if(st.o)options();
 if(st.t)builder();
 if(st.k==='intro')btn('Got it ▶️','n:'+st.q);
-if(st.k==='type')el('div','s','⌨️ Send your answer as a message in this chat')}
+if(st.k==='type')el('div','s','⌨️ Type your answer in the chat');
+if(st.k==='speak')el('div','s','🎤 Send a voice note')}
 if(W){W.onEvent('chatDataChanged',render);render();if(typeof W.ready==='function')W.ready()}
 </script>`;
