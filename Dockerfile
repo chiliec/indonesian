@@ -1,5 +1,5 @@
 # Dockerfile
-FROM node:20-alpine AS builder
+FROM node:24-alpine AS builder
 WORKDIR /app
 # better-sqlite3 (dev-only, used by the Anki prep scripts) has no musl prebuilt,
 # so npm ci compiles it from source — needs python3 + a C++ toolchain.
@@ -10,7 +10,7 @@ COPY src ./src
 COPY scenarios ./scenarios
 RUN npm run build
 
-FROM node:20-alpine
+FROM node:24-alpine
 WORKDIR /app
 ENV NODE_ENV=production
 COPY package.json package-lock.json* ./
